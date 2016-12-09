@@ -1,0 +1,67 @@
+<%
+var instruments = model.models;
+if (!instruments){%>
+  <%=BANCOMER.CULTURETEXT.t('dataTable_ErrorMessage_EmptyTable')%>
+<%}else{
+
+var numItems = model.options.viewOptions.numberOfItems;
+var percentageEqual = model.options.viewOptions.percentageEqual || 2;
+var instrument;
+var heightUp = 0;
+var heightDown = 0;
+var maxDifInstrument = _.max(instruments, function (instrument) {
+     return Math.abs(instrument.getChangePercent());
+});
+var maxDif = (maxDifInstrument) ? maxDifInstrument.getChangePercent() : 0;
+
+
+var bgContTopClsValues = ['ifb-bgTop', '', 'ifb-bgEqual'];
+var bgContFlopClsValues = ['', 'ifb-bgFlop', ''];
+
+
+
+var bgContCls = '';
+var trend;
+var j;
+
+var boxUp = '';
+var boxDown = '';
+%>
+
+<%  
+    for (i = 0; i < numItems; i++) { 
+      j = i+1;
+      instrument = instruments[i];
+      if(instrument){
+        trend = Number(instrument.getDescriptorValue(IFB.Descriptors.Trend.descriptor) || "0");
+      
+
+      heightUp = (maxDif === 0)? percentageEqual: (trend === 1)?((Math.abs(instrument.getChangePercent()/maxDif)*100)>percentageEqual) ? (Math.abs(instrument.getChangePercent()/maxDif)*100):percentageEqual:(trend === 0 )? percentageEqual: 0;
+      
+      bgContCls = (trend === 1) ? bgContTopClsValues[0] : (trend === 2) ? bgContTopClsValues[1] : bgContTopClsValues[2];
+
+
+      boxUp += "<div class=\"boxTop" + j + "\"><div class=\"data0" + j + " " + bgContCls + "\" style=\"height:" + heightUp + "%\"><div class=\"dataDifP\">" + instrument.getChangePercent() + "%</div></div></div>";
+
+      heightDown = (maxDif === 0)? percentageEqual: (trend === 2)?(Math.abs(instrument.getChangePercent()/maxDif)*100)>percentageEqual ? (Math.abs(instrument.getChangePercent()/maxDif)*100) : percentageEqual:(trend === 0 )? percentageEqual: 0;
+
+      bgContCls = (trend === 1) ? bgContFlopClsValues[0] : (trend === 2) ? bgContFlopClsValues[1] : bgContFlopClsValues[2];
+      
+      boxDown += "<div class=\"boxDown" + j + "\"><div class=\"data0" + j + " "+ bgContCls + "\" style=\"height:" + heightDown  + "%\"><div class=\"dataDifP\"><span class=\"bold\">" + instrument.getDescriptorValue(IFB.Descriptors.IFBShortName.descriptor) + "</span><br>" + instrument.getDateOrTime() + "</div></div></div>";
+      }      
+    }%>
+
+<div class="contGralGraphIndex-Up">
+  <div class="contTop">
+    <%=boxUp%>
+</div>
+</div>
+
+
+  <div class="contGralGraphIndex-Down">
+    <div class="contDown">
+      <%=boxDown%>
+    </div>
+  </div>
+
+<%}%>

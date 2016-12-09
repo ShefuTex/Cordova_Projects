@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BCOM cordova P3</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="activity_name">@string/launcher_name</string>
+
+    <!--Strings importados -->
+    <string name="alert_accept_button_text">Aceptar</string>
+    <string name="alert_cancel_button_text">Cancelar</string>
+    <string name="alert_title_text"/>
+    <string name="logout_session_time_warning">Estimado cliente le informamos que su sesión terminará en 5 minutos, por lo que será necesario volver a ingresar al servicio de su Banca en Línea</string>
+    <string name="logout_session_time_expired">Estimado Cliente su sesión ha terminado, lo invotamos a ingresar a su servicio de Banca en Línea</string>
+    <string name="logout_confirm_logout">Confirma que desea cerrar la sesión? </string>
+    <string name="internet_error_message">Ocurrió un Error en su Conexión a Internet</string>
+    <string name="authetication_failed">Apreciable cliente: es necesario introducir la clave de acceso o el número de tarjeta correctamente</string>
+    <string name="this_account_has_been_temporarily_locked">Apreciable cliente: por seguridad su cuenta ha sido bloqueada</string>
+    <string name="has_expired">Por su seguridad, su cuenta se ha bloqueado</string>
+    <string name="bancomer_trader">Para ingresar a Bancomer Trader, es necesario contratarlo previamente, contacta a tu ejecutivo</string>
+    <string name="authetication_mechanism">Por el momento el servicio no está disponible</string>
+    <string name="conexion">Error de comunicaciones favor de intentar más tarde</string>
+
+</resources>

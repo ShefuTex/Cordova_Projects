@@ -1,0 +1,155 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html, button, input, select, textarea { color: #333; font-family: "Myriad Pro",Helvetica, Arial, sans-serif; }
+html { font-size: 1em; line-height: 1.4; }
+
+::-moz-selection { background: #b3d4fc; text-shadow: none;}
+::selection { background: #b3d4fc; text-shadow: none;}
+audio, canvas, img, video { vertical-align: middle; }
+fieldset { border: 0; margin: 0; padding: 0; }
+textarea { resize: vertical; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden { display: none !important; visibility: hidden; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* ==========================================================================
+   Header classes
+   ========================================================================== */
+#cabeza { background:#FFF; height:120px; width:2048px}
+#logo { background:url(../img/retina/Ios_Logotipo.png) no-repeat center; display:block; width:660px; height:120px; text-indent:-99999px; }
+
+/* ==========================================================================
+   Body's classes
+   ========================================================================== */
+
+#cuerpo-login { background:url(../img/retina/Ios_Bg_Pub.png); height:1066px; width:2048px; padding-top:200px}
+
+#bcom { background:url(../img/retina/Ios_Box.png) no-repeat center; width:832px; height:560px; margin-left:1075px; padding: 40px 34px 0 34px; margin-bottom:260px;}
+.tab-icon {background:url(../img/retina/Ios_Ic_Tab.png) no-repeat; font-weight:normal; font-size:58px; color:#1A68AF; padding: 25px 0 0 80px; margin-bottom:50px;}
+
+.full-input { width:764px; height:72px; padding:0 34px; background:url(../img/retina/Ios_Input.png) no-repeat; border:0; margin:0; margin-bottom:40px; font-size:40px; color:#333;}
+.btn-submit { width:832px; height:72px; padding:0; background:url(../img/retina/Ios_Btn.png) no-repeat; border:0; margin:0; margin-bottom:40px; font-size:40px; color:#FFF;}
+
+.link { font-size:40px; color:#B95974; text-align:center; text-decoration:none; display:block}
+
+#login-nav { height:120px; background:url(../img/retina/Ios_Bg_Suite.png) no-repeat;}
+
+.btn-autoseguro { display:block; width:666px; height:120px; background:url(../img/retina/Ios_Btn_Aut.png) center no-repeat; float:left}
+.btn-geolocalizacion { display:block; width:720px; height:120px; background:url(../img/retina/Ios_Btn_Est.png) center no-repeat; float:left}
+.btn-bestratega { display:block; width:662px; height:120px; background:url(../img/retina/Ios_Btn_Geo.png) center no-repeat; float:left}
+
+/* ==========================================================================
+   Footer classes 
+   ========================================================================== */
+#pie { background:#969696; width:2048px; height:100px; text-align:center; position:relative; text-shadow: 1px 1px 2px #030303; }
+.contactanos { font-size:36px; color:#FFF; background: url(../img/retina/Ios_Ic_Tel.png) left no-repeat; display:inline-block; padding-left:80px; line-height:100px; }
+.ver { color:#FFF; position:absolute; font-size:28px; top:45px; right:45px; }
+
+@media only screen and (max-width: 1024px) and (min-height: 700px) and (max-height:768px) {
+#cabeza { height:60px; width:1024px}
+#logo { background:url(../img/normal/Ios_Logotipo.png) no-repeat center; width:330px; height:60px; text-indent:-99999px; }
+
+#cuerpo-login { background:url(../img/normal/Ios_Bg_Pub.png); height:533px; width:1024px; padding-top:100px}
+
+#bcom { background:url(../img/normal/Ios_Box.png) no-repeat center; width:418px; height:280px; margin-left:535px; padding: 20px 17px 0 17px; margin-bottom:130px;}
+.tab-icon {background:url(../img/normal/Ios_Ic_Tab.png) no-repeat; font-size:29px; padding: 12px 0 0 40px; margin-bottom:25px;}
+
+.full-input { width:382px; height:36px; padding:0 17px; background:url(../img/normal/Ios_Input.png) no-repeat; margin-bottom:20px; font-size:20px;}
+.btn-submit { width:416px; height:36px; padding:0; background:url(../img/normal/Ios_Btn.png) no-repeat; margin-bottom:20px; font-size:20px;}
+
+.link { font-size:20px;}
+
+#login-nav { height:60px; background:url(../img/normal/Ios_Bg_Suite.png) no-repeat;}
+
+.btn-autoseguro { width:333px; height:60px; background:url(../img/normal/Ios_Btn_Aut.png) center no-repeat;}
+.btn-geolocalizacion { width:360px; height:60px; background:url(../img/normal/Ios_Btn_Est.png) center no-repeat;}
+.btn-bestratega { width:331px; height:60px; background:url(../img/normal/Ios_Btn_Geo.png) center no-repeat;}
+
+#pie { width:1024px; height:50px;}
+.contactanos { font-size:18px; background: url(../img/normal/Ios_Ic_Tel.png) left no-repeat; padding-left:40px; line-height:50px; }
+.ver { font-size:14px; top:45%; right:22px; }
+}
+
+@media only screen and (max-width: 1024px) and (min-height: 550px) and (max-height:600px) {
+#cabeza { height:42px; width:1024px}
+#logo { background:url(../img/1024x600/An_Logotipo.png) no-repeat center; width:240px; height:42px; text-indent:-99999px; }
+
+#cuerpo-login { background:url(../img/1024x600/An__Bg_Pub.png); height:441px; width:1024px; padding-top:42px}
+
+#bcom { background:url(../img/1024x600/An_Box.png) no-repeat center; width:384px; height:250px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:85px;}
+.tab-icon {background:url(../img/1024x600/An_Ic_Tab.png) no-repeat; font-size:29px; padding: 12px 0 0 40px; margin-bottom:20px;}
+
+.full-input { width:350px; height:36px; padding:0 17px; background:url(../img/1024x600/An_Input.png) no-repeat; margin-bottom:10px; font-size:18px;}
+.btn-submit { width:384px; height:36px; padding:0; background:url(../img/1024x600/An_Btn.png) no-repeat; margin-bottom:20px; font-size:18px;}
+
+.link { font-size:18px;}
+
+#login-nav { height:53px; background:url(../img/1024x600/An_Bg_Suite.png) no-repeat;}
+
+.btn-autoseguro { width:333px; height:53px; background:url(../img/1024x600/An_Btn_Aut.png) center no-repeat;}
+.btn-geolocalizacion { width:360px; height:53px; background:url(../img/1024x600/An_Btn_Est.png) center no-repeat;}
+.btn-bestratega { width:331px; height:53px; background:url(../img/1024x600/An_Btn_Geo.png) center no-repeat;}
+
+#pie { width:1024px; height:40px;}
+.contactanos { font-size:16px; background: url(../img/1024x600/An_Ic_Tel.png) left no-repeat; padding-left:30px; line-height:40px; }
+.ver { font-size:12px; top:45%; right:22px;}
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+#cabeza { height:56px; width:1280px}
+#logo { background:url(../img/1280x800/An_Logotipo.png) no-repeat center; width:320px; height:56px; text-indent:-99999px; }
+
+#cuerpo-login { background:url(../img/1280x800/An__Bg_Pub.png); height:588px; width:1280px; padding-top:56px}
+
+#bcom { background:url(../img/1280x800/An_Box.png) no-repeat center; width:512px; height:340px; margin-left:700px; padding: 24px 20px 0 24px; margin-bottom:115px;}
+.tab-icon {background:url(../img/1280x800/An_Ic_Tab.png) no-repeat; font-size:38px; padding: 12px 0 0 50px; margin-bottom:20px;}
+
+.full-input { width:472px; height:48px; padding:0 20px; background:url(../img/1280x800/An_Input.png) no-repeat; margin-bottom:20px; font-size:28px;}
+.btn-submit { width:512px; height:48px; padding:0; background:url(../img/1280x800/An_Btn.png) no-repeat; margin-bottom:20px; font-size:28px;}
+
+.link { font-size:28px;}
+
+#login-nav { height:70px; background:url(../img/1280x800/An_Bg_Suite.png) no-repeat;}
+
+.btn-autoseguro { width:417px; height:70px; background:url(../img/1280x800/An_Btn_Aut.png) center no-repeat;}
+.btn-geolocalizacion { width:447px; height:70px; background:url(../img/1280x800/An_Btn_Est.png) center no-repeat;}
+.btn-bestratega { width:414px; height:70px; background:url(../img/1280x800/An_Btn_Geo.png) center no-repeat;}
+
+#pie { width:1280px; height:50px;}
+.contactanos { font-size:20px; background: url(../img/1280x800/An_Ic_Tel.png) left no-repeat; padding-left:40px; line-height:50px; }
+.ver { font-size:18px; top:45%; right:22px;}
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1920px) {
+#cabeza { height:82px; width:1920px}
+#logo { background:url(../img/1920x1200/An_Logotipo.png) no-repeat center; width:480px; height:84px; text-indent:-99999px; }
+
+#cuerpo-login { background:url(../img/1920x1200/An__Bg_Pub.png); height:882px; width:1920px; padding-top:84px}
+
+#bcom { background:url(../img/1920x1200/An_Box.png) no-repeat center; width:768px; height:540px; margin-left:1050px; padding: 36px 40px 0 36px; margin-bottom:170px;}
+.tab-icon {background:url(../img/1920x1200/An_Ic_Tab.png) no-repeat; font-size:60px; padding: 12px 0 0 72px; margin-bottom:20px;}
+
+.full-input { width:708px; height:72px; padding:0 30px; background:url(../img/1920x1200/An_Input.png) no-repeat; margin-bottom:40px; font-size:36px;}
+.btn-submit { width:768px; height:72px; padding:0; background:url(../img/1920x1200/An_Btn.png) no-repeat; margin-bottom:40px; font-size:36px;}
+
+.link { font-size:36px;}
+
+#login-nav { height:105px; background:url(../img/1920x1200/An_Bg_Suite.png) no-repeat;}
+
+.btn-autoseguro { width:626px; height:105px; background:url(../img/1920x1200/An_Btn_Aut.png) center no-repeat;}
+.btn-geolocalizacion { width:673px; height:105px; background:url(../img/1920x1200/An_Btn_Est.png) center no-repeat;}
+.btn-bestratega { width:621px; height:105px; background:url(../img/1920x1200/An_Btn_Geo.png) center no-repeat;}
+
+#pie { width:1920px; height:80px;}
+.contactanos { font-size:32px; background: url(../img/1920x1200/An_Ic_Tel.png) left no-repeat; padding-left:60px; line-height:80px; }
+.ver { font-size:24px; top:45%; right:44px;}
+}

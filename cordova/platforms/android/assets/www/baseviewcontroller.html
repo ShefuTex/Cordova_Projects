@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html style="overflow-x: hidden; overflow-y: hidden;">
+
+    <head>
+ 
+ 		<title></title>
+        
+        <meta charset="utf-8"/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link rel="stylesheet" href="css/normalize.css"/>
+        <link rel="stylesheet" href="css/1024x600.css" id="mainCss"/>
+        <link rel="stylesheet" href="css/962x601.css" id="mainCss"/>
+        
+        <script  src="js/jquery/jquery-2.1.0.js"></script>
+        <script  src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+
+        <script  src="cordova.js"></script>
+        <script  src="js/Constants.js" charset="utf-8"></script>
+        <script  src="js/BComTools.js"></script>
+        <script  src="js/BaseViewController.js"></script>
+        <script  src="js/BComViewsController.js"></script>
+        <script  src="js/Accounting.js"></script>
+
+        <script type="text/javascript">
+            function startApp() {
+                document.addEventListener("deviceready", baseViewController.initPhonegap(), false);
+                             
+                }
+                //backbutton
+                document.addEventListener("deviceready", onDeviceReady, false); 
+
+            function onDeviceReady() {
+                document.addEventListener("backbutton", onBackKeyDown, false);
+               
+
+                }
+
+            function onBackKeyDown()    
+                        {
+                 parent.loginDelegate.wtLogout();
+                }
+
+
+            
+            var viewsController = new BComViewsController();
+
+            function mostrarMBComInicio(opcion, paso) {
+                //showLoadingLayer();
+			   //viewsController.//mostrarPantallaWebtrader//(opcion, paso);
+                
+    		}
+        </script>
+        
+    </head>
+
+    <body id="body" onLoad="startApp();" style="overflow-x:hidden; overflow-y:hidden;">
+            <!-- div id="sombraCabecera" class="baseviewcontroller-loading-layer"></div-->
+    
+        <div id="todo">
+            <div id="nav-bajo">     
+                <div id="nav-webtrader">
+                    <a href="#" class="nb-rejecutivo nb-selec"></a>
+                    <a href="#" class="nb-indices"></a>
+                    <a href="#" class="nb-acciones"></a>
+                    <a href="#" class="nb-sic"></a>
+                    <a href="#" class="nb-moperatividad"></a>
+                    <a href="#" class="nb-ipc"></a>
+                    <a href="#" class="nb-noticias"></a>
+                    <a href="#" class="nb-etrabajo"></a>
+                </div>      
+            </div>
+
+		<div id="mainContent"><iframe id="contentFrame" src="" seamless="seamless"></iframe>
+
+            <div id="contentFrame2"></div>
+        </div>
+        </div>
+    
+    </body>
+    
+</html>

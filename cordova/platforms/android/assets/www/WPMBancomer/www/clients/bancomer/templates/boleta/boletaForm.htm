@@ -1,0 +1,65 @@
+                <div class="contTblDataEntry">
+                    <table class="tblDataEntry" cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaForm_Title')%></td>
+                            <td colspan="2">                                
+                                    <input class="inputTit ifbEventTrigger" id="volume" type="tel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="volume" value="" data-listen="keydown,keyup,focusout,focusin,click" data-event="sharesKeyDown,sharesKeyUp,sharesFocusOut,sharesFocusIn,sharesClick"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaForm_Precio')%></td>
+                            <td>                   
+                                    <select id='orderType' name="orderType" class="ifbEventTrigger" data-listen="change" data-event="orderTypeChange" size="">
+                                    <%
+										var selected = '';
+										_.each(BANCOMER.Utils.Trader.orderTypeOptions, function (orderType) {
+											selected = (model.getOrderType() === orderType.value) ? 'selected' : '';
+									%>
+										<option class="boletaTxt" value="<%=orderType.value%>"<%=selected%>><%=BANCOMER.CULTURETEXT.t(orderType.textKey)%></option>
+									<%
+										});
+									%>		    
+                                    </select>
+                            </td>
+                            <td>
+                                 <input class="inputTit ifbEventTrigger" id="price" type="tel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="price" value="" data-listen="keydown,keyup,focusout,change,focusin,click" data-event="priceKeyDown,priceKeyUp,priceFocusOut,priceChange,priceFocusIn,priceClick">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ifb-alignRight txtDown"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaForm_ExpireDate')%></td>
+                            <td colspan="2">
+                                <input  id="datepicker" type="date" name="expireDate" value="<%=model.getExpireDate()%>">
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td class="ifb-alignRight btnCancelar"><a  class="ifbEventTrigger ifb-button" data-event="cancelOrderClick"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaForm_ButtomCancel')%></a></td>
+
+                			<% if (model.getSide()===BANCOMER.Utils.Trader.sideOptions.BUY.value) {%>
+                				       <td class="ifb-alignLeft btnComprar" colspan="2"><a id="btnAccept" class="ifbEventTrigger ifb-button disable" data-event="sendOrderClick"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaForm_ButtomBuy')%></a>
+                                       </td>
+                			<% } else { %>
+                					 <td class="ifb-alignLeft btnVender" colspan="2"><a id="btnAccept" class="ifbEventTrigger ifb-button disable" data-event="sendOrderClick"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaForm_ButtomSell')%></a>
+                                     </td>
+                			<%}%>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+<script>	
+        if (!Modernizr.inputtypes.date) {  			
+            $('#datepicker').datepicker({ dateFormat: "dd/mm/yy" });
+		} else {
+            var date = moment('<%=model.getExpireDate()%>', '<%=model.DEFAULTS_DATE_FORMAT%>').format('<%=model.DATE_INPUT_FORMAT_RAW%>');
+			$('#datepicker').val(date);
+			
+		}
+
+	 	$('a.specialConditions').on('click', function (e) {
+	        $(this).toggleClass('up');
+			$(this).next().toggle();
+	    });
+	 
+</script>	

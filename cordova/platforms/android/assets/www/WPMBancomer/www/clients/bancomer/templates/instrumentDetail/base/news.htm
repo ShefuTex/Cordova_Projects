@@ -1,0 +1,29 @@
+<section class="contFvNews">
+  <table class="ifb-popupTable" id="newsTable" cellpadding="0" cellspacing="0" border="0" width="100%">	
+		<thead>
+			<tr>
+				<th><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Date')%></th>
+				<th><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Time')%></th>
+				<th><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Title')%></th>
+				<th><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Category')%></th>
+				<th><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Source')%></th>
+			</tr>
+		</thead>
+		<tbody>
+
+		<%
+			_.each(model.models, function (news) {
+		%>
+			<tr>
+				<td class="date"><%=news.getDate()%></td>
+				<td><%=news.getTime()%></td>
+				<td><a class="ifbEventTrigger" data-event="clickNews"  data-key="<%=news.getKey()%>"><%=news.getTitle()%></a></td>
+				<td><%=news.getCategory()%></td>
+				<td><%=news.getSource()%></td>
+			</tr>
+		<%
+	    	});
+	    %>
+		</tbody>
+	</table>
+</section>

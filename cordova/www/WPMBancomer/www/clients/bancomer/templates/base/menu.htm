@@ -1,0 +1,29 @@
+<div class="ifb-contMySpace" >
+	<ul>
+<%
+    	var maxItems = model.maxItems;
+	    var items = model.items;
+		var item;
+		var clsVisited = '';
+		for (var i = 0; i < maxItems; i++) { 
+		    item = items[i] || BANCOMER.Utils.Preferences.getWorkspaceObject(undefined, i, '1', {});
+		    clsVisited = (items[i]) ? 'visited' : ''; 
+%>
+	        <li class="ifb-contMySpace ifbEventTrigger" data-event="clickItemMenu" data-workspace="<%=i%>" data-title="<%=item.title%>">
+	                <div class="icoMySpace">
+	                    <i class="icoMySpace <%=clsVisited%>"></i>
+	                </div>
+	                <div class="txtIcoMySpace <%=clsVisited%>"><%=item.title%></div>
+	        </li>		
+<%
+		};
+%>
+	</ul>
+</div>	
+<div class="ifb-btnCerrarWS">        
+	<div class="buttonCerrarWS">
+		<div class="icoBtnClose">
+			<a class="icoBtnClose ifbEventTrigger" id="btnCloseFooter" data-event="closeMenu">	                
+		</div>	
+	</div>
+</div>

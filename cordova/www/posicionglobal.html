@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <title></title>
+        
+        <meta charset="utf-8"/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <link rel="stylesheet" href="css/normalize.css"/>
+        <link rel="stylesheet" href="css/1024x600.css" id="mainCss"/>
+        
+		<script type="text/javascript" src="js/jquery/jquery-2.1.0.js"></script>
+        <script type="text/javascript" src="js/BComTools.js"></script>
+        <script type="text/javascript" src="js/BaseViewController.js"></script>
+        <script type="text/javascript" src="js/BComViewsController.js"></script>
+        <script type="text/javascript" src="js/Constants.js"></script>
+        <script type="text/javascript" src="js/Accounting.js"></script>
+
+        <script type="text/javascript">
+            function onPageLoaded() {
+                loadDeviceCSS();
+                parent.posicionGlobalDelegate.initializePage();
+                
+                bindSwipeEvent('swiperight', 'posicionglobal-img-slider', function () { parent.posicionGlobalDelegate.moveToPreviousImage(); });
+                bindSwipeEvent('swipeleft', 'posicionglobal-img-slider', function () { parent.posicionGlobalDelegate.moveToNextImage(); });
+                document.body.addEventListener('touchstart', function () { parent.timerDelegate.resetTimerInactividad(); });
+                parent.hideLoadingLayer();
+            }
+        </script>
+    </head>
+    
+    <body onLoad="onPageLoaded();">
+        
+        <a href="#" class="posicionglobal-cabecera">- Inicio</a>
+        
+        <div id="posicionglobal-contenedor" class="posicionglobal-clearfix">
+        
+            <div id="posicionglobal-img-slider" class="main-menu-visible">
+            
+                <div id="img-publicidad" class="posicionglobal-publicidad-image1"></div>
+                
+                <div id="bullet-container" class="posicionglobal-publicidad-bullet-container">
+                    <div onclick="parent.posicionGlobalDelegate.selectAdvertiseImage(1);" class="posicionglobal-publicidad-bullet selected"></div>
+                    <div onclick="parent.posicionGlobalDelegate.selectAdvertiseImage(2);" class="posicionglobal-publicidad-bullet"></div>
+                    <div onclick="parent.posicionGlobalDelegate.selectAdvertiseImage(3);" class="posicionglobal-publicidad-bullet"></div>
+                </div>
+            
+            </div>
+            
+            <div id="posicionglobal-texto-lateral">
+                
+                <div class="clearfix" id="posicionglobal-info-cuentas"></div>
+                
+                <section id="accordion">
+                    
+                    <div id="cuentas-pesos" style="display:none">
+                        <label id="mxpAccounts" class="tituls" onclick="parent.posicionGlobalDelegate.selectAccountsTable('mxpAccounts');">
+                            <span class="acc_titulo">Cuenta en Pesos</span>
+                            <span class="acc_titulo2">Al día</span>
+                        </label>
+                        <article id="article-Pesos"></article>
+                    </div>
+                    
+                    <br>
+                    
+                    <div id="cuentas-dolares" style="display:none">
+                        <label id="usdAccounts" class="tituls" onclick="parent.posicionGlobalDelegate.selectAccountsTable('usdAccounts');">
+                            <span class="acc_titulo">Cuenta en Dólares</span>
+                            <span class="acc_titulo2">Al día</span>
+                        </label>
+                        <article id="article-Dolares"></article>
+                    </div>
+                    
+                    <br>
+                    
+                    <div id="cuentas-credito" style="display:none">
+                        <label id="creditCards" class="tituls" onclick="parent.posicionGlobalDelegate.selectAccountsTable('creditCards');">
+                            <span class="acc_titulo">Tarjeta de Crédito</span>
+                            <span class="acc_titulo2">Al día</span>
+                        </label>
+                        <article id="article-Credito"></article>
+                    </div>
+                    
+                </section>
+                
+            </div>
+        
+        </div>
+    	<script type="text/javascript">
+    		var reglasNegocio = JSON.parse(sessionStorage.jsonReglasNegocio);
+            
+            console.log("reglas de negocio",reglasNegocio);
+            
+            var pg = JSON.parse(sessionStorage.jsonPosicion).posicionGlobal;
+            
+            console.log("posicion global",pg);
+    	</script>
+    </body>
+
+</html>

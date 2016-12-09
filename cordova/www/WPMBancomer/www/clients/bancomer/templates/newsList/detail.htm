@@ -1,0 +1,47 @@
+<%
+var news = model.models;
+
+
+if (!news || !news[0]){
+    return;
+}
+var item = news[0];
+var detail;
+var urls;
+var file;
+var link;
+
+if (item) {
+	detail= item.getDetails();
+}
+if (detail) {
+	urls = detail.split('href=');
+} 
+
+%>
+<div class="mesAviTxt_Tit_border">
+	<div class="mesAviTxt_Tit"><%=item.getTitle()%></div>
+</div>
+<!-- salida noticia sin estilo + nicescroll -->
+<div class="mesAviTxtScroll" id="niceScrollNewsDetailList">
+	<div class="mesAviTxtScroll_txt" >	
+		<%=detail%>
+		<ul>
+<%
+			if (urls) {
+ 			_.each(urls, function(url) {
+ 				if (url.indexOf("http") != -1) { 					 
+ 					link = url.substring(url.indexOf("http"), url.indexOf("\">"));
+     				file = url.substring(url.indexOf(">") + 1, url.indexOf("</a>")); 
+ 				}
+%>				
+				<li class="ifbEventTrigger" data-event="openExternalFile" data-url="<%=link%>"><a><%=file%></a></li>
+<%
+			});
+%>
+		</ul>
+	</div>
+</div>
+<%
+	}
+%>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pdfmanager">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/pdfmanager.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

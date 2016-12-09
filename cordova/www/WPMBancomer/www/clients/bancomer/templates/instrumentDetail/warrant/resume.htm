@@ -1,0 +1,75 @@
+<%  var instrument = model.models[0];
+if (!instrument) { %>
+  <p><%=BANCOMER.CULTURETEXT.t('dataTable_ErrorMessage_EmptyTable')%></p>
+<% } else { 
+    var topFlopArrow = instrument.getTopFlopCls(IFB.Descriptors.Trend.descriptor, ['ifb-topArrowWhite', 'ifb-flopArrowWhite', 'ifb-equalArrowWhite']);
+    var topFlopBg = instrument.getTopFlopCls(IFB.Descriptors.Trend.descriptor, ['ifb-bgTop', 'ifb-bgFlop', 'ifb-bgEqual']);
+
+    mv = instrument.getDescriptorValue("MV");
+  %>
+        <!-- inf miniResumen -->
+        <section class="contMiniDetail">
+          <div class="miniDetail <%=topFlopBg%>" data-type="silent" data-descriptor="<%=IFB.Descriptors.Trend.descriptor%>" data-mv="<%=instrument.getDescriptorValue('MV')%>">
+            <ul>
+              <li class="<%=topFlopArrow%>" data-type="silent" data-descriptor="<%=IFB.Descriptors.Trend.descriptor%>" data-mv="<%=instrument.getDescriptorValue('MV')%>"></li>
+              <li><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Current')%>:</li>
+              <li class="separate" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Last.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%= instrument.getLast({decimals: 3, zeroValue: ' '})%></li>
+              <li><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Previous')%>:</li>
+              <li class="separate" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Close.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%= instrument.getClose({decimals: 3, zeroValue: ' '})%></li>
+              <li><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Dif')%>:</li>
+              <li class="separate" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Change.descriptor %>" data-type="number" data-decimals="3" data-zeroValue="0"><%=instrument.getChange({decimals: 3, zeroValue: '0'}) %></li>
+              <li><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_DifPerc')%>:</li>
+              <li class="separate" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.ChangePercent.descriptor %>" data-type="number" data-decimals="2" data-zeroValue="0"><%=instrument.getChangePercent({positiveSign: '', decimals: 2, zeroValue: '0'}) %></li>
+              <li>(<span data-mv="<%=mv%>" data-descriptor="<%=IFB.Descriptors.Time.descriptor%>" data-type="time"><%=instrument.getTime()%></span> - <span data-mv="<%=instrument.getDescriptorValue('MV')%>" data-descriptor="<%=IFB.Descriptors.Date.descriptor%>" data-type="date"><%=instrument.getDate()%></span>)</li>
+            </ul>
+          </div>
+        </section>
+
+  <section class="contFvDetail">
+      <!-- caja izquierda: tabla de datos -->
+      <div class="contTbFvDetail">
+          <table class="ifb-popupTable warrant2" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <tbody>
+                <tr>
+                    <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Category')%></td>
+                    <td><%=instrument.getCategory()%></td>
+                </tr>
+                <tr>
+                    <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Strike')%></td>
+                    <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Strike.descriptor %>" data-type="number" data-decimals="3" data-zeroValue="0"><%=instrument.getStrike()%></td>
+                </tr>
+                <tr>
+                    <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_ExpiryDate')%></td>
+                    <td data-mv="<%=mv%>" data-descriptor="<%=IFB.Descriptors.ExpiryDate.descriptor%>" data-type="date"><%=instrument.getExpiryDate()%></td>
+                </tr>
+                <tr>
+                    <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Underlying')%></td>
+                    <td><%=instrument.getUnderlying()%></td>
+                </tr>
+                <tr>
+                    <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_IFBLongName')%></td>
+                    <td><%=instrument.getIFBLongName()%></td>
+                </tr>
+                <tr>
+                    <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Symbol')%></td>
+                    <td><%=instrument.getSymbol()%></td>
+                </tr>
+                <tr>
+                    <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Market')%></td>
+                    <td><%=instrument.getIFBMarketName()%></td>
+                </tr>
+                <tr>
+                    <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Placement')%></td>
+                    <td><%=instrument.getPlacement()%></td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+
+         <!-- caja derecha: graf + datos -->
+          
+          <div class="contGraph warrants" id="instrumentDetailResumeCharts">
+          </div>          
+        </section>
+
+<% } %>

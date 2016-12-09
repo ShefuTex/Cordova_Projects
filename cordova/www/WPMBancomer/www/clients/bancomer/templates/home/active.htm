@@ -1,0 +1,32 @@
+<%
+var instruments = model.models || [];
+var getOrdinal = function(index) {
+    switch(index + 1) {
+        case 1: return "first";
+        case 2: return "second";
+        case 3: return "third";
+        default: return "";
+    }
+}
+%>
+
+    <h4><%=BANCOMER.CULTURETEXT.t('componentTitle_TopFlopActive_Active')%></h4>
+    <% if (instruments.length === 0) { %>
+        <p class="noData"><%=BANCOMER.CULTURETEXT.t('componentNoData_TopFlopActive_Active')%></p>
+    <% } else { %>
+    <ul>
+        <%
+        _.each(model.models, function(instrument, index) {
+            var mv = instrument.getIFBShortName("MV");             
+        %>
+        <li class="<%=getOrdinal(index)%> ifb-alignLeft">
+            <div class="name ifbEventTrigger" data-mv="<%=instrument.getDescriptorValue('MV')%>" data-event="AbrirFicha">
+                </span> <%=instrument.getEmisora()%> <%=instrument.getSerie()%>
+            </div>
+            <span class="vol" data-mv="<%=mv%>" data-descriptor="<%=IFB.Descriptors.Cash.descriptor %>" data-type="number" data-decimals="0" data-zeroValue="-" data-positiveSign=""><%=instrument.formatAsNumber(IFB.Descriptors.Cash.descriptor, 0)%></span>
+        </li>
+        <%
+        });
+        %>
+    </ul>
+    <% } %>

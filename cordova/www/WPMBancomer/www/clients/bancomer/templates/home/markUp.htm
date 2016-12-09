@@ -1,0 +1,120 @@
+<div id="lightboxHeaderSelector" class="ifb-LightBox" style="display:none;"></div>
+<div id="lightboxBoleta" class="ifb-LightBox" style="display:none;"></div>
+<div id="lightboxInstrumentDetail" class="ifb-LightBox" style="display:none;"></div>
+<div id="lightboxNewsDetail" class="ifb-LightBox" style="display:none;"></div>
+<div id="lightboxMessageNotice" class="ifb-LightBox" style="display:none;"></div>
+<div id="lightboxHelp" class="ifb-LightBox" style="display:none;"></div>
+<div id="lightboxInstrumentSelector" class="ifb-LightBox" style="display:none;"></div>
+<section class="index">
+ 
+
+  <!-- cont sup izq: INDICES -->
+  <section class="contTop">
+      <div class="topLeft">
+        <div class="topLeftBox">
+          <div class="title">
+            <h2><%=BANCOMER.CULTURETEXT.t('moduleTitle_Indexes')%></h2>
+              <a href="#!/indexDetailPage" class="icoOpenBox"></a>
+              <a class="icoToolBox ifbEventTrigger" data-event="clickToolBoxIndexes"></a>
+              <a class="icoFilter ifbEventTrigger" data-event="clickToolBoxInstrumentSelector"></a>
+              <a class="icoRefresh ifbEventTrigger iconRefresh" data-event="clickRefreshModule" data-module="indexes"></a>
+          </div>
+          <div class="data">
+           	<section class="contIndexGraph" >
+              <div class="indexGraph" id="homeIndexesChart"></div>
+            </section>
+            <section class="contIndexTable" id="homeIndexesMarketGrid"></section>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- cont sup dcha: PANORAMA -->
+      <div class="topRight">
+        <div class="topRightBox">
+          <div class="title" id="marketSummaryHeader">
+            <h2><%=BANCOMER.CULTURETEXT.t('moduleTitle_HomeMarketSummaryPrefix')%><%=BANCOMER.CULTURETEXT.t('componentLabel_ModuleFilterMarketSummary_Option_Stocks')%></h2>
+				<a class="icoOpenBox ifbEventTrigger" data-event="clickModuleOpen" data-module="marketSummary" data-href="#!/instrumentList"></a>
+              	<a class="icoFilter ifbEventTrigger" data-event="clickModuleFilter" data-module="marketSummary"></a>
+              	<a class="icoRefresh ifbEventTrigger iconRefresh" data-event="clickRefreshModule" data-module="marketSummary"></a>				
+          </div>
+          <div class="data">
+            <section class="contSceneShares">              
+              <!-- Pie Chart -->
+              <div class="tbCol1">                
+                <div class="conSceneGraph">
+                  <div class="sceneGraph" id="homeTopFlopPieChart"></div>
+                </div>
+				<div class="sceneGraphKey">
+                	<div class="keyTxt ifb-top" id="txtTop"></div>
+                    <div class="keyTxt ifb-flop" id="txtFlop"></div>
+                    <div class="keyTxt ifb-equal" id="txtEqual"></div>
+                </div>
+              </div>              
+
+              <!-- Top Flop Active -->
+              <div class="tbCol2" id="home_multipleTopFlopActive">
+                <div class="topFlop" id="ifb-top"></div>
+                <div class="topFlop" id="ifb-flop"></div>
+                <div class="topFlop mostActives" id="ifb-active"></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+  </section>
+
+   <!-- cont centro: ACCIONES -->
+  <section class="contMiddle">
+      <div class="middle">
+        <div class="middleBox">
+          <div class="title" id="topFlopHeader">
+            <h2><%=BANCOMER.CULTURETEXT.t('moduleTitle_Stocks')%></h2>
+				<a class="icoOpenBox ifbEventTrigger" data-event="clickModuleOpen" data-module="topFlop" data-href="#!/instrumentList"></a>
+				<a class="icoFilter ifbEventTrigger" data-event="clickModuleFilter" data-module="topFlop"></a>
+				<a class="icoRefresh ifbEventTrigger iconRefresh" data-event="clickRefreshModule" data-module="topFlop"></a>
+          </div>
+          <div class="data" id="homeMultiTopFlopList">
+            <section class="contShares">
+              <div class="sharesLeft" id="ifb-flopHorizontal"></div>
+              <div class="sharesRight" id="ifb-topHorizontal"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="contBottom">
+  <!-- cont inf izq: DETALLES DE INVERSION -->
+  <div class="bottomLeft">
+    <div class="bottomLeftBox">
+       <div class="title" id="investmentDetailHeader">
+        <h2><%=BANCOMER.CULTURETEXT.t('moduleTitle_InvestmentDetailPrefix')%></h2>
+        <a href="#!/investmentDetail" class="icoOpenBox"></a>        
+        <a class="icoFilter ifbEventTrigger" data-event="clickModuleFilter" data-module="investmentDetail"></a>
+        <a class="icoRefresh ifbEventTrigger" data-event="clickRefreshModule" data-module="investmentDetail"></a>
+      </div>
+      <div class="data">
+        <!--investmentDetail graph-->
+        <section class="contInvestmentDetailGraph" id="homeInvestmentDetailChart"></section>
+
+        <!--investmentDetail table-->
+        <div class="contInvestmentDetailTable" id="homeInvestmentDetailTable"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- cont inf izq: RESEARCH&NEWS -->
+  <div class="bottomRight">
+    <div class="bottomRightBox">
+      <div class="title" id="researchNewsHeader">
+        <h2></h2>
+            <a class="icoOpenBox ifbEventTrigger" data-event="clickModuleOpen" data-module="researchNews" data-href="#!/researchNews"></a>
+            <a class="icoFilter ifbEventTrigger" style="display:none;" id="researchNewsHeaderFilter" data-event="clickModuleFilter" data-module="researchNews"></a>
+            <a class="icoRefresh ifbEventTrigger iconRefresh" data-event="clickRefreshModule" data-module="researchNews"></a>
+      </div>
+      <div class="data" id="homeResearchNews">
+      </div>
+  </div>
+  </section>
+</section>

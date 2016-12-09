@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>
+<html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!-->
+<html class="no-js ifb"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8">
+   <title>Bancomer</title>
+   <meta name="description" content="">
+   <meta name="HandheldFriendly" content="True">
+   <meta name="MobileOptimized" content="320">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="cleartype" content="on">
+   <meta name="format-detection" content="telephone=no">
+
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+   <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+   <!-- Tile icon for Win8 (144x144 + tile color) -->
+   <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+   <meta name="msapplication-TileColor" content="#222222">    
+
+   <meta name="format-detection" content="telephone=no">
+
+	<!-- DataTables CSS -->
+   <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+   <link rel="stylesheet" type="text/css" href="css/dataTables.fixedColumns.css">
+
+
+
+   <link rel="stylesheet" href="js/vendor/jquery/ui/1.11.1/themes/bancomer/jquery-ui.css">
+        <!-- Estilos Lista de Contratos-->
+        <link rel="stylesheet" type="text/css" href="../../../../../css/lstContratos.css">
+        <!-- Estilos Comprobantes Guardados-->
+        <link rel="stylesheet" type="text/css" href="../../../../../css/comprobante.css">
+        <!-- Traspaso de Efectivo -->
+        <link rel="stylesheet" type="text/css" href="../../../../../css/tEfectivo.css" id="trasEfectivo2">
+		    <!-- Envio Correo -->
+        <link rel="stylesheet" type="text/css" href="../../../../../css/envioCorreo.css" >
+    <!-- Swiper -->
+    <link rel="stylesheet" href="js/vendor/swiper/2.6/idangerous.swiper.css">
+    <script src="js/vendor/swiper/2.6/idangerous.swiper.min.js"></script>
+
+
+<script>
+   function getURLParameter(name) {
+       return decodeURI(
+                   (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
+   }
+
+   function isIOS() {        
+       return (['iPad', 'iPhone', 'iPod', 'iPad Simulator', 'iPhone Simulator', 'iPod Simulator'].indexOf(navigator.platform) !== -1);
+   }
+
+   function getParameter(parameter, defaultValue) {
+       return (getURLParameter(parameter) !== 'null' && getURLParameter(parameter) !== null) ? (getURLParameter(parameter)) : window.sessionStorage.getItem(parameter) || defaultValue;
+   }
+
+   var os = getParameter('os', '');
+   if (os === 'ios' || isIOS()){
+       document.write('<link rel="stylesheet" href="css/bancomerIOS.css">');
+   }else{
+       document.write('<link rel="stylesheet" href="css/bancomerAndroid.css">');
+   }
+
+</script>
+
+
+
+
+</head>
+
+<body class="ifb">
+  <div class="ifb-contHelp" style="display:none;">
+    <img class="ifb-helpSummary ifb-help" style="display:none;"/>
+    <img class="ifb-helpIndices ifb-help" style="display:none;"/>
+    <img class="ifb-helpGraph ifb-help" style="display:none;"/>
+
+		<img class="ifb-helpDetail ifb-help" style="display:none;"/> 
+		<img class="ifb-helpNews ifb-help" style="display:none;"/> 
+		<img class="ifb-helpShares ifb-help" style="display:none;"/>
+	</div>
+
+	<div class="ifb-LightBoxMenu" style="display:none;" id="footerMenu">
+	</div>
+
+   <div id="clickOn"></div>
+   <div class="ifb-clikOutBox" id="clickableLevel" hidden>
+       <div class="ifb-PopUpclikOutBox">
+			<div class="speechBubble" id="search_instrumentList" style="display:none;"></div>
+			<div class="speechBubble" id="settingsBubble" style="display:none;"></div>
+			<div class="speechBubble" id="moduleFilterMarketSummary" style="display:none;"></div>
+			<div class="speechBubble" id="moduleFilterTopFlop" style="display:none;"></div>
+			<div class="speechBubble" id="moduleFilterInvestmentDetail" style="display:none;"></div>
+			<div class="speechBubble" id="moduleFilterResearchNews" style="display:none;"></div>
+			<div class="speechBubble" id="chart1FilterChartType" style="display:none;"></div>
+			<div class="speechBubble" id="chart2FilterChartType" style="display:none;"></div>
+			<div class="speechBubble" id="chart3FilterChartType" style="display:none;"></div>
+			<div class="speechBubble" id="chart1FilterPeriod" style="display:none;"></div>
+			<div class="speechBubble" id="chart2FilterPeriod" style="display:none;"></div>
+			<div class="speechBubble" id="chart3FilterPeriod" style="display:none;"></div>
+			<div class="speechBubble" id="chart1FilterFrequency" style="display:none;"></div>
+			<div class="speechBubble" id="chart2FilterFrequency" style="display:none;"></div>
+			<div class="speechBubble" id="chart3FilterFrequency" style="display:none;"></div>
+			<div class="speechBubble" id="detailChartFilterChartType" style="display:none;"></div>
+			<div class="speechBubble" id="detailChartFilterPeriod" style="display:none;"></div>
+			<div class="speechBubble" id="detailChartFilterFrequency" style="display:none;"></div>
+			<div class="speechBubble" id="moduleFilterResearchNewsMaximized" style="display:none;"></div>
+			<div class="speechBubble" id="moduleFilterInstrumentList" style="display:none;"></div>			
+			<div class="speechBubble" id="chartLayoutModuleFilterChartType" style="display:none;"></div>
+			<div class="speechBubble" id="chartLayoutModuleFilterPeriod" style="display:none;"></div>
+			<div class="speechBubble" id="chartLayoutModuleFilterFrequency" style="display:none;"></div>
+			<div class="speechBubble" id="detailLayoutModuleChartFilterChartType" style="display:none;"></div>
+			<div class="speechBubble" id="detailLayoutModuleChartFilterPeriod" style="display:none;"></div>
+			<div class="speechBubble" id="detailLayoutModuleChartFilterFrequency" style="display:none;"></div>
+       </div>
+   </div>
+
+   <div class="ifb-cont" style="display:none;">
+       <header class="ifb-header">
+           <!--logo + menu-->
+           <div class="contHeader01">
+             <div class="logo"></div>
+             <div class="menu">
+               <ul>
+                 <li class="btnSalir" id="menuBtnExit"><a>Salir</a></li>
+                 <li class="icoTools" id="menuBtnHelp"></li>
+                 <div id="menuBtnNotice"><li class="icoInfo"></li></div>
+                 <div id="menuBtnMessage"><li class="icoMail"></li></div>
+                 <li class="icoContract hidden" id="menuBtnAccounts"><a></a></li>
+                 <li class="icoTransfer" id="menuBtnTransference"></li>
+                 <li class="icoWS" id="mnuFooterIcon"></li>
+                 <li id="homeBtn" class="icoHome"></li>
+                 <li id="menuVersion"></li>                
+               </ul>
+             </div>
+           </div>
+           <!--title + searcher-->
+           <div class="contHeader02">
+             <div class="title">
+				<i class="icoTitle"></i><div class="txtTitle" id="ifb-txtTitSup"></div>				
+             </div>
+             <div class="contIcoLog">
+          		<div class="icoLogoBTrader" id="iconLogo"></div>
+              </div>
+              <div class="searcher">
+               <input class="ifb-searcher" type="search" name="search" placeholder="" id="txtSearch">                        
+             </div>
+           </div>
+       </header>        
+
+<div id="mainContent" class="ifb-content">
+	<script src="../../../vendor/cordova/cordova.js"></script>
+	<script src="../../../vendor/jquery/1.11.1/jquery-1.11.1.js"></script>
+	<script src="../../../vendor/underscore/1.5.1/underscore.js"></script>
+	<script src="../../../vendor/backbone/1.0.0/backbone.js"></script>
+	<script src="../../../vendor/backbone-validation/0.9.1/backbone-validation.js"></script>  
+	<script src="../../../vendor/accounting/0.3.2/accounting.js"></script>
+	<script src="../../../vendor/moment/2.5.1/moment.min.js"></script>   
+	<script src="../../../vendor/moment/1.7.2/lang/es.js"></script>
+	<script src="js/vendor/modernizr/2.6.2/modernizr-2.6.2.min.js"></script>
+	<script src="js/vendor/noty/2.2.2/jquery.noty.js"></script>
+	<script src="js/vendor/noty/2.2.2/layouts/center.js"></script>
+	<script src="js/vendor/noty/2.2.2/layouts/bottomCenter.js"></script>
+	<script src="js/vendor/noty/2.2.2/layouts/topCenter.js"></script>
+	<script src="js/vendor/noty/2.2.2/themes/bancomer.js"></script>   
+	
+	<script src="../../../vendor/highstock/2.0.4/highstock.js"></script>
+	<script src="../../../vendor/highcharts/4.0.3/highcharts-more.js"></script>    
+
+	<script src="../../../vendor/polyglot/0.2.0/polyglot.js"></script>
+	<script src="js/vendor/jquery/ui/1.11.1/jquery-ui.min.js"></script>
+	<script src="js/vendor/jquery/ui/1.11.1/jquery.ui.datepicker-es.js"></script>
+	<script src="js/vendor/jqueryTouchPunch/jquery.ui.touch-punch.min.js"></script>
+	<script src="../../../vendor/jquery.niceScroll/3.4.0/jquery.nicescroll.min.js"></script>
+	<script src="js/vendor/jquery.nestable/jquery.nestable.js"></script>
+
+	<!-- DataTables -->
+	<script type="text/javascript" charset="utf8"src="../../../vendor/jquery.fixedColumns/1.11.1/jquery.dataTables.js"></script>
+
+	<script type="text/javascript" charset="utf8"src="../../../vendor/jquery.fixedColumns/1.11.1/dataTables.fixedColumns.js"></script>
+
+	<script src="../../../vendor/jquery.touchy/1.1/jquery.touchy.js"></script>
+
+	<script>
+	   var debug = getParameter('debug', '0');
+	   //var language = getParameter('language', 'en');
+     var language = 'es';
+
+	   var server = getParameter('server', 'equitystreaming.bbvanet.com.mx');
+	   var streaming = getParameter('streaming','equitybwt.bbvanet.com.mx');
+	   var sid = getParameter('sid','');
+
+	   var protocol = (os === 'android' || os === 'ios') ?  '//': (getParameter('protocol','https')+'://');
+	   var accounts = getParameter('accounts','0');
+
+	   var thousand = getParameter('thousand',',');
+	   var decimal  = getParameter('decimal','.');
+       var currentDate = new Date()
+       var gmt = getParameter('gmt', (currentDate.getTimezoneOffset()/-60).toString());
+
+	   //Clean sessionStorage
+	   //window.sessionStorage.clear();
+
+	   var VERSION = '0.0.2.18';
+
+	   // Load infobolsa core library
+	   var infobolsaLibrary = debug === '1' ? "../infobolsa-" + VERSION + ".js" : "../infobolsa-" + VERSION + ".min.js";
+	   document.write('<scri' + 'pt type="text/javascript" src="' + infobolsaLibrary + '"></sc' + 'ript>');
+
+       // Load bancomer client library
+       var bancomerLibrary = debug === '1' ? "../bancomer-" + VERSION + ".js" : "../bancomer-" + VERSION + ".min.js";
+       document.write('<script type="text/javascript" src="' + bancomerLibrary + '"></sc' + 'ript>');
+
+       //Language
+       language = (language==='es') ? language : 'en';
+       document.write('<script type="text/javascript" src="' + 'locales/' + language + '.js' + '"></sc' + 'ript>');
+                        function cierraDialog(dialog) {
+                            $(dialog).dialog("close");
+                        }
+                    
+                    $(document).ready(function () {
+                                      var rutaBoton = '../../../../../img/normal/Ios_Ic_cerrar.png';
+                                      if (screen.height != 1024) {
+                                      rutaBoton = '../../../../../img/retina/Ios_Ic_cerrar.png';
+                                      }
+
+                                      if (screen.height == 601) {
+                                      console.log("screen.height == 601");
+                                      filePath = '../../../../../css/tEfectivo2.css';
+                                      document.getElementById("trasEfectivo2").removeAttribute("href");
+                                      document.getElementById("trasEfectivo2").setAttribute("href", filePath);
+                                      }
+
+            var wWidth = $(window).width();
+            var dWidth = wWidth * 0.8;
+            var wHeight = $(window).height();
+            var dHeight = wHeight * 0.8;
+            console.log("X: " + dWidth + " Y: " + dHeight);
+                                      $('img.botonCierre').attr('src',rutaBoton);
+                                      
+                                      $("#dialogPDF").dialog({
+                                    	  				
+                											 width:dWidth,
+                											 height: dHeight,
+                                                             modal: true,
+                                                             autoOpen: false,
+                                                             open: function (event, ui) {
+                                                             $(this).parent().css("z-index", "999999");
+                                                             $(".ui-dialog-titlebar-close").hide();
+                                                             $(".ui-dialog-titlebar").hide();
+                                                             }
+                                                             });
+                                      
+            $('#objectPDF').width(dWidth);
+            $('#objectPDF').height(dHeight);
+           
+                                      $("#dialogComprobantes").dialog({
+                                                                      width:800,
+                                                                      modal: true,
+                                                                      autoOpen: false,
+                                                                      open: function (event, ui) {
+                                                                      $(this).parent().css("z-index", "999999");
+                                                                      $(".ui-dialog-titlebar-close").hide();
+                                                                      $(".ui-dialog-titlebar").hide();
+                                                                      }
+                                                                      });
+                                      
+                                      $("#envioCorreo").dialog({
+                                                               width:800,
+                                                               modal: true,
+                                                               autoOpen: false,
+                                                               open: function (event, ui) {
+                                                               $(this).parent().css("z-index", "999999");
+                                                               $(".ui-dialog-titlebar-close").hide();
+                                                               $(".ui-dialog-titlebar").hide();
+                                                               }
+                                                               });
+                                      
+                                      
+                                      $("#trasEfectivo").dialog({
+
+                                                                width:dWidth,
+                                                                height: dHeight,
+                                                                modal: true,
+                                                                autoOpen: false,
+                                                                open: function (event, ui) {
+                                                                $(this).parent().css("z-index", "999999");
+                                                                $(".ui-dialog-titlebar-close").hide();
+                                                                $(".ui-dialog-titlebar").hide();
+                                                                }
+                                                                });
+											$('.ui-dialog').css('background', 'white');
+                                            $("#trans1").show();
+                                            $("#trans2").show();
+                                      });
+
+
+
+   </script>
+
+   <!--script src="../site/js/server/bancomer.server.bcom.js"></script-->
+                    
+   <script src="../../../../../js/listaContratos.js"></script>
+   <script src="../../../../../js/tEfectivo.js"></script>
+   <script src="../../../../../js/bancomer.server.bcom.js"></script>
+   <script src="../site/js/services/bancomer.services.bcom.js"></script>
+   <script src="../site/js/tests/bancomer.tests.bcomservices.js"></script>
+
+	<script>
+
+	   $(function () { 
+           $.support.cors = true;
+
+           //Version
+           //$("#menuVersion").html('v'+VERSION);
+
+           BANCOMER.CULTURETEXT = new Polyglot({
+               phrases: locale
+           }); 
+
+           var params = { os: os, server: server, streaming: streaming, sid: sid, protocol: protocol, accounts: accounts, settings: {language: language, thousand: thousand, decimal: decimal, gmt: gmt}};
+
+           console.log('--> WEBTRADER - parametros de entrada', JSON.stringify(params));
+
+           BANCOMER.Launcher = new BANCOMER.Launcher.Main(params);
+
+           if (os === 'android' || os === 'ios') {
+               BANCOMER.Launcher.enter();
+           } else {
+               document.addEventListener('deviceready', BANCOMER.Launcher.enter(), false);
+           }           
+	   });        
+	</script>
+</div>
+</div>
+        
+        
+        <div id="dialogPDF">
+            <img alt="Cerrar" class="botonCierre" style="float:right;" src="" onClick="cierraDialog('#dialogPDF');">
+                <div id="dialContainer" class="printContainer overflowS">
+                    <!--object id="objectPDF" data="" type="application/pdf" height="500" width="800"></object-->
+                    <iframe id="objectPDF"  style = "width:100% !important; height:479px !important; overflow-y: hidden !important;"  allowfullscreen="" webkitallowfullscreen=""></iframe>
+              </div>
+</div>
+
+<div id="envioCorreo">
+    <img alt="Cerrar" class="botonCierre" style="float:right;" src="" onClick="cierraDialog('#envioCorreo');">
+    <div id="wCorreo">
+        <div class="wt_title">
+            <span id="ifb-txtTitSup">Enviar correo electrónico</span>
+        </div>
+        <div id="bCorreo" class="cCorreo">
+            <table class="tCorreo">
+                <tr>
+                    <td class="derecha">Correo electrónico del destinatario:</td>
+                    <td class="izquierda"><input type="email" id="wt_email" class="wt_txCorreo" ></td>
+                </tr>
+                <tr>
+                    <td class="derecha">Mensaje:</td>
+                    <td class="izquierda"><textarea id="wt_txtCorreo" class="wt_txCorreo" rows="4" cols="39"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="derecha">Enviarme una copia del aviso a mi correo electrónico:</td>
+                    <td class="izquierda">
+                            <input type="checkbox" value="true" id="chkCORREO" name="check" class="wt_txCorreo" />
+                            <label for="chkCORREO"></label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="wt_btnContenedor" align="center" >
+            <input type="button" id="wt_btnOperacion" class="wt_boton" value="Enviar Correo" />
+        </div>
+    </div>
+    <script>
+        $( "#wt_btnOperacion" ).on( "click", function() {
+            var valWTCorreo = $("#wt_email").val();
+            var valWTMsg = $("#wt_txtCorreo").val();
+            var valWTCopa = $("#chkCORREO:checked").val();
+            if(valWTCopa == 'true'){
+            }else{    valWTCopa = 'false';}
+            if(valWTMsg == '' || valWTCorreo == ''){
+                parent.loginDelegate.showAlert("Aviso\n", "Estimado cliente, favor de ingresar los datos solicitados.", parent.constants.ALERT_BUTTON_OK);
+            }else{
+                expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                if ( !expr.test(valWTCorreo) ){
+                    parent.loginDelegate.showAlert("Aviso\n", "Estimado cliente, favor de ingresar una cuenta de correo válida.", parent.constants.ALERT_BUTTON_OK);
+                }else{
+                    console.log("wt_email "+ valWTCorreo);
+                    console.log("wt_txtCorreo "+ valWTMsg);
+                    console.log("chkCORREO:checked "+ valWTCopa);
+                    console.log("envioCancelar: "+ envioCancelar);
+                    parent.loginDelegate.wtenvioEmail(valWTCorreo, valWTMsg, valWTCopa, envioCancelar,function (jsonResponse){
+                        //cierraDialog('#envioCorreo');
+                        //console.log("LU_DESPUES_ENVIO");
+                        console.log("LU_sessionStorage.okEC: ",sessionStorage.okEC);
+                        if(sessionStorage.okEC == 'true'){
+                            var jsonObject = JSON.parse(jsonResponse);
+                            sessionStorage.exitoEnvioMailCompraVenta = jsonObject.respuesta.exitoEnvioMailCompraVenta;
+                            sessionStorage.exitoEnvioMailCancelacion = jsonObject.respuesta.exitoEnvioMailCancelacion;
+                            console.log("LU_sessionStorage.exitoEnvioMailCancelacion: ",sessionStorage.exitoEnvioMailCancelacion);
+                            console.log("LU_sessionStorage.exitoEnvioMailCompraVenta: ",sessionStorage.exitoEnvioMailCompraVenta);
+                            if(sessionStorage.exitoEnvioMailCompraVenta == 'true' || sessionStorage.exitoEnvioMailCancelacion == 'true'){
+                                parent.loginDelegate.showAlert("Aviso\n", "Estimado cliente, el comprobante se ha enviado correctamente.", parent.constants.ALERT_BUTTON_OK);
+                            }else{
+                                parent.loginDelegate.showAlert("Aviso\n", "El correo no se ha enviado correctamente.", parent.constants.ALERT_BUTTON_OK);
+                                envioCont = 0;
+                            }
+                        }else{
+                            envioCont = 0;
+                            console.log("LU_envioCont: ",envioCont);
+                        }
+                        cierraDialog('#envioCorreo');
+                        $('#wt_email').val("");
+                        $('#wt_txtCorreo').val("");
+                        $('#chkCORREO').prop('checked', false);
+                    });
+                }
+            }
+        });
+    </script>
+   
+
+</div>
+
+<div id="trasEfectivo">
+    <!--div class="floatButton"-->
+        <img alt="Cerrar" id="btnCerrar" class="botonCierre" src="" onClick="cierraDialog('#trasEfectivo');">
+        <img alt="Regresar" id="wt_btnRegresar" class="botonCierre" src="" onClick="regresar();">
+    <!--/div-->
+    <div id="wt">
+        <div>
+            <div class="wt_title">
+                <i class="wt_icoTitle"></i> - <span id="ifb-txtTitSup">Transferir efectivo</span>
+            </div>
+        </div>
+        <div id="wt_container1">
+            <div id="wt_col1">
+                <div id="wt_colCabecera">Contrato</div>
+                <div id="wt_contenedorPat" class="wt_contenedorPatE"></div>
+            </div>
+            <div id="wt_col2">
+                <div id="trans1" class="trans1"> </div>
+                <div id="wt_colCabecera">Origen</div>
+                <div id="wt_contenedorMXP" class="wt_contenedorMXPE"></div>
+            </div>
+            <div id="wt_col3">
+                <div id="trans2" class="trans2"> </div>
+                <div id="wt_colCabecera">Destino</div>
+                <div id="wt_contenedor" class="wt_contenedorE">
+                    <table id="wt_tblOperacion">
+                        <tbody>
+                            <tr>
+                                <td><label id="lbOper"></label></td>
+                                <td><label id="lbCtaOper"></label></td>
+                            </tr>
+                            <tr>
+                                <td align="center" colspan="2">
+                                   	<div align="center" class="wt_importe">
+                                       	<br />
+                                       	<label class="wt_pImporte">Importe</label>
+                                       	<br />
+                                       	<br />
+                                       	<input type="tel" id="wt_txImporte" 
+                                        onblur="validaImporte(this.value);" onChange="validaImporte(this.value);"  style="text-align:center;"/>
+                                       <!-- 	onfocus="this.value = (this.value=='$0.00') ? '' : this.value" onblur="this.value = (this.value=='') ? '$0.00' : this.value"/ -->   <!-- Formato caja texto -->
+                                   	</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label id="lbOper">Fecha de operación:</label></td>
+                                <td><label id="lbfecha"></label></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="background:#f0f9fe">
+                                    <div id="msjTabla" style="padding-left:20px">
+                                      <span>
+                                        <i class="wt_icoMsg"></i>
+                                      </span>
+                                        <span id="msjConfirm" style="padding-left:2px">
+                                            Al oprimir "Confirmar" se aplicar&aacute; tu operaci&oacute;n
+                                        </span>
+                                    </div>
+                                    <input type="hidden" id="claveOperaciones" name="claveOperaciones" value="00000000" />
+                                    <input type="hidden" id="hFecha" name="fecha" value="" />
+                                    <input type="hidden" id="idCuentaAbono" name="idCuentaAbono" value="" />
+                                    <input type="hidden" id="idCuentaCargo" name="idCuentaCargo" value="" />
+                                    <input type="hidden" id="CuentaAbono" name="CuentaAbono" value="" />
+                                    <input type="hidden" id="CuentaCargo" name="CuentaCargo" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div id="wt_btnContenedor" align="center" >
+                                        <input type="button" id="btnOperacion" class="wt_boton" value="Confirmar" onclick="ejecutaOperacion()" />
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wt_Comprobante">
+        <div>
+            <div id="boletaReceipt" class="wt_boletaTE">
+
+           <!-- logotipo + btn cerrar -->
+                <div class="contLogo">
+                    <div class="wt_logo"></div>
+                    <div align="right"><label id="lblNombreCliente"></label></div>
+                    <div class="userName"></div>
+                </div>
+
+                <!-- titular -->
+                <section class="contTit01">
+                    <h3 class="wt_txtBlue">Transferir - Efectivo</h3>
+                </section>
+
+                <section class="contTxt01">
+                    <div class="txt01">Comprobante</div><br>
+                </section>
+
+                <!-- tabla datos -->
+                <section class="wt_datosBoleta">
+                    <div>
+                        <table class="wt_tblDataBoleta" cellpadding="0" cellspacing="0" border="0">
+                            <tbody>
+                            <tr>
+                                <td class="wt_ifb-alignRight">Contrato:</td>
+                                <td class="wt_ifb-alignLeft"><label id="lbContrato"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="wt_ifb-alignRight">Cuenta de retiro:</td>
+                                <td class="wt_ifb-alignLeft"><label id="lbCtaRetiro"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="wt_ifb-alignRight">Cuenta destino:</td>
+                                <td class="wt_ifb-alignLeft"><label id="lbCtaDestino"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="wt_ifb-alignRight">Importe:</td>
+                                <td class="wt_ifb-alignLeft wt_txtBlue">$&nbsp;<label id="lbImporte"></label></td>
+                            </tr>
+                            <tr>
+                                <td class="wt_ifb-alignRight">Fecha de operaci&oacute;n:</td>
+                                <td class="wt_ifb-alignLeft"><label id="lbFechOp"></label></td>
+                            </tr>
+
+                            <tr>
+                                <td class="wt_ifb-alignRight">Folio de operaci&oacute;n:</td>
+                                <td class="wt_ifb-alignLeft"><label id="lbFolio"></label></td>
+                            </tr>
+                           </tbody>
+                        </table>
+                    </div>
+                </section>
+
+<div class="pie" align="center">BBVA Bancomer, S.A., Instituci&oacute;n de Banca M&uacute;ltiple, Grupo Financiero BBVA Bancomer.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="example-popup" class="popup"></div>
+<div class="popup-overlay"></div>
+
+
+</body>
+
+<script>
+    /*** TRASPASO EFECTIVO ***/
+    function traspasoEfe() {
+document.getElementById('lblNombreCliente').innerHTML = JSON.parse(sessionStorage.jsonPosicion).posicionGlobal.nombre_usr;
+        $("#wt_listaD").remove();
+       // document.getElementById("wt_txImporte").value = "$0.00";
+        $("#wt_contenedorMXP").addClass("wt_contenedorMXPE");
+        $("#wt_contenedorMXP").removeClass("wt_contenedorMXPActivo");
+        $("#wt_contenedor").addClass("wt_contenedorE");
+        $("#wt_contenedor").removeClass("wt_contenedorActivo");
+        $("#lbCtaOper").text("");
+        $("#lbOper").text("");
+        
+        var objCtasMXP = JSON.parse(sessionStorage.jsonPosicion).posicionGlobal.asuntos.lista_cuentas_mxp;
+        console.log(objCtasMXP);
+        var objJSON = JSON.parse(sessionStorage.lstCtasPat);
+        console.log("Lista cuentas patrimoniales");
+        var lstCtas = [];
+        
+        for(elem in objJSON) { lstCtas.push(objJSON[elem]); }
+        
+        lstPat("wt_contenedorPat", lstCtas);
+        
+        $("#trasEfectivo").dialog("open");
+        $("#trasEfectivo").show();
+    }
+
+function validaCaracteresCorreo(e){
+    var keyCode = e.keyCode;
+    
+    if((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) ||(keyCode >= 48 && keyCode <= 57) || (keyCode == 45) || (keyCode == 95) || (keyCode == 46) || (keyCode == 64)){
+        console.log("KEYCODE "+keyCode);
+        return true;
+    }else{
+        console.log("KEYCODE 1"+keyCode);
+        return false;
+    }
+}
+
+
+function validaImporte(value){
+// Permite decimales tanto por . como por ,
+//var patron=new RegExp("^[0-9](\.)[0-9][0-9]?$");
+//var patron=new RegExp("[0-9]+([\.][0-9]{2})?$");
+
+var patron=new RegExp("[0-9]+([\.][0-9]{2})?$");
+
+if(value.search(patron)==0)
+{
+//alert ("OK");
+document.getElementById("btnOperacion").disabled=false;
+if (value.indexOf(".")==-1) {
+//alert (value+".00")
+value = value+".00"
+document.getElementById("wt_txImporte").value = value;
+//document.getElementById("boton").disabled=false;
+}
+} else {
+//alert ("Error");
+document.getElementById("btnOperacion").disabled=true;
+}
+}
+
+    </script>
+
+</html>

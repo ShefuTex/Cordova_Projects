@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title></title>
+            <meta name="description" content="">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                    
+                    <link rel="stylesheet" href="css/normalize.css">
+                        <link rel="stylesheet" href="css/1024x600.css" id="mainCss">
+                            <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+                            <script type="text/javascript" src="js/jquery/jquery-2.1.0.js"></script>
+                            <script type="text/javascript" src="phonegap.js"></script>
+                            <script type="text/javascript" src="js/BComTools.js"></script>
+                            <script type="text/javascript" src="js/BaseViewController.js"></script>
+                            <script type="text/javascript" src="js/BComViewsController.js"></script>
+                            <script type="text/javascript" src="js/Constants.js" charset="utf-8"></script>
+                            <script type="text/javascript" src="js/Accounting.js"></script>
+                            <script type="text/javascript" src="js/TransferirInterbancariaViewController.js"></script>
+                            <script type="text/javascript">
+                                
+                                $(document).ready(function () {
+                                                  
+                                                  $(document).on("click", ".transferir-cuentasbbva-slide", function () {
+                                                                 if ($("#chkCORREO").is(":checked")) {
+                                                                 $(".transferir-cuentasbbva-slide").css("background-color", "#00bf00");
+                                                                 } else {
+                                                                 $(".transferir-cuentasbbva-slide").css("background-color", "#ccc");
+                                                                 }
+                                                                 });
+                                                  
+                                                  });
+                                                  
+                                </script>
+                            
+                            </head>
+    <body onload="inicio()" class="ios-body-adaptader">
+        <div id="sombra" class="baseviewcontroller-loading-layer"></div>
+        <div id="transferir-cuentasbbva-div-principal">
+            <a href="" class="transferir-cuentasbbva-encabezado">- A otros bancos</a>
+       		<div class="transferir-cuentasbbva-div-clearfix">
+                <table style="padding: 0; border: 0; width: 100%;" class="transferir-cuentasbbva-tab">
+                    <tbody>
+                        <tr align="left">
+                            <td style="color: #0098e1;" width="50%">Enviar correo electrónico</td>
+                        </tr>
+                    </tbody></table>
+                <div class="transferir-cuentasbbva-div-clearfix">
+                    
+				    <table style="margin: 0px auto" class="envioMail">
+                        <tr align="right">
+                            <td >Correo electrónico del beneficiario:</td>
+                            	<td ><input id="txtCORREO" onkeypress="return validaCaracteresCorreo(event);" size="38px">
+                            </td>
+                        </tr>
+                        <tr align="right">
+                            <td>Mensaje:</td>
+                            <td><textarea id="txtMENSAJE" rows="4" cols="39"></textarea></td>
+                        </tr>
+                        <tr align="right">
+                            <td>Enviarme una copia del aviso a mi correo electrónico:</td>
+                            <td align="left">
+								<div class="transferir-cuentasbbva-slide">	
+									<input type="checkbox" value="None" id="chkCORREO" name="check" />
+									<label for="chkCORREO"></label>
+								</div>
+							</td>
+                        </tr>
+				    </table>
+                    
+                </div>
+            </div>
+        </div>
+	    <div class="transferir-cuentasbbva-div-botones">
+	    	<input type="button" class="transferir-cuentasbbva-boton-continuar" value="Continuar" onclick="enviarCorreo();"/>
+	    </div>        
+        <script type="text/javascript">
+            
+            function inicio(){
+                
+                loadDeviceCSS();
+                document.body.addEventListener('touchstart', function () { timerDelegate.resetTimerInactividad(); });
+                
+            }
+        
+        
+            </script>
+        
+    </body>
+</html>

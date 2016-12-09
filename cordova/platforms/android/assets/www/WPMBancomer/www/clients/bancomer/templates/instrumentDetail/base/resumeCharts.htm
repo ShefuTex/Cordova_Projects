@@ -1,0 +1,49 @@
+<%  
+    var instrument = model.models[0];
+    if (!instrument || !instrument.id) {
+        return;
+    }
+  
+%>
+  <!-- aquí están los gráficos y las pestañas-->
+  <table class="ifb-tableGraph" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tbody>
+      <tr>
+        <td class="contGraphMenu" colspan="2">
+          <ul>
+            <li class="active ifbEventTrigger" data-event="clickTabChart" data-type="intraday" ><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_ChartIntraday')%></li>
+            <li>|</li>
+            <li class="ifbEventTrigger name" data-event="clickTabChart" data-type="daily" ><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_ChartDaily')%></li>    
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="contGraph1">
+          <!-- graf -->
+          <div class="graphBox">
+            <div class="graph" id="chart<%=instrument.id.trim().replace(/ /g,'_')%>"></div>
+          </div>
+        </td>
+        <td class="contGraph2">
+          <!-- datos ult + fecha -->
+          <div class="graphData">
+            <div class="ult" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Last.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%= instrument.getLast({decimals: 3, zeroValue: ' '})%></div>
+            <div class="date" data-mv="<%=instrument.getDescriptorValue('MV')%>" data-descriptor="<%=IFB.Descriptors.Date.descriptor%>" data-type="date"><%=instrument.getDate()%></div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="contGraphMaxMin" colspan="2">
+          <!-- max + min -->
+          <ul>
+            <li class="title">Máx.52s</li>
+            <li class="max" data-descriptor="<%= IFB.Descriptors._52WeeksHigh.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=" "><%= instrument.get52WeeksHigh({decimals: 3, zeroValue: ' '})%></li>
+            <li class="date sep" data-descriptor="<%= IFB.Descriptors._52WeeksDateHigh.descriptor %>" data-type="date" data-zeroValue="">(<%= instrument.get52WeeksDateHigh()%>)</li>
+            <li class="title">Mín.52s</li>
+            <li class="min" data-descriptor="<%= IFB.Descriptors._52WeeksLow.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%= instrument.get52WeeksLow({decimals: 3, zeroValue: ' '})%></li>
+            <li class="date" data-descriptor="<%= IFB.Descriptors._52WeeksDateLow.descriptor %>" data-type="date" data-zeroValue="">(<%= instrument.get52WeeksDateLow()%>)</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>

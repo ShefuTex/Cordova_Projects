@@ -1,0 +1,53 @@
+<%
+var instrumentList = model.models;
+if (!instrumentList) {
+    return;
+}
+
+var decimals = '2';
+var numVals = 4;
+var topFlopCls = ''
+var topFlopArrowCls = ''
+var mv = '';
+var emisora = '';
+var serie = '';
+var tradableCls = '';
+	_.each(instrumentList, function (instrument, index) {
+		emisora = instrument.getDescriptorValue(IFB.Descriptors.Emisora.descriptor);
+		serie =  instrument.getDescriptorValue(IFB.Descriptors.Serie.descriptor);
+
+		mv = instrument.getDescriptorValue("MV");
+		tradableCls = BANCOMER.Utils.Trader.isTradable(mv) ? '' : 'hidden';
+		topFlopCls = instrument.getTopFlopCls(IFB.Descriptors.Trend.descriptor);
+		topFlopArrowCls = instrument.getTopFlopCls(IFB.Descriptors.Trend.descriptor, ['arrowBigVTop', 'arrowBigVFlop', 'arrowBigVEqual']);
+%>	
+		<div class="shares">
+			<div class="<%=topFlopArrowCls%>" data-type="silent" data-descriptor="<%=IFB.Descriptors.Trend.descriptor%>" data-mv="<%=instrument.getDescriptorValue('MV')%>"></div>
+			<div class="sharesRow01">
+				<div class="tit"><a href="#!/lightbox/instrumentDetail/<%=instrument.id%>"><%=instrument.getDescriptorValue(IFB.Descriptors.IFBShortName.descriptor)%></a></div>
+			</div>
+			<div class="sharesRow02">
+				<div class="buySellButton <%=tradableCls%>"><a href="#!/lightbox/boleta/<%=instrument.id%>/<%=(emisora + ' '+ serie)%>/Compra" class="icoBuy"><%=BANCOMER.CULTURETEXT.t('iconBuy')%></a></div>
+				<div class="buySellButton <%=tradableCls%>"><a href="#!/lightbox/boleta/<%=instrument.id%>/<%=(emisora + ' '+ serie)%>/Venta" class="icoSell"><%=BANCOMER.CULTURETEXT.t('iconSell')%></a></div>
+				<div class="difP <%=topFlopCls%>"data-mv="<%=mv%>" data-descriptor="<%=IFB.Descriptors.ChangePercent.descriptor %>" data-type="number" data-decimals="2" data-suffix="%" data-zeroValue=""><%=instrument.formatAsNumber(IFB.Descriptors.ChangePercent.descriptor, decimals)%>%</div>
+            </div>
+		</div>
+<%
+	});
+
+	for (i = 0; i < (numVals - instrumentList.length); i++) {
+%>
+		<div class="shares">
+			<div class="arrowBigVEqual"></div>
+			<div class="sharesRow01">
+				<div class="tit"><a></a></div>
+			</div>
+			<div class="sharesRow02">
+				<div class="buySellButton ifb-hide"><a class="icoBuy"></a></div>
+				<div class="buySellButton ifb-hide"><a class="icoBuy"></a></div>
+				<div class="difP"></div>
+			</div>
+        </div>
+<%
+	}
+%>

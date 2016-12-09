@@ -1,0 +1,61 @@
+<%
+	var instruments = model.models;	
+    var sharesCls = '';
+    var dateCls = '';
+    var timeCls = '';
+    var typeCls = '';
+
+    if (!instruments){
+        return;
+    }
+
+    var operationText = (model.options.viewOptions.operacion === 'V') ? BANCOMER.CULTURETEXT.t('field_Order_OperationType_Sell') : BANCOMER.CULTURETEXT.t('field_Order_OperationType_Buy')
+%>
+
+<div class="ifb-PopUp ordEje">
+    <div class="ifb-contEjecOrd">            
+        <section class="contTop">
+            <h3>Ejecuciones de la orden <span><%=model.options.serviceBCOMParams.params.data2%></span> - <span><%=moment(model.options.serviceBCOMParams.params.data3, 'YYYYMMDD').format('DD/MM/YYYY')%></span></h3>
+            <a class="icoCloseWindow"></a>
+        </section>
+
+        <!-- tabla mejores posturas -->
+        <section class="contEjecutionOrd">
+            <div class="contEjecutionTbl" id="heightEjecutionTable">
+                <table class="ifb-popupTable" id="orderDetailTable" class="tblEjecution" cellpadding="0" cellspacing="0" border="0"  width="100%">
+                    <thead>
+                    <tr>
+                        <th><%=BANCOMER.CULTURETEXT.t("header_OrderDetail_Titulos")%></th>
+                        <th><%=BANCOMER.CULTURETEXT.t("header_OrderDetail_Fecha")%></th>
+                        <th><%=BANCOMER.CULTURETEXT.t("header_OrderDetail_Hora")%></th>
+                        <th><%=BANCOMER.CULTURETEXT.t("header_OrderDetail_Detalle")%></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+    <%	
+    	_.each(instruments, function (order) {
+            sharesCls = (order.getTitulos() === '') ? 'ifb-noData' : '';
+            dateCls = (order.getFecha() === '') ? 'ifb-noData' : '';
+            timeCls = (order.getHora() === '') ? 'ifb-noData' : '';
+            typeCls = (order.getTipo() === '') ? 'ifb-noData' : '';
+    %>                    	
+                    <tr>
+                        <td class="shares <%=sharesCls%>"><%=order.getTitulos()%></td>
+                        <td class="ifb-alignCenter <%=dateCls%>"><%=order.getFecha()%></td>
+                        <td class="ifb-alignCenter <%=timeCls%>"><%=order.getHora()%></td>
+                        <td class="ifb-alignLeft <%=typeCls%>"><%=order.getTipo()%></td>
+                    </tr>
+    <%
+    	});
+    %>	                    
+                   </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- txt inferior + btn cerrar -->
+        <section class="contBottom">
+            <h3><%=operationText%> de <span><%=model.options.viewOptions.emisora%></span> <span><%=model.options.viewOptions.serie%></span></h3>
+        </section>
+    </div>
+</div>

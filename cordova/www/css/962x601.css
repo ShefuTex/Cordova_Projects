@@ -1,0 +1,375 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html, button, input, select, textarea { color: #333; font-family: "Myriad Pro",Helvetica, Arial, sans-serif; }
+html { font-size: 1em; line-height: 1.4; }
+
+::-moz-selection { background: #b3d4fc; text-shadow: none;}
+::selection { background: #b3d4fc; text-shadow: none;}
+audio, canvas, img, video { vertical-align: middle; }
+fieldset { border: 0; margin: 0; padding: 0; }
+textarea { resize: vertical; }
+
+hr { border:0; margin: 20px 0; height:0; border-bottom:1px solid #DEDEDE;}
+body { overflow: hidden; }
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden { display: none !important; visibility: hidden; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* ==========================================================================
+   Header classes
+   ========================================================================== */
+#cabeza { background:#FFF;  width:1024px; height:42px; }
+#todo.sideMenuShowing #cabeza { width:940px; }
+#logo {display:block;  background:url(../img/962x601/An_Logotipo.png) no-repeat center; width:240px; height:42px; text-indent:-99999px; }
+#logo { float:left;}
+
+/*************************** Inicio Login *************************/
+#login-encabezado { background:#FFF;  width:auto; height:42px;}/*cabeza*/
+#login-logo {display:block; background:url(../img/962x601/An_Logotipo.png) no-repeat center; width:240px; height:42px; text-indent:-99999px; float:left; } /*logo*/
+
+#cuerpo-login { background:url(../img/962x601/An__Bg_Pub.png); background-size: 100% 100%;  height:478px !important; width:962px; padding-top:42px;}/*cuerpo-login*/
+#loginPrincipal #bcom-principal { background:url(../img/962x601/An_Box.png) no-repeat center; width:384px; height:250px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:85px; display:block}/*loginPrincipal*//*bcom*/
+#loginPrincipal #bcom-secundario { background:url(../img/962x601/An_Box_Token.png) no-repeat center; width:384px; height:304px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:30px; display:none} /*loginPrincipal*//*bcom2*/
+#loginSecundario #bcom-principal { background:url(../img/962x601/An_Box.png) no-repeat center; width:384px; height:250px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:85px; display:none;}/*loginSecundario bcom*/
+#loginSecundario #bcom-secundario { background:url(../img/962x601/An_Box_Token.png) no-repeat center; width:384px; height:304px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:30px; display:block}/*loginSecundario bcom2*/
+#bcom-principal .link { margin-top: 7px; }
+#bcom-secundario .link { margin-top: 1px; }
+
+.tab-icon {font-weight:normal; color:#1A68AF; background:url(../img/962x601/An_Ic_Tab.png) no-repeat; font-size:29px; padding: 1.5% 0 0 40px; margin-bottom:4.7%} /*tab-icon*/
+.tab-icon h1{background:url(../img/962x601/An_Ic_Tab.png) no-repeat; font-size:29px; padding: 6px 0 0 40px; margin-bottom:28px;} /*tab-icon*/
+.login-input-datos {border:0; margin:0; color:#BDBDBD; width:350px; height:36px; padding:0 17px; background:url(../img/962x601/An_Input.png) no-repeat; margin-bottom:10px; font-size:18px;} /*full-input*/
+.login-boton-entrar { padding:0; border:0; margin:0; color:#FFF; width:384px; height:36px; padding:0; background:url(../img/962x601/An_Btn.png) no-repeat; margin-bottom:20px; font-size:18px;}/*btn-submit*/
+
+.link { color:#B95974; text-align:center; text-decoration:none; display:block; font-size:18px;}/*link*/
+.usuario-login { font-weight:normal; font-size:20px; color:#4C524C;}/*usuario-login*/
+.usuario-log-datos img { float:left; margin-right:20px; -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.3); box-shadow: 0 0 3px 3px rgba(0,0,0,.3); }/*usuario-log-datos*/
+.usuario-log-datos{height:62px;margin-top:10px; margin-bottom:10px; font-size:16px; color:#4C524C;} /*usuario-log-datos*/
+#login-nav { height:53px; background:url(../img/962x601/An_Bg_Suite.png) no-repeat;}/*login-nav*/
+
+#pie {width:962px; height:40px; background:#969696; text-align:center; position:relative; text-shadow: 1px 1px 2px #030303; }/*pie*/
+.contactanos { font-size:16px; background: url(../img/962x601/An_Ic_Tel.png) left no-repeat; padding-left:30px; line-height:40px;  color:#FFF; display:inline-block;}/*contactanos*/
+.ver { font-size:12px; top:33%; right:15px; color:#FFF; position:absolute;}/*ver*/
+
+#ayudaToken { position: absolute; left: 0px; top: 0px; outline: none; z-index: 999998; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); }
+#ayudaDP720 { width:100%; height:100%; background: url(../img/962x601/An_token_dp270.png) center center no-repeat; }
+#ayudaSOFT  { width:100%; height:100%; background: url(../img/962x601/An_token_softoken.png) center center no-repeat; }
+#ayudaOCRA  { width:100%; height:100%; background: url(../img/962x601/An_token_ocra.png) center center no-repeat; }
+
+.login-icono-invitado { width: 30px; height: 30px; margin-left: 350px; min-width: 0px; position: absolute; margin-top: 20px; }
+
+/*************************** Fin Login *************************/
+
+#nav-lateral { width:14px; height:564px; background: url(../img/962x601/An_Bg_Menu_Off.png) center right no-repeat; position:absolute; left:0; z-index: 11;}
+#menu_principal{ position:absolute; top:0px; left:0px; width:40px; height:564px; z-index:99; }
+
+.datos-usuario { float:right; font-size:11px; vertical-align:middle; color:#0098E2; margin-top:4px; margin-right:20px}
+.datos-usuario img { vertical-align:middle; margin-right:20px;-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3);
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.3);-webkit-border-radius: 6px; border-radius: 6px;}
+.miniAvatar { background:url(../img/962x601/foto-top.png) no-repeat; width:27px; height:27px; vertical-align:middle; margin-right:20px; -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3); box-shadow: 0 0 2px 2px rgba(0,0,0,.3); -webkit-border-radius:6px; border-radius: 6px;  display:inline-block; }
+.pregunta { background:url(../img/962x601/An_Ic_Ayuda.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.contacto { background:url(../img/962x601/An_Ic_Tels.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.salir { background:url(../img/962x601/An_Btn_Salir.png) no-repeat center; display:inline-block; width:80px; height:20px; vertical-align:middle; text-align:center; line-height:20px; color:#fff; text-decoration:none;  vertical-align:middle; margin-left:10px;}
+.ultima-sesion { font-size:9px; color:#333; text-align:right; margin-top:2px }
+
+/*Encabezado para webtrader*/
+#cabeza-webtrader { background:#FFF; width:1024px; }
+#todo.sideMenuShowing #cabeza-webtrader { width:940px; }
+#logo2 { background:url(../img/962x601/An_Logotipo.png) no-repeat center; width:240px; height:42px; text-indent:-99999px; display:block; float:left; }
+.datos-usuario2 { float:right; font-size:11px; vertical-align:middle; color:#0098E2; margin-top:4px; margin-right:20px}
+.ifb-icoContract{ background:url(../img/962x601/icoContract.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.correo { background:url(../img/962x601/An_Ic_Correo.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.ayuda { background:url(../img/962x601/An_Ic_Ayuda2.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.engrane { background:url(../img/962x601/An_Ic_Engrane.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+
+#todo {  height:100%; width:1024px; position:relative}
+#contentFrame { width:1024px; height:490px; border:none; }
+
+#img-slider { width:517px; height:431px; float:left; margin-left:35px; padding:1px 3px 3px 1px; background-size:100% auto} 
+
+#todo #btns-lateral{ background:#164A8C; width:80px; height:562px; padding:1px 0; display:none; }
+#btns-lateral a { width:80px; height:80px; text-indent:-99999px; display:block; margin:10px 0} 
+.lateral-inicio {background:url(../img/962x601/An_Ic_Left_Inicio_Off.png) no-repeat; }
+.lateral-cuentas {background:url(../img/962x601/An_Ic_Left_Cuentas_Off.png) no-repeat; }
+.lateral-transferir {background:url(../img/962x601/An_Ic_Left_Transferir_Off.png) no-repeat; }
+.lateral-invertir {background:url(../img/962x601/An_Ic_Left_Invertir_Off.png) no-repeat; }
+.lateral-trader {background:url(../img/962x601/An_Ic_Left_Trader_Off.png) no-repeat; }
+.lateral-administrar {background:url(../img/962x601/An_Ic_Left_Admin_Off.png) no-repeat; }
+
+.lateral-inicio.lat-selec {background:url(../img/962x601/An_Ic_Left_Inicio_On.png) no-repeat; }
+.lateral-cuentas.lat-selec {background:url(../img/962x601/An_Ic_Left_Cuentas_On.png) no-repeat; }
+.lateral-transferir.lat-selec {background:url(../img/962x601/An_Ic_Left_Transferir_On.png) no-repeat; }
+.lateral-invertir.lat-selec {background:url(../img/962x601/An_Ic_Left_Invertir_On.png) no-repeat; }
+.lateral-trader.lat-selec {background:url(../img/962x601/An_Ic_Left_Trader_On.png) no-repeat; }
+.lateral-administrar.lat-selec {background:url(../img/962x601/An_Ic_Left_Admin_On.png) no-repeat; }
+
+/* ==========================================================================
+   AGREGADO
+   ========================================================================== */
+#nav-administrar a { padding-left:30px; padding-right:30px}
+   /* ==========================================================================
+   END
+   ========================================================================== */
+.nb-cuentas { width:128px; height:80px; float:left;display:block; background:url(../img/962x601/An_Ic_Bottom_Miscuentas_Off.png) no-repeat center top;}
+.nb-estado { width:128px; height:80px; float:left;display:block; background:url(../img/962x601/An_Ic_Bottom_Estado_Off.png) no-repeat center top;}
+.nb-comprobantes { width:128px; height:80px; float:left;display:block; background:url(../img/962x601/An_Ic_Bottom_Comprobantes_Off.png) no-repeat center top;}
+.nb-compguardados { width:128px; height:80px; float:left;display:block; background:url(../img/962x601/An_Ic_Bottom_Guardados_Off.png) no-repeat center top;}
+
+body { overflow: hidden; }
+
+#contentFrame { width:1024px; height:490px; border:none; }
+
+.miniAvatar { background:url(../img/962x601/foto-top.png) no-repeat; width:27px; height:27px; vertical-align:middle; margin-right:20px; -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3); box-shadow: 0 0 2px 2px rgba(0,0,0,.3); -webkit-border-radius:6px; border-radius: 6px;  display:inline-block; }
+.cuerpo-admin { background:url(../img/962x601/An_Ic_Administrar.png) no-repeat left; height:24px; margin:8px 0; padding-left:35px; margin-left:19px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:24px}
+
+.titulo-administrar { font-weight:normal; margin:15px 0; color:#006DC0; font-size:18px; padding-left: 19px}
+.eliminar-tab { font-size:16px; border-collapse: separate; border-spacing: 15px; }
+.formulario-btn { background:url(../img/962x601/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}
+
+.nb-eliminar { width:128px; height:80px; float:left;display:block; float:left;display:block; background:url(../img/962x601/An_Ic_Bottom_Eliminar_Off.png) no-repeat center top;}
+
+/**Agregado**/
+.nb-eliminar:ACTIVE{ width:128px; height:80px; float:left;display:block; float:left;display:block; background:url(../img/962x601/An_Ic_Bottom_Eliminar_On.png) no-repeat center top;}
+#depurar_0{-webkit-transform: scale(1.5,1.5);}
+#depurar_1{-webkit-transform: scale(1.5,1.5);}
+.div-btns-eliminar{padding-top:230px;}
+#contenedor-admin { padding-left:0px; width:1000px;}
+.inicio-selected .lateral-inicio { background:url(../img/962x601/An_Ic_Left_Inicio_On.png) no-repeat; }
+.cuentas-selected .lateral-cuentas {background:url(../img/962x601/An_Ic_Left_Cuentas_On.png) no-repeat; }
+.transferir-selected .lateral-transferir {background:url(../img/962x601/An_Ic_Left_Transferir_On.png) no-repeat; }
+.invertir-selected .lateral-invertir {background:url(../img/962x601/An_Ic_Left_Invertir_On.png) no-repeat; }
+.trader-selected .lateral-trader {background:url(../img/962x601/An_Ic_Left_Trader_On.png) no-repeat; }
+.administrar-selected .lateral-administrar {background:url(../img/962x601/An_Ic_Left_Admin_On.png) no-repeat; }
+
+
+/* ####################################################################################################################################### */
+/* Se debe de ajustar el valor de la propiegag height, los demas valores estan basados en la clase: sec2 */
+.sec2-mis-cuentas {  
+    overflow:auto;
+    height:332px;
+}
+
+.sec2-mis-cuentas-bullet {
+    background: white;
+    /* Ajustar al tama�o requerido, el alto y el ancho son el mismo */
+    height: 7px;
+    width: 7px;
+    border: 1px solid #939494;
+    /* El radio es igual a la mitad del alto/ancho mas uno, no se tienen en cuenta decimales. */
+    border-radius: 6px;
+    /* La mitad del alto/ancho */
+    margin: 0px 5px;
+    display:inline-block;
+}
+
+.sec2-mis-cuentas-bullet.selected {
+    background: #939494;
+}
+
+.sec2-mis-cuentas-bullet-container {
+    margin-top:11px;
+    margin-left:139px;
+}
+
+.sec2Table.visible {
+    display:block;
+}
+
+.cargo{color:#2969B7;}
+.cargo.selec{color:red;}
+
+
+/*Submenu mis cuentas*/
+
+/*Estilos para boton Opciones*/
+#nav-bajo-scroll-pane { position: absolute; bottom: 0px; left: 0px; height: 15%; width: 100%; width:1024px; opacity:0.1; display:none;}
+
+.android-options-menu-pane { display:table; table-layout: fixed; position: absolute; width: 100%; height: 15%;
+    left: 0px; bottom: 0px; background-color: #1a1a1a; box-shadow: rgba(26,26,26,1) 0px 0px 9px 5px; }
+.android-options-menu-pane-hidden { display:none; }
+.android-options-menu-pane div { display:table-cell; border: 1px solid white; border-width: 0px 1px 0px 0px; padding-top: 0.5%;
+        padding-left:13%; }
+.android-options-menu-pane div:last-child { border-width: 0px; }
+.android-options-menu-pane div a { width: 81px; height: 69px; display: inline-block; }
+.emailMenu a { background: url(../img/962x601/An_Btn_Correo.png) no-repeat; }
+.emailMenuHidden .emailMenu { display:none; }
+.frecuenteMenu a { background: url(../img/962x601/An_Btn_Frecuente.png) no-repeat; }
+.frecuenteMenuHidden .frecuenteMenu { display:none; }
+.rapidaMenu a { background: url(../img/962x601/An_Btn_Rapida.png) no-repeat; }
+.rapidaMenuHidden .rapidaMenu { display:none; }
+.rango { margin-left:13%; width:83%; }
+/*.mis-cuentas-table { width: 620px; height: 130px; margin-left: -0px; }*/
+.mis-cuentas-table { width: 620px; height: 130px; margin-left: 16px; }
+
+div#todo.sideMenuShowing {  height:564px; width:940px; position:relative; padding-left:84px;}
+div#todo.sideMenuShowing #img-slider { width:517px; height:431px; float:left; margin-left:35px; padding:1px 3px 3px 1px; background-size:100% auto} 
+div#todo.sideMenuShowing #nav-lateral { width:94px;}
+div#todo.sideMenuShowing #btns-lateral{ background:#164A8C; width:80px; height:562px; padding:1px 0; display:block; }
+
+/*Estilos para comprobantes*/
+.comprobante { -webkit-transition: all 0.5s ease; width: 92px; height: 119px; position: absolute; top: 200px; left: 141px; background-size: 100%; }
+#comprobanteFrame{ position: absolute; left: 0px; top: 0px; outline: none; z-index: 999998; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4);}
+#imagenComprobante{ width:100%; height:100%; background: url(../img/comprobante.png) center center no-repeat; }
+
+/* Solo para Android, no incluir en iOS */
+.android-hidden {
+    display:none;
+}
+
+
+
+.floatButton{
+  left: 76%;
+  top: 0px;
+  position:absolute;
+  z-index: 20;
+  width: 50px;
+  height:50px;
+  /*border: 2px solid #ccc;*/
+  background: white url(../img/962x601/an_Ic_Share_Guardar_Off2.png) no-repeat center top; 
+}
+
+.floatButton:active{
+  background: white url(../img/962x601/an_Ic_Share_Guardar_On2.png) no-repeat center top;
+}
+
+.andOn{
+  background: white url(../img/962x601/an_Ic_Share_Guardar_On2.png) no-repeat center top;
+}
+
+.andOff{
+  background: white url(../img/962x601/an_Ic_Share_Guardar_Off2.png) no-repeat center top;
+}
+
+
+
+
+/******************** Inicia BaseViewController ********************/
+.baseviewcontroller-loading-layer {
+    position: absolute;
+    /*width: 100%;*/
+   /* height: 100%;*/
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+
+.baseviewcontroller-loading-spinner {
+    width:100%;
+    height:100%;
+    background: url(../img/962x601/loading.gif) center center no-repeat;
+}
+/******************** Fin BaseViewController ********************/
+
+/* ==========================================================================
+  Modulo posisición global
+   ========================================================================== */
+.posicionglobal-cabecera{ background:url(../img/962x601/An_Ic_Inicio.png) no-repeat left; height:24px; margin:10px 0; padding-left:35px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none;}
+#posicionglobal-contenedor { padding-left:19px; width:auto;}
+
+#posicionglobal-texto-lateral { margin-left:35px; width:297px; float:left}
+.posicionglobal-clearfix:before, .posicionglobal-clearfix:after { content: " "; display: table; }
+.posicionglobal-clearfix:after { clear: both; }
+.posicionglobal-clearfix { *zoom: 1; }
+.posicionglobal-texto-cuenta { font-size:14px; color:#676767; float:left; margin-right:10px; }
+.posicionglobal-texto-cantidad { font-size:16px; color:#0098E0; float:right; }
+.posicionglobal-texto-cantidad.rosa { color:#D75A8A}
+#posicionglobal-info-cuentas { margin-bottom:10px; }
+
+   /*tablas*/
+
+/* Publicidad */
+#posicionglobal-img-slider { width:563px; height:431px; float:left; margin-left:35px; padding:1px 3px 3px 1px; position:relative;}
+#posicionglobal-img-slider.main-menu-visible { width:483px; }
+#img-publicidad { width: 100%; height: 100%; -webkit-box-shadow: 1px 1px 1px 1px #a9a9a9; }
+.posicionglobal-publicidad-bullet { background: white; height: 10px; width: 10px; border: 1px solid #939494; border-radius: 6px; margin: 0px 5px; display:inline-block; }
+.posicionglobal-publicidad-bullet.selected { background: #939494; }
+.posicionglobal-publicidad-bullet-container { position: absolute; display: inline-block; bottom: 3px; right: 3px; margin-right: 5px; }
+.posicionglobal-publicidad-image1 { background: url(../img/962x601/an_pub_1.png) no-repeat; display: inline-block; background-size: 100% 100%; }
+.posicionglobal-publicidad-image2 { background: url(../img/962x601/an_pub_2.png) no-repeat; display: inline-block; background-size: 100% 100%; }
+.posicionglobal-publicidad-image3 { background: url(../img/962x601/an_pub_3.png) no-repeat; display: inline-block; background-size: 100% 100%; }
+
+.posicionglobal-contenedor-cuenta { width:100%; display:table; }
+
+/** Mis Cuentas Posicion Global **/   
+
+
+ /* ==========================================================================
+  Modulo mis Cuentas
+   ========================================================================== */ 
+
+   
+
+
+/* ==========================================================================
+  Modulo mis Cuentas-comprobantesguardados
+ ========================================================================== */  
+/* ==========================================================================
+  Modulo  mis cuentas-estadocuenta
+ ========================================================================== */ 
+
+/* ==========================================================================
+  Modulo  mis cuentas-comprobantes
+ ========================================================================== */ 
+
+
+/* ==========================================================================
+  Modulo  Transferir
+ ========================================================================== */
+
+/*estilos para transferir.html*/
+
+/**************** Loading animation ****************/
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../img/962x601/loading.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+/**************** Loading animation ****************//* } */
+
+/********************************** Inicio Invertir *********************************/
+
+/* Fin Invertir Compra */
+
+/*Inicio Invertir Venta */
+
+/* Fin Invertir consulta */
+
+/********************************** Fin Invertir *********************************/
+
+/* ==========================================================================
+  Modulo administrar
+   ========================================================================== */
+
+   /* ==========================================================================
+  Modulo posisición global
+   ========================================================================== */
+ 

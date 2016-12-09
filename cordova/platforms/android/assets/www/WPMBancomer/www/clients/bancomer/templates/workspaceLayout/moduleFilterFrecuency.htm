@@ -1,0 +1,28 @@
+<%
+var checked = '';
+var idLabel = '';
+var suffix = '';
+var name = '';
+
+if (model && model.options) {
+    suffix = model.suffixCls || '';
+%>
+
+<div class="tooltip-<%=suffix%>-frecuencia">
+    <div class="arrow<%=suffix%>-frecuencia"></div>
+    <div class="data<%=suffix%>-frecuencia">
+
+    <%_.each(model.options, function (option, index){
+    checked = (option.key === model.checkedOption)?  'checked' : '';
+    idLabel = suffix + option.key +model.componentId;
+    name = model.componentId + suffix;
+    
+%>
+    <div class="ifb-radioButton">
+        <input id="<%=idLabel%>" class="radioButton ifbEventTrigger" data-event="clickOptionFilter" data-textkey="<%=option.textKey%>" type="radio" value="<%=option.value%>" name="<%=name%>" value="<%=option.value%>" data-listen="change" <%=checked%>>
+        <label class="radioButtonLabel" for="<%=idLabel%>"><%=BANCOMER.CULTURETEXT.t(option.textKey)%></label>
+    </div>
+    <%});%>
+<%}%>
+    </div>
+</div>

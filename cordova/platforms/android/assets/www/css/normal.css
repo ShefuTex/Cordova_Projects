@@ -1,0 +1,1367 @@
+/**==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html, button, input, select, textarea { color: #333; font-family: "Myriad Pro",Helvetica, Arial, sans-serif; }
+html { font-size: 1em; line-height: 1.4; }
+
+::-moz-selection { background: #b3d4fc; text-shadow: none;}
+::selection { background: #b3d4fc; text-shadow: none;}
+audio, canvas, img, video { vertical-align: middle; }
+fieldset { border: 0; margin: 0; padding: 0; }
+textarea { resize: vertical; }
+hr { border:0; margin: 20px 0; height:0; border-bottom:1px solid #DEDEDE;}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden { display: none !important; visibility: hidden; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* ==========================================================================
+   Header classes
+   ========================================================================== */
+#cabeza { background:#FFF; height:60px; width:1024px}
+#logo { background:url(../img/normal/Ios_Logotipo.png) no-repeat center; display:block;  width:330px; height:60px; text-indent:-99999px; }
+#logo { float:left; }
+
+/*************************** Inicio Login *************************/
+#login-encabezado {background:#FFF; height:60px; width:1024px}/*cabeza*/
+#login-logo { display:block; background:url(../img/normal/Ios_Logotipo.png) no-repeat center; width:330px; height:60px; text-indent:-99999px; float:left;}/*logo*/
+
+#cuerpo-login { background:url(../img/1024x600/An__Bg_Pub.png); height:533px; width:1024px; padding-top:100px}/*cuerpo-login*/
+#loginPrincipal #bcom-principal { background:url(../img/normal/Ios_Box.png) no-repeat center; width:418px; height:280px; margin-left:535px; padding: 20px 17px 0 17px; margin-bottom:130px; display:block; }/*loginPrincipal*//*bcom*/
+#loginPrincipal #bcom-secundario { background:url(../img/normal/Ios_Box_Token.png) no-repeat center; width:418px; height:330px; margin-left:535px; padding: 20px 17px 0 17px; margin-bottom:80px; display:none; } /*loginPrincipal*//*bcom2*/
+#loginSecundario #bcom-principal { background:url(../img/normal/Ios_Box.png) no-repeat center;  width:418px; height:280px; margin-left:535px; padding: 20px 17px 0 17px; margin-bottom:130px; display:none; }/*#loginSecundario #bcom*/
+#loginSecundario #bcom-secundario { background:url(../img/normal/Ios_Box_Token.png) no-repeat center; width:418px; height:330px; margin-left:535px; padding: 20px 17px 0 17px; margin-bottom:80px; display:block; }/*#loginSecundario #bcom2*/
+
+.tab-icon { font-weight:normal; color:#1A68AF; background:url(../img/normal/Ios_Ic_Tab.png) no-repeat; font-size:29px; padding: 10px 0 0 40px; margin-bottom:25px;}/*tab-icon*/
+
+.login-input-datos { border:0; margin:0; color:#333;  width:382px; height:36px; padding:0 17px; background:url(../img/normal/Ios_Input.png) no-repeat; margin-bottom:20px; font-size:20px;color:#BDBDBD;} /*add [color]*/ /*full-input*/
+
+.login-boton-entrar {padding:0; border:0; margin:0; color:#FFF; width:416px; height:36px; padding:0; background:url(../img/normal/Ios_Btn.png) no-repeat; margin-bottom:20px; font-size:20px;}/*btn-submit*/
+
+.link { color:#B95974; text-align:center; text-decoration:none; display:block} /*link*/
+.link { font-size:20px;}/*link*/
+
+.usuario-login { font-weight:normal; font-size:20px; color:#4C524C;} /*usuario-login*/
+.usuario-log-datos img { float:left; margin-right:20px; -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.3); box-shadow: 0 0 3px 3px rgba(0,0,0,.3);}/*usuario-log-datos*/
+.usuario-log-datos { height:62px; margin-bottom:16px; font-size:16px; color:#4C524C;} /*usuario-log-datos*/
+#login-nav { height:60px; background:url(../img/normal/Ios_Bg_Suite.png) no-repeat;}/*login-nav*/
+
+.btn-autoseguro { display:block; float:left; width:333px; height:60px; background:url(../img/normal/Ios_Btn_Aut.png) center no-repeat;} /*btn-autoseguro*/
+.btn-geolocalizacion {display:block; float:left; width:360px; height:60px; background:url(../img/normal/Ios_Btn_Est.png) center no-repeat;} /*btn-geolocalizacion*/
+.btn-bestratega {display:block; float:left; width:331px; height:60px; background:url(../img/normal/Ios_Btn_Geo.png) center no-repeat;} /*btn-bestratega*/
+
+#pie { background:#969696; text-align:center; position:relative; text-shadow: 1px 1px 2px #030303; width:1024px; height:50px;} /*pie*/
+.contactanos {color:#FFF; display:inline-block; font-size:18px; background: url(../img/normal/Ios_Ic_Tel.png) left no-repeat; padding-left:40px; line-height:50px; } /*contactanos*/
+.ver {color:#FFF; position:absolute; font-size:14px; top:45%; right:22px; }/*ver*/
+
+#ayudaToken { position: absolute; left: 0px; top: 0px; outline: none; z-index: 999998; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); }
+#ayudaDP720 { width:100%; height:100%; background: url(../img/normal/An_token_dp270.png) center center no-repeat; }
+#ayudaSOFT  { width:100%; height:100%; background: url(../img/normal/An_token_softoken.png) center center no-repeat; }
+#ayudaOCRA  { width:100%; height:100%; background: url(../img/normal/An_token_ocra.png) center center no-repeat; }
+
+.login-icono-invitado { width: 30px; height: 30px; margin-left: 380px;	min-width: 0px;	position: absolute;	margin-top: 6px; display:none; }
+/*************************** Fin Login *************************/
+
+/******************** Inicia BaseViewController ********************/
+#todo.sideMenuShowing #cabeza { width:940px; }
+#cabeza-webtrader { width:1024px; }
+#todo.sideMenuShowing #cabeza-webtrader { width:940px; }
+
+.baseviewcontroller-loading-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.baseviewcontroller-loading-spinner {
+    width:100%;
+    height:100%;
+    background: url(../img/normal/loading.gif) center center no-repeat;
+}
+
+@-webkit-keyframes baseviewcontroller-loading-animation {
+    from { -webkit-transform:rotate(0deg); }
+    to { -webkit-transform:rotate(360deg); }
+}
+
+@keyframes baseviewcontroller-loading-animation {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+/******************** Fin BaseViewController ********************/
+
+/*Menu principal*/
+#nav-lateral { width:20px; height:743px; background: url(../img/normal/Ios_Bg_Menu_Off.png) center right no-repeat; position:absolute}
+#nav-lateral { left:0; }
+#menu_principal{ position:absolute; top:0px; left:0px; width:5%; height:100%; z-index:99; }
+
+.datos-usuario { float:right; font-size:14px; vertical-align:middle; color:#0098E2; margin-top:10px;}
+.datos-usuario img { vertical-align:middle; margin-right:20px;-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3);
+box-shadow: 0 0 2px 2px rgba(0,0,0,.3);-webkit-border-radius: 6px; border-radius: 6px;}
+.datos-usuario { margin-right:30px;} /* change to 20px*/
+
+.miniAvatar { background:url(../img/normal/foto-top.png) no-repeat; width:27px; height:27px; vertical-align:middle; margin-right:20px; -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3); box-shadow: 0 0 2px 2px rgba(0,0,0,.3); -webkit-border-radius:6px; border-radius: 6px;  display:inline-block; }
+.pregunta { background:url(../img/normal/Ios_Ic_Ayuda.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.contacto { background:url(../img/normal/Ios_Ic_Tels.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.salir { background:url(../img/normal/Ios_Btn_Salir.png) no-repeat center; display:inline-block; width:100px; height:25px; vertical-align:middle; text-align:center; line-height:25px; color:#fff; text-decoration:none;  vertical-align:middle; margin-left:10px;}
+.ultima-sesion { font-size:10px; color:#333; text-align:right; margin-top:5px }
+
+/*Encabezado para webtrader*/
+#cabeza-webtrader { background:#FFF;}
+#logo2 { background:url(../img/normal/Ios_Logotipo.png) no-repeat center; width:330px; height:60px; text-indent:-99999px; display:block; float:left; }
+.datos-usuario2 { float:right; font-size:11px; vertical-align:middle; color:#0098E2; margin-top:4px; margin-right:20px}
+.correo { background:url(../img/An_Ic_Correo.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.ayuda { background:url(../img/An_Ic_Ayuda2.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.engrane { background:url(../img/An_Ic_Engrane.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.ifb-icoContract{ background:url(../img/normal/icoContract.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+
+
+#contenedor { padding-left:25px; width:999px;}
+#todo {  height:743px; width:1024px; position:relative}
+#contentFrame { width:1024px; height:657px; border:none; }
+
+#img-slider { width:512px; float:left; background-size:100% 577px; } 
+#todo #btns-lateral{ background:#164A8C; width:101px; height:741px; padding:1px 0; display:none; }
+
+#btns-lateral a { width:101px; height:101px; text-indent:-99999px; display:block; margin:10px 0} 
+.lateral-inicio {background:url(../img/normal/Ios_Ic_Left_Inicio_Off.png) no-repeat; }
+.lateral-cuentas {background:url(../img/normal/Ios_Ic_Left_Cuentas_Off.png) no-repeat; }
+.lateral-transferir {background:url(../img/normal/Ios_Ic_Left_Transferir_Off.png) no-repeat; }
+.lateral-invertir {background:url(../img/normal/Ios_Ic_Left_Invertir_Off.png) no-repeat; }
+.lateral-trader {background:url(../img/normal/Ios_Ic_Left_Trader_Off.png) no-repeat; }
+.lateral-administrar {background:url(../img/normal/Ios_Ic_Left_Admin_Off.png) no-repeat; }
+
+/**.lateral-inicio:hover, .lateral-inicio.lat-selec {background:url(../img/normal/Ios_Ic_Left_Inicio_On.png) no-repeat; }
+.lateral-cuentas:hover, .lateral-cuentas.lat-selec {background:url(../img/normal/Ios_Ic_Left_Cuentas_On.png) no-repeat; }
+.lateral-transferir:hover, .lateral-transferir.lat-selec {background:url(../img/normal/Ios_Ic_Left_Transferir_On.png) no-repeat; }
+.lateral-invertir:hover, .lateral-invertir.lat-selec {background:url(../img/normal/Ios_Ic_Left_Invertir_On.png) no-repeat; }
+.lateral-trader:hover, .lateral-trader.lat-selec {background:url(../img/normal/Ios_Ic_Left_Trader_On.png) no-repeat; }
+.lateral-administrar:hover, .lateral-administrar.lat-selec {background:url(../img/normal/Ios_Ic_Left_Admin_On.png) no-repeat; }**/
+
+.inicio-selected .lateral-inicio { background:url(../img/normal/Ios_Ic_Left_Inicio_On.png) no-repeat; }
+.cuentas-selected .lateral-cuentas {background:url(../img/normal/Ios_Ic_Left_Cuentas_On.png) no-repeat; }
+.transferir-selected .lateral-transferir {background:url(../img/normal/Ios_Ic_Left_Transferir_On.png) no-repeat; }
+.invertir-selected .lateral-invertir {background:url(../img/normal/Ios_Ic_Left_Invertir_On.png) no-repeat; }
+.trader-selected .lateral-trader {background:url(../img/normal/Ios_Ic_Left_Trader_On.png) no-repeat; }
+.administrar-selected .lateral-administrar {background:url(../img/normal/Ios_Ic_Left_Admin_On.png) no-repeat; }
+
+/*Menu inferior*/
+#nav-bajo{ position:absolute; height:10px; bottom:0px; left:0px; background:url(../img/normal/Ios_Ic_Lineas.png) no-repeat top; width:1024px}
+#nav-bajo-display{ position:absolute; height:110px; bottom:0px; left:0px; background:url(../img/normal/Ios_Bg_BottomBar.png) no-repeat top; width:1024px}
+
+#nav-bajo #nav-cont { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px; display:none; }
+#nav-bajo-display #nav-cont { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px; }
+
+/*Submenu general*/
+#nav-cont { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px;}
+#nav-cont a+a { border-left:1px solid #9A9B9C}
+#nav-cont a { padding-left:30px; padding-right:30px}
+.nb-inicio { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Inicio_Off.png) no-repeat center top;}
+.nb-flechas { width:128px; height:25px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Rapida_Trans_Off.png) no-repeat center top; font-size:11px; color:#9A9B9C; text-align:center; text-decoration:none; padding-top:55px}
+
+/*Submenu administrar*/
+#nav-administrar { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px;}
+#nav-administrar a+a { border-left:1px solid #9A9B9C}
+#nav-bajo #nav-administrar { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px; display:none; }
+#nav-bajo-display #nav-administrar { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px; }
+#nav-administrar a { padding-left:30px; padding-right:30px}
+
+.nb-eliminar { width:128px; height:80px; float:left; display:block; float:left; display:block; background:url(../img/normal/Ios_Ic_Bottom_Eliminar_Off.png) no-repeat center top;}
+.nb-eliminar.nb-selec { background:url(../img/normal/Ios_Ic_Bottom_Eliminar_On.png) no-repeat center top;}
+
+
+/*Submenu webtrader*/
+#nav-webtrader { height:83px; background:rgba(244,244,244,.9); margin-top:27px;}
+.nb-rejecutivo { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Rejecutivo_Off.png) no-repeat center top;}
+.nb-indices { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Indices_Off.png) no-repeat center top;}
+.nb-acciones { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Acciones_Off.png) no-repeat center top;}
+.nb-sic { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_SIC_Off.png) no-repeat center top;}
+.nb-moperatividad { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Mayor_Operatividad_Off.png) no-repeat center top;}
+.nb-ipc { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_IPC_Off.png) no-repeat center top;}
+.nb-noticias { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Noticias_Off.png) no-repeat center top;}
+.nb-etrabajo { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Espacio_Trabajo_Off.png) no-repeat center top;}
+
+.nb-rejecutivo:hover, .nb-rejecutivo.nb-selec { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Rejecutivo_On.png) no-repeat center top;}
+.nb-indices:hover, .nb-indices.nb-selec  { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Indices_On.png) no-repeat center top;}
+.nb-acciones:hover, .nb-acciones.nb-selec  { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Acciones_On.png) no-repeat center top;}
+.nb-sic:hover, .nb-sic.nb-selec  { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_SIC_On.png) no-repeat center top;}
+.nb-moperatividad:hover, .nb-moperatividad.nb-selec  { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Mayor_Operatividad_On.png) no-repeat center top;}
+.nb-ipc:hover, .nb-ipc.nb-selec  { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_IPC_On.png) no-repeat center top;}
+.nb-noticias:hover, .nb-noticias.nb-selec  { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Noticias_On.png) no-repeat center top;}
+.nb-etrabajo:hover, .nb-etrabajo.nb-selec  { width:128px; height:80px; float:left;display:block; background:url(../img/An_Ic_Espacio_Trabajo_On.png) no-repeat center top;}
+
+
+/*Submenu mis cuentas*/
+#nav-bajo-mis-cuentas a { padding: 0px 30px; }
+#nav-bajo-mis-cuentas a:first-child { border-right: 1px solid #9A9B9C; }
+
+.nb-cuentas { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Miscuentas_Off.png) no-repeat center top;}
+.nb-estado { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Estado_Off.png) no-repeat center top;}
+.nb-comprobantes { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Comprobantes_Off.png) no-repeat center top;}
+.nb-compguardados { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Guardados_Off.png) no-repeat center top;}
+
+.nb-cuentas.nb-selec { background:url(../img/normal/Ios_Ic_Bottom_Miscuentas_On.png) no-repeat center top;}
+.nb-estado.nb-selec { background:url(../img/normal/Ios_Ic_Bottom_Estado_On.png) no-repeat center top;}
+.nb-comprobantes.nb-selec { background:url(../img/normal/Ios_Ic_Bottom_Comprobantes_On.png) no-repeat center top;}
+.nb-compguardados.nb-selec { background:url(../img/normal/Ios_Ic_Bottom_Guardados_On.png) no-repeat center top;}
+
+
+/*Submenu transferir*/
+#nav-bajo #nav-transferir { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px; display:none; }
+#nav-bajo-display #nav-transferir { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px; }
+#nav-transferir { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px;}
+#nav-transferir a+a { border-left:1px solid #9A9B9C}
+#nav-transferir a { padding-left:30px; padding-right:30px}
+
+.nb-miscuentas { width:211px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Cuentas_Off.png) no-repeat center top;}
+.nb-cuentasbbva { width:211px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_BBVA_Off.png) no-repeat center top;}
+.nb-otrosbancos { width:211px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Otros_Off.png) no-repeat center top;}
+.nb-miscuentas.nb-selec { background:url(../img/normal/Ios_Ic_Bottom_Miscuentas_On.png) no-repeat center top;}
+.nb-cuentasbbva.nb-selec { background:url(../img/normal/Ios_Ic_Bottom_BBVA_On.png) no-repeat center top;}
+.nb-otrosbancos.nb-selec { background:url(../img/normal/Ios_Ic_Bottom_Otros_On.png) no-repeat center top;}
+
+
+/*Submenu invertir*/
+#nav-bajo-invertir a { padding: 0px 30px; }
+#nav-bajo-invertir a:first-child { border-right: 1px solid #9A9B9C; }
+ 
+.nb-comprar { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Compra_Off.png) no-repeat center top;}
+.nb-vender { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Venta_Off.png) no-repeat center top;}
+.nb-consultar { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Consulta_Off.png) no-repeat center top;}
+
+.nb-comprar.nb-selec { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Compra_On.png) no-repeat center top;}
+.nb-vender.nb-selec { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Venta_On.png) no-repeat center top;}
+.nb-consultar.nb-selec { width:128px; height:80px; float:left;display:block; background:url(../img/normal/Ios_Ic_Bottom_Consulta_On.png) no-repeat center top;}
+
+
+.inferior-menu-cont { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px; display:none;}
+
+#nav-bajo-invertir.inferior-menu-cont  { padding-left: 0px; }
+#nav-bajo-invertir.inferior-menu-cont a { padding: 0px 95px; }
+#nav-bajo-invertir.inferior-menu-cont a:first-child, #nav-bajo-invertir.inferior-menu-cont a:last-child { padding: 0px 30px; }
+
+
+/*Estilos para boton Opciones*/
+#nav-bajo-scroll-pane { position: absolute; bottom: 0px; left: 0px; height: 15%; width:1024px;  opacity:0.1; display:none; }
+#options-menu-pane { position: absolute; width: 100%; height: 15%; left: 0px; top: 85%;
+   background-color: #1a1a1a; box-shadow: rgba(26,26,26,1) 0px 0px 9px 5px; }
+
+.menuHiden {  display:none; }
+.menuElement { width: 81px; height: 69px; position: absolute; -webkit-transform: scale(1.0); }
+.emailMenu { background: url(../img/1024x600/Ios_Btn_Correo.png) no-repeat;  top: 10%; left: 20%; }
+.rapidaMenu { background: url(../img/1024x600/Ios_Btn_Rapida.png) no-repeat; top: 10%; left: 70%; }
+
+.android-options-menu-pane { display:table; table-layout: fixed; position: absolute; width: 100%; height: 15%; left: 0px; bottom: 0px; 
+							 background-color: #1a1a1a; box-shadow: rgba(26,26,26,1) 0px 0px 9px 5px; }
+.android-options-menu-pane-hidden { display:none; }
+.android-options-menu-pane div { display:table-cell; border: 1px solid white; border-width: 0px 1px 0px 0px; padding-top: 0.5%; 
+								 padding-left:13%; }
+.android-options-menu-pane div:last-child { border-width: 0px; }
+.android-options-menu-pane div a { width: 81px; height: 69px; display: inline-block; }
+
+.emailMenu a { background: url(../img/1024x600/Ios_Btn_Correo.png) no-repeat; }
+.emailMenuHidden .emailMenu { display:none; }
+.frecuenteMenu a { background: url(../img/1024x600/Ios_Btn_Frecuente.png) no-repeat; }
+.frecuenteMenuHidden .frecuenteMenu { display:none; }
+.rapidaMenu a { background: url(../img/1024x600/Ios_Btn_Rapida.png) no-repeat; }
+.rapidaMenuHidden .rapidaMenu { display:none; }
+.ios-body-adapter #todo { height: 683px; }
+.rango { margin-left:13%; width:83%; }
+
+div#todo.sideMenuShowing {  height:743px; width:940px; position:relative; padding-left:101px;}
+div#todo.sideMenuShowing #img-slider { width:517px; height:431px; float:left; margin-left:35px; padding:1px 3px 3px 1px; background-size:100% auto} 
+div#todo.sideMenuShowing #nav-lateral { width:118px;}
+div#todo.sideMenuShowing #btns-lateral{ background:#164A8C; width:101px; height:748px; padding:1px 0; display:block; }
+
+
+/*Estilos para comprobantes*/
+.comprobante { -webkit-transition: all 0.5s ease; width: 92px; height: 119px; position: absolute; top: 200px; left: 141px; background-size: 100%;  background-repeat:no-repeat;    background-position: 0px 20px;
+    background-color: white;}
+.comprobante-head-principal{	background: url(../img/comprobante_cabecera.png) repeat left; text-align: center;
+		 color:white; height: 40px;}
+
+.comprobante-head-leido{	background: url(../img/comprobante_cabecera_leido.png) repeat left; text-align: center;
+		 color:blue; height: 40px;}    
+#comprobanteFrame{ position: absolute; left: 0px; top: 0px; outline: none; z-index: 998; width: 100%;
+height: 100%; background: rgba(0, 0, 0, 0.4); }
+#imagenComprobante { width:100%; height:100%; background: url(../img/comprobante.png) center center no-repeat; }
+
+#detalles-comprobantes{margin-top:-35px;}
+
+/* .nav-tab { font-size:14px; color:#888; margin-top:15px;} */
+/* .nav-tab td{  padding-bottom:12px} */
+
+
+/* ==========================================================================
+ Modulo posisici�n global
+   ========================================================================== */
+.posicionglobal-cabecera { background:url(../img/normal/Ios_Ic_Inicio.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:45px;}
+#posicionglobal-contenedor { padding-left:25px; width:999px;}
+
+#posicionglobal-texto-lateral { margin-left:25px; width:316px; float:left}
+.posicionglobal-clearfix { *zoom: 1; }
+.posicionglobal-texto-cuenta { font-size:16px; color:#676767; float:left;  margin-right:10px;}
+.posicionglobal-texto-cantidad { font-size:16px; color:#0098E0; float:right; }
+.posicionglobal-texto-cantidad.rosa { color:#D75A8A}
+#posicionglobal-info-cuentas { margin-bottom:10px; }
+
+.posicionglobal-tabla-cuentas-pesos { background:url(../img/normal/Ios_Bg_Tablas.png) no-repeat; width:316px; height:202px; padding:0; margin-bottom:25px;}
+.posicionglobal-tabla-cuentas-pesos td { padding:0px 15px; line-height:100%; font-size:16px; color:#676767}
+.posicionglobal-tabla-cuentas-pesos td span { display:block; font-size:11px}
+.posicionglobal-tabla-cuentas-pesos td+td { text-align:right; color:#0098E0;}
+.posicionglobal-tabla-tarjeta-credito { background:url(../img/normal/Ios_Bg_Tablas.png) no-repeat; width:316px; height:202px; padding:0; margin-bottom:25px;}
+.posicionglobal-tabla-tarjeta-credito td { padding:0px 15px; line-height:100%; font-size:16px; color:#676767}
+.posicionglobal-tabla-tarjeta-credito td span { display:block; font-size:11px}
+.posicionglobal-tabla-tarjeta-credito td+td { text-align:right; color:#D75A8A;}
+
+td.posicionglobal-dt-titulo1 { color:#0098E0; font-size:20px ; height:51px}
+td.posicionglobal-dt-titulo2 { color:#676767 !important; font-size:13px !important; height:51px}
+
+/* Publicidad */
+#posicionglobal-img-slider { width:596px; height:577px; float:left; margin-left:25px; padding:4px 8px 8px 5px; position:relative;}
+#posicionglobal-img-slider.main-menu-visible { width:478px; }
+#img-publicidad { width: 100%; height: 100%; -webkit-box-shadow: 1px 1px 1px 1px #a9a9a9; }
+.posicionglobal-publicidad-bullet { background: white; height: 10px; width: 10px; border: 1px solid #939494; border-radius: 6px; margin: 0px 5px; display:inline-block; }
+.posicionglobal-publicidad-bullet.selected { background: #939494; }
+.posicionglobal-publicidad-bullet-container { position: absolute; display: inline-block; bottom: 8px; right: 8px; margin-right: 5px; }
+.posicionglobal-publicidad-image1 { background: url(../img/normal/ios_pub_1.png) no-repeat; display: inline-block; background-size: 100% 100%; }
+.posicionglobal-publicidad-image2 { background: url(../img/normal/ios_pub_2.png) no-repeat; display: inline-block; background-size: 100% 100%; }
+.posicionglobal-publicidad-image3 { background: url(../img/normal/ios_pub_3.png) no-repeat; display: inline-block; background-size: 100% 100%; }
+
+.posicionglobal-contenedor-cuenta { width:100%; display:table; }
+
+/** Mis Cuentas Posicion Global **/
+
+#accordion{  }
+
+.tituls { }
+.acc_titulo { font-size: 18px; color: #0098E0; float: left; margin-top: 13px;}
+.acc_titulo2 { font-size: 12px; color: #676767; float: right; margin-top: 19px; padding-right: 10px; }
+
+#accordion input { display: none;  margin:10px auto 30px auto; }
+#accordion label { cursor: pointer; display: block; position: relative; z-index: 20; background-image: url(../img/normal/An_Bg_Tablas_roll.png); padding-left: 38px; background-repeat: no-repeat; height: 52px; }
+#accordion label:hover { background-image: url(../img/normal/An_Bg_Tablas_roll.png); background-repeat: no-repeat; background-color: #F1F1F1; }
+#accordion label.checked { background-image: url(../img/normal/An_Bg_Tablas_over.png); background-repeat: no-repeat; }
+#accordion article { height: 0px; overflow: hidden; z-index: 10; }
+#accordion article p { padding: 1em; }
+
+#accordion label.checked + article { height: auto; margin-bottom: .125em; border: 1px solid gray; border-color: rgba(200,200,200,1.0); }
+#accordion label.checked + article.small { max-height: 238px; overflow-y:auto; overflow-x:hidden; }
+#accordion label.checked + article.medium { max-height: 176px; overflow-y:auto; overflow-x:hidden; }
+#accordion label.checked + article.large { max-height: 474px; overflow-y:auto; overflow-x:hidden; }
+
+.datos-tabla3 { width: 316px; max-height: 164px; padding: 0; /*background-image: url(../img/normal/Ios_Bg_Tablas_01.png);*/ }
+.datos-tabla3 td { line-height: 100%; font-size: 12px; color: #676767; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; padding-top: 7px; }
+.datos-tabla3 td span { display: block; font-size: 10px }
+.datos-tabla3 td+td { text-align:right; color:#0098E0; }
+
+.datos-tabla4 { width: 316px; max-height: 164px; padding: 0; /*background-image: url(../img/normal/Ios_Bg_Tablas_01.png);*/ }
+.datos-tabla4 td { line-height: 100%; font-size: 12px; color: #676767; padding-bottom: 5px; padding-left: 10px; padding-right: 10px; padding-top: 7px; }
+.datos-tabla4 td span { display: block; font-size: 10px; }
+.datos-tabla4 td+td { text-align: right; color: #D75A8A; }
+
+/* ==========================================================================
+  Modulo mis Cuentas
+   ========================================================================== */ 
+input[type=range] { -webkit-appearance: none; background-color: transparent; height: 3px; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 21px; height: 21px; background-image: url(../img/normal/Ios_Bg_Selector_Pin.png); background-size: 100%; }
+.cargo{color:#2969B7;}
+.cargo.selec{color:red;}
+  
+.miscuentas-encabezado { background:url(../img/normal/Ios_Ic_Mis_cuentas.png) no-repeat center left; height:25px; margin:8px 0; 
+      padding-left:35px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:25px}
+#miscuentas-contenedor { padding-left:25px; width:999px;}
+.miscuentas-clearfix:before, .miscuentas-clearfix:after { content: " "; display: table; }
+.miscuentas-clearfix:after { clear: both; }
+.miscuentas-clearfix { *zoom: 1; }
+.miscuentas-div-seccion1 {width:610px; float:left;}
+.miscuentas-titulo-cuenta { font-size:20px; color:#4A4A4A; float:left; width:50%; margin-bottom:20px;}
+.miscuentas-texto-saldo { font-size:20px; color:#4A4A4A; float:left;  width:50%; text-align:right; margin-bottom:20px;}  
+.miscuentas-titulo-cuenta span, .miscuentas-texto-saldo span { padding-left:20px; color:#006EC1}
+.miscuentas-titulo-tarjeta-credito { font-size:18px; color:#4A4A4A; float:left; width:27.0%; margin-bottom:10px;}
+.miscuentas-titulo-tarjeta-credito span { padding-left:5px; color:#006EC1}
+.miscuentas-texto-saldotarjetacredito { font-size:18px; color:#4A4A4A; float:left;  width:33.0%; text-align:center; margin-bottom:10px;}
+.miscuentas-texto-saldotarjetacredito span { padding-left:5%; color:#e81060}
+.miscuentas-texto-saldoalcorte { font-size:18px; color:#4A4A4A; float:left;  width:40.0%; text-align:right; margin-bottom:5px;}
+.miscuentas-texto-saldoalcorte span { padding-left:5px; color:#838485}
+.miscuentas-texto-saldoalcorte span:nth-child(1) { margin-right:2%; }
+.miscuentas-texto-pagomin { font-size:18px; color:#4A4A4A; float:left;  width:40.0%; text-align:right; margin-bottom:5px;}
+.miscuentas-texto-pagomin span { padding-left:5px; color:#838485}
+.miscuentas-texto-pagomin span:nth-child(1) { margin-right:7.0%; }
+   
+.miscuentas-seccion-navegacion { border-bottom:1px solid #939494; margin-left:55px; color: #939494;}
+.miscuentas-seccion-navegacion a { padding:0 15px; display:inline-block; line-height:24px; font-size:14px; color: #939494; 
+     border-top:1px solid  #939494; text-decoration:none; }
+.miscuentas-seccion-navegacion a:first-child { border-left:1px solid  #939494; -webkit-border-radius: 6px 0 0 0; border-radius: 10px 0 0 0;}
+.miscuentas-seccion-navegacion a:last-child { border-right:1px solid  #939494; -webkit-border-radius: 0 6px 0 0; border-radius: 0 10px 0 0;}
+.miscuentas-seccion-navegacion span { border: 0px; -webkit-border-radius: 6px; border-radius: 3px; float: right; display: none; 
+     background: -webkit-linear-gradient(rgb(4, 119, 189), rgb(0, 91, 169)); background: linear-gradient(rgb(4, 119, 189), rgb(0, 91, 169)); color:white; padding:2px 24px; }
+.miscuentas-seccion-navegacion a:nth-child(3) { border-right: 1px solid #939494; -webkit-border-radius: 0 6px 0 0; display:inline-block; }
+   
+a.miscuentas-seleccion-navegacion {color:#006EC1;}
+#miscuentas-div-cuentanormal { display:block;}
+.miscuentas-tabla-cuenta { width: 620px; height: 130px; margin-left: -0px; }
+.miscuentas-rango-contenido { padding: 0px 0px 9px 0px; margin-top: -4px; }
+.miscuentas-rango-bar { width: 555px; height: 3px; background: #E3DDD8; z-index: -1; position: relative; left: 54px; top: 17px; }
+.miscuentas-rango { margin-left:55px; width:555px}
+.miscuentas-rango { margin-left:13%; width:83%; }
+#miscuentas-div-cuentacredito { display:none;}
+.miscuentas-tabla-cuentacredito { width: 620px; height: 115px; margin-left: -0px; }
+.miscuentas-rango-cuentacredito { margin-left: 32%; width: 45%; }
+#miscuentas-div-gastosmasaltos { margin-left:55px; width:555px; height:200px; display:block;}
+.miscuentas-div-burbujas { width:244px; height:180px; margin-left:20px; margin-right:26px; margin-top:20px; position:relative; float:left; }
+.miscuentas-burbuja-uno { width:130px; height:128px; left:63px; top:-11px; position: absolute; margin:0px; opacity:0.6; }
+.miscuentas-burbuja-dos { width:120px; height:120px; left:28px; top:74px; position:absolute; margin:0px; opacity:0.6; }
+.miscuentas-burbuja-tres { width:90px; height:90px; left:161px; top:43px; position:absolute; margin:0px; opacity:0.6; }
+.miscuentas-burbuja-cuatro { width:80px; height:80px; left:-11px; top:20px; position:absolute; margin:0px; opacity:0.6; }
+.miscuentas-burbuja-cinco { width:80px; height:80px; left:143px; top:110px; position:absolute; margin:0px; opacity:0.6; }
+   
+.miscuentas-div-burbujas-azules .miscuentas-burbuja-uno { background:url(../img/normal/Ios_Bubble_Azu1on.png) no-repeat; }
+.miscuentas-div-burbujas-azules .miscuentas-burbuja-dos { background:url(../img/normal/Ios_Bubble_Azu2on.png) no-repeat; }
+.miscuentas-div-burbujas-azules .miscuentas-burbuja-tres { background:url(../img/normal/Ios_Bubble_Azu3on.png) no-repeat; }
+.miscuentas-div-burbujas-azules .miscuentas-burbuja-cuatro { background:url(../img/normal/Ios_Bubble_Azu4on.png) no-repeat; }
+.miscuentas-div-burbujas-azules .miscuentas-burbuja-cinco { background:url(../img/normal/Ios_Bubble_Azu5on.png) no-repeat; }
+
+.blueBubles .miscuentas-burbuja-uno { background:url(../img/normal/Ios_Bubble_Azu1on.png) no-repeat; }
+.blueBubles .miscuentas-burbuja-dos { background:url(../img/normal/Ios_Bubble_Azu2on.png) no-repeat; }
+.blueBubles .miscuentas-burbuja-tres { background:url(../img/normal/Ios_Bubble_Azu3on.png) no-repeat; }
+.blueBubles .miscuentas-burbuja-cuatro { background:url(../img/normal/Ios_Bubble_Azu4on.png) no-repeat; }
+.blueBubles .miscuentas-burbuja-cinco { background:url(../img/normal/Ios_Bubble_Azu5on.png) no-repeat; }
+   
+.yellowBubles .miscuentas-burbuja-uno { background:url(../img/normal/Ios_Bubble_Ama1on.png) no-repeat; }
+.yellowBubles .miscuentas-burbuja-dos { background:url(../img/normal/Ios_Bubble_Ama2on.png) no-repeat; }
+.yellowBubles .miscuentas-burbuja-tres { background:url(../img/normal/Ios_Bubble_Ama3on.png) no-repeat; }
+.yellowBubles .miscuentas-burbuja-cuatro { background:url(../img/normal/Ios_Bubble_Ama4on.png) no-repeat; }
+.yellowBubles .miscuentas-burbuja-cinco { background:url(../img/normal/Ios_Bubble_Ama5on.png) no-repeat; }
+   
+.greenBubles .miscuentas-burbuja-uno { background:url(../img/normal/Ios_Bubble_Ver1on.png) no-repeat; }
+.greenBubles .miscuentas-burbuja-dos { background:url(../img/normal/Ios_Bubble_Ver2on.png) no-repeat; }
+.greenBubles .miscuentas-burbuja-tres { background:url(../img/normal/Ios_Bubble_Ver3on.png) no-repeat; }
+.greenBubles .miscuentas-burbuja-cuatro { background:url(../img/normal/Ios_Bubble_Ver4on.png) no-repeat; }
+.greenBubles .miscuentas-burbuja-cinco { background:url(../img/normal/Ios_Bubble_Ver5on.png) no-repeat; }
+   
+.orangeBubles .miscuentas-burbuja-uno { background:url(../img/normal/Ios_Bubble_Nar1on.png) no-repeat; }
+.orangeBubles .miscuentas-burbuja-dos { background:url(../img/normal/Ios_Bubble_Nar2on.png) no-repeat; }
+.orangeBubles .miscuentas-burbuja-tres { background:url(../img/normal/Ios_Bubble_Nar3on.png) no-repeat; }
+.orangeBubles .miscuentas-burbuja-cuatro { background:url(../img/normal/Ios_Bubble_Nar4on.png) no-repeat; }
+.orangeBubles .miscuentas-burbuja-cinco { background:url(../img/normal/Ios_Bubble_Nar5on.png) no-repeat; }
+  
+.miscuentas-texto-burbuja { position:relative; font:bold 13px Arial; color:white; text-shadow:0.1em 0.1em 0.2em black; text-align:center; 
+      top:50%; display:inline-block; vertical-align:middle; margin-top:-1.5em; width:100%; opacity:1.0; }
+   
+.miscuentas-texto-burbuja1 { }
+.miscuentas-texto-burbuja2 { }
+.miscuentas-texto-burbuja3 { }
+.miscuentas-texto-burbuja4 { }
+.miscuentas-texto-burbuja5 { }
+.miscuentas-div-detalles-gastos { width:263px; float:left; margin-top:25px; -webkit-border-radius: 10px; border-radius: 10px;  
+     border:1px solid #939494; padding: 15px 0}
+.miscuentas-tabla-gastos th { text-align:right; font-weight:normal; font-size:14px; color:#595959; width:90px}
+.miscuentas-tabla-gastos td {font-size:14px; color:#2969B7}
+#miscuentas-div-balance { margin-left:-8px; width:628px; height:168px; display:none; }
+.miscuentas-div-seccion2 {width:330px; float:left; margin-left:35px}
+.miscuentas-titulo-seccion2 { font-size:17px; color:#004095; margin-bottom:35px;}
+.miscuentas-div-seccion-dos { margin-top:15px; -webkit-border-radius: 10px; border-radius: 10px;  border:1px solid #939494;}
+.miscuentas-div-seccion-dos-cuentas { overflow:auto; height:344px; }
+   
+.miscuentas-tabla-seccion-dos th { text-align:left; font-weight:normal; font-size:14px; color:#595959; padding:10px 20px;}
+.miscuentas-tabla-seccion-dos td {font-size:14px; color:#2969B7; text-align:right; padding:5px 20px;}
+.miscuentas-tabla-seccion-dos tr+tr { border-top:1px solid #939494; }
+.miscuentas-tabla-seccion-dos th span { display:block}
+   
+.miscuentas-tabla-oculta { display: none !important; visibility: hidden; } 
+.miscuentas-seccion-navegacion-vinetas { margin-top:20px; margin-left:129px; }
+.miscuentas-vineta { background: white; height: 10px; width: 10px; border: 1px solid #939494; border-radius: 6px;
+                     margin: 0px 5px; display:inline-block; }
+.miscuentas-vineta.miscuentas-vineta-seleccionada { background: #939494; }
+   
+/* ==========================================================================
+  Modulo mis Cuentas-comprobantesguardados
+========================================================================== */ 
+
+.miscuentas-comprobantes-guardados-adaptador-ios #todo { height: 683px; }
+.miscuentas-comprobantes-guardados-encabezado { background:url(../img/normal/Ios_Ic_Mis_cuentas.png) no-repeat center left; height:25px; 
+      margin:8px 0; padding-left:35px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:25px}
+#miscuentas-comprobantes-guardados-contenedor { padding-left:25px; width:999px;}
+.miscuentas-comprobantes-guardados-clearfix:before, .miscuentas-comprobantes-guardados-clearfix:after { content: " "; display: table; }
+.miscuentas-comprobantes-guardados-clearfix:after { clear: both; }
+.miscuentas-comprobantes-guardados-clearfix { *zoom: 1; }
+.miscuentas-comprobantes-guardados-mitad-uno { width:474px; float:left; padding-right:20px}
+#miscuentas-comprobantes-guardados{ background-size:454px 600px; background-repeat:no-repeat; width:504px; height:600px; position:absolute; top:0px; left:0px; perspective-origin: center top; -webkit-perspective: 200; -webkit-perspective-origin: 30% 0%; -webkit-transform-style: preserve-3d; z-index:999; }
+      
+.miscuentas-comprobantes-guardados-mitad-dos { width:454px; height:600px; position:absolute; top:40px; left:510px;  border-left:1px solid #ECEFF2;}
+      
+.miscuentas-comprobantes-guardados-menu { text-align:right; margin:0; margin-bottom:5px;  padding:0}
+.miscuentas-comprobantes-guardados-menu>li { display:inline-block; list-style:none; position:relative; width:27px; height:27px; margin: 0 5px}
+.miscuentas-comprobantes-guardados-menu>li>a { width:27px; height:27px; display:block}
+.miscuentas-comprobantes-guardados-compartir { background:url(../img/normal/Ios_Ic_Share.png) no-repeat}
+.miscuentas-comprobantes-guardados-submenu {position:absolute; width:85px; height:81px; z-index:2; background:url(../img/normal/Ios_Bg_Share2.png) no-repeat; text-align:center; padding:0; margin:0; right:-30px}
+.miscuentas-comprobantes-guardados-submenu>li { display:inline-block; list-style:none; position:relative; width:53px; height:51px; margin: 15px 5px}
+.miscuentas-comprobantes-guardados-submenu>li a { width:53px; height:51px; display:block}
+.miscuentas-comprobantes-guardados-opcioncorreo { background:url(../img/normal/Ios_Ic_Share_Correo_Off.png) no-repeat}
+.miscuentas-comprobantes-guardados-opcioncorreo:hover { background:url(../img/normal/Ios_Ic_Share_Correo_On.png) no-repeat}
+.miscuentas-comprobantes-guardados-completo { background:url(../img/normal/Ios_Ic_Full.png) no-repeat}
+.miscuentas-comprobantes-guardados-arrastra-comprobante { z-index: 1; width:432px; height:452px; background:url(../img/normal/Ios_Bg_Arrastra.png) no-repeat; margin:0 auto }
+ 
+/* ==========================================================================
+  Modulo  mis cuentas-estadocuenta
+========================================================================== */ 
+  
+.miscuentas-edo-cuenta-encabezado { background:url(../img/normal/Ios_Ic_Mis_cuentas.png) no-repeat center left; height:25px; margin:8px 0; padding-left:35px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:25px}
+#miscuentas-edo-cuenta-contenedor { padding-left:25px; width:999px;}
+.miscuentas-edo-cuenta-clearfix:before, .miscuentas-edo-cuenta-clearfix:after { content: " "; display: table; }
+.miscuentas-edo-cuenta-clearfix:after { clear: both; }
+.miscuentas-edo-cuenta-clearfix { *zoom: 1; }
+.miscuentas-edo-cuenta-mitad-uno { width:474px; float:left; padding-right:20px}
+.miscuentas-edo-cuenta-tab { font-size:16px; border-collapse: separate; border-spacing: 20px; }
+.miscuentas-edo-cuenta-opcion-emergente { width:264px; height:29px;line-height:28px; background: url(../img/normal/Ios_Input_Select.png) no-repeat right; display:inline-block; text-align:center;}
+.miscuentas-edo-cuenta-opcion-emergente select { width:264px; height:29px; padding: 0 20px 0 10px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}
+.miscuentas-edo-cuenta-opcion-emergente-ios { width:179px; height:29px; line-height:29px; background: url(../img/normal/Ios_Input_Select.png) no-repeat; display:inline-block; text-align:center;background-size:100% 100%; }
+.miscuentas-edo-cuenta-opcion-emergente-ios select { width:184px; height:29px; line-height:29px;  text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}
+.miscuentas-edo-cuenta-div-token { background:#F0F9FE; padding:15px; font-size:14px; margin-top:120px } /* margin-top:80px */
+.miscuentas-edo-cuenta-div-token a, .miscuentas-edo-cuenta-div-token label { color:#398DCB; text-decoration:none;}
+.doscolumnas .miscuentas-edo-cuenta-div-token { margin-top:0}
+.miscuentas-edo-cuenta-input-token { width:230px; border:1px solid #E9EDEE; height:23px; background:#FFF;padding-top:4px; text-align:center;}
+.miscuentas-edo-cuenta-div-botones { margin-top:20px; text-align:center}
+.miscuentas-edo-cuenta-boton-confirmar { background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}
+.miscuentas-edo-cuenta-mitad-dos { width:464px; float:left; border-left:1px solid #ECEFF2; padding:0 15px}
+.miscuentas-edo-cuenta-cargando { height:450px; background: url(../img/normal/loading.gif) no-repeat center}
+ 
+/* ==========================================================================
+ Modulo  mis cuentas-comprobantes
+========================================================================== */
+.tab { font-size:14px; border-collapse: separate; border-spacing:15px 10px; }
+.tab hr { margin:0}
+
+.miscuentas-comprobantes-encabezado { background:url(../img/normal/Ios_Ic_Mis_cuentas.png) no-repeat center left; height:25px; margin:8px 0; padding-left:35px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:25px}
+#miscuentas-comprobantes-contenedor { padding-left:25px; width:999px;}
+.miscuentas-comprobantes-clearfix:before, .miscuentas-comprobantes-clearfix:after { content: " "; display: table; }
+.miscuentas-comprobantes-clearfix:after { clear: both; }
+.miscuentas-comprobantes-clearfix { *zoom: 1; }
+.miscuentas-comprobantes-mitad-uno { width:474px; float:left; padding-right:20px}
+.miscuentas-comprobantes-tabla{ font-size:16px; border-collapse: separate; border-spacing: 10px; }
+.miscuentas-comprobantes-opcion-emergente { width:264px; height:29px;line-height:28px; background: url(../img/normal/Ios_Input_Select.png) no-repeat right; display:inline-block; text-align:center;}
+.miscuentas-comprobantes-opcion-emergente select { width:264px; height:29px; padding: 0 20px 0 10px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}
+.miscuentas-comprobantes-opcion-emergente-ios { width:179px; height:29px; line-height:29px; background: url(../img/normal/Ios_Input_Select.png) no-repeat; display:inline-block; text-align:center;background-size:100% 100%; }
+.miscuentas-comprobantes-opcion-emergente-ios select { width:184px; height:29px; line-height:29px;  text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}
+.miscuentas-comprobantes-div-token { background:#F0F9FE; padding:15px; font-size:14px; margin-top:120px } /* margin-top:80px */
+.miscuentas-comprobantes-div-token a, .miscuentas-comprobantes-div-token label { color:#398DCB; text-decoration:none;}
+.doscolumnas .miscuentas-comprobantes-div-token { margin-top:0}
+.miscuentas-comprobantes-input-token { width:230px; border:1px solid #E9EDEE; height:23px; background:#FFF;padding-top:4px; text-align:center;}
+.miscuentas-comprobantes-div-botones { margin-top:20px; text-align:center}
+.miscuentas-comprobantes-boton-confirmar { background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}
+.miscuentas-comprobantes-mitad-dos { width:464px; float:left; border-left:1px solid #ECEFF2; padding:0 15px}
+.miscuentas-comprobantes-mitad-comprobantes { width:474px; float:left; padding-right:38px;margin-top:20px;}
+.miscuentas-comprobantes-tabla { font-size:16px; border-collapse: separate; border-spacing: 20px; }
+.miscuentas-comprobantes-contenedor-gris { border:20px solid #FCFCFC; background:#FFF }
+.miscuentas-comprobantes-contenedor-gris hr { margin: 0;}
+.miscuentas-comprobantes-div-mitad-dos { margin-top:15px; -webkit-border-radius: 10px; border-radius: 10px;  border:1px solid #939494;}
+ .miscuentas-comprobantes-lista-comprobantes { width:100%; -webkit-user-select: none; user-select: none;}
+.miscuentas-comprobantes-lista-comprobantes th { text-align:left; font-weight:normal; font-size:14px; color:#595959; padding:10px 20px;}
+.miscuentas-comprobantes-lista-comprobantes td {font-size:14px; color:#2969B7; text-align:right; padding:5px 20px;}
+.miscuentas-comprobantes-lista-comprobantes tr+tr { border-top:1px solid #939494; }
+.miscuentas-comprobantes-lista-comprobantes th span { display:block}
+.miscuentas-comprobantes-texto-azul {color:#398DCB !important;}
+#miscuentas-comprobantes-detalle-comprobante {margin-top:-35px;}
+.miscuentas-comprobantes-menu { text-align:right; margin:0; margin-bottom:5px;  padding:0}
+.miscuentas-comprobantes-menu>li { display:inline-block; list-style:none; position:relative; width:27px; height:27px; margin: 0 5px}
+.miscuentas-comprobantes-menu>li>a { width:27px; height:27px; display:block}
+.miscuentas-comprobantes-opcion-compartir { background:url(../img/normal/Ios_Ic_Share.png) no-repeat}
+.miscuentas-comprobantes-submenu {position:absolute; width:175px; height:81px; z-index:2; background:url(../img/normal/Ios_Bg_Share1.png) no-repeat; text-align:center; padding:0; margin:0; right:-50px}
+.miscuentas-comprobantes-submenu>li { display:inline-block; list-style:none; position:relative; width:53px; height:51px; margin: 15px 5px}
+.miscuentas-comprobantes-submenu>li a { width:53px; height:51px; display:block}
+.miscuentas-comprobantes-opcion-guardar { background:url(../img/normal/Ios_Ic_Share_Guardar_Off.png) no-repeat}
+.miscuentas-comprobantes-opcion-correo { background:url(../img/normal/Ios_Ic_Share_Correo_Off.png) no-repeat}
+.miscuentas-comprobantes-opcion-completo { background:url(../img/normal/Ios_Ic_Full.png) no-repeat}
+
+
+/* ==========================================================================
+ Modulo Transferir
+========================================================================== */
+.transferir-resaltado-azul {color:#398DCB !important}
+.transferir-resaltado-verde { color:#9ED45E !important; }
+.nueva-cuenta { width:256px; height:61px; background:url(../img/normal/Ios_Btn_Drag_Nuevo.png) no-repeat; color:#FFF; text-decoration:none; text-align:center; line-height:55px; font-size:14px; display:block; margin:0 22px 0 0} /* line-height:61px; margin: 0 auto; */
+.text-cantidad { width:159px; border:0; height:25px; background:url(../img/normal/Ios_Input_Transferir.png) no-repeat;  background-size: contain;  background-repeat:no-repeat; text-align: center;}
+
+/*estilos para transferir.html*/
+#transferir-miscuentas-div-principal { height: 683px; width:1024px; position:relative}/*todo*/
+.transferir-miscuentas-encabezado {background:url(../img/1024x600/An_Ic_Transferir.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px}/*cuerpo-transferir*/
+#transferir-miscuentas-div-contenedor {padding-left:25px; width:999px;}/*contenedor, contenedor-miquince1, contenedor-miquince2, contenedor-miquince3, contenedor-cheq1, contenedor-cheq2, contenedor-cheq3*/ 
+.transferir-miscuentas-div-clearfix:before, .transferir-miscuentas-div-clearfix:after { content: " "; display: table; }/*clearfix*/ 
+.transferir-miscuentas-div-clearfix:after { clear: both; } /*clearfix*/ 
+.transferir-miscuentas-div-clearfix { *zoom: 1;} /*clearfix*/ 
+
+.transferir-miscuentas-tab {font-size:16px; border-collapse: separate; border-spacing: 20px; }/*eliminar-tab*/
+.transferir-miscuentas-contenedor-dragdrop { width:328px; float:left; margin:0px 80px}/*columna*/ 
+.transferir-miscuentas-titulo-drag { font-weight:normal; margin:20px 0; padding-left:20px; color:#006DC0; font-size:18px}/*titulo-administrar*/
+.transferir-miscuentas-contenedor-drag { border:1px solid #CCC; height:360px; overflow-x:none; overflow-y:auto; margin-top:12px;}/*col-listazul-transfer*/ 
+.transferir-miscuentas-titulo-drop { font-weight:normal; margin:20px 0; padding-left:20px; color:#006DC0; font-size:18px}/*titulo-administrar*/ 
+.transferir-miscuentas-contenedor-drop { border:1px solid #CCC; padding:15px; font-size:12px; color:#3675A9; height:330px; overflow-x:none; overflow-y:auto; }/*col-listgris*/ 
+
+.transferir-miscuentas-div-drag table {font-size: 12px; width: 96%; height: 90%; color:#FFF;}/*draggable*/
+.transferir-miscuentas-div-drag td {padding-right: 8%; padding-left: 8%; }/*draggable*/
+.transferir-miscuentas-div-drag .transferir-miscuentas-tab-filauno td{ padding-top: 4%; }/*draggable*/ /*first-row*/
+.transferir-miscuentas-div-drag .transferir-miscuentas-tab-filados td{ padding-bottom: 4%; }/*draggable*/ /*second-row*/
+
+#transferir-miscuentas-drag-uno, #transferir-miscuentas-drag-dos, #transferir-miscuentas-drag-tres, #transferir-miscuentas-drag-cuatro { width:256px; height:61px; position: absolute; top:196px; left:146px; background:url(../img/1024x600/An_Btn_Drag.png) no-repeat; background-size: cover; z-index: 10; }/*drag*/ /*drag2*/ /*drag3*/ /*drag4*/
+#transferir-miscuentas-drag-uno {top:196px;}/*drag*/
+#transferir-miscuentas-drag-dos {top: 272px;}/*drag2*/
+#transferir-miscuentas-drag-tres {top: 348px;}/*drag3*/
+#transferir-miscuentas-drag-cuatro {top: 424px;}/*drag4*/
+
+#transferir-miscuentas-drag-1, #transferir-miscuentas-drag-2, #transferir-miscuentas-drag-3, #transferir-miscuentas-drag-4,
+#transferir-otrosbancos-drag-5, #transferir-miscuentas-drag-6, #transferir-miscuentas-drag-7, #transferir-miscuentas-drag-8, 
+#transferir-miscuentas-drag-9, #transferir-miscuentas-drag-10, #transferir-miscuentas-drag-11, #transferir-miscuentas-drag-12, 
+#transferir-miscuentas-drag-13, #transferir-miscuentas-drag-14, #transferir-miscuentas-drag-15, #transferir-miscuentas-drag-16, 
+#transferir-miscuentas-drag-17, #transferir-miscuentas-drag-18, #transferir-miscuentas-drag-19, #transferir-miscuentas-drag-20,
+#transferir-miscuentas-drag-21, #transferir-miscuentas-drag-22, #transferir-miscuentas-drag-23, #transferir-miscuentas-drag-24    
+{width:256px; height:61px; position: absolute; top:196px; left:146px; background:url(../img/1024x600/An_Btn_Drag.png) no-repeat; background-size: cover; z-index: 10;}/*dragbbva*/ /*drag2bbva*/ /*drag3bbva*/ /*drag4bbva*/
+#transferir-miscuentas-drag-uno, #transferir-miscuentas-drag-1 {top: 196px;}/*drag*/
+#transferir-miscuentas-drag-dos, #transferir-miscuentas-drag-2 {top: 272px;}/*drag2bbva*/
+#transferir-miscuentas-drag-tres, #transferir-miscuentas-drag-3 {top: 348px;}/*drag3bbva*/
+#transferir-miscuentas-drag-cuatro, #transferir-miscuentas-drag-4 {top: 424px;}/*drag4bbva*/
+#transferir-miscuentas-drag-5 { top: 500px; } /* top: 500px*/
+#transferir-miscuentas-drag-6 { top: 576px; } /* top: 576px */
+#transferir-miscuentas-drag-7 { top: 652px; } /* top: 652px */
+#transferir-miscuentas-drag-8 { top: 728px; } /* top: 728px */
+#transferir-miscuentas-drag-9 { top: 804px; } /* top: 804px */
+#transferir-miscuentas-drag-10 { top: 880px; } /* top: 880px */
+
+.transferir-miscuentas-tab-columna-izq {text-align: left;}/*left-col*/
+.transferir-miscuentas-tab-columna-der {text-align: right;}/*right-col*/
+
+#transferir-miscuentas-drop-uno, #transferir-miscuentas-drop-dos, #transferir-miscuentas-drop-tres, #transferir-miscuentas-drop-cuatro{width:256px; height:61px; position: absolute; top:196px; left:635px; background:url(../img/1024x600/An_Btn_Drag_Gris.png) no-repeat; z-index: 9;}/*drop_*/ /*drop2_*/ /*drop3_*/ /*drop4_*/
+#transferir-miscuentas-drop-uno {top:196px;}/*drop_*/
+#transferir-miscuentas-drop-dos {top: 272px;}/*drop2_*/
+#transferir-miscuentas-drop-tres {top: 348px;}/*drop3_*/
+#transferir-miscuentas-drop-cuatro {top: 424px;}/*drop4_*/
+#transferir-miscuentas-drop-uno table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop_*/
+#transferir-miscuentas-drop-uno .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop_*/ /*second-row*/
+#transferir-miscuentas-drop-uno .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop_*/ /*first-row*/
+#transferir-miscuentas-drop-dos table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop2_*/
+#transferir-miscuentas-drop-dos .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop2_*/ /*second-row*/
+#transferir-miscuentas-drop-dos .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop2_*/ /*first-row*/
+#transferir-miscuentas-drop-tres table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop3_*/
+#transferir-miscuentas-drop-tres .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop3_*/ /*second-row*/
+#transferir-miscuentas-drop-tres .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop3_*/ /*first-row*/
+#transferir-miscuentas-drop-cuatro table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop4_*/
+#transferir-miscuentas-drop-cuatro .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop4_*/ /*second-row*/
+#transferir-miscuentas-drop-cuatro .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop4_*/ /*first-row*/
+
+
+#transferir-miscuentas-drop-1, #transferir-miscuentas-drop-2, #transferir-miscuentas-drop-3, #transferir-miscuentas-drop-4{width:256px; height:61px; position: absolute; top:196px; left:635px; background:url(../img/1024x600/An_Btn_Drag_Gris.png) no-repeat; z-index: 9;}/*drop_*/ /*drop2_*/ /*drop3_*/ /*drop4_*/
+#transferir-miscuentas-drop-1 {top:196px;}/*drop_*/
+#transferir-miscuentas-drop-2 {top: 272px;}/*drop2_*/
+#transferir-miscuentas-drop-3 {top: 348px;}/*drop3_*/
+#transferir-miscuentas-drop-4 {top: 424px;}/*drop4_*/
+#transferir-miscuentas-drop-1 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop_*/
+#transferir-miscuentas-drop-1 .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop_*/ /*second-row*/
+#transferir-miscuentas-drop-1 .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop_*/ /*first-row*/
+#transferir-miscuentas-drop-2 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop2_*/
+#transferir-miscuentas-drop-2 .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop2_*/ /*second-row*/
+#transferir-miscuentas-drop-2 .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop2_*/ /*first-row*/
+#transferir-miscuentas-drop-3 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop3_*/
+#transferir-miscuentas-drop-3 .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop3_*/ /*second-row*/
+#transferir-miscuentas-drop-3 .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop3_*/ /*first-row*/
+#transferir-miscuentas-drop-4 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop4_*/
+#transferir-miscuentas-drop-4 .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop4_*/ /*second-row*/
+#transferir-miscuentas-drop-4 .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop4_*/ /*first-row*/
+
+/*estilos para transferirMisCtasCCheqMquinceInicio.html*/ /*estilos para transferirMisCtasTDCCCheqInicio.html*//*estilos para transferirMisCtasCCheqTDCInicio.html*/
+.transferir-miscuentas-tab-subtitulos {font-size:14px; color:#888; margin-top:15px;}/*nav-tab*/
+.transferir-miscuentas-tab-subtitulos td{padding-bottom:12px}/*nav-tab*/
+.transferir-miscuentas-tab-subtitulos .transferir-miscuentas-subtitulo-selected { font-weight:bold; background:url(../img/1024x600/sombra.png) no-repeat bottom left; background-size:80%; color:#283B6C !important; }/*nav-tab*/ /*resaltado-azulmarino*/
+
+.transferir-miscuentas-subtitulo-selected { color:#283B6C !important; }/*resaltado-azulmarino*/
+
+.transferir-miscuentas-columnas-contenido-izq {width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado izquierdo*/
+.transferir-miscuentas-columnas-contenido-der {width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado derecho*/
+.transferir-miscuentas-tab-contenido {font-size:14px; border-collapse: collapse; border-spacing:0;}/*transferir-tab*/
+.transferir-miscuentas-tab-contenido td {padding-right:10px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:40px; line-height:40px; color:#888 }/*transferir-tab*/
+.transferir-miscuentas-tab-contenido td + td {text-align:left; padding-left:10px; color:#444;}/*transferir-tab*/
+.transferir-miscuentas-tab-contenido * {vertical-align: middle}/*transferir-tab*/
+
+.transferir-miscuentas-radios { display:inline-block; width:16px; height:16px; position:relative; } /*radio*/
+.transferir-miscuentas-radios *:focus { outline:none} /*radio*/
+.transferir-miscuentas-radios input { width:16px; height:16px; position:absolute; top:-2px; left:0; z-index:3; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; } /*radio*/
+.transferir-miscuentas-radios input {	width:16px; height:16px; top:-2px; left:0; display:inline-block; position:absolute; background: url(../img/1024x600/An_Radio.png) no-repeat center right; } /*radio*/
+.transferir-miscuentas-radios input:checked{ background: url(../img/1024x600/An_Radio.png) no-repeat center left; } /*radio*/
+
+.transferir-miscuentas-div-emergente {width:179px; height:29px; line-height:29px; background: url(../img/1024x600/An_Input_Select.png) no-repeat right; display:inline-block; text-align:center; }/*opcion-emergente2*/
+.transferir-miscuentas-div-emergente select {width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}/*opcion-emergente2*/
+
+.transferir-miscuentas-input-importe { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-miscuentas-div-botones { padding-right:25px; text-align:center; margin-top:30px;}
+.transferir-miscuentas-div-botones .transferir-miscuentas-boton-confirmar {margin: 0  35px; } /* margin: 0  35px */
+
+.transferir-miscuentas-div-botones {width:976px; top:initial; top:570px; position:absolute; }/*area-botones*/
+.transferir-miscuentas-boton-continuar {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/*estilos para transferirMisCtasCCheqMquinceAprobacion.html*/ /*estilos para transferirMisCtasTDCCCheqAprobacion.html*/ /*estilos para transferirMisCtasCCheqTDCAprobacion.html*/
+.transferir-miscuentas-boton-confirmar {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-miscuentas-aviso-aprobacion { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+
+/*estilos para transferirMisCtasCCheqMquinceTermino.html*/  /*estilos para transferirMisCtasTDCCCheqTermino.html*/ /*estilos para transferirMisCtasCCheqTDCTermino.html*/
+.transferir-miscuentas-encabezado-operacion { font-size:22px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:10px;}/*aviso-verde*/
+.transferir-miscuentas-div-botones-finales {width:976px; top:initial; bottom:5%; position:absolute; padding-right:25px; text-align:center; margin-top:30px}/*area-botones-final*/
+.transferir-miscuentas-div-botones-finales p{font-size: 14px}/*area-botones-final*/
+.transferir-miscuentas-boton-nueva {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-miscuentas-boton-comprobante {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-miscuentas-boton-inicio {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/*estilos para transferir-cuentasbbva.html*/
+.encabezado-registro {font-weight:bold; color:#1F53A4; text-align:left; font-size:16px; padding-left:10px;}
+#transferir-cuentasbbva-div-principal { height: 683px; width:1024px; position:relative}/*todo*/
+.transferir-cuentasbbva-encabezado {background:url(../img/normal/Ios_Ic_Transferir.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px}/*cuerpo-transferir*/
+#transferir-cuentasbbva-div-contenedor {padding-left:25px; width:999px;}/*contenedor, contenedor-miquince1, contenedor-miquince2, contenedor-miquince3, contenedor-cheq1, contenedor-cheq2, contenedor-cheq3, contenedor-tdc1, contenedor-tdc2, contenedor-tdc3*/ 
+.transferir-cuentasbbva-div-clearfix:before, .transferir-cuentasbbva-div-clearfix:after { content: " "; display: table; }/*clearfix*/ 
+.transferir-cuentasbbva-div-clearfix:after { clear: both; } /*clearfix*/ 
+.transferir-cuentasbbva-div-clearfix { *zoom: 1;} /*clearfix*/ 
+
+.transferir-cuentasbbva-tab {font-size:16px; border-collapse: separate; border-spacing: 20px; }/*eliminar-tab*/
+.transferir-cuentasbbva-contenedor-dragdrop { width:328px; float:left; margin:0px 80px}/*columna*/ 
+.transferir-cuentasbbva-titulo-drag { font-weight:normal; margin:20px 0; padding-left:20px; color:#006DC0; font-size:18px}/*titulo-administrar*/
+.transferir-cuentasbbva-contenedor-drag { border:1px solid #CCC; height:360px; overflow-x:none; overflow-y:auto; margin-top:12px;}/*col-listazul-transfer*/ 
+.transferir-cuentasbbva-titulo-drop { font-weight:normal; margin:20px 0; padding-left:20px; color:#006DC0; font-size:18px}/*titulo-administrar*/ 
+.transferir-cuentasbbva-contenedor-drop { border:1px solid #CCC; padding:15px; font-size:12px; color:#3675A9; height:330px; overflow-x:none; overflow-y:auto; }/*col-listgris*/ 
+
+.transferir-cuentasbbva-div-drag table {font-size: 12px; width: 96%; height: 90%; color:#FFF;}/*draggable*/
+.transferir-cuentasbbva-div-drag td {padding-right: 8%; padding-left: 8%; }/*draggable*/
+.transferir-cuentasbbva-div-drag .transferir-cuentasbbva-tab-filauno td{ padding-top: 4%; }/*draggable*/ /*first-row*/
+.transferir-cuentasbbva-div-drag .transferir-cuentasbbva-tab-filados td{ padding-bottom: 4%; }/*draggable*/ /*second-row*/
+
+#transferir-cuentasbbva-drag-uno, #transferir-cuentasbbva-drag-dos, #transferir-cuentasbbva-drag-tres, #transferir-cuentasbbva-drag-cuatro {position: absolute; width:256px; height:61px;  left:146px; background:url(../img/normal/Ios_Btn_Drag.png) no-repeat; z-index: 10; background-size: contain;  background-repeat:no-repeat}/*dragbbva*/ /*drag2bbva*/ /*drag3bbva*/ /*drag4bbva*/
+#transferir-cuentasbbva-drag-uno {top:250px;}/*drag*/
+#transferir-cuentasbbva-drag-dos {top: 326px;}/*drag2*/
+#transferir-cuentasbbva-drag-tres {top: 402px;}/*drag3*/
+#transferir-cuentasbbva-drag-cuatro {top: 478px;}/*drag4*/
+
+.transferir-cuentasbbva-tab-columna-izq {text-align: left;}/*left-col*/
+.transferir-cuentasbbva-tab-columna-der {text-align: right;}/*right-col*/
+
+#transferir-cuentasbbva-drop-uno  { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png) 		
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:250px; }
+#transferir-cuentasbbva-drop-dos { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png)            
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:326px; }
+#transferir-cuentasbbva-drop-tres { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png) 		
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:402px; }
+#transferir-cuentasbbva-drop-cuatro { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png)
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:478px; }
+#transferir-cuentasbbva-drop-uno table, #transferir-cuentasbbva-drop-dos table, #transferir-cuentasbbva-drop-tres table, #transferir-cuentasbbva-drop-cuatro table{ width: 96%; height: 90%; font-size:12px; color:#3675A9; }
+#transferir-cuentasbbva-drop-uno .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-dos .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-tres .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-cuatro .transferir-cuentasbbva-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; }
+#transferir-cuentasbbva-drop-uno .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-dos .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-tres .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-cuatro .transferir-cuentasbbva-tab-filauno td{ padding-top: 4%; padding-right: 8%; padding-left: 8%; }
+
+#transferir-cuentasbbva-drop-uno  { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png) 		
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:250px; }
+#transferir-cuentasbbva-drop-dos { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png)            
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:326px; }
+#transferir-cuentasbbva-drop-tres { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png) 		
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:402px; }
+#transferir-cuentasbbva-drop-cuatro { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png)
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:478px; }
+#transferir-cuentasbbva-drop-uno table, #transferir-cuentasbbva-drop-dos table, #transferir-cuentasbbva-drop-tres table, #transferir-cuentasbbva-drop-cuatro table{ width: 96%; height: 90%; font-size:12px; color:#3675A9; }
+#transferir-cuentasbbva-drop-uno .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-dos .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-tres .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-cuatro .transferir-cuentasbbva-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; }
+#transferir-cuentasbbva-drop-uno .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-dos .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-tres .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-cuatro .transferir-cuentasbbva-tab-filauno td{ padding-top: 4%; padding-right: 8%; padding-left: 8%; }
+
+/*estilos para transferirCtasBBVACCheqFrecuenteInicio.html*/ /*estilos para .html*/
+.transferir-cuentasbbva-tab-subtitulos {font-size:14px; color:#888; margin-top:15px;}/*nav-tab*/
+.transferir-cuentasbbva-tab-subtitulos td{padding-bottom:12px}/*nav-tab*/
+.transferir-cuentasbbva-tab-subtitulos .transferir-cuentasbbva-subtitulo-selected { font-weight:bold; background:url(../img/normal/sombra.png) no-repeat bottom left; background-size:80%; color:#283B6C !important; }/*nav-tab*/ /*resaltado-azulmarino*/
+
+.transferir-cuentasbbva-subtitulo-selected { color:#283B6C !important; }/*resaltado-azulmarino*/
+
+.transferir-cuentasbbva-columnas-contenido-izq {width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado izquierdo*/
+.transferir-cuentasbbva-columnas-contenido-der {width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado derecho*/
+.transferir-cuentasbbva-tab-contenido {font-size:14px; border-collapse: collapse; border-spacing:0;}/*transferir-tab*/
+.transferir-cuentasbbva-tab-contenido td {padding-right:10px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:40px; line-height:40px; color:#888 }/*transferir-tab*/
+.transferir-cuentasbbva-tab-contenido td + td {text-align:left; padding-left:10px; color:#444;}/*transferir-tab*/
+.transferir-cuentasbbva-tab-contenido h3 { font-weight:bold; color:#1F53A4; text-align:left; padding-left:10px;}
+.transferir-cuentasbbva-tab-contenido * {vertical-align: middle}/*transferir-tab*/
+
+.transferir-cuentasbbva-div-emergente {width:179px; height:29px; line-height:29px; background: url(../img/normal/Ios_Input_Select.png) no-repeat right; display:inline-block; text-align:center; }/*opcion-emergente2*/
+.transferir-cuentasbbva-div-emergente select {width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}/*opcion-emergente2*/
+
+.transferir-cuentasbbva-input-importe { width:169px; border:0; height:29px; background:url(../img/normal/Ios_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-cuentasbbva-input-numtarjeta { width:169px; border:0; height:29px; background:url(../img/normal/Ios_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-cuentasbbva-input-concepto { width:169px; border:0; height:29px; background:url(../img/normal/Ios_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+
+.transferir-cuentasbbva-div-botones { padding-right:25px; text-align:center; margin-top:30px; margin-left: -5px}
+.transferir-cuentasbbva-div-botones .transferir-miscuentas-boton-confirmar {margin: 0  35px; } /* margin: 0  35px */
+.transferir-cuentasbbva-div-botones {width:976px; top:initial; bottom:5%; position:absolute; }/*area-botones*/
+.transferir-cuentasbbva-boton-continuar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-cuentasbbva-aviso-inicio { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/normal/Ios_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+.transferir-cuentasbbva-aviso-confirmar { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/normal/Ios_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+.transferir-cuentasbbva-boton-cancelar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-cuentasbbva-boton-corregir {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/*estilos para transferirCtasBBVACCheqFrecuenteAprobacion.html*/ /*estilos para .html*/
+.transferir-cuentasbbva-div-token-aprobacion { background:#F0F9FE; padding:15px; font-size:14px; margin-top:120px } /* cuadro-azul */
+.transferir-cuentasbbva-div-token-aprobacion a, .transferir-cuentasbbva-div-token-aprobacion label { color:#398DCB; text-decoration:none;}  /* cuadro-azul */
+.transferir-cuentasbbva-boton-confirmar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-cuentasbbva-input-token { width:230px; border:1px solid #E9EDEE; height:23px; background:#FFF;padding-top:4px; text-align:center;}  /* text-imput */
+.transferir-cuentasbbva-columnas-contenido-der .transferir-cuentasbbva-div-token-aprobacion { margin-top:0}  /* cuadro-azul */
+
+/*estilos para transferirCtasBBVACCheqFrecuenteTermino.html*/ /*estilos para .html*/
+.transferir-cuentasbbva-encabezado-operacion { font-size:22px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:10px;}/*aviso-verde*/
+.transferir-cuentasbbva-div-botones-finales {width:976px; top:initial; bottom:5%; position:absolute; padding-right:25px; text-align:center; margin-top:30px; margin-left: -5px}/*area-botones-final*/
+.transferir-cuentasbbva-div-botones-finales p{font-size: 14px}/*area-botones-final*/
+.transferir-cuentasbbva-boton-nueva {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-cuentasbbva-boton-comprobante {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-cuentasbbva-boton-inicio {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+
+/*estilos para transferir-cuentasbbva.html*/
+#transferir-otrosbancos-div-principal { height: 683px; width:1024px; position:relative}/*todo*/
+.transferir-otrosbancos-encabezado {background:url(../img/normal/Ios_Ic_Transferir.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px}/*cuerpo-transferir*/
+#transferir-otrosbancos-div-contenedor {padding-left:25px; width:999px;}/*contenedor, contenedor-miquince1, contenedor-miquince2, contenedor-miquince3, contenedor-cheq1, contenedor-cheq2, contenedor-cheq3, contenedor-tdc1, contenedor-tdc2, contenedor-tdc3*/ 
+.transferir-otrosbancos-div-clearfix:before, .transferir-cuentasbbva-div-clearfix:after { content: " "; display: table; }/*clearfix*/ 
+.transferir-otrosbancos-div-clearfix:after { clear: both; } /*clearfix*/ 
+.transferir-otrosbancos-div-clearfix { *zoom: 1;} /*clearfix*/ 
+
+.transferir-otrosbancos-tab {font-size:16px; border-collapse: separate; border-spacing: 20px; }/*eliminar-tab*/
+.transferir-otrosbancos-contenedor-dragdrop { width:328px; float:left; margin:0px 80px}/*columna*/ 
+.transferir-otrosbancos-titulo-drag { font-weight:normal; margin:20px 0; padding-left:20px; color:#006DC0; font-size:18px}/*titulo-administrar*/
+.transferir-otrosbancos-contenedor-drag { border:1px solid #CCC; height:360px; overflow-x:none; overflow-y:auto; margin-top:12px;}/*col-listazul-transfer*/ 
+.transferir-otrosbancos-titulo-drop { font-weight:normal; margin:20px 0; padding-left:20px; color:#006DC0; font-size:18px}/*titulo-administrar*/ 
+.transferir-otrosbancos-contenedor-drop { border:1px solid #CCC; padding:15px; font-size:12px; color:#3675A9; height:330px; overflow-x:none; overflow-y:auto; }/*col-listgris*/ 
+
+.transferir-otrosbancos-div-drag table {font-size: 12px; width: 96%; height: 90%; color:#FFF;}/*draggable*/
+.transferir-otrosbancos-div-drag td {padding-right: 8%; padding-left: 8%; }/*draggable*/
+.transferir-otrosbancos-div-drag .transferir-otrosbancos-tab-filauno td{ padding-top: 4%; }/*draggable*/ /*first-row*/
+.transferir-otrosbancos-div-drag .transferir-otrosbancos-tab-filados td{ padding-bottom: 4%; }/*draggable*/ /*second-row*/
+
+#transferir-otrosbancos-drag-uno, #transferir-otrosbancos-drag-dos, #transferir-otrosbancos-drag-tres, #transferir-otrosbancos-drag-cuatro {position: absolute; width:256px; height:61px;  left:146px; background:url(../img/normal/Ios_Btn_Drag.png) no-repeat; z-index: 10; background-size: contain;  background-repeat:no-repeat}/*dragbbva*/ /*drag2bbva*/ /*drag3bbva*/ /*drag4bbva*/
+#transferir-otrosbancos-drag-uno {top:250px;}/*drag*/
+#transferir-otrosbancos-drag-dos {top: 326px;}/*drag2*/
+#transferir-otrosbancos-drag-tres {top: 402px;}/*drag3*/
+#transferir-otrosbancos-drag-cuatro {top: 478px;}/*drag4*/
+
+.transferir-otrosbancos-tab-columna-izq {text-align: left;}/*left-col*/
+.transferir-otrosbancos-tab-columna-der {text-align: right;}/*right-col*/
+
+#transferir-otrosbancos-drop-uno  { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png) 		
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:250px; }
+#transferir-otrosbancos-drop-dos { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png)            
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:326px; }
+#transferir-otrosbancos-drop-tres { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png) 		
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:402px; }
+#transferir-otrosbancos-drop-cuatro { width:256px; height:61px; position: absolute; left:634px; background:url(../img/normal/Ios_Btn_Drag_Gris.png)
+			 no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat; top:478px; }
+#transferir-otrosbancos-drop-uno table, #transferir-otrosbancos-drop-dos table, #transferir-otrosbancos-drop-tres table, #transferir-otrosbancos-drop-cuatro table{ width: 96%; height: 90%; font-size:12px; color:#3675A9; }
+#transferir-otrosbancos-drop-uno .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-dos .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-tres .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-cuatro .transferir-otrosbancos-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; }
+#transferir-otrosbancos-drop-uno .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-dos .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-tres .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-cuatro .transferir-otrosbancos-tab-filauno td{ padding-top: 4%; padding-right: 8%; padding-left: 8%; }
+
+
+/*estilos para transferirOtrosBancosCCheqCreditoInicio.html*/ /*estilos para transferirOtrosBancosCCheqDebitoInicio.html*/
+.transferir-otrosbancos-tab-subtitulos {font-size:14px; color:#888; margin-top:15px;}/*nav-tab*/
+.transferir-otrosbancos-tab-subtitulos td{padding-bottom:12px}/*nav-tab*/
+.transferir-otrosbancos-tab-subtitulos .transferir-otrosbancos-subtitulo-selected { font-weight:bold; background:url(../img/normal/sombra.png) no-repeat bottom left; background-size:80%; color:#283B6C !important; }/*nav-tab*/ /*resaltado-azulmarino*/
+
+.transferir-otrosbancos-subtitulo-selected { color:#283B6C !important; }/*resaltado-azulmarino*/
+
+.transferir-otrosbancos-columnas-contenido-izq {width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado izquierdo*/
+.transferir-otrosbancos-columnas-contenido-der {width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado derecho*/
+.transferir-otrosbancos-tab-contenido {font-size:14px; border-collapse: collapse; border-spacing:0;}/*transferir-tab*/
+.transferir-otrosbancos-tab-contenido td {padding-right:10px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:40px; line-height:40px; color:#888 }/*transferir-tab*/
+.transferir-otrosbancos-tab-contenido td + td {text-align:left; padding-left:10px; color:#444;}/*transferir-tab*/
+.transferir-otrosbancos-tab-contenido h3 { font-weight:bold; color:#1F53A4; text-align:left; padding-left:10px;}
+.transferir-otrosbancos-tab-contenido * {vertical-align: middle}/*transferir-tab*/
+
+.transferir-otrosbancos-div-emergente {width:179px; height:29px; line-height:29px; background: url(../img/normal/Ios_Input_Select.png) no-repeat right; display:inline-block; text-align:center; }/*opcion-emergente2*/
+.transferir-otrosbancos-div-emergente select {width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}/*opcion-emergente2*/
+
+.transferir-otrosbancos-input-importe { width:169px; border:0; height:29px; background:url(../img/normal/Ios_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-otrosbancos-input-numtarjeta { width:169px; border:0; height:29px; background:url(../img/normal/Ios_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-otrosbancos-input-concepto { width:169px; border:0; height:29px; background:url(../img/normal/Ios_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-otrosbancos-input-referencia { width:169px; border:0; height:29px; background:url(../img/normal/Ios_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-otrosbancos-div-botones { padding-right:25px; text-align:center; margin-top:30px; margin-left: -5px}
+.transferir-otrosbancos-div-botones .transferir-miscuentas-boton-confirmar {margin: 0  35px; } /* margin: 0  35px */
+.transferir-otrosbancos-div-botones {width:976px; top:initial; bottom:5%; position:absolute; }/*area-botones*/
+.transferir-otrosbancos-boton-continuar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-aviso-inicio { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/normal/Ios_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+.transferir-otrosbancos-aviso-confirmar { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/normal/Ios_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+.transferir-otrosbancos-boton-cancelar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-boton-corregir {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/*estilos para transferirOtrosBancosCCheqCreditoAprobacion.html*/ /*estilos para transferirOtrosBancosCCheqDebitoAprobacion.html*/
+.transferir-otrosbancos-div-token-aprobacion { background:#F0F9FE; padding:15px; font-size:14px; margin-top:120px } /* cuadro-azul */
+.transferir-otrosbancos-div-token-aprobacion a, .transferir-otrosbancos-div-token-aprobacion label { color:#398DCB; text-decoration:none;}  /* cuadro-azul */
+.transferir-otrosbancos-boton-confirmar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-input-token { width:230px; border:1px solid #E9EDEE; height:23px; background:#FFF;padding-top:4px; text-align:center;}  /* text-imput */
+.transferir-otrosbancos-columnas-contenido-der .transferir-otrosbancos-div-token-aprobacion { margin-top:0}  /* cuadro-azul */
+.transferir-otrosbancos-aviso-aprobacion { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/normal/Ios_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+
+/*estilos para transferirOtrosBancosCCheqCreditoTermino.html*/ /*estilos para transferirOtrosBancosCCheqDebitoTermino.html*/
+.transferir-otrosbancos-encabezado-operacion { font-size:22px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:10px;}/*aviso-verde*/
+.transferir-otrosbancos-div-botones-finales {width:976px; top:initial; position: absolute; bottom: 5%; padding-right:25px; text-align:center; margin-top:30px; margin-left: -5px}/*area-botones-final*/
+.transferir-otrosbancos-div-botones-finales p{font-size: 14px}
+.transferir-otrosbancos-boton-nueva {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-boton-comprobante {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-boton-inicio {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-aviso-termino { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/normal/Ios_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+.transferir-otrosbancos-div-botones-aprobacion {width:976px; top:initial; position: absolute; bottom: 5%; padding-right:25px; text-align:center; margin-top:30px; margin-left: -5px}
+
+/*SOLO PARA IOS*/
+.transferir-ajustar-contenedor-ios {} /*ios-adjust*/ 
+.transferir-ajustar-contenedor-ios .transferir-miscuentas-div-botones{ width:976px; top:initial; top:570px; position:absolute; } /*ios-adjust*/ /*area-botones*/
+.transferir-ajustar-contenedor-ios .transferir-miscuentas-div-botones-finales { width:976px; top:initial; bottom:5%; position:absolute; } /*ios-adjust*/ /*area-botones*/
+.transferir-body-ios-adaptador{height: 683px;}/*ios-body-adapter*/
+.transferir-ajustar-contenedor-ios .transferir-otrosbancos-div-botones-termino { width:976px; top:initial; bottom:5%; position:absolute; }
+.transferir-otrosbancos-div-botones-termino  { padding-right:25px; text-align:center; margin-top:30px; margin-left: -5px}
+.transferir-otrosbancos-div-botones-termino p{font-size: 14px}/*area-botones-final*/
+
+/********************************** Fin Transferir **********************************/
+
+
+/* ==========================================================================
+ Modulo Invertir
+========================================================================== */
+.invertir-resaltado-azul {color:#398DCB !important}
+.compras-overflow {  
+    overflow:auto;
+    height:244px;
+}
+
+/* Inicio Invertir Compra */
+.invertir-compra-encabezado { background:url(../img/normal/Ios_Ic_Invertir.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px}/*cuerpo-invertir*/
+#invertir-compra-contenedor { padding-left:25px; width:999px;}/*contenedor*/
+.invertir-compra-clearfix:before, .invertir-compra-clearfix:after { content: " "; display: table; }/*clearfix*/
+.invertir-compra-clearfix:after { clear: both; } /*clearfix*/
+.invertir-compra-clearfix { *zoom: 1; } /*clearfix*/
+.invertir-compra-tab-subtitulos {font-size:14px; color:#888; margin-top:15px;}/*nav-tab*/
+.invertir-compra-tab-subtitulos td{padding-bottom:12px}/*nav-tab*/
+.invertir-compra-tab-subtitulos .invertir-compra-subtitulo-selected { font-weight:bold; background:url(../img/normal/sombra.png) no-repeat bottom left; background-size:80%; color:#283B6C !important; }/*nav-tab*/ /*resaltado-azulmarino*/
+
+.invertir-compra-subtitulo-selected { color:#283B6C !important; }/*resaltado-azulmarino*/
+
+.invertir-compra-columnas-contenido-izq {width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado izquierdo*/
+.invertir-compra-columnas-contenido-der {width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado derecho*/
+.invertir-compra-tab-contenido {font-size:14px; border-collapse: collapse; border-spacing:0;}/*transferir-tab*/
+.invertir-compra-tab-contenido td {padding-right:10px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:40px; line-height:40px; color:#888 }/*transferir-tab*/
+.invertir-compra-tab-contenido td + td {text-align:left; padding-left:10px; color:#444;}/*transferir-tab*/
+.invertir-compra-tab-contenido * {vertical-align: middle}/*transferir-tab*/
+
+.invertir-compra-opcion-emergente {width:179px; height:29px; line-height:29px; background: url(../img/normal/Ios_Input_Select.png) no-repeat right; display:inline-block; text-align:center; }/*opcion-emergente2*/
+.invertir-compra-opcion-emergente select {width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}/*opcion-emergente2*/
+
+
+.invertir-compra-input-importe { width:169px; border:0; height:29px; background:url(../img/normal/Ios_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.invertir-compra-div-botones { padding-right:25px; text-align:center; margin-top:30px; margin-left: -5px}
+.invertir-compra-div-botones .transferir-miscuentas-boton-confirmar {margin: 0  35px; } /* margin: 0  35px */
+.invertir-compra-div-botones {width:976px; top:initial; top:570px; position:absolute; }/*area-botones*//*area-botones area-botonesInvertir1*/
+.invertir-compra-boton-continuar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-compra-aviso-aprobacion { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/normal/Ios_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+.invertir-compra-aviso-termino { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/normal/Ios_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+
+.invertir-compra-boton-regresar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-compra-boton-confirmar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/*area-botones*/
+.invertir-compra-div-principal{  height:683px; width:1024px; position:relative}/*todo todo3-ios*/
+.invertir-compra-resultado-operacion { font-size:22px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:10px;}/*aviso-verde*/
+
+.invertir-compra-div-botones-finales {width:976px; top:initial; position: absolute; bottom: 5%; padding-right:25px; text-align:center; margin-top:30px; margin-left: -3px}/*area-botones area-botones3*/
+.invertir-compra-boton-nueva {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-compra-boton-comprobante {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-compra-boton-inicio {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/***************************** Fin Invertir Compra *******************************/
+
+/***************************** Inicio Invertir venta *******************************/
+.invertir-venta-encabezado { background:url(../img/normal/Ios_Ic_Invertir.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px}/*cuerpo-invertir*/
+#invertir-venta-contenedor { padding-left:25px; width:999px;}/*contenedor*/
+.invertir-venta-clearfix:before, .invertir-venta-clearfix:after { content: " "; display: table; }/*clearfix*/
+.invertir-venta-clearfix:after { clear: both; } /*clearfix*/
+.invertir-venta-clearfix { *zoom: 1; } /*clearfix*/
+.invertir-venta-tab-subtitulos {font-size:14px; color:#888; margin-top:15px;}/*nav-tab*/
+.invertir-venta-tab-subtitulos td{padding-bottom:12px}/*nav-tab*/
+.invertir-venta-tab-subtitulos .invertir-venta-subtitulo-selected { font-weight:bold; background:url(../img/normal/sombra.png) no-repeat bottom left; background-size:80%; color:#283B6C !important; }/*nav-tab*/ /*resaltado-azulmarino*/
+
+.invertir-venta-subtitulo-selected { color:#283B6C !important; }/*resaltado-azulmarino*/
+
+.invertir-venta-columnas-contenido-izq {width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado izquierdo*/
+.invertir-venta-columnas-contenido-der {width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado derecho*/
+.invertir-venta-tab-contenido {font-size:14px; border-collapse: collapse; border-spacing:0;}/*transferir-tab*/
+.invertir-venta-tab-contenido td {padding-right:10px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:40px; line-height:40px; color:#888 }/*transferir-tab*/
+.invertir-venta-tab-contenido td + td {text-align:left; padding-left:10px; color:#444;}/*transferir-tab*/
+.invertir-venta-tab-contenido * {vertical-align: middle}/*transferir-tab*/
+
+.invertir-venta-opcion-emergente {width:179px; height:29px; line-height:29px; background: url(../img/normal/Ios_Input_Select.png) no-repeat right; display:inline-block; text-align:center; }/*opcion-emergente2*/
+.invertir-venta-opcion-emergente select {width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}/*opcion-emergente2*/
+
+.invertir-venta-div-botones { padding-right:25px; text-align:center; margin-top:30px; margin-left: -3px}
+.invertir-venta-div-botones .transferir-miscuentas-boton-confirmar {margin: 0  35px; } /* margin: 0  35px */
+.invertir-venta-div-botones {width:976px; top:initial; top:570px; position:absolute; }/*area-botones*//*area-botones area-botonesInvertir1*/
+.invertir-venta-boton-continuar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-venta-aviso-aprobacion { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/normal/Ios_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+
+.invertir-venta-boton-regresar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-venta-boton-confirmar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/*area-botones*/
+.invertir-venta-div-principal{  height:683px; width:1024px; position:relative}/*todo todo3-ios*/
+.invertir-venta-resultado-operacion { font-size:22px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:10px;}/*aviso-verde*/
+
+.invertir-venta-div-botones-finales {width:976px; top:initial; position: absolute; top: 570px; padding-right:25px; text-align:center; margin-top:30px; margin-left: -3px}/*area-botones area-botones3*/
+.invertir-venta-boton-nueva {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-venta-boton-comprobante {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-venta-boton-inicio {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/* Fin Invertir venta */
+
+/* Inicio Invertir Consulta */
+.invertir-consulta-encabezado { background:url(../img/normal/Ios_Ic_Invertir.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px}/*cuerpo-invertir*/
+#invertir-consulta-contenedor { padding-left:25px; width:999px;}/*contenedor*/
+.invertir-consulta-clearfix:before, .invertir-compra-clearfix:after { content: " "; display: table; }/*clearfix*/
+.invertir-consulta-clearfix:after { clear: both; } /*clearfix*/
+.invertir-consulta-clearfix { *zoom: 1; } /*clearfix*/
+.invertir-consulta-mitad-izq { width:474px; float:left; padding-right:20px}/*mitad*/
+.invertir-consulta-tab-contenido { font-size:14px; border-collapse: separate; border-spacing: 10px;}/*invertir-tab*/
+.invertir-consulta-tab-contenido td label{font-size:14px; color:#888}/*invertir-tab*/
+
+.invertir-consulta-opcion-emergente { width:179px; height:29px; line-height:29px; background: url(../img/normal/Ios_Input_Select.png) no-repeat; display:inline-block; text-align:center;background-size:100% 100%; } /*ios-opcion-emergente*/
+.invertir-consulta-opcion-emergente select { width:184px; height:29px; line-height:29px;  text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px} /*ios-opcion-emergente*/
+
+.invertir-consulta-input-importe { width:230px; border:1px solid #E9EDEE; height:23px; background:#FFF;padding-top:4px; text-align:center;}  /* text-imput */
+
+.invertir-consulta-boton-confirmar {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-consulta-boton-nueva {background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+.invertir-consulta-div-botones { margin-top:80px; text-align:center}
+.invertir-consulta-mitad-der { width:464px; float:left; border-left:1px solid #ECEFF2; padding:0 15px}
+.invertir-consulta-cargando { height:450px; background: url(../img/normal/Ios_Ic_Load.png) no-repeat center}
+#invertir-consulta-div-grafica { margin-left:5px; width:470px; height:200px; display:none; }
+.invertir-consulta-etiquetas-titulo{color:#888; font-size: 20px}
+.invertir-consulta-etiquetas-valores{color:#006EC1; font-size: 20px}
+
+/********************************** Fin Invertir *********************************/
+
+/* ==========================================================================
+  Modulo administrar
+ ========================================================================== */
+.administrar-cabecera { background:url(../img/normal/Ios_Ic_Administrar.png) no-repeat left; height:25x; margin:10px 0; padding-left:30px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:24px}
+#administrar-contenedor { padding-left:20px; width:auto;}
+.administrar-texto-titulo { font-weight:normal; margin:20px 0; padding-left:20px; color:#006DC0; font-size:18px}
+.administrar-tab-eliminar { font-size:16px; border-collapse: separate; border-spacing: 20px; }
+/*componente radio*/
+.administrar-radio-seleccionar  { display:inline-block; width:16px; height:16px; position:relative; }
+.administrar-radio-seleccionar *:focus { outline:none}
+.administrar-radio-seleccionar input { width:16px; height:16px; position:absolute; top:-2px; left:0; z-index:3; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; }
+.administrar-radio-seleccionar input {	width:16px; height:16px; top:-2px; left:0; display:inline-block; position:absolute; background: url(../img/1024x600/An_Radio.png) no-repeat center right; }
+.administrar-radio-seleccionar input:checked{ background: url(../img/1024x600/An_Radio.png) no-repeat center left; }
+  
+.administrar-div-botones{padding-top:350px;}
+.administrar-boton-confirmar { background:url(../img/normal/Ios_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}
+#administrar-div-principal {height: 683px; width:1024px; position:relative}
+.administrar-clearfix { *zoom: 1; }
+#administrar-radio-depurar0{-webkit-transform: scale(1.3,1.3);}
+#administrar-radio-depurar1{-webkit-transform: scale(1.3,1.3);}
+#administrar-radio-depurar2{-webkit-transform: scale(1.3,1.3);}
+ /* ==========================================================================
+ Modulo posisici�n global
+   ========================================================================== */
+   
+.highcharts-legend {display: none;}
+
+#transferir-cuentasbbva-div-principal + div > #dialog #dialContainer, 
+#dialogCFiscal #dialContainer,
+#dialogFrecuente #dialContainer { margin-top: 25px; padding: 40px 5px 30px 5px; }
+
+
+
+/* Comprobante */
+.ui-dialog{ 
+	color:#70767B !important; 
+	padding-top: 10px;
+	background-color: #F2F2F2;
+	border: 2px solid #ccc;
+}
+
+.ui-widget-content{
+	color:#70767B !important; 
+}
+
+.floatButton{
+	left: 95%;
+	top: 0px;
+	position:absolute;
+	z-index: 20;
+	width: 50px;
+	height:50px;
+	border: 2px solid #ccc;
+	background: white url(../img/1024x600/An_Ic_Share_Guardar_On.png) no-repeat center top;	
+}
+
+.andOn{
+	background: white url(../img/1024x600/An_Ic_Share_Guardar_On.png) no-repeat center top;
+}
+
+.andOff{
+	background: white url(../img/1024x600/An_Ic_Share_Guardar_Off.png) no-repeat center top;
+}
+
+.overflowS{
+	overflow: scroll;
+}
+
+.intContainer{
+	z-index: 2;
+	background-color: white;
+	border: 2px solid #ccc;
+	margin: 2%;
+}
+
+.intContainer table{
+	margin: 0 auto;
+	width: 70%;
+}
+
+.intContainer table tr{
+	border-bottom: 1px solid #ccc;
+}
+
+.intContainer table tr td{
+	padding-top: 7px;
+	padding-bottom: 7px;
+	width: 50%;
+}
+
+.intContainer table tr td:nth-child(odd){
+	padding-right: 10px;
+	text-align: right;
+}
+
+.intContainer table tr td:nth-child(even){
+	padding-left: 10px;
+	text-align: left;
+}
+
+.avisoComponente { 
+	font-size:12px; 
+	padding:14px 15px 14px 15px ;
+	background: #ECF7FE; 
+	color:#70767B !important; 
+}
+
+.leyenda{
+	text-align: center;
+	margin:30px;
+}
+
+#bodyD #compname{
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+.hbox{
+	height: 50px;
+}
+
+.hbox .ident{
+	font-size: 24px;
+	color: #0098E1 !important;
+	margin-left: 20px;
+}
+
+.hbox .logo, .hbox .ident{
+	float: left;
+}
+
+.hbox .name, .hbox .date{
+	float: right;
+	margin-right: 50px;
+}
+
+/* .jqplot-highlighter{ */
+/* 	background:url(../img/1024x600/An_Btn_Grafica_Tooltip.png) no-repeat; */
+/* 	padding: 30px; */
+/* } */
+
+.jqplot-target > canvas:last-child {
+	border-bottom: 1px solid #aaa;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+/**************** Loading animation ****************/
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../img/1024x600/loading.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+/**************** Loading animation ****************/
+
+#CComprobantesGuadados{
+   background-size:454px 600px;
+   background-repeat:no-repeat;
+   width:504px;
+   height:1800px;
+   position:absolute;
+   top:0px;
+   left:0px;
+   perspective-origin: center top; 
+   -webkit-perspective: 200;
+   -webkit-perspective-origin: 30% 0%;
+   -webkit-transform-style: preserve-3d;
+   z-index:9;
+}
+      
+
+.comprobante {
+ background-size:200px 200px;
+ background-repeat:no-repeat;
+-webkit-transition: all 0.5s ease;
+ width: 200px;
+ height: 200px;
+ position:absolute;
+ top: 300px;
+ left:100px;
+ background-attachment: fixed;
+ background-position: 30% 20%; 
+}
+.comprobante-head-principal{	background: url(../img/comprobante_cabecera.png) repeat left; text-align: center;
+		 color:white; height: 40px;}
+
+.comprobante-head-leido{	background: url(../img/comprobante_cabecera_leido.png) repeat left; text-align: center;
+		 color:blue; height: 40px;}
+   
+
+   
+#contenedor { padding-left:25px; width:999px;}
+#contenedor-miquince1 {padding-left: 4%; width: 94%; }
+#contenedor-miquince2 {padding-left: 4%; width: 94%; }
+#contenedor-miquince3{ padding-left: 4%; width: 94%; }
+#contenedor-tdc1 { padding-left: 4%; width: 94%; }
+#contenedor-tdc2 { padding-left: 4%; width: 94%; }
+#contenedor-tdc3 { padding-left: 4%; width: 94%; }
+#contenedor-cheq1 {padding-left: 4%; width: 94%; }
+#contenedor-cheq2 {padding-left: 4%; width: 94%; }
+#contenedor-cheq3 {padding-left: 4%; width: 94%; }
+#contenedor-nvaCta-bbva1 { padding-left:4%; width:94%;}
+#contenedor-nvaCta-bbva2 { padding-left:4%; width:94%;}
+#contenedor-nvaCta-bbva3 { padding-left:4%; width:94%;}
+#contenedor-nvaCta-bbva4 { padding-left:4%; width:94%;}
+#contenedor-nvaCta-bbva5 { padding-left:4%; width:94%;}
+#contenedor-frec-bbva1 {padding-left: 4%; width: 94%;}
+#contenedor-frec-bbva2 {padding-left: 4%; width: 94%;}
+#contenedor-frec-bbva3 {padding-left: 4%; width: 94%;}
+#contenedor-otrosbancos-nva1 { padding-left:4%; width:94%;}
+#contenedor-otrosbancos-nva2 { padding-left:4%; width:94%;}
+#contenedor-otrosbancos-nva3 { padding-left:4%; width:94%;}
+#contenedor-otrosbancos-nva4 { padding-left:4%; width:94%;}
+#contenedor-otrosbancos-nva5 { padding-left:4%; width:94%;}
+#contenedor-otrosbancos-debito0 {padding-left: 4%; width: 94%;}
+#contenedor-otrosbancos-debito1 {padding-left: 4%; width: 94%;}
+#contenedor-otrosbancos-debito2 {padding-left: 4%; width: 94%;}
+#contenedor-otrosbancos-debito3 {padding-left: 4%; width: 94%;}
+#contenedor-otrosbancos-credito0 {padding-left: 4%; width: 94%;}
+#contenedor-otrosbancos-credito1 {padding-left: 4%; width: 94%;}
+#contenedor-otrosbancos-credito2 {padding-left: 4%; width: 94%;}
+#contenedor-otrosbancos-credito3 {padding-left: 4%; width: 94%;}
+#contenedor-nvaCta-bbva-corregir {padding-left: 4%; width: 94%;}
+
+.mitad { width:474px; float:left; padding-right:20px}
+.mitad2 { width:464px; float:left; border-left:1px solid #ECEFF2; padding:0 15px; height: 500px; }
+.mitad4 { width:464px; float:left; border-left:1px solid #ECEFF2; padding:0 15px}
+
+.mitad4 {   
+  width:454px;
+  height:600px;
+  position:absolute;
+  top:40px;
+  left:510px;
+}
+      
+.minmenu { text-align:right; margin:0; margin-bottom:5px;  padding:0}
+.minmenu>li { display:inline-block; list-style:none; position:relative; width:27px; height:27px; margin: 0 5px}
+.minmenu>li>a { width:27px; height:27px; display:block}
+.min-share { background:url(../img/normal/Ios_Ic_Share.png) no-repeat}
+
+.sub-min2 {position:absolute; width:85px; height:81px; z-index:2; background:url(../img/normal/An_Bg_Share2.png) no-repeat; text-align:center; padding:0; margin:0; right:-30px}
+.sub-min2>li { display:inline-block; list-style:none; position:relative; width:53px; height:51px; margin: 15px 5px}
+.sub-min2>li a { width:53px; height:51px; display:block}
+.min-correo { background:url(../img/normal/Ios_Ic_Share_Correo_Off.png) no-repeat}
+.min-guardar:hover  { background:url(../img/normal/ios_Ic_Share_Guardar_On2.png) no-repeat}
+.min-correo:hover { background:url(../img/1024x600/An_Ic_Share_Correo_On.png) no-repeat}
+.min-full { background:url(../img/1024x600/An_Ic_Full.png) no-repeat}
+.arrastra-comprobante { width:432px; height:452px; background:url(../img/1024x600/An_Bg_Arrastra.png) no-repeat; margin:0 auto }
+
+
+// Estilos Calendario
+
+[name=fechaOperacion] {
+  border: 1px solid #e3e3e3;
+  height: 34px;
+  border-radius: 3px;
+  margin-right: 5%;
+  padding-left: 4%;
+}
+
+#ui-datepicker-div {
+  border: none;
+}
+
+.ui-datepicker-calendar tbody td * {
+  text-align: center !important;
+}
+
+.ui-datepicker-unselectable.ui-state-disabled span.ui-state-default {
+  background: none;
+  background-color: #b5e5f9;
+  border: none;
+  color: #89d1f3;
+}
+
+.ui-datepicker-other-month a {
+  background: none !important;
+  background-color: #b5e5f9 !important;
+}
+
+span.ui-icon.ui-icon-circle-triangle-w {
+  background-position: -96px -16px;
+}
+
+span.ui-icon.ui-icon-circle-triangle-e {
+  background-position: -33px -16px;
+}
+
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
+    color: #363636 !important;
+    border: 1px solid #094fa4 !important;
+    background: #fff0a5 url("images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x !important;
+    font-weight: normal !important;
+}

@@ -1,0 +1,2270 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html, button, input, select, textarea { color: #333; font-family: "Myriad Pro",Helvetica, Arial, sans-serif; }
+html { font-size: 1em; line-height: 1.4; }
+
+::-moz-selection { background: #b3d4fc; text-shadow: none;}
+::selection { background: #b3d4fc; text-shadow: none;}
+audio, canvas, img, video { vertical-align: middle; }
+fieldset { border: 0; margin: 0; padding: 0; }
+textarea { resize: vertical; }
+
+hr { border:0; margin: 20px 0; height:0; border-bottom:1px solid #DEDEDE;}
+body { overflow: hidden; }
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden { display: none !important; visibility: hidden; }
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* ==========================================================================
+   Header classes
+   ========================================================================== */
+#cabeza { background:#FFF;  width:1024px; height:42px; }
+#todo.sideMenuShowing #cabeza { width:940px; }
+#logo {display:block;  background:url(../img/1024x600/An_Logotipo.png) no-repeat center; width:240px; height:42px; text-indent:-99999px; }
+#logo { float:left;}
+
+/*************************** Inicio Login *************************/
+#login-encabezado { background:#FFF;  width:auto; height:42px;}/*cabeza*/
+#login-logo {display:block; background:url(../img/1024x600/An_Logotipo.png) no-repeat center; width:240px; height:42px; text-indent:-99999px; float:left; } /*logo*/
+#menu_superior{  height:24.4px; width: 962px; background-color: rgb(0,0,255); opacity: 0.5;}
+
+#cuerpo-login { background:url(../img/1024x600/An__Bg_Pub.png); background-size: 100% 100%;  height:404px !important; width:962px; padding-top:42px;}/*cuerpo-login*/
+#loginPrincipal #bcom-principal { background:url(../img/1024x600/An_Box.png) no-repeat center; width:384px; height:250px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:85px; display:block}/*loginPrincipal*//*bcom*/
+#loginPrincipal #bcom-secundario { background:url(../img/1024x600/An_Box_Token.png) no-repeat center; width:384px; height:304px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:30px; display:none} /*loginPrincipal*//*bcom2*/
+#loginSecundario #bcom-principal { background:url(../img/1024x600/An_Box.png) no-repeat center; width:384px; height:250px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:85px; display:none;}/*loginSecundario bcom*/
+#loginSecundario #bcom-secundario { background:url(../img/1024x600/An_Box_Token.png) no-repeat center; width:384px; height:304px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:30px; display:block}/*loginSecundario bcom2*/
+#bcom-principal .link { margin-top: 7px; }
+#bcom-secundario .link { margin-top: 1px; }
+
+.tab-icon {font-weight:normal; color:#1A68AF; background:url(../img/1024x600/An_Ic_Tab.png) no-repeat; font-size:29px; padding: 1.5% 0 0 40px; margin-bottom:4.7%} /*tab-icon*/
+.tab-icon h1{background:url(../img/1024x600/An_Ic_Tab.png) no-repeat; font-size:29px; padding: 6px 0 0 40px; margin-bottom:28px;} /*tab-icon*/
+.login-input-datos {border:0; margin:0; color:#BDBDBD; width:350px; height:36px; padding:0 17px; background:url(../img/1024x600/An_Input.png) no-repeat; margin-bottom:10px; font-size:18px;} /*full-input*/
+.login-boton-entrar { padding:0; border:0; margin:0; color:#FFF; width:384px; height:36px; padding:0; background:url(../img/1024x600/An_Btn.png) no-repeat; margin-bottom:20px; font-size:18px;}/*btn-submit*/
+
+.link { color:#B95974; text-align:center; text-decoration:none; display:block; font-size:18px;}/*link*/
+.usuario-login { font-weight:normal; font-size:20px; color:#4C524C;}/*usuario-login*/
+.usuario-log-datos img { float:left; margin-right:20px; -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.3); box-shadow: 0 0 3px 3px rgba(0,0,0,.3); }/*usuario-log-datos*/
+.usuario-log-datos{height:62px;margin-top:10px; margin-bottom:10px; font-size:16px; color:#4C524C;} /*usuario-log-datos*/
+#login-nav { height:53px; background:url(../img/1024x600/An_Bg_Suite.png) no-repeat;}/*login-nav*/
+
+#pie {width:962px; height:40px; background:#969696; text-align:center; position:relative; text-shadow: 1px 1px 2px #030303; }/*pie*/
+.contactanos { font-size:16px; background: url(../img/1024x600/An_Ic_Tel.png) left no-repeat; padding-left:30px; line-height:40px;  color:#FFF; display:inline-block;}/*contactanos*/
+.ver { font-size:12px; top:33%; right:15px; color:#FFF; position:absolute;}/*ver*/
+
+#ayudaToken { position: absolute; left: 0px; top: 0px; outline: none; z-index: 999998; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); }
+#ayudaDP720 { width:100%; height:100%; background: url(../img/1024x600/An_token_dp270.png) center center no-repeat; }
+#ayudaSOFT  { width:100%; height:100%; background: url(../img/1024x600/An_token_softoken.png) center center no-repeat; }
+#ayudaOCRA  { width:100%; height:100%; background: url(../img/1024x600/An_token_ocra.png) center center no-repeat; }
+
+.login-icono-invitado { width: 30px; height: 30px; margin-left: 350px; min-width: 0px; position: absolute; margin-top: 20px; }
+
+/*************************** Fin Login *************************/
+
+#nav-lateral { width:14px; height:564px; background: url(../img/1024x600/An_Bg_Menu_Off.png) center right no-repeat; position:absolute; left:0; z-index: 11;}
+#menu_principal{ position:absolute; top:0px; left:0px; width:40px; height:564px; z-index:99; }
+
+.datos-usuario { float:right; font-size:11px; vertical-align:middle; color:#0098E2; margin-top:4px; margin-right:20px}
+.datos-usuario img { vertical-align:middle; margin-right:20px;-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3);
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.3);-webkit-border-radius: 6px; border-radius: 6px;}
+.miniAvatar { background:url(../img/1024x600/foto-top.png) no-repeat; width:27px; height:27px; vertical-align:middle; margin-right:20px; -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3); box-shadow: 0 0 2px 2px rgba(0,0,0,.3); -webkit-border-radius:6px; border-radius: 6px;  display:inline-block; }
+.pregunta { background:url(../img/1024x600/An_Ic_Ayuda.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.contacto { background:url(../img/1024x600/An_Ic_Tels.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.salir { background:url(../img/1024x600/An_Btn_Salir.png) no-repeat center; display:inline-block; width:80px; height:20px; vertical-align:middle; text-align:center; line-height:20px; color:#fff; text-decoration:none;  vertical-align:middle; margin-left:10px;}
+.ultima-sesion { font-size:9px; color:#333; text-align:right; margin-top:2px }
+
+/*Encabezado para webtrader*/
+#cabeza-webtrader { background:#FFF; width:1024px; }
+#todo.sideMenuShowing #cabeza-webtrader { width:940px; }
+#logo2 { background:url(../img/1024x600/An_Logotipo.png) no-repeat center; width:240px; height:42px; text-indent:-99999px; display:block; float:left; }
+.datos-usuario2 { float:right; font-size:11px; vertical-align:middle; color:#0098E2; margin-top:4px; margin-right:20px}
+.ifb-icoContract{ background:url(../img/1024x600/icoContract.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.correo { background:url(../img/1024x600/An_Ic_Correo.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.ayuda { background:url(../img/1024x600/An_Ic_Ayuda2.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.engrane { background:url(../img/1024x600/An_Ic_Engrane.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+
+#todo {  height:100%; width:1024px; position:relative}
+#contentFrame { width:962px !important; height:523px !important; border:none; }
+
+#img-slider { width:517px; height:431px; float:left; margin-left:35px; padding:1px 3px 3px 1px; background-size:100% auto} 
+
+#todo #btns-lateral{ background:#164A8C; width:80px; height:562px; padding:1px 0; display:none; }
+#btns-lateral a { width:80px; height:80px; text-indent:-99999px; display:block; margin:10px 0} 
+.lateral-inicio {background:url(../img/1024x600/An_Ic_Left_Inicio_Off.png) no-repeat; }
+.lateral-cuentas {background:url(../img/1024x600/An_Ic_Left_Cuentas_Off.png) no-repeat; }
+.lateral-transferir {background:url(../img/1024x600/An_Ic_Left_Transferir_Off.png) no-repeat; }
+.lateral-invertir {background:url(../img/1024x600/An_Ic_Left_Invertir_Off.png) no-repeat; }
+.lateral-trader {background:url(../img/1024x600/An_Ic_Left_Trader_Off.png) no-repeat; }
+.lateral-administrar {background:url(../img/1024x600/An_Ic_Left_Admin_Off.png) no-repeat; }
+
+.lateral-inicio.lat-selec {background:url(../img/1024x600/An_Ic_Left_Inicio_On.png) no-repeat; }
+.lateral-cuentas.lat-selec {background:url(../img/1024x600/An_Ic_Left_Cuentas_On.png) no-repeat; }
+.lateral-transferir.lat-selec {background:url(../img/1024x600/An_Ic_Left_Transferir_On.png) no-repeat; }
+.lateral-invertir.lat-selec {background:url(../img/1024x600/An_Ic_Left_Invertir_On.png) no-repeat; }
+.lateral-trader.lat-selec {background:url(../img/1024x600/An_Ic_Left_Trader_On.png) no-repeat; }
+.lateral-administrar.lat-selec {background:url(../img/1024x600/An_Ic_Left_Admin_On.png) no-repeat; }
+
+/* ==========================================================================
+   AGREGADO
+   ========================================================================== */
+#nav-administrar a { padding-left:30px; padding-right:30px}
+   /* ==========================================================================
+   END
+   ========================================================================== */
+.nb-cuentas { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Miscuentas_Off.png) no-repeat center top;}
+.nb-estado { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Estado_Off.png) no-repeat center top;}
+.nb-comprobantes { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Comprobantes_Off.png) no-repeat center top;}
+.nb-compguardados { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Guardados_Off.png) no-repeat center top;}
+
+body { overflow: hidden; }
+
+#contentFrame { width:962px !important; height:523px !important; border:none; }
+
+.miniAvatar { background:url(../img/1024x600/foto-top.png) no-repeat; width:27px; height:27px; vertical-align:middle; margin-right:20px; -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3); box-shadow: 0 0 2px 2px rgba(0,0,0,.3); -webkit-border-radius:6px; border-radius: 6px;  display:inline-block; }
+.cuerpo-admin { background:url(../img/1024x600/An_Ic_Administrar.png) no-repeat left; height:24px; margin:8px 0; padding-left:35px; margin-left:19px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:24px}
+
+.titulo-administrar { font-weight:normal; margin:15px 0; color:#006DC0; font-size:18px; padding-left: 19px}
+.eliminar-tab { font-size:16px; border-collapse: separate; border-spacing: 15px; }
+.formulario-btn { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}
+
+.nb-eliminar { width:128px; height:80px; float:left;display:block; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Eliminar_Off.png) no-repeat center top;}
+
+/**Agregado**/
+.nb-eliminar:ACTIVE{ width:128px; height:80px; float:left;display:block; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Eliminar_On.png) no-repeat center top;}
+#depurar_0{-webkit-transform: scale(1.5,1.5);}
+#depurar_1{-webkit-transform: scale(1.5,1.5);}
+.div-btns-eliminar{padding-top:230px;}
+#contenedor-admin { padding-left:0px; width:1000px;}
+.inicio-selected .lateral-inicio { background:url(../img/1024x600/An_Ic_Left_Inicio_On.png) no-repeat; }
+.cuentas-selected .lateral-cuentas {background:url(../img/1024x600/An_Ic_Left_Cuentas_On.png) no-repeat; }
+.transferir-selected .lateral-transferir {background:url(../img/1024x600/An_Ic_Left_Transferir_On.png) no-repeat; }
+.invertir-selected .lateral-invertir {background:url(../img/1024x600/An_Ic_Left_Invertir_On.png) no-repeat; }
+.trader-selected .lateral-trader {background:url(../img/1024x600/An_Ic_Left_Trader_On.png) no-repeat; }
+.administrar-selected .lateral-administrar {background:url(../img/1024x600/An_Ic_Left_Admin_On.png) no-repeat; }
+
+
+/*Menu inferior*/
+#nav-bajo{ position:absolute; height:27px; bottom:0px; left:0px; /*background:url(../img/1024x600/An_Ic_Lineas.png) no-repeat top;*/ width:1024px }
+#nav-bajo-display{ position:absolute; height:104px; bottom:0px; left:0px; /*background:url(../img/1024x600/An_Bg_BottomBar.png) no-repeat top;*/ width:1024px }
+
+#nav-bajo #nav-cont { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px; display:none; }
+#nav-bajo-display #nav-cont { height:83px; background:rgba(244,244,244,.9); margin-top:21px; padding-left:20px; }
+
+/*Submenu general*/
+#nav-cont { height:83px; background:rgba(244,244,244,.9); margin-top:21px; padding-left:20px;}
+#nav-cont a+a { border-left:1px solid #9A9B9C}
+.nb-inicio { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Inicio_Off.png) no-repeat center top;}
+.nb-flechas { width:128px; height:25px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Rapida_Trans_Off.png) no-repeat center top; font-size:11px; color:#9A9B9C; text-align:center; text-decoration:none; padding-top:55px}
+
+
+/*Submenu administrar*/
+#nav-administrar { height:83px; background:rgba(244,244,244,.9); margin-top:21px; padding-left:20px;}
+#nav-administrar a+a { border-left:1px solid #9A9B9C}
+#nav-bajo #nav-administrar{ height:83px; background:rgba(244,244,244,.9); margin-top:21px; padding-left:20px; display:none; }
+#nav-bajo-display #nav-administrar { height:83px; background:rgba(244,244,244,.9); margin-top:21px; padding-left:20px; }
+#nav-administrar a { padding-left:30px; padding-right:30px}
+
+.nb-eliminar { width:128px; height:80px; float:left;display:block; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Eliminar_Off.png) no-repeat center top;}
+.nb-eliminar.nb-selec { background:url(../img/1024x600/An_Ic_Bottom_Eliminar_On.png) no-repeat center top;}
+
+
+/*Submenu webtrader*/
+#nav-webtrader { height:83px; background:rgba(244,244,244,.9); margin-top:21px;}
+
+.nb-rejecutivo { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Rejecutivo_Off.png) no-repeat center top;}
+.nb-indices { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Indices_Off.png) no-repeat center top;}
+.nb-acciones { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Acciones_Off.png) no-repeat center top;}
+.nb-sic { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_SIC_Off.png) no-repeat center top;}
+.nb-moperatividad { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Mayor_Operatividad_Off.png) no-repeat center top;}
+.nb-ipc { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_IPC_Off.png) no-repeat center top;}
+.nb-noticias { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Noticias_Off.png) no-repeat center top;}
+.nb-etrabajo { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Espacio_Trabajo_Off.png) no-repeat center top;}
+
+.nb-rejecutivo.nb-selec { background:url(../img/1024x600/An_Ic_Rejecutivo_On.png) no-repeat center top;}
+.nb-indices.nb-selec  { background:url(../img/1024x600/An_Ic_Indices_On.png) no-repeat center top;}
+.nb-acciones.nb-selec  { background:url(../img/1024x600/An_Ic_Acciones_On.png) no-repeat center top;}
+.nb-sic.nb-selec  {background:url(../img/1024x600/An_Ic_SIC_On.png) no-repeat center top;}
+.nb-moperatividad.nb-selec  {background:url(../img/1024x600/An_Ic_Mayor_Operatividad_On.png) no-repeat center top;}
+.nb-ipc.nb-selec  { background:url(../img/1024x600/An_Ic_IPC_On.png) no-repeat center top;}
+.nb-noticias.nb-selec  { background:url(../img/1024x600/An_Ic_Noticias_On.png) no-repeat center top;}
+.nb-etrabajo.nb-selec  {background:url(../img/1024x600/An_Ic_Espacio_Trabajo_On.png) no-repeat center top;}
+
+/* Mis cuentas */
+.cuerpo-cuentas { background:url(../img/1024x600/An_Ic_Cuentas.png) no-repeat center left; height:24px; margin:8px 0; margin-left:35px; padding-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:24px}
+
+.seccion1 {width:612px; float:left;}
+.seccion2 {width:332px; float:left; margin-left:35px}
+.titulo-cuenta { font-size:15px; color:#4A4A4A; float:left; width:50%; margin-bottom:10px;}
+.saldo-cuenta { font-size:15px; color:#4A4A4A; float:left;  width:50%; text-align:right; margin-bottom:10px;}
+.titulo-cuenta span, .saldo-cuenta span, .credit-card-title span { padding-left:20px; color:#006EC1}
+
+.sec2-titulo { font-size:12px; color:#004095; margin-bottom:19px;}
+
+.sec1-nav { border-bottom:1px solid #939494; margin-left:44px; color: #939494;}
+.sec1-nav a { padding:0 15px; display:inline-block; line-height:24px; font-size:10px; color: #939494; border-top:1px solid  #939494; text-decoration:none; }
+.sec1-nav a:first-child { border-left:1px solid  #939494; -webkit-border-radius: 6px 0 0 0;
+border-radius: 10px 0 0 0;}
+.sec1-nav a:last-child { 
+  border-right:1px solid  #939494; 
+  -webkit-border-radius: 0 6px 0 0;
+  border-radius: 0 10px 0 0;
+} 
+a.selec-nav {color:#006EC1;} 
+
+.sec1-nav a:nth-child(5) {
+  border-right: 1px solid #939494;
+  -webkit-border-radius: 0 10px 0 0;
+  display: inline-block;
+}
+
+.sec1-nav .lastItem{
+  border-right: 1px solid #939494;
+  -webkit-border-radius: 0 10px 0 0;
+  display: inline-block;
+}
+
+.grafica-tabla {}
+.grafica-tabla th { text-align:right; width:50px; font-weight:normal; font-size:9px; padding:4px 7px; color:#939494}
+.grafica-tabla a { text-decoration:none; color: inherit}
+.grafica-tabla td { vertical-align:bottom; font-size:9px; color:#939494; padding-bottom:0}
+.tr-grafica td{  background:url(../img/1024x600/An_Bg_Grafica.jpg) bottom; border-bottom:1px solid #939494; line-height:0}
+.barra-azul { background:#006EC1; width:56px; height:67px; display:inline-block}
+.barra-amarillo { background:#FDC033; width:56px; height:52px; display:inline-block}
+.barra-verde { background:#8ACA34; width:56px; height:60px; display:inline-block}
+.barra-naranja { background:#F68C24; width:56px; height:37px; display:inline-block}
+.barra-azul2 { background:#8AD1F3; width:56px; height:56px; display:inline-block}
+.barra-azul3 { background:#53B7E3; width:56px; height:37px; display:inline-block}
+a.azul-selec { color:#006EC1; font-size:14px;}
+
+.rango { margin-left:70px; width:444px}
+
+.esferas {position:relative; width:280px; float:left; margin-left:56px; margin-right:12px; height:187px}
+.esferas>div { display:table; position:absolute}
+.esferas a {display: table-cell; visibility: visible; text-align:center; vertical-align:middle; color:#FFF; text-decoration:none; font-size:10px; font-weight:bold }
+.esfera-a1 { top:11px; left:76px; width:99px; height:96px; z-index:5}
+.esfera-a1 a {background:url(../img/1024x600/An_Bubble_Azu1.png) no-repeat; }
+.esfera-a2 { top:70px; left:34px; width:78px; height:78px; z-index:4}
+.esfera-a2 a {background:url(../img/1024x600/An_Bubble_Azu2.png) no-repeat; }
+.esfera-a3 { top:45px; left:148px; width:69px; height:69px; z-index:3}
+.esfera-a3 a {background:url(../img/1024x600/An_Bubble_Azu3.png) no-repeat; }
+.esfera-a4 { top:30px; left:16px; width:60px; height:60px; z-index:2}
+.esfera-a4 a {background:url(../img/1024x600/An_Bubble_Azu4.png) no-repeat; }
+.esfera-a5 { top:88px; left:133px; width:59px; height:59px; z-index:1}
+.esfera-a5 a {background:url(../img/1024x600/An_Bubble_Azu5.png) no-repeat; }
+
+.detalle-gastos { width:262px; float:right; margin-top:15px; -webkit-border-radius: 10px; border-radius: 10px;  border:1px solid #939494; padding: 7px 0}
+.gastos-table th { text-align:right; font-weight:normal; font-size:10px; color:#595959; width:72px}
+.gastos-table td {font-size:10px; color:#2969B7}
+.gastos-table td:nth-child(1) {text-align: right; color: #000;}
+
+.sec2 { margin-top:10px; -webkit-border-radius: 10px; border-radius: 10px;  border:1px solid #939494;}
+.sec2-table { width:100%; -webkit-user-select: none; user-select: none;}
+.sec2-table th { text-align:left; font-weight:normal; font-size:10px; color:#595959; padding:5px 20px;}
+.sec2-table td {font-size:10px; color:#2969B7; text-align:right; padding:5px 20px;}
+.sec2-table tr+tr { border-top:1px solid #939494; }
+.sec2-table th span { display:block}
+
+#nav-cont a { padding-left:40px; padding-right:40px}
+#normalAccountsSection { display:block;}
+/* ####################################################################################################################################### */
+/* Se debe de ajustar el valor de la propiegag height, los demas valores estan basados en la clase: sec2 */
+.sec2-mis-cuentas {  
+    overflow:auto;
+    height:332px;
+}
+
+.sec2-mis-cuentas-bullet {
+    background: white;
+    /* Ajustar al tama�o requerido, el alto y el ancho son el mismo */
+    height: 7px;
+    width: 7px;
+    border: 1px solid #939494;
+    /* El radio es igual a la mitad del alto/ancho mas uno, no se tienen en cuenta decimales. */
+    border-radius: 6px;
+    /* La mitad del alto/ancho */
+    margin: 0px 5px;
+    display:inline-block;
+}
+
+.sec2-mis-cuentas-bullet.selected {
+    background: #939494;
+}
+
+.sec2-mis-cuentas-bullet-container {
+    margin-top:11px;
+    margin-left:139px;
+}
+
+.sec2Table.visible {
+    display:block;
+}
+
+.cargo{color:#2969B7;}
+.cargo.selec{color:red;}
+
+
+/*Submenu mis cuentas*/
+#nav-bajo-mis-cuentas a { padding: 0px 30px; }
+#nav-bajo-mis-cuentas a:first-child { border-right: 1px solid #9A9B9C; }
+
+.nb-cuentas { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Miscuentas_Off.png) no-repeat center top;}
+.nb-estado { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Estado_Off.png) no-repeat center top;}
+.nb-comprobantes { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Comprobantes_Off.png) no-repeat center top;}
+.nb-compguardados { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Guardados_Off.png) no-repeat center top;}
+
+.nb-cuentas.nb-selec { background:url(../img/1024x600/An_Ic_Bottom_Miscuentas_On.png) no-repeat center top;}
+.nb-estado.nb-selec { background:url(../img/1024x600/An_Ic_Bottom_Estado_On.png) no-repeat center top;}
+.nb-comprobantes.nb-selec { background:url(../img/1024x600/An_Ic_Bottom_Comprobantes_On.png) no-repeat center top;}
+.nb-compguardados.nb-selec { background:url(../img/1024x600/An_Ic_Bottom_Guardados_On.png) no-repeat center top;}
+
+/*Submenu transferir*/
+#nav-transferir a { padding: 0px 30px; }
+#nav-transferir a:first-child { border-right: 1px solid #9A9B9C; }
+
+.nb-miscuentas { width:168px; height:75px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Cuentas_Off.png) no-repeat center top;}
+.nb-cuentasbbva { width:168px; height:75px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_BBVA_Off.png) no-repeat center top;}
+.nb-otrosbancos { width:168px; height:75px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Otros_Off.png) no-repeat center top;}
+
+.nb-miscuentas.nb-selec { background:url(../img/1024x600/An_Ic_Bottom_Cuentas_On.png) no-repeat center top;}
+.nb-cuentasbbva.nb-selec { background:url(../img/1024x600/An_Ic_Bottom_BBVA_On.png) no-repeat center top;}
+.nb-otrosbancos.nb-selec { background:url(../img/1024x600/An_Ic_Bottom_Otros_On.png) no-repeat center top;}
+
+
+/*Submenu invertir*/
+#nav-bajo-invertir a { padding: 0px 30px; }
+#nav-bajo-invertir a:first-child { border-right: 1px solid #9A9B9C; }
+
+/*.cuerpo-invertir { background:url(../img/1024x600/An_Ic_Invertir.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px}*/
+.nb-comprar { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Compra_Off.png) no-repeat center top;}
+.nb-vender { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Venta_Off.png) no-repeat center top;}
+.nb-consultar { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Consulta_Off.png) no-repeat center top;}
+
+.nb-comprar.nb-selec { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Compra_On.png) no-repeat center top;}
+.nb-vender.nb-selec { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Venta_On.png) no-repeat center top;}
+.nb-consultar.nb-selec { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Consulta_On.png) no-repeat center top;}
+
+
+.inferior-menu-cont { height:83px; background:rgba(244,244,244,.9); margin-top:21px; padding-left:20px; display:none;}
+
+#nav-bajo-invertir.inferior-menu-cont { padding-left: 0px; padding-top: 0.3%;}
+#nav-bajo-invertir.inferior-menu-cont a { padding: 0px 95px; }
+#nav-bajo-invertir.inferior-menu-cont a:first-child, #nav-bajo-invertir.inferior-menu-cont a:last-child { padding: 0px 30px; }
+
+/*Estilos para boton Opciones*/
+#nav-bajo-scroll-pane { position: absolute; bottom: 0px; left: 0px; height: 15%; width: 100%; width:1024px; opacity:0.1; display:none;}
+
+.android-options-menu-pane { display:table; table-layout: fixed; position: absolute; width: 100%; height: 15%;
+    left: 0px; bottom: 0px; background-color: #1a1a1a; box-shadow: rgba(26,26,26,1) 0px 0px 9px 5px; }
+.android-options-menu-pane-hidden { display:none; }
+.android-options-menu-pane div { display:table-cell; border: 1px solid white; border-width: 0px 1px 0px 0px; padding-top: 0.5%;
+        padding-left:13%; }
+.android-options-menu-pane div:last-child { border-width: 0px; }
+.android-options-menu-pane div a { width: 81px; height: 69px; display: inline-block; }
+.emailMenu a { background: url(../img/1024x600/An_Btn_Correo.png) no-repeat; }
+.emailMenuHidden .emailMenu { display:none; }
+.frecuenteMenu a { background: url(../img/1024x600/An_Btn_Frecuente.png) no-repeat; }
+.frecuenteMenuHidden .frecuenteMenu { display:none; }
+.rapidaMenu a { background: url(../img/1024x600/An_Btn_Rapida.png) no-repeat; }
+.rapidaMenuHidden .rapidaMenu { display:none; }
+.rango { margin-left:13%; width:83%; }
+/*.mis-cuentas-table { width: 620px; height: 130px; margin-left: -0px; }*/
+.mis-cuentas-table { width: 620px; height: 130px; margin-left: 16px; }
+
+div#todo.sideMenuShowing {  height:564px; width:940px; position:relative; padding-left:84px;}
+div#todo.sideMenuShowing #img-slider { width:517px; height:431px; float:left; margin-left:35px; padding:1px 3px 3px 1px; background-size:100% auto} 
+div#todo.sideMenuShowing #nav-lateral { width:94px;}
+div#todo.sideMenuShowing #btns-lateral{ background:#164A8C; width:80px; height:562px; padding:1px 0; display:block; }
+
+/*Estilos para comprobantes*/
+.comprobante { -webkit-transition: all 0.5s ease; width: 92px; height: 119px; position: absolute; top: 200px; left: 141px; background-size: 100%; }
+#comprobanteFrame{ position: absolute; left: 0px; top: 0px; outline: none; z-index: 999998; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4);}
+#imagenComprobante{ width:100%; height:100%; background: url(../img/comprobante.png) center center no-repeat; }
+
+/* Solo para Android, no incluir en iOS */
+.android-hidden {
+    display:none;
+}
+
+
+
+.floatButton{
+  left: 76%;
+  top: 0px;
+  position:absolute;
+  z-index: 20;
+  width: 50px;
+  height:50px;
+  /*border: 2px solid #ccc;*/
+  background: white url(../img/1024x600/an_Ic_Share_Guardar_Off2.png) no-repeat center top; 
+}
+
+.floatButton:active{
+  background: white url(../img/1024x600/an_Ic_Share_Guardar_On2.png) no-repeat center top;
+}
+
+.andOn{
+  background: white url(../img/1024x600/an_Ic_Share_Guardar_On2.png) no-repeat center top;
+}
+
+.andOff{
+  background: white url(../img/1024x600/an_Ic_Share_Guardar_Off2.png) no-repeat center top;
+}
+
+
+
+
+/******************** Inicia BaseViewController ********************/
+.baseviewcontroller-loading-layer {
+    position: absolute;
+    /*width: 100%;*/
+   /* height: 100%;*/
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+
+.baseviewcontroller-loading-spinner {
+    width:100%;
+    height:100%;
+    background: url(../img/962x601/loading.gif) center center no-repeat;
+}
+/******************** Fin BaseViewController ********************/
+
+/* ==========================================================================
+  Modulo posisición global
+   ========================================================================== */
+.posicionglobal-cabecera{ background:url(../img/1024x600/An_Ic_Inicio.png) no-repeat left; height:24px; margin:10px 0; padding-left:35px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none;}
+#posicionglobal-contenedor { padding-left:19px; width:auto;}
+
+#posicionglobal-texto-lateral { margin-left:35px; width:297px; float:left}
+.posicionglobal-clearfix:before, .posicionglobal-clearfix:after { content: " "; display: table; }
+.posicionglobal-clearfix:after { clear: both; }
+.posicionglobal-clearfix { *zoom: 1; }
+.posicionglobal-texto-cuenta { font-size:14px; color:#676767; float:left; margin-right:10px; }
+.posicionglobal-texto-cantidad { font-size:16px; color:#0098E0; float:right; }
+.posicionglobal-texto-cantidad.rosa { color:#D75A8A}
+#posicionglobal-info-cuentas { margin-bottom:10px; }
+
+   /*tablas*/
+.posicionglobal-tabla-cuentas-pesos { background:url(../img/1024x600/An_Bg_Tablas.png) no-repeat; width:297px; height:164px; padding:0; margin-bottom:20px;}
+.posicionglobal-tabla-cuentas-pesos td { padding:0px 10px; line-height:100%; font-size:16px; color:#676767}
+.posicionglobal-tabla-cuentas-pesos td span { display:block; font-size:10px}
+.posicionglobal-tabla-cuentas-pesos td+td { text-align:right; color:#0098E0;}
+.posicionglobal-tabla-tarjeta-credito { background:url(../img/1024x600/An_Bg_Tablas.png) no-repeat; width:297px; height:164px; padding:0; margin-bottom:20px;}
+.posicionglobal-tabla-tarjeta-credito td { padding:0px 10px; line-height:100%; font-size:16px; color:#676767}
+.posicionglobal-tabla-tarjeta-credito td span { display:block; font-size:10px}
+.posicionglobal-tabla-tarjeta-credito td+td { text-align:right; color:#D75A8A;}   
+td.posicionglobal-dt-titulo1 { color:#0098E0; font-size:18px ; height:48px; -webkit-transform: translateY(-5px);}
+td.posicionglobal-dt-titulo2 { color:#676767 !important; font-size:12px !important; height:48px; -webkit-transform: translateY(-5px);}
+
+/* Publicidad */
+#posicionglobal-img-slider { width:563px; height:431px; float:left; margin-left:35px; padding:1px 3px 3px 1px; position:relative;}
+#posicionglobal-img-slider.main-menu-visible { width:483px; }
+#img-publicidad { width: 100%; height: 100%; -webkit-box-shadow: 1px 1px 1px 1px #a9a9a9; }
+.posicionglobal-publicidad-bullet { background: white; height: 10px; width: 10px; border: 1px solid #939494; border-radius: 6px; margin: 0px 5px; display:inline-block; }
+.posicionglobal-publicidad-bullet.selected { background: #939494; }
+.posicionglobal-publicidad-bullet-container { position: absolute; display: inline-block; bottom: 3px; right: 3px; margin-right: 5px; }
+.posicionglobal-publicidad-image1 { background: url(../img/1024x600/an_pub_1.png) no-repeat; display: inline-block; background-size: 100% 100%; }
+.posicionglobal-publicidad-image2 { background: url(../img/1024x600/an_pub_2.png) no-repeat; display: inline-block; background-size: 100% 100%; }
+.posicionglobal-publicidad-image3 { background: url(../img/1024x600/an_pub_3.png) no-repeat; display: inline-block; background-size: 100% 100%; }
+
+.posicionglobal-contenedor-cuenta { width:100%; display:table; }
+
+/** Mis Cuentas Posicion Global **/   
+
+#accordion{  }
+
+.tituls { }
+
+.acc_titulo { font-size: 18px; color: rgb(9,79,164); float: left; margin-top: 8px; }
+.acc_titulo2 { font-size: 14px; color: #676767; float: right; margin-top: 14px; padding-right: 10px; }
+
+#accordion input { display: none;  margin:10px auto 30px auto; }
+#accordion label { cursor: pointer; display: block; position: relative; z-index: 20; background-image: url(../img/1024x600/An_Bg_Tablas_roll.png); padding-left: 38px; background-repeat: no-repeat; height: 38px; }
+#accordion label:hover { background-image: url(../img/1024x600/An_Bg_Tablas_roll.png); background-repeat: no-repeat; background-color: #000000; }
+#accordion label.checked { background-image: url(../img/1024x600/An_Bg_Tablas_over.png); background-repeat: no-repeat; }
+#accordion article { height: 0px; overflow: hidden; z-index: 10; }
+#accordion article p { padding: 1em; }
+
+#accordion label.checked + article { height: auto; margin-bottom: .125em; border: 1px solid gray; border-color: rgba(200,200,200,1.0); }
+#accordion label.checked + article.small { max-height: 130px; overflow-y:auto; overflow-x:hidden; }
+#accordion label.checked + article.medium { max-height: 116px; overflow-y:auto; overflow-x:hidden; }
+#accordion label.checked + article.large { max-height: 342px; overflow-y:auto; overflow-x:hidden; }
+
+.datos-tabla3 { width: 297px; max-height: 164px; padding: 0; /*background-image: url(../img/1024x600/An_Bg_Tablas_01.png);*/ }
+.datos-tabla3 td { line-height: 100%; font-size: 12px; color: #676767; padding-bottom: 4px; padding-left: 10px; padding-right: 10px; padding-top: 4px; }
+.datos-tabla3 td span { display:block; font-size:10px }
+.datos-tabla3 td+td { text-align:right; color:#0098E0; }
+
+.datos-tabla4 { width: 297px; max-height: 164px; padding: 0; /*background-image: url(../img/1024x600/An_Bg_Tablas_01.png);*/ }
+.datos-tabla4 td { line-height: 100%; font-size: 12px; color: #676767; padding-bottom: 4px; padding-left: 10px; padding-right: 10px; padding-top: 4px; }
+.datos-tabla4 td span { display:block; font-size:10px; }
+.datos-tabla4 td+td { text-align: right; color: #D75A8A; }
+   
+ /* ==========================================================================
+  Modulo mis Cuentas
+   ========================================================================== */ 
+input[type=range] { -webkit-appearance: none; background-color: transparent; height: 3px; }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 21px; height: 21px; background-image: url(../img/1024x600/An_Bg_Selector_Pin.png); background-size: 100%; }
+/*.range-container { padding: 0px 0px 9px 0px; margin-top: -4px; }*/
+.range-container { padding: 0px 0px 9px 0px; margin: -4px 0px 18px 0px; position: relative; z-index: 10; }
+.range-filler-bar { width: 556px; height: 3px; background: #E3DDD8; z-index: -1; position: relative; left: 72px; top: 17px; }
+#creditCardsSection { display:none;}
+.credit-cards-table { width: 608px; height: 130px; margin-left: 15px; }
+.creditCardsRange { margin-left: 30%; width: 50%; }
+.cargo{color:#2969B7;}
+.cargo.selec{color:red;}
+
+.miscuentas-encabezado { background:url(../img/1024x600/An_Ic_Cuentas.png) no-repeat center left; height:24px; margin:8px 0; padding-left:35px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:24px}
+#miscuentas-contenedor { padding-left:19px; width:auto;}
+.miscuentas-clearfix:before, .miscuentas-clearfix:after { content: " "; display: table; }
+.miscuentas-clearfix:after { clear: both; }
+.miscuentas-clearfix { *zoom: 1; }
+.miscuentas-div-seccion1 {width:610px; float:left;}
+.miscuentas-titulo-cuenta { font-size:20px; color:#4A4A4A; float:left; width:50%; margin-bottom:10px;}
+.miscuentas-texto-saldo { font-size:20px; color:#4A4A4A; float:left;  width:50%; text-align:right; margin-bottom:10px;}
+.miscuentas-titulo-cuenta span, .miscuentas-texto-saldo span { padding-left:20px; color:#006EC1}
+.miscuentas-titulo-tarjeta-credito { font-size:18px; color:#4A4A4A; float:left; width:27.0%; margin-bottom:10px;}
+.miscuentas-titulo-tarjeta-credito span { padding-left:5px; color:#006EC1}
+.miscuentas-texto-saldotarjetacredito { font-size:18px; color:#4A4A4A; float:left;  width:33.0%; text-align:center; margin-bottom:10px;}
+.miscuentas-texto-saldotarjetacredito span { padding-left:5%; color:#e81060}
+.miscuentas-texto-saldoalcorte { font-size:18px; color:#4A4A4A; float:left;  width:40.0%; text-align:right; margin-bottom:5px;}
+.miscuentas-texto-saldoalcorte span { padding-left:5px; color:#838485}
+.miscuentas-texto-saldoalcorte span:nth-child(1) { margin-right:2%; }
+.miscuentas-texto-pagomin { font-size:18px; color:#4A4A4A; float:left;  width:40.0%; text-align:right; margin-bottom:5px;}
+.miscuentas-texto-pagomin span { padding-left:5px; color:#838485}
+.miscuentas-texto-pagomin span:nth-child(1) { margin-right:6.5%; }
+   
+.miscuentas-seccion-navegacion { border-bottom:1px solid #939494; margin-left:55px; color: #939494;}
+.miscuentas-seccion-navegacion a { padding:0 15px; display:inline-block; line-height:24px; font-size:14px; color: #939494; border-top:1px solid  #939494; text-decoration:none; }
+.miscuentas-seccion-navegacion a:first-child { border-left:1px solid  #939494; -webkit-border-radius: 6px 0 0 0;
+    border-radius: 10px 0 0 0;}
+.miscuentas-seccion-navegacion a:last-child { border-right:1px solid  #939494; -webkit-border-radius: 0 6px 0 0;
+   border-radius: 0 10px 0 0;}
+   /* .sec1-nav span { border: 0px; -webkit-border-radius: 6px; border-radius: 3px; float: right; display: none; background: -webkit-linear-gradient(rgb(4, 119, 189), rgb(0, 91, 169)); background: linear-gradient(rgb(4, 119, 189), rgb(0, 91, 169)); color:white; padding:2px 24px; } */
+.sec1-nav span { border: 0px; -webkit-border-radius: 6px; border-radius: 3px; float: right; display: none; padding:2px 24px;  background: -webkit-gradient(linear, left top, left bottom, from(#0477BD), to(#005BA9));
+  background: -webkit-linear-gradient(top, #0477BD, #005BA9);
+  background:    -moz-linear-gradient(top, #0477BD, #005BA9); 
+  background:      -o-linear-gradient(top, #0477BD, #005BA9); 
+  background:         linear-gradient(to bottom, #0477BD, #005BA9); color:white; padding:2px 24px;}
+.miscuentas-seccion-navegacion span { border: 0px; -webkit-border-radius: 6px; border-radius: 3px; float: right; display: none;  background: -webkit-gradient(linear, left top, left bottom, from(#0477BD), to(#005BA9));
+   background: -webkit-linear-gradient(top, #0477BD, #005BA9);
+   background:    -moz-linear-gradient(top, #0477BD, #005BA9); 
+   background:      -o-linear-gradient(top, #0477BD, #005BA9); 
+   background:         linear-gradient(to bottom, #0477BD, #005BA9); color:white; padding:2px 24px;}
+.miscuentas-seccion-navegacion a:nth-child(3) { border-right: 1px solid #939494; -webkit-border-radius: 0 6px 0 0; display:inline-block; }   
+ 
+a.miscuentas-seleccion-navegacion {color:#006EC1;} 
+#miscuentas-div-cuentanormal { display:block;}
+.miscuentas-tabla-cuenta { width: 620px; height: 130px; margin-left: -0px; }
+.miscuentas-rango-contenido { padding: 0px 0px 9px 0px; margin-top: -4px; }
+.miscuentas-rango-bar { width: 555px; height: 3px; background: #E3DDD8; z-index: -1; position: relative; left: 54px; top: 17px; }
+.miscuentas-rango { margin-left:55px; width:555px}
+ /* Altered */
+.miscuentas-rango { margin-left:13%; width:83%; }
+#miscuentas-div-cuentacredito { display:none;}
+.miscuentas-tabla-cuentacredito { width: 620px; height: 115px; margin-left: -0px; } 
+.miscuentas-rango-cuentacredito { margin-left: 32%; width: 45%; }
+#miscuentas-div-gastosmasaltos { margin-left:55px; width:555px; height:200px; display:block;}
+.miscuentas-div-burbujas { width:244px; height:180px; margin-right:26px; margin-top:20px; position:relative; float:left; }
+
+.miscuentas-burbuja-uno { width:124px; height:128px; left:63px; top:-11px; position: absolute; margin:0px; opacity:0.6; }
+.miscuentas-burbuja-dos { width:98px; height:104px; left:28px; top:74px; position:absolute; margin:0px; opacity:0.6; }
+.miscuentas-burbuja-tres { width:87px; height:87px; left:161px; top:43px; position:absolute; margin:0px; opacity:0.6; }
+.miscuentas-burbuja-cuatro { width:75px; height:75px; left:-2px; top:20px; position:absolute; margin:0px; opacity:0.6; }
+.miscuentas-burbuja-cinco { width:74px; height:74px; left:143px; top:98px; position:absolute; margin:0px; opacity:0.6; }
+   
+.miscuentas-div-burbujas-azules .miscuentas-burbuja-uno { background:url(../img/1024x600/An_Bubble_Azu1on.png) no-repeat; }
+.miscuentas-div-burbujas-azules .miscuentas-burbuja-dos { background:url(../img/1024x600/An_Bubble_Azu2on.png) no-repeat; }
+.miscuentas-div-burbujas-azules .miscuentas-burbuja-tres { background:url(../img/1024x600/An_Bubble_Azu3on.png) no-repeat; }
+.miscuentas-div-burbujas-azules .miscuentas-burbuja-cuatro { background:url(../img/1024x600/An_Bubble_Azu4on.png) no-repeat; }
+.miscuentas-div-burbujas-azules .miscuentas-burbuja-cinco { background:url(../img/1024x600/An_Bubble_Azu5on.png) no-repeat; }
+
+/* Added */
+.chartBubble { width:280px; height:180px; margin-right:0px; margin-top:20px; position:relative; float:left; }
+
+.buble1 { width:124px; height:128px; left:63px; top:-11px; position: absolute; margin:-4px; opacity:0.6; }
+.buble2 { width:98px; height:104px; left:28px; top:74px; position:absolute; margin:-4px; opacity:0.6; }
+.buble3 { width:92px; width:87px; height:87px; left:161px; top:43px; position:absolute; margin:-4px; opacity:0.6; }
+.buble4 { width:75px; height:75px; left:-2px; top:20px; position:absolute; margin:-4px; opacity:0.6;  }
+.buble5 { width:74px; height:74px; left:143px; top:98px; position:absolute; margin:-4px; opacity:0.6; }
+
+.yellowBubles .buble1 { background:url(../img/1024x600/An_Bubble_Ama1on.png) no-repeat; }
+.yellowBubles .buble2 { background:url(../img/1024x600/An_Bubble_Ama2on.png) no-repeat; }
+.yellowBubles .buble3 { background:url(../img/1024x600/An_Bubble_Ama3on.png) no-repeat; }
+.yellowBubles .buble4 { background:url(../img/1024x600/An_Bubble_Ama4on.png) no-repeat; }
+.yellowBubles .buble5 { background:url(../img/1024x600/An_Bubble_Ama5on.png) no-repeat; }
+
+.blueBubles .buble1 { background:url(../img/1024x600/An_Bubble_Azu1on.png) no-repeat; }
+.blueBubles .buble2 { background:url(../img/1024x600/An_Bubble_Azu2on.png) no-repeat; }
+.blueBubles .buble3 { background:url(../img/1024x600/An_Bubble_Azu3on.png) no-repeat; }
+.blueBubles .buble4 { background:url(../img/1024x600/An_Bubble_Azu4on.png) no-repeat; }
+.blueBubles .buble5 { background:url(../img/1024x600/An_Bubble_Azu5on.png) no-repeat; }
+
+.greenBubles .buble1 { background:url(../img/1024x600/An_Bubble_Ver1on.png) no-repeat; }
+.greenBubles .buble2 { background:url(../img/1024x600/An_Bubble_Ver2on.png) no-repeat; }
+.greenBubles .buble3 { background:url(../img/1024x600/An_Bubble_Ver3on.png) no-repeat; }
+.greenBubles .buble4 { background:url(../img/1024x600/An_Bubble_Ver4on.png) no-repeat; }
+.greenBubles .buble5 { background:url(../img/1024x600/An_Bubble_Ver5on.png) no-repeat; }
+
+.orangeBubles .buble1 { background:url(../img/1024x600/An_Bubble_Nar1on.png) no-repeat; }
+.orangeBubles .buble2 { background:url(../img/1024x600/An_Bubble_Nar2on.png) no-repeat; }
+.orangeBubles .buble3 { background:url(../img/1024x600/An_Bubble_Nar3on.png) no-repeat; }
+.orangeBubles .buble4 { background:url(../img/1024x600/An_Bubble_Nar4on.png) no-repeat; }
+.orangeBubles .buble5 { background:url(../img/1024x600/An_Bubble_Nar5on.png) no-repeat; }
+
+.blueBubles .miscuentas-burbuja-uno { background:url(../img/1024x600/An_Bubble_Azu1on.png) no-repeat; }
+.blueBubles .miscuentas-burbuja-dos { background:url(../img/1024x600/An_Bubble_Azu2on.png) no-repeat; }
+.blueBubles .miscuentas-burbuja-tres { background:url(../img/1024x600/An_Bubble_Azu3on.png) no-repeat; }
+.blueBubles .miscuentas-burbuja-cuatro { background:url(../img/1024x600/An_Bubble_Azu4on.png) no-repeat; }
+.blueBubles .miscuentas-burbuja-cinco { background:url(../img/1024x600/An_Bubble_Azu5on.png) no-repeat; }
+   
+.yellowBubles .miscuentas-burbuja-uno { background:url(../img/1024x600/An_Bubble_Ama1on.png) no-repeat; }
+.yellowBubles .miscuentas-burbuja-dos { background:url(../img/1024x600/An_Bubble_Ama2on.png) no-repeat; }
+.yellowBubles .miscuentas-burbuja-tres { background:url(../img/1024x600/An_Bubble_Ama3on.png) no-repeat; }
+.yellowBubles .miscuentas-burbuja-cuatro { background:url(../img/1024x600/An_Bubble_Ama4on.png) no-repeat; }
+.yellowBubles .miscuentas-burbuja-cinco { background:url(../img/1024x600/An_Bubble_Ama5on.png) no-repeat; }
+ 
+.greenBubles .miscuentas-burbuja-uno { background:url(../img/1024x600/An_Bubble_Ver1on.png) no-repeat; }
+.greenBubles .miscuentas-burbuja-dos { background:url(../img/1024x600/An_Bubble_Ver2on.png) no-repeat; }
+.greenBubles .miscuentas-burbuja-tres { background:url(../img/1024x600/An_Bubble_Ver3on.png) no-repeat; }
+.greenBubles .miscuentas-burbuja-cuatro { background:url(../img/1024x600/An_Bubble_Ver4on.png) no-repeat; }
+.greenBubles .miscuentas-burbuja-cinco { background:url(../img/1024x600/An_Bubble_Ver5on.png) no-repeat; }
+   
+.orangeBubles .miscuentas-burbuja-uno { background:url(../img/1024x600/An_Bubble_Nar1on.png) no-repeat; }
+.orangeBubles .miscuentas-burbuja-dos { background:url(../img/1024x600/An_Bubble_Nar2on.png) no-repeat; }
+.orangeBubles .miscuentas-burbuja-tres { background:url(../img/1024x600/An_Bubble_Nar3on.png) no-repeat; }
+.orangeBubles .miscuentas-burbuja-cuatro { background:url(../img/1024x600/An_Bubble_Nar4on.png) no-repeat; }
+.orangeBubles .miscuentas-burbuja-cinco { background:url(../img/1024x600/An_Bubble_Nar5on.png) no-repeat; }
+   
+/*1024x600*/
+.bubleText { position:relative; font:bold 13px Arial; color:white; text-shadow:0.1em 0.1em 0.2em black; text-align:center; top:50%; display:inline-block; vertical-align:middle; margin-top:-1.5em; width:100%; opacity:1.0; }
+
+.textBubble1 { }
+
+.textBubble2 { }
+
+.textBubble3 { }
+
+.textBubble4 { }
+
+.textBubble5 { }   
+  
+.miscuentas-texto-burbuja { position:relative; font:bold 13px Arial; color:white; text-shadow:0.1em 0.1em 0.2em black; text-align:center; top:50%; display:inline-block; vertical-align:middle; margin-top:-1.5em; width:100%; opacity:1.0; }
+   
+.miscuentas-texto-burbuja1 { }
+.miscuentas-texto-burbuja2 { }
+.miscuentas-texto-burbuja3 { }
+.miscuentas-texto-burbuja4 { }  
+.miscuentas-texto-burbuja5 { }
+   
+.miscuentas-div-detalles-gastos { width:263px; float:right; margin-top:20px; -webkit-border-radius: 10px; border-radius: 10px;  border:1px solid #939494; padding: 10px 0} 
+.miscuentas-tabla-gastos th { text-align:right; font-weight:normal; font-size:14px; color:#595959; width:90px}
+.miscuentas-tabla-gastos td {font-size:14px; color:#2969B7}
+#miscuentas-div-balance { margin-left:-8px; width:628px; height:168px; display:none; }
+.miscuentas-div-seccion2 {width:330px; float:left; margin-left:35px}
+.miscuentas-titulo-seccion2 { font-size:17px; color:#004095; margin-bottom:25px;}
+.miscuentas-div-seccion-dos { margin-top:10px; -webkit-border-radius: 10px; border-radius: 10px;  border:1px solid #939494;}
+/* ####################################################################################################################################### */
+/* Se debe de ajustar el valor de la propiegag height, los demas valores estan basados en la clase: sec2 */
+.miscuentas-div-seccion-dos-cuentas {  
+    overflow:auto;
+    height:258px;
+}
+   
+#higherExpensesSection { margin-left:70px; width:556px; height:195px; display:block;}
+#balanceSection { margin-left:13px; width:608px; height:195px; display:none; }
+
+.miscuentas-tabla-seccion-dos { width:100%; -webkit-user-select: none; user-select: none;}
+.miscuentas-tabla-seccion-dos th { text-align:left; font-weight:normal; font-size:14px; color:#595959; padding:5px 20px;}
+.miscuentas-tabla-seccion-dos td {font-size:14px; color:#2969B7; text-align:right; padding:5px 20px;}
+.miscuentas-tabla-seccion-dos tr+tr { border-top:1px solid #939494; }
+.miscuentas-tabla-seccion-dos th span { display:block}
+
+.creditCardsRange { margin-left: 30%; width: 50%; }
+
+.credit-card-title { font-size:16px; color:#4A4A4A; float:left; width:27.0%; margin-bottom:10px;}
+.credit-card-balance { font-size:16px; color:#4A4A4A; float:left;  width:33.0%; text-align:center; margin-bottom:10px;}
+.credit-card-balance-at-cut { font-size:16px; color:#4A4A4A; float:left;  width:40.0%; text-align:right; margin-bottom:5px;}
+.credit-card-title span { padding-left:5px; color:#006EC1}
+.credit-card-balance span { padding-left:5%; color:#e81060}
+.credit-card-balance-at-cut span { padding-left:5px; color:#838485}
+.credit-cards-table { width: 608px; height: 130px; margin-left: 15px; }
+
+.credit-card-minimum-payment { font-size:16px; color:#4A4A4A; float:left;  width:40.0%; text-align:right; margin-bottom:5px;}
+.credit-card-minimum-payment span { padding-left:5px; color:#838485}
+.credit-card-balance-at-cut span:nth-child(1) { margin-right:2%; }
+.credit-card-minimum-payment span:nth-child(1) { margin-right:7%; }
+
+.miscuentas-tabla-oculta { display: none !important; visibility: hidden; } 
+.miscuentas-seccion-navegacion-vinetas {
+    margin-top:20px;
+    margin-left:129px;
+   }
+   
+.miscuentas-vineta {
+    background: white;
+    /* Ajustar al tamaño requerido, el alto y el ancho son el mismo */
+    height: 10px;
+    width: 10px;
+    border: 1px solid #939494;
+    /* El radio es igual a la mitad del alto/ancho mas uno, no se tienen en cuenta decimales. */
+    border-radius: 6px;
+    /* La mitad del alto/ancho */
+    margin: 0px 5px;
+    display:inline-block;
+   }
+
+.miscuentas-vineta.miscuentas-vineta-seleccionada {
+    background: #939494;
+   }
+   
+/* ==========================================================================
+  Modulo mis Cuentas-comprobantesguardados
+ ========================================================================== */  
+.miscuentas-comprobantes-guardados-encabezado { background:url(../img/1024x600/An_Ic_Cuentas.png) no-repeat center left; height:24px; margin:8px 0; padding-left:35px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:24px}
+#miscuentas-comprobantes-guardados-contenedor { padding-left:19px; width:auto;}
+.miscuentas-comprobantes-guardados-clearfix:before, .miscuentas-comprobantes-guardados-clearfix:after { content: " "; display: table; }
+.miscuentas-comprobantes-guardados-clearfix:after { clear: both; }
+.miscuentas-comprobantes-guardados-clearfix { *zoom: 1; }
+.miscuentas-comprobantes-guardados-mitad-uno { width:474px; float:left; padding-right:20px}
+#miscuentas-comprobantes-guardados { height: 452px; top: 0px; left: 0px; perspective-origin: center top; -webkit-perspective: 200; -webkit-perspective-origin: 50% -10%; -webkit-transform-style: preserve-3d; }
+.miscuentas-comprobantes-guardados-mitad-dos { width:464px; float:left; border-left:1px solid #ECEFF2; padding:0 15px}
+.miscuentas-comprobantes-guardados-menu { text-align:right; margin:0; margin-bottom:5px;  padding:0}
+.miscuentas-comprobantes-guardados-menu>li { display:inline-block; list-style:none; position:relative; width:27px; height:27px; margin: 0 5px}
+.miscuentas-comprobantes-guardados-menu>li>a { width:27px; height:27px; display:block}
+.miscuentas-comprobantes-guardados-compartir { background:url(../img/1024x600/An_Ic_Share.png) no-repeat}
+.miscuentas-comprobantes-guardados-submenu {position:absolute; width:105px; height:81px; z-index:2; background:url(../img/1024x600/An_Bg_Share2.png) no-repeat; text-align:center; padding:0; margin:0; right:-50px}
+.miscuentas-comprobantes-guardados-submenu>li { display:inline-block; list-style:none; position:relative; width:53px; height:51px;  margin: 15px 26px}
+.miscuentas-comprobantes-guardados-submenu>li a { width:53px; height:51px; display:block}
+.miscuentas-comprobantes-guardados-opcioncorreo { background:url(../img/1024x600/An_Ic_Share_Correo_Off.png) no-repeat}
+.miscuentas-comprobantes-guardados-opcioncorreo:hover { background:url(../img/1024x600/An_Ic_Share_Correo_On.png) no-repeat}
+.miscuentas-comprobantes-guardados-completo { background:url(../img/1024x600/An_Ic_Full.png) no-repeat}
+.miscuentas-comprobantes-guardados-arrastra-comprobante { width:432px; height:452px; background:url(../img/1024x600/An_Bg_Arrastra.png) no-repeat; margin:0 auto }
+ 
+/* ==========================================================================
+  Modulo  mis cuentas-estadocuenta
+ ========================================================================== */ 
+.miscuentas-edo-cuenta-encabezado { background:url(../img/1024x600/An_Ic_Cuentas.png) no-repeat center left; height:24px; margin:8px 0; padding-left:35px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:24px}
+#miscuentas-edo-cuenta-contenedor { padding-left:19px; width:auto;}
+.miscuentas-edo-cuenta-clearfix:before, .miscuentas-edo-cuenta-clearfix:after { content: " "; display: table; }
+.miscuentas-edo-cuenta-clearfix:after { clear: both; }
+.miscuentas-edo-cuenta-clearfix { *zoom: 1; }
+.miscuentas-edo-cuenta-mitad-uno { width:474px; float:left; padding-right:20px}
+.miscuentas-edo-cuenta-tab { font-size:16px; border-collapse: separate; border-spacing: 15px; }
+.miscuentas-edo-cuenta-opcion-emergente { width:264px; height:29px; background: url(../img/1024x600/An_Input_Select.png) no-repeat right; display:inline-block; text-align:center; }
+.miscuentas-edo-cuenta-opcion-emergente select { width:264px; height:29px; padding: 0 20px 0 10px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}
+.miscuentas-edo-cuenta-div-token { background:#F0F9FE; padding:15px; font-size:14px; margin-top:80px }
+.miscuentas-edo-cuenta-div-token a, .miscuentas-edo-cuenta-div-token label { color:#398DCB; text-decoration:none;}
+.doscolumnas .miscuentas-edo-cuenta-div-token { margin-top:0}
+.miscuentas-edo-cuenta-input-token { width:230px; border:1px solid #E9EDEE; height:32px; background:#FFF;  text-align: center;}
+.miscuentas-edo-cuenta-div-botones { margin-top:13px; text-align:center}
+.miscuentas-edo-cuenta-boton-confirmar { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}
+.miscuentas-edo-cuenta-mitad-dos { width:464px; float:left; border-left:1px solid #ECEFF2; padding:0 15px} 
+.miscuentas-edo-cuenta-cargando { height:450px; background: url(../img/1024x600/An_Ic_Load.png) no-repeat center}
+ 
+#miscuentas-edo-cuenta-contenedor-ayuda{ position: absolute; left: 0px; top: 0px; outline: none; z-index: 999998; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4);}
+#miscuentas-edo-cuenta-imagen-ayuda{ width:100%; height:100%; background: url(../img/comprobante.png) center center no-repeat; }
+ 
+/* ==========================================================================
+  Modulo  mis cuentas-comprobantes
+ ========================================================================== */ 
+.tab { font-size:14px; border-collapse: separate; border-spacing:15px 10px; }
+.tab hr { margin:0}
+
+.miscuentas-comprobantes-encabezado { background:url(../img/1024x600/An_Ic_Cuentas.png) no-repeat center left; height:24px; margin:8px 0; padding-left:35px; margin-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:24px}
+#miscuentas-comprobantes-contenedor { padding-left:19px; width:auto;}
+.miscuentas-comprobantes-clearfix:before, .miscuentas-comprobantes-clearfix:after { content: " "; display: table; }
+.miscuentas-comprobantes-clearfix:after { clear: both; }
+.miscuentas-comprobantes-clearfix { *zoom: 1; }
+.miscuentas-comprobantes-mitad-uno { width:474px; float:left; padding-right:20px}
+.miscuentas-comprobantes-tabla { font-size:16px; border-collapse: separate; border-spacing: 10px; }
+.miscuentas-comprobantes-opcion-emergente { width:264px; height:29px; background: url(../img/1024x600/An_Input_Select.png) no-repeat right; display:inline-block; text-align:center; }
+.miscuentas-comprobantes-opcion-emergente select { width:264px; height:29px; padding: 0 20px 0 10px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}
+.miscuentas-comprobantes-div-token { background:#F0F9FE; padding:15px; font-size:14px; margin-top:80px }
+.miscuentas-comprobantes-div-token a, .miscuentas-comprobantes-div-token label { color:#398DCB; text-decoration:none;}
+.doscolumnas .miscuentas-comprobantes-div-token { margin-top:0}
+.miscuentas-comprobantes-input-token { width:260px; border:1px solid #E9EDEE; height:32px; background:#FFF;  text-align: center;}
+.miscuentas-comprobantes-div-botones { margin-top:13px; text-align:center}
+.miscuentas-comprobantes-boton-confirmar { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}
+.miscuentas-comprobantes-mitad-dos { width:464px; float:left; border-left:1px solid #ECEFF2; padding:0 15px}
+.miscuentas-comprobantes-mitad-comprobantes { width:474px; float:left; padding-right:38px; margin-top:25px;}
+.miscuentas-comprobantes-tab { font-size:16px; border-collapse: separate; border-spacing: 15px; }
+.miscuentas-comprobantes-contenedor-gris { border:20px solid #FCFCFC; background:#FFF }
+.miscuentas-comprobantes-contenedor-gris hr { margin: 0;}
+.miscuentas-comprobantes-div-mitad-dos { margin-top:10px; -webkit-border-radius: 10px; border-radius: 10px;  border:1px solid #939494;}
+.miscuentas-comprobantes-lista-comprobantes { width:100%; -webkit-user-select: none; user-select: none;}
+.miscuentas-comprobantes-lista-comprobantes th { text-align:left; font-weight:normal; font-size:14px; color:#595959; padding:5px 20px;}
+.miscuentas-comprobantes-lista-comprobantes td {font-size:14px; color:#2969B7; text-align:right; padding:5px 20px;}
+.miscuentas-comprobantes-lista-comprobantes tr+tr { border-top:1px solid #939494; }
+.miscuentas-comprobantes-lista-comprobantes th span { display:block}
+.miscuentas-comprobantes-texto-azul {color:#398DCB !important}
+#miscuentas-comprobantes-detalle-comprobante {margin-top:-25px;}
+.miscuentas-comprobantes-menu { text-align:right; margin:0; margin-bottom:5px;  padding:0}
+.miscuentas-comprobantes-menu>li { display:inline-block; list-style:none; position:relative; width:27px; height:27px; margin: 0 5px}
+.miscuentas-comprobantes-menu>li>a { width:27px; height:27px; display:block}
+.miscuentas-comprobantes-opcion-compartir { background:url(../img/1024x600/An_Ic_Share.png) no-repeat}
+.miscuentas-comprobantes-submenu {position:absolute; width:175px; height:81px; z-index:2; background:url(../img/1024x600/An_Bg_Share1.png) no-repeat; text-align:center; padding:0; margin:0; right:-50px}
+.miscuentas-comprobantes-submenu>li { display:inline-block; list-style:none; position:relative; width:53px; height:51px; margin: 15px 5px}
+.miscuentas-comprobantes-submenu>li a { width:53px; height:51px; display:block}
+.miscuentas-comprobantes-opcion-guardar { background:url(../img/1024x600/An_Ic_Share_Guardar_Off.png) no-repeat}
+.miscuentas-comprobantes-opcion-correo { background:url(../img/1024x600/An_Ic_Share_Correo_Off.png) no-repeat}
+.miscuentas-comprobantes-opcion-completo { background:url(../img/1024x600/An_Ic_Full.png) no-repeat}
+
+
+/* ==========================================================================
+  Modulo  Transferir
+ ========================================================================== */
+.transferir-resaltado-azul {color:#398DCB !important}
+.transferir-resaltado-verde { color:#9ED45E !important; }
+.nueva-cuenta {position:absolute; top:35px; width: 280px; height:65px; left:629px; background:url(../img/1024x600/An_Btn_Nuevoon.png) no-repeat; background-size: contain;  background-repeat:no-repeat; color:#FFF; text-decoration:none; text-align:center; line-height:61px; font-size:14px; display:block; margin:0 auto}
+.text-cantidad { width:140px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; background-size: contain;  background-repeat:no-repeat; text-align: center;}
+
+/*estilos para transferir.html*/
+#transferir-miscuentas-div-principal {height:564px; width:1024px; position:relative}/*todo*/
+.transferir-miscuentas-encabezado {background:url(../img/1024x600/An_Ic_Transferir.png) no-repeat left; height:25px; margin:10px 0; padding-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:19px}/*cuerpo-transferir*/
+#transferir-miscuentas-div-contenedor {padding-left:19px; width:auto;}/*contenedor, contenedor-miquince1, contenedor-miquince2, contenedor-miquince3, contenedor-cheq1, contenedor-cheq2, contenedor-cheq3*/ 
+.transferir-miscuentas-div-clearfix:before, .transferir-miscuentas-div-clearfix:after { content: " "; display: table; }/*clearfix*/ 
+.transferir-miscuentas-div-clearfix:after { clear: both; } /*clearfix*/ 
+.transferir-miscuentas-div-clearfix { *zoom: 1; } /*clearfix*/ 
+
+.transferir-miscuentas-tab { font-size:16px; border-collapse: separate; border-spacing: 15px; }/*eliminar-tab*/
+.transferir-miscuentas-contenedor-dragdrop {width:328px; float:left; margin:0px 80px}/*columna*/ 
+.transferir-miscuentas-titulo-drag {font-weight:normal; margin:15px 0; color:#006DC0; font-size:18px; padding-left: 19px}/*titulo-administrar*/
+.transferir-miscuentas-contenedor-drag {border:1px solid #CCC; height:330px; overflow-x:none; overflow-y:auto;}/*col-listazul-transfer*/
+.transferir-miscuentas-contenedor-drag li {list-style-type: none;}
+.transferir-miscuentas-titulo-drop {font-weight:normal; margin:15px 0; color:#006DC0; font-size:18px; padding-left: 19px}/*titulo-administrar*/ 
+.transferir-miscuentas-contenedor-drop { border:1px solid #CCC; padding:15px; font-size:12px; color:#3675A9; height:300px; overflow-x:none; overflow-y:auto; }/*col-listgris*/ 
+.transferir-miscuentas-contenedor-drop li {list-style-type: none;}
+
+.transferir-miscuentas-div-drag table {font-size: 12px; width: 96%; height: 90%; color:#FFF; }/*draggable*/
+.transferir-miscuentas-div-drag td { padding-right: 8%; padding-left: 8%; }/*draggable*/
+.transferir-miscuentas-div-drag .transferir-miscuentas-tab-filauno td{  padding-top: 4%; }/*draggable*/ /*first-row*/
+.transferir-miscuentas-div-drag .transferir-miscuentas-tab-filados td{  padding-bottom: 4%; }/*draggable*/ /*second-row*/
+
+#transferir-miscuentas-drag-uno, #transferir-miscuentas-drag-dos, #transferir-miscuentas-drag-tres, #transferir-miscuentas-drag-cuatro {width:256px; height:61px; position: absolute; left:140px; background:url(../img/1024x600/An_Btn_Drag.png) no-repeat; background-size: cover; z-index: 10;}/*drag*/ /*drag2*/ /*drag3*/ /*drag4*/
+#transferir-miscuentas-drag-uno {top: 180px;}/*drag2*/
+#transferir-miscuentas-drag-dos {top: 256px;}/*drag2*/
+#transferir-miscuentas-drag-tres {top: 332px;}/*drag3*/
+#transferir-miscuentas-drag-cuatro {top: 408px;}/*drag4*/
+
+#transferir-miscuentas-drag-1, #transferir-miscuentas-drag-2, #transferir-miscuentas-drag-3, #transferir-miscuentas-drag-4,
+#transferir-otrosbancos-drag-5, #transferir-miscuentas-drag-6, #transferir-miscuentas-drag-7, #transferir-miscuentas-drag-8, 
+#transferir-miscuentas-drag-9, #transferir-miscuentas-drag-10, #transferir-miscuentas-drag-11, #transferir-miscuentas-drag-12, 
+#transferir-miscuentas-drag-13, #transferir-miscuentas-drag-14, #transferir-miscuentas-drag-15, #transferir-miscuentas-drag-16, 
+#transferir-miscuentas-drag-17, #transferir-miscuentas-drag-18, #transferir-miscuentas-drag-19, #transferir-miscuentas-drag-20,
+#transferir-miscuentas-drag-21, #transferir-miscuentas-drag-22, #transferir-miscuentas-drag-23, #transferir-miscuentas-drag-24    
+{width:256px; height:61px; position: absolute; left:140px; background:url(../img/1024x600/An_Btn_Drag.png) no-repeat; background-size: cover; z-index: 10;}/*drag*/ /*drag2*/ /*drag3*/ /*drag4*/
+#transferir-miscuentas-drag-uno, #transferir-miscuentas-drag-1 {top: 160px;}/*drag*/
+#transferir-miscuentas-drag-dos, #transferir-miscuentas-drag-2 {top: 240px;}/*drag2bbva*/
+#transferir-miscuentas-drag-tres, #transferir-miscuentas-drag-3 {top: 320px;}/*drag3bbva*/
+#transferir-miscuentas-drag-cuatro, #transferir-miscuentas-drag-4 {top: 400px;}/*drag4bbva*/
+#transferir-miscuentas-drag-5 { top: 500px; } /* top: 500px*/
+#transferir-miscuentas-drag-6 { top: 576px; } /* top: 576px */
+#transferir-miscuentas-drag-7 { top: 652px; } /* top: 652px */
+#transferir-miscuentas-drag-8 { top: 728px; } /* top: 728px */
+#transferir-miscuentas-drag-9 { top: 804px; } /* top: 804px */
+#transferir-miscuentas-drag-10 { top: 880px; } /* top: 880px */
+#transferir-miscuentas-drag-11 { top: 956px; } /* top: 956px */
+#transferir-miscuentas-drag-12 { top: 1032px; } /* top: 1032px */
+#transferir-miscuentas-drag-13 { top: 1108px; } /* top: 1108px */
+#transferir-miscuentas-drag-14 { top: 1184px; } /* top: 1184px */
+#transferir-miscuentas-drag-15 { top: 1260px; } /* top: 1260px */
+#transferir-miscuentas-drag-16 { top: 1336px; } /* top: 1336px */
+#transferir-miscuentas-drag-17 { top: 1412px; } /* top: 1412px */
+#transferir-miscuentas-drag-18 { top: 1488px; } /* top: 1488px */
+#transferir-miscuentas-drag-19 { top: 1564px; } /* top: 1564px */
+#transferir-miscuentas-drag-20 { top: 1640px; } /* top: 1640px */
+#transferir-miscuentas-drag-21 { top: 1716px; } /* top: 1716px */
+
+.transferir-miscuentas-tab-columna-izq {text-align: left;}/*left-col*/
+.transferir-miscuentas-tab-columna-der {text-align: right;}/*right-col*/
+
+#transferir-miscuentas-drop-uno, #transferir-miscuentas-drop-dos, #transferir-miscuentas-drop-tres, #transferir-miscuentas-drop-cuatro{width:256px; height:61px; position: absolute; left:629px; background:url(../img/1024x600/An_Btn_Drag_Gris.png) no-repeat; z-index: 9;}/*drop_*/ /*drop2_*/ /*drop3_*/ /*drop4_*/
+#transferir-miscuentas-drop-uno { top: 180px; }/*drop_*/
+#transferir-miscuentas-drop-dos { top: 256px; }/*drop2_*/
+#transferir-miscuentas-drop-tres { top: 332px; }/*drop3_*/
+#transferir-miscuentas-drop-cuatro { top: 408px; }/*drop4_*/
+#transferir-miscuentas-drop-uno table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop_*/
+#transferir-miscuentas-drop-uno .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop_*/ /*second-row*/
+#transferir-miscuentas-drop-uno .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop_*/ /*first-row*/
+#transferir-miscuentas-drop-dos table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop2_*/
+#transferir-miscuentas-drop-dos .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop2_*/ /*second-row*/
+#transferir-miscuentas-drop-dos .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop2_*/ /*first-row*/
+#transferir-miscuentas-drop-tres table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*dro3p_*/
+#transferir-miscuentas-drop-tres .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop3_*/ /*second-row*/
+#transferir-miscuentas-drop-tres .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop3_*/ /*first-row*/
+#transferir-miscuentas-drop-cuatro table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop4_*/
+#transferir-miscuentas-drop-cuatro .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop4_*/ /*second-row*/
+#transferir-miscuentas-drop-cuatro .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop4_*/ /*first-row*/
+
+
+#transferir-miscuentas-drop-1, #transferir-miscuentas-drop-2, #transferir-miscuentas-drop-3, #transferir-miscuentas-drop-4 {width:256px; height:61px; position: absolute; left:629px; background:url(../img/1024x600/An_Btn_Drag_Gris.png) no-repeat; z-index: 9;}/*drop_*/ /*drop2_*/ /*drop3_*/ /*drop4_*/
+#transferir-miscuentas-drop-1 {top: 160px;}/*drop_*/
+#transferir-miscuentas-drop-2 {top: 240px;}/*drop2_*/
+#transferir-miscuentas-drop-3 {top: 320px;}/*drop3_*/
+#transferir-miscuentas-drop-4 {top: 400px;}/*drop4_*/
+#transferir-miscuentas-drop-1 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop_*/
+#transferir-miscuentas-drop-1 .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop_*/ /*second-row*/
+#transferir-miscuentas-drop-1 .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop_*/ /*first-row*/
+#transferir-miscuentas-drop-2 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop2_*/
+#transferir-miscuentas-drop-2 .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop2_*/ /*second-row*/
+#transferir-miscuentas-drop-2 .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop2_*/ /*first-row*/
+#transferir-miscuentas-drop-3 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop3_*/
+#transferir-miscuentas-drop-3 .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop3_*/ /*second-row*/
+#transferir-miscuentas-drop-3 .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop3_*/ /*first-row*/
+#transferir-miscuentas-drop-4 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop4_*/
+#transferir-miscuentas-drop-4 .transferir-miscuentas-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop4_*/ /*second-row*/
+#transferir-miscuentas-drop-4 .transferir-miscuentas-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop4_*/ /*first-row*/
+
+/*estilos para transferirMisCtasCCheqMquinceInicio.html*//*estilos para transferirMisCtasTDCCCheqInicio.html*//*estilos para transferirMisCtasCCheqTDCInicio.html*/
+.transferir-miscuentas-tab-subtitulos {font-size:14px; color:#888; margin-top:15px}/*nav-tab*/
+.transferir-miscuentas-tab-subtitulos td{padding-bottom:10px}/*nav-tab*/
+.transferir-miscuentas-tab-subtitulos .transferir-miscuentas-subtitulo-selected {font-weight:bold; background:url(../img/1024x600/sombra.png) no-repeat bottom left; background-size:75%;}/*nav-tab*/ /*resaltado-azulmarino*/
+
+.transferir-miscuentas-subtitulo-selected {color:#283B6C !important;}/*resaltado-azulmarino*/
+
+.transferir-miscuentas-columnas-contenido-izq {width:48%; margin:0 2% 0 0; float:left;}/*doscolumnas *lado izquierdo*/
+.transferir-miscuentas-columnas-contenido-der {width:48%; margin:0 2% 0 0; float:left;}/*doscolumnas *lado derecho*/
+.transferir-miscuentas-tab-contenido {font-size:14px; border-collapse: collapse; border-spacing:0;}/*transferir-tab*/
+.transferir-miscuentas-tab-contenido td {padding-right:20px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:38px; line-height:38px; color:#888}/*transferir-tab*/
+.transferir-miscuentas-tab-contenido td + td {text-align:left; padding-left:20px; color:#444;}/*transferir-tab*/
+.transferir-miscuentas-tab-contenido * {vertical-align: middle}/*transferir-tab*/
+
+.transferir-miscuentas-radios { display:inline-block; width:16px; height:16px; position:relative; } /*radio*/
+.transferir-miscuentas-radios *:focus { outline:none} /*radio*/
+.transferir-miscuentas-radios input { width:16px; height:16px; position:absolute; top:5px; left:0; z-index:3; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; } /*radio*/
+.transferir-miscuentas-radios input { width:16px; height:16px; top:-1px; left:0; display:inline-block; position:absolute; background: url(../img/1024x600/An_Radio.png) no-repeat center right; padding-left: 10px;} /*radio*/
+.transferir-miscuentas-radios input:checked{ background: url(../img/1024x600/An_Radio.png) no-repeat center left; } /*radio*/
+
+.transferir-miscuentas-div-emergente { width:179px; height:29px; line-height:29px; background: url(../img/1024x600/An_Input_Select2.png) no-repeat right; display:inline-block; text-align:center;}/*opcion-emergente2*/
+.transferir-miscuentas-div-emergente select { width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}/*opcion-emergente2*/
+
+.transferir-miscuentas-input-importe { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; background-size: contain;  background-repeat:no-repeat; text-align: center;}/*text-imput2*/
+.transferir-miscuentas-div-botones {position:absolute; text-align:center; top:420px; width:1000px;  margin-left: -7px}/*area-botones*/
+.transferir-miscuentas-boton-continuar { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/*estilos para transferirMisCtasCCheqMquinceAprobacion.html*/ /*estilos para transferirMisCtasTDCCCheqAprobacion.html*/ /*estilos para transferirMisCtasCCheqTDCAprobacion.html*/
+.transferir-miscuentas-boton-confirmar {  background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-miscuentas-aviso-aprobacion {font-size:12px; padding:14px 15px 14px 50px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:6px 2% 6px 0; color:#70767B;} /*aviso*/
+
+/*estilos para transferirMisCtasCCheqMquinceTermino.html*/ /*estilos para transferirMisCtasTDCCCheqTermino.html*/ /*estilos para transferirMisCtasCCheqTDCTermino.html*/
+.transferir-miscuentas-encabezado-operacion {font-size:20px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:6px;}/*aviso-verde*/
+.transferir-miscuentas-div-botones-finales { position:absolute; text-align:center; top:320px; width:1000px;  margin-left: -7px}/*area-botones-final*/
+.transferir-miscuentas-div-botones-finales p{font-size: 14px}/*area-botones-final*/
+
+.transferir-miscuentas-boton-nueva { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-miscuentas-boton-comprobante { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-miscuentas-boton-inicio { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+
+/**************** Loading animation ****************/
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../img/1024x600/loading.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+/**************** Loading animation ****************//* } */
+
+
+/*estilos para transferir-cuentasbbva.html*/
+#transferir-cuentasbbva-div-principal {height:752px; width:1280px; position:relative}/*todo*/
+.transferir-cuentasbbva-encabezado { background:url(../img/1280x800/An_Ic_Transferir.png) no-repeat left; height:32px; margin:10px 0; margin-left:25px; padding-left:35px; display:block; font-size:30px; color:#0098E1; text-decoration:none; line-height:32px;}/*cuerpo-transferir*/
+#transferir-cuentasbbva-div-contenedor {padding-left:25px; width:1245px;}/*contenedor, contenedor-miquince1, contenedor-miquince2, contenedor-miquince3, contenedor-cheq1, contenedor-cheq2, contenedor-cheq3, contenedor-tdc1, contenedor-tdc2, contenedor-tdc3*/ 
+.transferir-cuentasbbva-div-clearfix:before, .transferir-cuentasbbva-div-clearfix:after { content: " "; display: table; }/*clearfix*/ 
+.transferir-cuentasbbva-div-clearfix:after { clear: both; }/*clearfix*/ 
+.transferir-cuentasbbva-div-clearfix { *zoom: 1; }/*clearfix*/ 
+
+.transferir-cuentasbbva-tab { font-size:18px; border-collapse: separate; border-spacing: 20px;}/*eliminar-tab*/
+.transferir-cuentasbbva-contenedor-dragdrop {width:410px; float:left; margin:0px 100px}/*columna*/ 
+.transferir-cuentasbbva-titulo-drag { font-weight:normal; margin:20px 0; color:#006DC0; font-size:20px; padding-left:25px;}/*titulo-administrar*/
+.transferir-cuentasbbva-contenedor-drag { border:1px solid #CCC; height:360px; overflow-x:none; overflow-y:auto;}/*col-listazul-transfer*/ 
+.transferir-cuentasbbva-titulo-drop {font-weight:normal; margin:20px 0; color:#006DC0; font-size:20px; padding-left:25px;}/*titulo-administrar*/ 
+.transferir-cuentasbbva-contenedor-drop {border:1px solid #CCC; padding:15px; font-size:12px; color:#3675A9; height:330px; overflow-x:none; overflow-y:auto;}/*col-listgris*/ 
+
+.transferir-cuentasbbva-div-drag { background:url(../img/1280x800/An_Btn_Drag.png) no-repeat; }
+.transferir-cuentasbbva-div-drop { background:url(../img/1280x800/An_Btn_Drag_Gris) no-repeat; }
+.transferir-cuentasbbva-contenedor-drag li { list-style-type: none !important; }
+.transferir-cuentasbbva-contenedor-drop li { list-style-type: none !important; }
+
+.transferir-cuentasbbva-div-drag table {font-size: 12px; width: 96%; height: 90%; color:#FFF;}/*draggable*/
+.transferir-cuentasbbva-div-drag td {padding-right: 8%; padding-left: 8%;}/*draggable*/
+.transferir-cuentasbbva-div-drag .transferir-cuentasbbva-tab-filauno td{ padding-top: 4%; }/*draggable*/ /*first-row*/
+.transferir-cuentasbbva-div-drag .transferir-cuentasbbva-tab-filados td{ padding-bottom: 4%;}/*draggable*/ /*second-row*/
+
+#transferir-cuentasbbva-drag-uno, #transferir-cuentasbbva-drag-dos, #transferir-cuentasbbva-drag-tres, #transferir-cuentasbbva-drag-cuatro { position: absolute; width:300px; height:72px;  left:180px; background:url(../img/1280x800/An_Btn_Drag.png) no-repeat; z-index: 10; background-size: contain;  background-repeat:no-repeat}/*dragbbva*/ /*drag2bbva*/ /*drag3bbva*/ /*drag4bbva*/
+#transferir-cuentasbbva-drag-uno {top:210px;}/*dragbbva*/
+#transferir-cuentasbbva-drag-dos { top:290px; }/*drag2bbva*/
+#transferir-cuentasbbva-drag-tres { top:370px; }/*drag3bbva*/
+#transferir-cuentasbbva-drag-cuatro { top:450px; }/*drag4bbva*/
+
+.transferir-cuentasbbva-tab-columna-izq {text-align: left;}/*left-col*/
+.transferir-cuentasbbva-tab-columna-der {text-align: right;}/*right-col*/
+
+#transferir-cuentasbbva-drop-uno, #transferir-cuentasbbva-drop-dos, #transferir-cuentasbbva-drop-tres, #transferir-cuentasbbva-drop-cuatro{width:300px; height:72px; position: absolute; left:790px; background:url(../img/1280x800/An_Btn_Drag_Gris.png) no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat}/*drop*/ /*drop2*/ /*drop3*/ /*drop4*/
+#transferir-cuentasbbva-drop-uno { top: 210px; }/*drop*/
+#transferir-cuentasbbva-drop-dos { top: 290px; }/*drop2*/
+#transferir-cuentasbbva-drop-tres { top: 370px; }/*drop3*/
+#transferir-cuentasbbva-drop-cuatro { top: 450px; }/*drop4*/
+#transferir-cuentasbbva-drop-uno table, #transferir-cuentasbbva-drop-dos table, #transferir-cuentasbbva-drop-tres table, #transferir-cuentasbbva-drop-cuatro table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop*//*drop2*//*drop3*//*drop4*/
+#transferir-cuentasbbva-drop-uno .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-dos .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-tres .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-cuatro .transferir-cuentasbbva-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop*/ /*second-row*/ /*drop2*/ /*second-row*//*drop3*/ /*second-row*//*drop4*/ /*second-row*/
+#transferir-cuentasbbva-drop-uno .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-dos .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-tres .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-cuatro .transferir-cuentasbbva-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop*/ /*first-row*//*drop2*/ /*first-row*//*drop3*/ /*first-row*//*drop4*/ /*first-row*/
+
+/*estilos para transferirCtasBBVACCheqFrecuenteInicio.html*/ /*estilos para .html*/
+.transferir-cuentasbbva-tab-subtitulos { font-size:16px; color:#888; margin-top:20px}/*nav-tab*/
+.transferir-cuentasbbva-tab-subtitulos td{  padding-bottom:15px }/*nav-tab*/
+.transferir-cuentasbbva-tab-subtitulos .transferir-cuentasbbva-subtitulo-selected { font-weight:bold; background:url(../img/1280x800/sombra.png) no-repeat bottom left; background-size:75%;}/*nav-tab*/ /*resaltado-azulmarino*/
+
+.transferir-cuentasbbva-subtitulo-selected { color:#283B6C !important; }/*resaltado-azulmarino*/
+
+.transferir-cuentasbbva-columnas-contenido-izq { width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado izquierdo*/
+.transferir-cuentasbbva-columnas-contenido-der { width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado derecho*/
+.transferir-cuentasbbva-tab-contenido { font-size:16px; border-collapse: collapse; border-spacing:0; }/*transferir-tab*/
+.transferir-cuentasbbva-tab-contenido td { padding-right:25px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:44px; line-height:44px; color:#888 }/*transferir-tab*/
+.transferir-cuentasbbva-tab-contenido td + td { text-align:left; padding-left:25px; color:#444; padding-right:0 }/*transferir-tab*/
+.transferir-cuentasbbva-tab-contenido h3 { font-weight:bold; color:#1F53A4; text-align:left; padding-left:27px}
+.transferir-cuentasbbva-tab-contenido * { vertical-align: middle }/*transferir-tab*/
+
+.transferir-cuentasbbva-div-emergente { width:238px; height:38px; line-height:38px; background: url(../img/1280x800/An_Input_Select2.png) no-repeat right; display:inline-block; text-align:center; }/*opcion-emergente2*/
+.transferir-cuentasbbva-div-emergente select { width:238px; height:38px; line-height:38px; padding: 0 25px 0 10px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:16px }/*opcion-emergente2*/
+
+.transferir-cuentasbbva-input-importe { width:228px; border:0; height:38px; background:url(../img/1280x800/An_Input_Transferir.png) no-repeat; padding:0 10px; text-align: center; }/*text-imput2*/
+.transferir-cuentasbbva-input-numtarjeta { width:228px; border:0; height:38px; background:url(../img/1280x800/An_Input_Transferir.png) no-repeat; padding:0 10px; text-align: center; }/*text-imput2*/
+.transferir-cuentasbbva-input-concepto { width:228px; border:0; height:38px; background:url(../img/1280x800/An_Input_Transferir.png) no-repeat; padding:0 10px; text-align: center; }/*text-imput2*/
+.transferir-cuentasbbva-div-botones { position:absolute; text-align:center; top:570px; width:1245px; }/*area-botones*/
+.transferir-cuentasbbva-boton-continuar { background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 }/*formulario-btn*/
+.transferir-cuentasbbva-aviso-inicio {font-size:14px; padding:20px 20px 20px 55px ;background: #ECF7FE url(../img/1280x800/An_Bg_Aviso.png) left no-repeat; margin:15px 2% 15px 0; color:#70767B} /*aviso*/
+.transferir-cuentasbbva-aviso-confirmar {font-size:14px; padding:20px 20px 20px 55px ;background: #ECF7FE url(../img/1280x800/An_Bg_Aviso.png) left no-repeat; margin:15px 2% 15px 0; color:#70767B} /*aviso*/
+.transferir-cuentasbbva-boton-cancelar { background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 } /*formulario-btn*/
+.transferir-cuentasbbva-boton-corregir { background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 } /*formulario-btn*/
+
+
+/*estilos para transferirCtasBBVACCheqFrecuenteAprobacion.html*/ /*estilos para .html*/
+.transferir-cuentasbbva-div-token-aprobacion { background:#F0F9FE; padding:20px; font-size:16px; margin-top:100px } /*cuadro-azul*/
+.transferir-cuentasbbva-div-token-aprobacion a, .transferir-cuentasbbva-div-token-aprobacion label { color:#398DCB; text-decoration:none;} /*cuadro-azul*/
+.transferir-cuentasbbva-boton-confirmar { background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 }/*formulario-btn*/
+.transferir-cuentasbbva-input-token { width:350px; border:1px solid #E9EDEE; height:38px; background:#FFF; text-align: center;} /*text-Imput*/
+.transferir-cuentasbbva-columnas-contenido-der .transferir-cuentasbbva-div-token-aprobacion { margin-top:0} /*doscolumnas*//*cuadro-azul*/
+
+/*estilos para transferirCtasBBVACCheqFrecuenteTermino.html*/ /*estilos para .html*/
+.transferir-cuentasbbva-encabezado-operacion { font-size:24px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:15px; }/*aviso-verde*/
+.transferir-cuentasbbva-div-botones-finales { position:absolute; text-align:center; top:450px; width:1245px; }/*area-botones-final*/
+.transferir-cuentasbbva-boton-nueva { background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 }/*formulario-btn*/
+.transferir-cuentasbbva-boton-comprobante { background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 }/*formulario-btn*/
+.transferir-cuentasbbva-boton-inicio { background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 }/*formulario-btn*/
+
+
+.transferir-cuentasbbva-slide input[type=checkbox]{
+    visibility : hidden;
+}
+.transferir-cuentasbbva-slide {
+  width: 50px;
+  height: 26px;
+  margin: 20px 0;
+
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+
+  -webkit-box-shadow: inset 0px 1px 1px , 0px 1px 0px rgba(255,255,255,0.2);
+  -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+  background-color: #ccc;
+}
+
+.transferir-cuentasbbva-slide:after {
+  position: absolute;
+    background: #00bf00;
+    background-color: #00bf00;
+    right: 10px;
+}
+
+.transferir-cuentasbbva-slide:before {
+  background: white;
+  background-color: white;
+  position: absolute;
+    left: 10px;
+}
+
+.transferir-cuentasbbva-slide label {
+  display: block;
+  width: 27px;
+  height: 20px;
+
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+  background: #fcfff4;
+
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.transferir-cuentasbbva-slide input[type=checkbox]:checked + label {
+  left: 20px;
+}
+.encabezado-registro {font-weight:bold; color:#1F53A4; text-align:left; font-size:16px; padding-left:10px;}
+#transferir-cuentasbbva-div-principal { height: 683px; width:1024px; position:relative}/*todo*/
+.transferir-cuentasbbva-encabezado {background:url(../img/1280x800/An_Ic_Transferir.png) no-repeat left; /* height: 25px; */ margin:10px 0; /* width: 1110px; */padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px;/* width: 80%; */}/*cuerpo-transferir*/
+#transferir-cuentasbbva-div-contenedor {padding-left:25px; width:999px;}/*contenedor, contenedor-miquince1, contenedor-miquince2, contenedor-miquince3, contenedor-cheq1, contenedor-cheq2, contenedor-cheq3, contenedor-tdc1, contenedor-tdc2, contenedor-tdc3*/ 
+.transferir-cuentasbbva-div-clearfix:before, .transferir-cuentasbbva-div-clearfix:after { content: " "; display: table; }/*clearfix*/ 
+.transferir-cuentasbbva-div-clearfix:after { clear: both; } /*clearfix*/ 
+.transferir-cuentasbbva-div-clearfix { *zoom: 1;} /*clearfix*/ 
+
+.envioMail td {padding-right:30px; padding-bottom: 20px}
+.transferir-cuentasbbva-tab {font-size:16px; border-collapse: separate; border-spacing: 20px; /* width: 100%; */}/*eliminar-tab*/
+.transferir-cuentasbbva-contenedor-dragdrop { width:328px; float:left; margin: -40px 50px;}/*columna*/ 
+.transferir-cuentasbbva-titulo-drag { font-weight:normal; margin:30px 0; color:rgb(0,110,193); font-size:18px}/*titulo-administrar*/
+.transferir-cuentasbbva-contenedor-drag { border:1px solid rgba(221,221,221,0.5); height: 318px; overflow-x:none; overflow-y:auto; margin-top:12px;}/*col-listazul-transfer*/
+.transferir-cuentasbbva-titulo-drop { font-weight:normal; margin:30px 0; color:rgb(0,110,193); font-size:18px}/*titulo-administrar*/
+.transferir-cuentasbbva-contenedor-drop { border:1px solid rgba(221,221,221,0.5); padding:15px; font-size:12px; color:#3675A9; height: 289px; overflow-x:none; overflow-y:auto; }/*col-listgris*/ 
+
+.transferir-cuentasbbva-div-drag table {font-size: 12px; width: 96%; height: 90%; color:#FFF;}/*draggable*/
+.transferir-cuentasbbva-div-drag td {padding-right: 8%; padding-left: 8%; }/*draggable*/
+.transferir-cuentasbbva-div-drag .transferir-cuentasbbva-tab-filauno td{ padding-top: 4%; }/*draggable*/ /*first-row*/
+.transferir-cuentasbbva-div-drag .transferir-cuentasbbva-tab-filados td{ padding-bottom: 4%; }/*draggable*/ /*second-row*/
+
+#transferir-cuentasbbva-drag-uno, #transferir-cuentasbbva-drag-dos, #transferir-cuentasbbva-drag-tres, #transferir-cuentasbbva-drag-cuatro, 
+#transferir-cuentasbbva-drag-1, #transferir-cuentasbbva-drag-2, #transferir-cuentasbbva-drag-3, #transferir-cuentasbbva-drag-4,
+#transferir-otrosbancos-drag-5, #transferir-cuentasbbva-drag-6, #transferir-cuentasbbva-drag-7, #transferir-cuentasbbva-drag-8, 
+#transferir-cuentasbbva-drag-9, #transferir-cuentasbbva-drag-10, #transferir-cuentasbbva-drag-11, #transferir-cuentasbbva-drag-12 
+#transferir-cuentasbbva-drag-13, #transferir-cuentasbbva-drag-14, #transferir-cuentasbbva-drag-15, #transferir-cuentasbbva-drag-16, 
+#transferir-cuentasbbva-drag-17, #transferir-cuentasbbva-drag-18, #transferir-cuentasbbva-drag-19, #transferir-cuentasbbva-drag-20,
+#transferir-cuentasbbva-drag-21, #transferir-cuentasbbva-drag-22, #transferir-cuentasbbva-drag-23, #transferir-cuentasbbva-drag-24  
+{position: absolute; width:256px; height:61px;  left:240px; background:url(../img/1280x800/An_Btn_Drag.png) no-repeat; z-index: 10; background-size: contain;  background-repeat:no-repeat}/*dragbbva*/ /*drag2bbva*/ /*drag3bbva*/ /*drag4bbva*/
+#transferir-cuentasbbva-drag-uno, #transferir-cuentasbbva-drag-1 {top: 180px;left: 180px;}/*drag*/
+#transferir-cuentasbbva-drag-dos, #transferir-cuentasbbva-drag-2 {top: 254px;left: 180px;}/*drag2*/
+#transferir-cuentasbbva-drag-tres, #transferir-cuentasbbva-drag-3 {top: 330px;left: 180px;}/*drag3*/
+#transferir-cuentasbbva-drag-cuatro, #transferir-cuentasbbva-drag-4 {top: 400px;left: 180px;}/*drag4*/
+#transferir-cuentasbbva-drag-5 { top: 484px; } /* top: 484px*/
+#transferir-cuentasbbva-drag-6 { top: 560px; } /* top: 560px */
+#transferir-cuentasbbva-drag-7 { top: 636px; } /* top: 636px */
+#transferir-cuentasbbva-drag-8 { top: 712px; } /* top: 712px */
+#transferir-cuentasbbva-drag-9 { top: 788px; } /* top: 788px */
+#transferir-cuentasbbva-drag-10 { top: 864px; } /* top: 864px */
+
+.transferir-cuentasbbva-tab-columna-izq {text-align: left;}/*left-col*/
+.transferir-cuentasbbva-tab-columna-der {text-align: right;}/*right-col*/
+
+#transferir-cuentasbbva-drop-uno, #transferir-cuentasbbva-drop-dos, #transferir-cuentasbbva-drop-tres, #transferir-cuentasbbva-drop-cuatro
+{width:256px; height:61px; position: absolute; left:730px; background:url(../img/1024x600/An_Btn_Drag_Gris.png) no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat}/*drop*/ /*drop2*/ /*drop3*/ /*drop4*/
+
+#transferir-cuentasbbva-drop-uno { top: 180px; }/*drop*/
+#transferir-cuentasbbva-drop-dos { top: 256px; }/*drop2*/
+#transferir-cuentasbbva-drop-tres { top: 332px; }/*drop3*/
+#transferir-cuentasbbva-drop-cuatro { top: 408px; }/*drop4*/
+#transferir-cuentasbbva-drop-5 { visibility: hidden;top: 484px; } /* top: 484px*/
+#transferir-cuentasbbva-drop-6 { visibility: hidden;top: 560px; } /* top: 560px */
+#transferir-cuentasbbva-drop-7 { visibility: hidden;top: 636px; } /* top: 636px */
+#transferir-cuentasbbva-drop-8 { visibility: hidden;top: 712px; } /* top: 712px */
+#transferir-cuentasbbva-drop-9 { visibility: hidden;top: 788px; } /* top: 788px */
+#transferir-cuentasbbva-drop-10 { visibility: hidden;top: 864px; } /* top: 864px */
+
+#transferir-cuentasbbva-div-contenedor .transferir-cuentasbbva-div-clearfix { margin: 10px 0px 0px 60px; width: 900px; }
+
+#transferir-cuentasbbva-drop-uno table, #transferir-cuentasbbva-drop-dos table, #transferir-cuentasbbva-drop-tres table, #transferir-cuentasbbva-drop-cuatro table,
+{ width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop*//*drop2*//*drop3*//*drop4*/
+
+
+#transferir-cuentasbbva-drop-1, #transferir-cuentasbbva-drop-2, #transferir-cuentasbbva-drop-3, #transferir-cuentasbbva-drop-4{width:256px; height:61px; position: absolute; top:196px; left: 725px; background:url(../img/1280x800/An_Btn_Drag_Gris.png) no-repeat; background-size: cover; z-index: 9;}/*drop_*/ /*drop2_*/ /*drop3_*/ /*drop4_*/
+
+#transferir-cuentasbbva-drop-1 {top: 180px;left: 600px;}/*drag*/
+#transferir-cuentasbbva-drop-2 {top: 255px;left: 600px;}/*drag2*/
+#transferir-cuentasbbva-drop-3 {top: 330px;left: 600px;}/*drag3*/
+#transferir-cuentasbbva-drop-4 {top: 400px;left: 600px;}/*drag4*/
+
+#transferir-cuentasbbva-drop-1 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop_*/
+#transferir-cuentasbbva-drop-1 .transferir-cuentasbbva-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop_*/ /*second-row*/
+#transferir-cuentasbbva-drop-1 .transferir-cuentasbbva-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop_*/ /*first-row*/
+#transferir-cuentasbbva-drop-2 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop2_*/
+#transferir-cuentasbbva-drop-2 .transferir-cuentasbbva-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop2_*/ /*second-row*/
+#transferir-cuentasbbva-drop-2 .transferir-cuentasbbva-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop2_*/ /*first-row*/
+#transferir-cuentasbbva-drop-3 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop3_*/
+#transferir-cuentasbbva-drop-3 .transferir-cuentasbbva-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop3_*/ /*second-row*/
+#transferir-cuentasbbva-drop-3 .transferir-cuentasbbva-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop3_*/ /*first-row*/
+#transferir-cuentasbbva-drop-4 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop4_*/
+#transferir-cuentasbbva-drop-4 .transferir-cuentasbbva-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop4_*/ /*second-row*/
+#transferir-cuentasbbva-drop-4 .transferir-cuentasbbva-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop4_*/ /*first-row*/
+
+
+#transferir-cuentasbbva-drop-uno .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-dos .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-tres .transferir-cuentasbbva-tab-filados td, #transferir-cuentasbbva-drop-cuatro .transferir-cuentasbbva-tab-filados td
+
+#transferir-cuentasbbva-drop-uno .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-dos .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-tres .transferir-cuentasbbva-tab-filauno td, #transferir-cuentasbbva-drop-cuatro .transferir-cuentasbbva-tab-filauno td
+{ padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop*/ /*first-row*//*drop2*/ /*first-row*//*drop3*/ /*first-row*//*drop4*/ /*first-row*/
+
+/*estilos para transferirCtasBBVACCheqFrecuenteInicio.html*/ /*estilos para .html*/
+.transferir-cuentasbbva-tab-subtitulos {font-size:14px; color:#888; margin-top:-20px;margin-left: 25px;}/*nav-tab*/
+.transferir-cuentasbbva-tab-subtitulos td{padding-bottom:12px}/*nav-tab*/
+.transferir-cuentasbbva-tab-subtitulos .transferir-cuentasbbva-subtitulo-selected { font-weight:bold; background:url(../img/1280x800/sombra.png) no-repeat bottom left; background-size:80%; color:#283B6C !important; }/*nav-tab*/ /*resaltado-azulmarino*/
+
+.transferir-cuentasbbva-subtitulo-selected { color:#283B6C !important; }/*resaltado-azulmarino*/
+
+.transferir-cuentasbbva-columnas-contenido-izq {width:48%; margin:10 2% 0 0; float:left; }/*doscolumnas *lado izquierdo*/
+.transferir-cuentasbbva-columnas-contenido-der {width:48%; margin:10 2% 0 0; float:left;  }/*doscolumnas *lado derecho*/
+.transferir-cuentasbbva-columnas-contenido-der.pantalla2 {width:48%; margin:10 2% 0 0; float:left; margin-top: -22px; }/*doscolumnas *lado derecho*/
+
+.transferir-cuentasbbva-tab-contenido {font-size:12px; border-collapse: collapse; border-spacing:0;}/*transferir-tab*/
+.transferir-cuentasbbva-tab-contenido td {padding-right:10px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:40px; line-height:40px; color:#888 }/*transferir-tab*/
+.transferir-cuentasbbva-tab-contenido.pantalla2 td {padding-right:10px; border-bottom:1px solid #E6E6E6; width:50%; text-align:left; height:25px; line-height:25px; color:#888 }/*transferir-tab*/
+
+.transferir-cuentasbbva-tab-contenido td + td {text-align:left; padding-left:10px; color:#444;}/*transferir-tab*/
+.transferir-cuentasbbva-tab-contenido h3 { font-weight:bold; color:#1F53A4; text-align:left; padding-left:10px;}
+.transferir-cuentasbbva-tab-contenido * {vertical-align: middle}/*transferir-tab*/
+
+.transferir-cuentasbbva-div-emergente {width:179px; height:29px; line-height:29px; background: url(../img/1024x600/An_Input_Select2.png) no-repeat right; display:inline-block; text-align:center; }/*opcion-emergente2*/
+.transferir-cuentasbbva-div-emergente select {width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}/*opcion-emergente2*/
+
+.transferir-cuentasbbva-input-importe { width:169px; border:0; height:29px; background:url(../img/1280x800/An_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-cuentasbbva-input-numtarjeta { width:169px; border:0; height:29px; background:url(../img/1280x800/An_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-cuentasbbva-input-concepto { width:169px; border:0; height:29px; background:url(../img/1280x800/An_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+
+.transferir-cuentasbbva-div-botones { padding-right:25px; text-align:center; margin-top: 20px; margin-left: 125px;}
+.transferir-cuentasbbva-div-botones .transferir-miscuentas-boton-confirmar {margin: 0  35px; } /* margin: 0  35px */
+.transferir-cuentasbbva-div-botones {width: 770px; top: 420px; /* bottom: 35%; */ position:absolute; /* height: 100px; */}/*area-botones*/
+.transferir-cuentasbbva-boton-continuar {background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-cuentasbbva-aviso-inicio { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/1280x800/An_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+.transferir-cuentasbbva-aviso-confirmar { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/1280x800/An_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+.transferir-cuentasbbva-boton-cancelar {background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-cuentasbbva-boton-corregir {background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/*estilos para transferirCtasBBVACCheqFrecuenteAprobacion.html*/ /*estilos para .html*/
+.transferir-cuentasbbva-div-token-aprobacion { background:#F0F9FE; padding:4px; font-size:12px; margin-top:120px; line-height: 12px;} /* cuadro-azul */
+.transferir-cuentasbbva-div-token-aprobacion a, .transferir-cuentasbbva-div-token-aprobacion label { color:#398DCB; text-decoration:none;}  /* cuadro-azul */
+.transferir-cuentasbbva-div-token-aprobacion p { margin-top: 5px; margin-bottom: 2px;}
+.transferir-cuentasbbva-boton-confirmar {background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-cuentasbbva-input-token { width:230px; border:1px solid #E9EDEE; height:23px; background:#FFF;padding-top:4px; text-align:center;}  /* text-imput */
+.transferir-cuentasbbva-columnas-contenido-der .transferir-cuentasbbva-div-token-aprobacion { margin-top:0px}  /* cuadro-azul */
+
+/*estilos para transferirCtasBBVACCheqFrecuenteTermino.html*/ /*estilos para .html*/
+.transferir-cuentasbbva-encabezado-operacion { font-size:22px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:10px;}/*aviso-verde*/
+.transferir-cuentasbbva-div-botones-finales {width: 750px; top: 410px; bottom:5%; position:absolute; padding-right:25px; text-align:center; margin-top:30px; margin-left: 135px;}/*area-botones-final*/
+.transferir-cuentasbbva-div-botones-finales p{font-size: 14px}/*area-botones-final*/
+.transferir-cuentasbbva-boton-nueva {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-cuentasbbva-boton-comprobante {background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-cuentasbbva-boton-inicio {background:url(../img/1280x800/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/*estilos para transferir-cuentasbbva.html*/
+
+
+/*estilos para transferir-otrosbancos.html*/
+/* #transferir-otrosbancos-div-principal {height:564px; width:1024px; position:relative}todo */
+/* .transferir-otrosbancos-encabezado {background:url(../img/1024x600/An_Ic_Transferir.png) no-repeat left; height:25px; margin:10px 0; padding-left:35px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:19px}cuerpo-transferir */
+/* #transferir-otrosbancos-div-contenedor {padding-left:19px; width:auto;}contenedor, contenedor-frec-bbva1, contenedor-frec-bbva2, contenedor-frec-bbva3  */
+/* .transferir-otrosbancos-div-clearfix:before, .transferir-otrosbancos-div-clearfix:after { content: " "; display: table; }clearfix  */
+/* .transferir-otrosbancos-div-clearfix:after { clear: both; } clearfix  */
+/* .transferir-otrosbancos-div-clearfix { *zoom: 1; } clearfix  */
+
+/* .transferir-otrosbancos-tab { font-size:16px; border-collapse: separate; border-spacing: 15px; }eliminar-tab */
+/* .transferir-otrosbancos-contenedor-dragdrop {width:328px; float:left; margin:0px 80px}columna  */
+/* .transferir-otrosbancos-titulo-drag {font-weight:normal; margin:15px 0; color:#006DC0; font-size:18px; padding-left: 19px}titulo-administrar */
+/* .transferir-otrosbancos-contenedor-drag {border:1px solid #CCC; height:330px; overflow-x:none; overflow-y:auto;}col-listazul-transfer  */
+/* .transferir-otrosbancos-titulo-drop {font-weight:normal; margin:15px 0; color:#006DC0; font-size:18px; padding-left: 19px}titulo-administrar  */
+/* .transferir-otrosbancos-contenedor-drop { border:1px solid #CCC; padding:15px; font-size:12px; color:#3675A9; height:300px; overflow-x:none; overflow-y:auto; }col-listgris  */
+
+/* .transferir-otrosbancos-div-drag table {font-size: 12px; width: 96%; height: 90%; color:#FFF; }draggable */
+/* .transferir-otrosbancos-div-drag td { padding-right: 8%; padding-left: 8%; }draggable */
+/* .transferir-otrosbancos-div-drag .transferir-otrosbancos-tab-filauno td{  padding-top: 4%; }draggable first-row */
+/* .transferir-otrosbancos-div-drag .transferir-otrosbancos-tab-filados td{  padding-bottom: 4%; }draggable second-row */
+
+/* #transferir-otrosbancos-drag-uno, #transferir-otrosbancos-drag-dos, #transferir-otrosbancos-drag-tres, #transferir-otrosbancos-drag-cuatro {position: absolute; width:256px; height:61px;  left:140px; background:url(../img/1024x600/An_Btn_Drag.png) no-repeat; z-index: 10; background-size: contain;  background-repeat:no-repeat}dragbbva drag2bbva drag3bbva drag4bbva */
+/* #transferir-otrosbancos-drag-uno {top: 180px;}drag */
+/* #transferir-otrosbancos-drag-dos {top: 256px;}drag2bbva */
+/* #transferir-otrosbancos-drag-tres {top: 332px;}drag3bbva */
+/* #transferir-otrosbancos-drag-cuatro {top: 408px;}drag4bbva */
+
+/* .transferir-otrosbancos-tab-columna-izq {text-align: left;}left-col */
+/* .transferir-otrosbancos-tab-columna-der {text-align: right;}right-col */
+
+/* #transferir-otrosbancos-drop-uno, #transferir-otrosbancos-drop-dos, #transferir-otrosbancos-drop-tres, #transferir-otrosbancos-drop-cuatro{width:256px; height:61px; position: absolute; left:629px; background:url(../img/1024x600/An_Btn_Drag_Gris.png) no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat}drop drop2 drop3 drop4 */
+/* #transferir-otrosbancos-drop-uno { top: 180px; }drop */
+/* #transferir-otrosbancos-drop-dos { top: 256px; }drop2 */
+/* #transferir-otrosbancos-drop-tres { top: 332px; }drop3 */
+/* #transferir-otrosbancos-drop-cuatro { top: 408px; }drop4 */
+/* #transferir-otrosbancos-drop-uno table, #transferir-otrosbancos-drop-dos table, #transferir-otrosbancos-drop-tres table, #transferir-otrosbancos-drop-cuatro table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } drop*//*drop2*//*drop3*//*drop4 */
+/* #transferir-otrosbancos-drop-uno .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-dos .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-tres .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-cuatro .transferir-otrosbancos-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } drop second-row drop2 second-row*//*drop3 second-row*//*drop4 second-row */
+/* #transferir-otrosbancos-drop-uno .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-dos .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-tres .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-cuatro .transferir-otrosbancos-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} drop first-row*//*drop2 first-row*//*drop3 first-row*//*drop4 first-row */
+
+
+/* /*estilos para transferirOtrosBancosCCheqCreditoInicio.html*/ estilos para transferirOtrosBancosCCheqDebitoInicio.html */
+/* .transferir-otrosbancos-tab-subtitulos {font-size:14px; color:#888; margin-top:15px}nav-tab */
+/* .transferir-otrosbancos-tab-subtitulos td{padding-bottom:10px}nav-tab */
+/* .transferir-otrosbancos-tab-subtitulos .transferir-otrosbancos-subtitulo-selected {font-weight:bold; background:url(../img/1024x600/sombra.png) no-repeat bottom left; background-size:75%;}nav-tab resaltado-azulmarino */
+
+/* .transferir-otrosbancos-subtitulo-selected {color:#283B6C !important;}resaltado-azulmarino */
+
+/* .transferir-otrosbancos-columnas-contenido-izq {width:48%; margin:0 2% 0 0; float:left;}doscolumnas *lado izquierdo */
+/* .transferir-otrosbancos-columnas-contenido-der {width:48%; margin:0 2% 0 0; float:left;}doscolumnas *lado derecho */
+/* .transferir-otrosbancos-tab-contenido {font-size:14px; border-collapse: collapse; border-spacing:0;}transferir-tab */
+/* .transferir-otrosbancos-tab-contenido td {padding-right:20px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:38px; line-height:38px; color:#888}transferir-tab */
+/* .transferir-otrosbancos-tab-contenido td + td {text-align:left; padding-left:20px; color:#444;}transferir-tab */
+/* .transferir-otrosbancos-tab-contenido h3 { font-weight:bold; color:#1F53A4; text-align:left; padding-left:22px} */
+/* .transferir-otrosbancos-tab-contenido * {vertical-align: middle}transferir-tab */
+
+/* .transferir-otrosbancos-div-emergente { width:179px; height:29px; line-height:29px; background: url(../img/1024x600/An_Input_Select2.png) no-repeat right; display:inline-block; text-align:center;}opcion-emergente2 */
+/* .transferir-otrosbancos-div-emergente select { width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}opcion-emergente2 */
+
+/* .transferir-otrosbancos-input-importe { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; background-size: contain;  background-repeat:no-repeat; text-align: center;}text-imput2 */
+/* .transferir-otrosbancos-input-numtarjeta { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; background-size: contain;  background-repeat:no-repeat; text-align: center;}text-imput2 */
+/* .transferir-otrosbancos-input-concepto { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; background-size: contain;  background-repeat:no-repeat; text-align: center;}text-imput2 para concepto */
+/* .transferir-otrosbancos-input-referencia { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; background-size: contain;  background-repeat:no-repeat; text-align: center;}text-imput2 para concepto */
+/* .transferir-otrosbancos-div-botones {position:absolute; text-align:center; top:420px; width:1000px;  margin-left: -7px}area-botones */
+/* .transferir-otrosbancos-boton-continuar { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}formulario-btn */
+/* .transferir-otrosbancos-aviso-inicio {font-size:12px; padding:14px 15px 14px 50px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:6px 2% 6px 0; color:#70767B;} aviso */
+/* .transferir-otrosbancos-aviso-confirmar {font-size:12px; padding:14px 15px 14px 50px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:6px 2% 6px 0; color:#70767B;} aviso */
+/* .transferir-otrosbancos-boton-cancelar { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}formulario-btn */
+/* .transferir-otrosbancos-boton-corregir { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}formulario-btn */
+
+
+/* /*estilos para transferirOtrosBancosCCheqCreditoAprobacion.html*/ estilos para transferirOtrosBancosCCheqDebitoAprobacion.html */
+/* .transferir-otrosbancos-div-token-aprobacion { background:#F0F9FE; padding:15px; font-size:14px; margin-top:80px } cuadro-azul */
+/* .transferir-otrosbancos-div-token-aprobacion a, .transferir-otrosbancos-div-token-aprobacion label { color:#398DCB; text-decoration:none;} cuadro-azul */
+/* .transferir-otrosbancos-boton-confirmar {  background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}formulario-btn */
+/* .transferir-otrosbancos-input-token{width:230px; border:1px solid #E9EDEE; height:32px; background:#FFF;  text-align: center;}text-imput */
+/* .transferir-otrosbancos-columnas-contenido-der .transferir-otrosbancos-div-token-aprobacion { margin-top:0} doscolumnas*//*cuadro-azul */
+/* .transferir-otrosbancos-aviso-aprobacion {font-size:12px; padding:14px 15px 14px 50px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:6px 2% 6px 0; color:#70767B;} aviso */
+
+
+/* /*estilos para transferirOtrosBancosCCheqCreditoTermino.html*/ estilos para transferirOtrosBancosCCheqDebitoTermino.html */
+/* .transferir-otrosbancos-encabezado-operacion {font-size:20px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:6px;}aviso-verde */
+/* .transferir-otrosbancos-div-botones-finales {position:absolute; text-align:center; top:385px; width:1000px; margin-left: -7px}area-botones-final */
+/* .transferir-otrosbancos-div-botones-finales p{font-size: 14px}area-botones-final */
+
+/* .transferir-otrosbancos-boton-nueva { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}formulario-btn */
+/* .transferir-otrosbancos-boton-comprobante { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}formulario-btn */
+/* .transferir-otrosbancos-boton-inicio { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}formulario-btn */
+/* .transferir-otrosbancos-aviso-termino {font-size:12px; padding:14px 15px 14px 50px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:6px 2% 6px 0; color:#70767B;} aviso */
+/* .transferir-otrosbancos-div-botones-aprobacion {position:absolute; text-align:center; top:390px; width:1000px; margin-left: -7px} */
+/* .transferir-otrosbancos-div-botones-termino {position:absolute; text-align:center; top:390px; width:1000px; margin-left: -7px} */
+/* .transferir-otrosbancos-div-botones-termino p{font-size: 14px}area-botones-final */
+
+/********************************** Fin Transferir **********************************/
+
+
+/********************************** Inicio Invertir *********************************/
+.invertir-resaltado-azul {color:#398DCB !important}
+.compras-overflow {  
+    overflow:auto;
+    height:205px;
+}
+
+#flechaIzqON {
+   background: url(../img/1024x600/An_Fizq_on.png) no-repeat center -5px;
+   width: 0px;
+   height: 23px;
+   border: 0px;
+}
+
+#flechDerechaON {
+   background: url(../img/1024x600/An_Fder_on.png) no-repeat center -5px;
+   width: 0px;
+   height: 23px;
+   border: 0px;
+}
+
+#flechaIzqOFF {
+   background: url(../img/1024x600/An_Fizq_off.png) no-repeat center -5px;
+   width: 0px;
+   height: 23px;
+   border: 0px;
+}
+
+#flechDerechaOFF {
+   background: url(../img/1024x600/An_Fder_off.png) no-repeat center -5px;
+   width: 0px;
+   height: 23px;
+   border: 0px;
+}
+
+/* Inicio Invertir Compra */
+.invertir-compra-encabezado {background:url(../img/1024x600/An_Ic_Invertir.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px}/*cuerpo-invertir*/
+#invertir-compra-contenedor{padding-left:19px; width:auto;}/*contenedor*/
+.invertir-compra-clearfix:before, .invertir-compra-clearfix:after { content: " "; display: table; }/*clearfix*/
+.invertir-compra-clearfix:after { clear: both; } /*clearfix*/
+.invertir-compra-clearfix { *zoom: 1; } /*clearfix*/
+/*android-adjust*/
+.invertir-compra-tab-subtitulos {font-size:14px; color:#888; margin-top:15px}/*nav-tab*/
+.invertir-compra-tab-subtitulos td{padding-bottom:10px}/*nav-tab*/
+.invertir-compra-tab-subtitulos .invertir-compra-subtitulo-selected {font-weight:bold; background:url(../img/1024x600/sombra.png) no-repeat bottom left; background-size:75%;}/*nav-tab*/ /*resaltado-azulmarino*/
+
+.invertir-compra-subtitulo-selected {color:#283B6C !important;}/*resaltado-azulmarino*/
+
+.invertir-compra-columnas-contenido-izq {width:48%; margin:0 2% 0 0; float:left;}/*doscolumnas *lado izquierdo*/
+.invertir-compra-columnas-contenido-der {width:48%; margin:0 2% 0 0; float:left;}/*doscolumnas *lado derecho*/
+.invertir-compra-tab-contenido {font-size:14px; border-collapse: collapse; border-spacing:0;}/*transferir-tab*/
+.invertir-compra-tab-contenido td {padding-right:20px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:38px; line-height:38px; color:#888}/*transferir-tab*/
+.invertir-compra-tab-contenido td + td {text-align:left; padding-left:20px; color:#444;}/*transferir-tab*/
+.invertir-compra-tab-contenido * {vertical-align: middle}/*transferir-tab*/
+
+.invertir-compra-opcion-emergente { width:179px; height:29px; line-height:29px; background: url(../img/1024x600/An_Input_Select2.png) no-repeat right; display:inline-block; text-align:center;}/*opcion-emergente2*/
+.invertir-compra-opcion-emergente select { width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}/*opcion-emergente2*/
+
+.invertir-compra-input-importe { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; background-size: contain;  background-repeat:no-repeat; text-align: center;}/*text-imput2*/
+
+.invertir-compra-div-botones{position:absolute; text-align:center; bottom: 5%; width:1000px; margin-left: -7px} /*area-botones area-botonesInvertir1*/ /*area-botones area-botones3*/ /*area-botones*/
+.invertir-compra-boton-continuar{ background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-compra-aviso-aprobacion {font-size:12px; padding:14px 15px 14px 50px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:6px 2% 6px 0; color:#70767B;} /*aviso*/
+.invertir-compra-aviso-termino {font-size:12px; padding:14px 15px 14px 50px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:6px 2% 6px 0; color:#70767B;} /*aviso*/
+
+.invertir-compra-boton-regresar{ background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-compra-boton-regresar-hidden{display:none;}/*android-hidden*/
+.invertir-compra-boton-confirmar{ background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+#invertir-compra-div-principal{height:564px; width:1024px; position:relative}/*todo todo3-ios*/
+.invertir-compra-resultado-operacion {font-size:20px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:6px;}/*aviso-verde*/
+.invertir-compra-div-botones-finales {position:absolute; text-align:center; bottom: 5%; width:1000px; margin-left: -7px}/*area-botones area-botones3*/
+.invertir-compra-boton-nueva { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-compra-boton-comprobante { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-compra-boton-inicio { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/* Fin Invertir Compra */
+
+/*Inicio Invertir Venta */
+.invertir-venta-encabezado {background:url(../img/1024x600/An_Ic_Invertir.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px}/*cuerpo-invertir*/
+#invertir-venta-contenedor{padding-left:19px; width:auto;}/*contenedor*/
+.invertir-venta-clearfix:before, .invertir-venta-clearfix:after { content: " "; display: table; }/*clearfix*/
+.invertir-venta-clearfix:after { clear: both; } /*clearfix*/
+.invertir-venta-clearfix { *zoom: 1; } /*clearfix*/
+/*android-adjust*/
+.invertir-venta-tab-subtitulos {font-size:14px; color:#888; margin-top:15px}/*nav-tab*/
+.invertir-venta-tab-subtitulos td{padding-bottom:10px}/*nav-tab*/
+.invertir-venta-tab-subtitulos .invertir-venta-subtitulo-selected {font-weight:bold; background:url(../img/1024x600/sombra.png) no-repeat bottom left; background-size:75%;}/*nav-tab*/ /*resaltado-azulmarino*/
+
+.invertir-venta-subtitulo-selected {color:#283B6C !important;}/*resaltado-azulmarino*/
+
+.invertir-venta-columnas-contenido-izq {width:48%; margin:0 2% 0 0; float:left;}/*doscolumnas *lado izquierdo*/
+.invertir-venta-columnas-contenido-der {width:48%; margin:0 2% 0 0; float:left;}/*doscolumnas *lado derecho*/
+.invertir-venta-tab-contenido {font-size:14px; border-collapse: collapse; border-spacing:0;}/*transferir-tab*/
+.invertir-venta-tab-contenido td {padding-right:20px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:38px; line-height:38px; color:#888}/*transferir-tab*/
+.invertir-venta-tab-contenido td + td {text-align:left; padding-left:20px; color:#444;}/*transferir-tab*/
+.invertir-venta-tab-contenido * {vertical-align: middle}/*transferir-tab*/
+
+.invertir-venta-opcion-emergente { width:179px; height:29px; line-height:29px; background: url(../img/1024x600/An_Input_Select2.png) no-repeat right; display:inline-block; text-align:center;}/*opcion-emergente2*/
+.invertir-venta-opcion-emergente select { width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}/*opcion-emergente2*/
+
+.invertir-venta-div-botones{position:absolute; text-align:center; bottom: 5%; width:1000px; margin-left: -7px} /*area-botones area-botonesInvertir1*/ /*area-botones area-botones3*/ /*area-botones*/
+.invertir-venta-boton-continuar{ background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-venta-aviso-aprobacion {font-size:12px; padding:14px 15px 14px 50px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:6px 2% 6px 0; color:#70767B;} /*aviso*/
+
+.invertir-venta-boton-regresar{ background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-venta-boton-regresar-hidden{display:none;}/*android-hidden*/
+.invertir-venta-boton-confirmar{ background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+#invertir-venta-div-principal{height:564px; width:1024px; position:relative}/*todo todo3-ios*/
+.invertir-venta-resultado-operacion {font-size:20px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:6px;}/*aviso-verde*/
+.invertir-venta-div-botones-finales {position:absolute; text-align:center; top:420px; width:1000px; margin-left: -7px}/*area-botones area-botones3*/
+.invertir-venta-boton-nueva { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-venta-boton-comprobante { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-venta-boton-inicio { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/* Fin Invertir venta */
+
+/* Inicio Invertir consulta */
+
+.invertir-consulta-encabezado {background:url(../img/1024x600/An_Ic_Invertir.png) no-repeat left; height:25px; margin:10px 0; padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px}/*cuerpo-invertir*/
+#invertir-consulta-contenedor{padding-left:19px; width:auto;}/*contenedor*/
+.invertir-consulta-clearfix:before, .invertir-venta-clearfix:after { content: " "; display: table; }/*clearfix*/
+.invertir-consulta-clearfix:after { clear: both; } /*clearfix*/
+.invertir-consulta-clearfix { *zoom: 1; } /*clearfix*/
+.invertir-consulta-mitad-izq { width:474px; float:left; padding-right:20px}/*mitad*/
+.invertir-consulta-tab-contenido { font-size:14px; border-collapse: separate; border-spacing: 10px;} /*invertir-tab*/
+.invertir-consulta-tab-contenido td label{font-size:14px; color:#888} /*invertir-tab*/
+
+.invertir-consulta-opcion-emergente { width:264px; height:29px; background: url(../img/1024x600/An_Input_Select.png) no-repeat right; display:inline-block; text-align:center; } /*opcion-emergente*/
+.invertir-consulta-opcion-emergente select { width:264px; height:29px; padding: 0 20px 0 10px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px} /*opcion-emergente*/
+
+.invertir-consulta-input-importe { width:260px; border:1px solid #E9EDEE; height:32px; background:#FFF;  text-align: center;}/*text-imput*/
+.invertir-consulta-boton-confirmar { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.invertir-consulta-boton-nueva { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+.invertir-consulta-div-botones{ margin-top:80px; text-align:center}/*centrado-consulta*/
+.invertir-consulta-mitad-der { width:464px; float:left; border-left:1px solid #ECEFF2; padding:0 15px}/*mitad2*/
+.invertir-consulta-cargando { height:450px; background: url(../img/1024x600/An_Ic_Load.png) no-repeat center}/*cargando*/
+#invertir-consulta-div-grafica { margin-left:5px; width:470px; height:200px; display:none; }/*consultaInversiones*/
+.invertir-consulta-etiquetas-titulo{color:#888; font-size: 20px} /*titulo-consulta*/
+.invertir-consulta-etiquetas-valores{color:#006EC1; font-size: 20px} /*titulo-consulta2*/
+
+/* Fin Invertir consulta */
+
+/********************************** Fin Invertir *********************************/
+
+/* ==========================================================================
+  Modulo administrar
+   ========================================================================== */
+.administrar-cabecera { background:url(../img/1024x600/An_Ic_Administrar.png) no-repeat left; height:24px; margin:8px 0; padding-left:35px; margin-left:19px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:24px}
+#administrar-contenedor{ padding-left:0px; width:1000px;}
+.administrar-texto-titulo { font-weight:normal; margin:15px 0; color:#006DC0; font-size:18px; padding-left: 19px}
+.administrar-tab-eliminar { font-size:16px; border-collapse: separate; border-spacing: 15px; }
+   /*componente radio*/
+.administrar-radio-seleccionar { display:inline-block; width:16px; height:16px; position:relative; }
+.administrar-radio-seleccionar *:focus { outline:none}
+.administrar-radio-seleccionar input { width:16px; height:16px; position:absolute; top:5px; left:0; z-index:3; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; }
+.administrar-radio-seleccionar input { width:16px; height:16px; top:-1px; left:0; display:inline-block; position:absolute; background: url(../img/1024x600/An_Ic_Check_Off.png) no-repeat center right; padding-left: 10px;}
+.administrar-radio-seleccionar input:checked{ background: url(../img/1024x600/An_Ic_Check_On.png) no-repeat center left; }
+   
+.administrar-div-botones {padding-top:210px;}
+.administrar-boton-confirmar { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}
+#administrar-div-principal {  height:564px; width:1024px; position:relative}
+.administrar-clearfix:before, .administrar-clearfix:after { content: " "; display: table; }
+.administrar-clearfix:after { clear: both; }
+.administrar-clearfix { *zoom: 1; }
+#administrar-radio-depurar0{-webkit-transform: scale(1.5,1.5);}
+#administrar-radio-depurar1{-webkit-transform: scale(1.5,1.5);}
+#administrar-radio-depurar2{-webkit-transform: scale(1.5,1.5);}
+   
+   /* ==========================================================================
+  Modulo posisición global
+   ========================================================================== */
+   
+.highcharts-legend {display: none;}
+
+/* No permite dejar pulsado al usuario en ningún lugar excepto inputs */
+:not(input) { -webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; }
+
+/* Imagen de boton secundario */
+#imgMenu { position: absolute; bottom: 16px; right: 4px; z-index: 11;}
+
+/* Barra de scroll para elemento scrollable */
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color:  #cccccc;
+}
+
+/* Content frame para gráficos de mis cuentas*/
+#contentFrame2 {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background-image: none;
+    background-color: transparent;
+}
+
+// Estilos Calendario
+
+[name=fechaOperacion] {
+  border: 1px solid #e3e3e3;
+  height: 34px;
+  border-radius: 3px;
+  margin-right: 5%;
+  padding-left: 4%;
+}
+
+#ui-datepicker-div {
+  border: none;
+}
+
+.ui-datepicker-calendar tbody td * {
+  text-align: center !important;
+}
+
+.ui-datepicker-unselectable.ui-state-disabled span.ui-state-default {
+  background: none;
+  background-color: #b5e5f9;
+  border: none;
+  color: #89d1f3;
+}
+
+.ui-datepicker-other-month a {
+  background: none !important;
+  background-color: #b5e5f9 !important;
+}
+
+span.ui-icon.ui-icon-circle-triangle-w {
+  background-position: -96px -16px;
+}
+
+span.ui-icon.ui-icon-circle-triangle-e {
+  background-position: -33px -16px;
+}
+
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
+    color: #363636 !important;
+    border: 1px solid #094fa4 !important;
+    background: #fff0a5 url("images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x !important;
+    font-weight: normal !important;
+}
+
+
+.floatButton{
+  left: 76%;
+  top: 1px;
+  position:absolute;
+  z-index: 20;
+  width: 120px;
+  height: 40px;
+  /* border: 2px solid #ccc; */
+  background: rgba(255, 255, 255, 0) url(../img/1024x600/an_Ic_Share_Guardar_Off2.png) no-repeat center top;  
+  background-size: 92%;
+}
+
+.floatButton:active{
+  background: rgba(255, 255, 255, 0) url(../img/1024x600/an_Ic_Share_Guardar_On2.png) no-repeat center top;
+}
+
+.andOn{
+  background: white url(../img/1024x600/an_Ic_Share_Guardar_On2.png) no-repeat center top;
+}
+
+.andOff{
+  background: white url(../img/1024x600/an_Ic_Share_Guardar_Off2.png) no-repeat center top;
+}
+
+/*comprobantes fiscal*/
+
+.ui-dialog{ 
+  color:#70767B !important; 
+  padding-top: 10px;
+  background: #F2F2F2;
+  border: 2px solid #ccc;
+}
+
+div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix.ui-draggable-handle {display: none}
+.ui-dialog { top: 0px !important; }
+#botonCierre, .botonCierre { float: right; margin-top: -5px; margin-right: -15px; }
+
+.mensaje-comprobante { padding: 0px 5px 0px 20px; }
+
+
+
+#bodyD #compname{
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.hbox{
+  height: 50px;
+}
+
+.hbox .ident{
+  font-size: 24px;
+  color: #0098E1 !important;
+  margin-left: 20px;
+}
+
+.hbox .logo, .hbox .ident{
+  float: left;
+}
+
+.hbox .name, .hbox .date{
+  float: right;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+.tr-contendor-boton { border: none !important; }
+
+
+
+#dialogCFiscal #dialContainer,
+#dialogFrecuente #dialContainer { margin-top: 25px; padding: 40px 5px 30px 5px; }
+
+
+.leyenda{
+  text-align: center;
+  margin:30px;
+}
+
+
+#cuentaOrigenOculta + .transferir-cuentasbbva-div-clearfix 
+{
+width: 850px;
+
+  
+}
+
+.campos-comprobante { padding: 0px 5px 0px 20px; margin-left:180px; margin-top: 40px; padding-top: 10px;}
+
+
+
+.tablacomprobante { padding: 0px 5px 0px 20px; margin-left:220px; margin-top: 40px; padding-top: 10px;}
+
+
+#confirmaComprobante{
+  
+  margin-top: 40px;
+  /*margin-left:90px;*/
+}
+
+.transferir-cuentasbbva-div-clearfix.desplazaderecha
+{
+
+width: 860px !important;
+  
+}
+
+#contenedorBotonConfirmarComprobante{
+  
+  text-align: center;
+}
+
+
+
+
+#transferir-cuentasbbva-div-principal + div > #dialog #dialContainer,
+#dialogCFiscal #dialContainer,
+#dialogFrecuente #dialContainer { margin-top: 0px; padding: 40px 5px 30px 5px; }
+
+
+.intContainer table tr td{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 10%;
+}
+
+
+.intContainer table tr td:nth-child(odd){
+  padding-right: 10px;
+  text-align: right;
+  vertical-align: top;
+
+}
+
+.mensaje-comprobante { padding: 0px 5px 0px 20px; }
+
+.intContainer{
+   /* z-index: 2; */ 
+  background-color: white;
+   border: 2px solid #ccc;
+   margin-left: 2%; 
+   margin-right: 2%;
+   margin-top: 4%; 
+}
+
+.intContainer table{
+  margin: 0 auto;
+  width: 80%;
+}
+
+.intContainer table tr{
+  border-bottom: 1px solid #ccc;
+}
+.overflowS{
+  overflow: scroll;
+}
+
+/******************** Inicia BaseViewController ********************/
+.baseviewcontroller-loading-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+
+.baseviewcontroller-loading-spinner {
+    width:100%;
+    height:100%;
+    background: url(../img/962x601/loading.gif) center center no-repeat;
+}
+
+
+#sombraFooter{
+ height: 8.2%;
+
+ margin-top: 533px;
+
+ z-index: 100;
+ visibility: hidden;
+ width: 100%;
+ background-color: rgba(0, 0, 0, 0.6);
+}
+
+#sombraCabecera
+{
+height: 8.2%;
+margin-top: -2px;
+z-index: 100;
+visibility: hidden;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all{
+
+
+height: 470px !important;
+  width:700px !important;
+  left:150px !important;
+
+}
+
+
+
+#dialContainer{ height: 360px;}
+
+
+  #dialog{
+   height: auto !important;
+  }
+  
+  #dialogCFiscal{
+   height: auto !important;
+  }
+  
+  #dialogFrecuente{
+height: auto !important
+}
+  
+  #leyendaToken{
+  height:10%;
+  }
+
+#labelComp{font-size: 13px;}
+
+#labelFrecuente{font-size: 13px;}
+
+
+.transferir-cuentasbbva-div-botones-finales.pantalla4{
+
+margin-top: -50px;
+}
+
+
+#botonCierreComprobante{
+margin-top:-35px !important;
+}
+
+#contenedorBotonConfirmarFiscal{
+  text-align: center;
+  
+}
+
+
+#dialogCFiscal table{
+  margin: 0 auto;
+}
+
+#dialogCFiscal table tr td{
+  width: 0%;
+}
+
+#dialogFrecuente table{
+  margin: 0 auto;
+}
+
+#dialogFrecuente tr td{
+  width: 0%;
+}
+
+#sombra{
+  width:100%;
+    height: 100%;
+    margin-top:0px;
+background-color: rgba(0, 0, 0, 0.6);
+}
+
+#confirmaFrecuente{
+  margin-top: 30px;
+}
+
+.minmenu {text-align: right;margin-top: -25px;margin-bottom: 10px;margin-left: 750px;padding: 0;}
+.minmenu>li { display:inline-block; list-style:none; position:relative; width:36px; height:36px; margin: 0 15px}
+.minmenu>li>a { width:36px; height:36px; display:block}
+
+.min-share { background:url(../img/1024x600/An_Ic_Share.png) no-repeat}
+.min-share-cuentasbbva { background:url(../img/1024x600/An_ic_Compartir.png) no-repeat; background-size: 25px 25px}
+.min-share-otrosbancos { background:url(../img/1024x600/An_ic_Compartir.png) no-repeat; background-size: 25px 25px}
+.min-full { background:url(../img/1024x600/An_Ic_Full.png) no-repeat}
+
+.sub-min {position:absolute; width:175px; height:108px; z-index:2; background:url(../img/1024x600/An_Bg_Share1.png) no-repeat; text-align:center; padding:0; margin:0; right:-65px; top: -130px}
+.sub-min>li { display:inline-block; list-style:none; position:relative; width:70px; height:68px; margin: 20px 10px}
+.sub-min>li a { width:70px; height:68px; display:block}
+
+
+.min-correo { background:url(../img/1024x600/An_Ic_Share_Correo_Off.png) no-repeat}
+.min-correo:hover { background:url(../img/1024x600/An_Ic_Share_Correo_On.png) no-repeat}
+
+/* Contenedor de dialog para comprobante en invertir venta */
+.contenedor-dialog-invertir-vender{
+  height: 440px !important; 
+  overflow: auto;
+}
+
+/* Sombra para comprobante invertir vender */
+.sombraCabecera-invertir-vender{
+  /*margin-top: -6px !important;*/
+}
+
+/* Sombra para comprobante invertir vender*/
+.sombraFooter-invertir-vender{
+  /*margin-top: 716px !important;*/
+}
+
+
+
+/*estilos para transferir-otrosbancos.html*/
+#transferir-otrosbancos-div-principal {height:752px; width:1280px; position:relative}/*todo*/
+.transferir-otrosbancos-encabezado { background:url(../img/1024x600/An_Ic_Transferir.png) no-repeat left; height:32px; margin:10px 0; margin-left:25px; padding-left:35px; display:block; font-size:30px; color:#0098E1; text-decoration:none; line-height:32px;}/*cuerpo-transferir*/
+#transferir-otrosbancos-div-contenedor {padding-left:25px; width:1245px;}/*contenedor, contenedor-miquince1, contenedor-miquince2, contenedor-miquince3, contenedor-cheq1, contenedor-cheq2, contenedor-cheq3, contenedor-tdc1, contenedor-tdc2, contenedor-tdc3*/ 
+.transferir-otrosbancos-div-clearfix:before, .transferir-otrosbancos-div-clearfix:after { content: " "; display: table; }/*clearfix*/ 
+.transferir-otrosbancos-div-clearfix:after { clear: both; }/*clearfix*/ 
+.transferir-otrosbancos-div-clearfix { *zoom: 1; }/*clearfix*/ 
+
+.transferir-otrosbancos-tab { font-size:18px; border-collapse: separate; border-spacing: 20px;}/*eliminar-tab*/
+.transferir-otrosbancos-contenedor-dragdrop {width:410px; float:left; margin:0px 100px}/*columna*/ 
+.transferir-otrosbancos-titulo-drag { font-weight:normal; margin:20px 0; color:#006DC0; font-size:20px; padding-left:25px;}/*titulo-administrar*/
+.transferir-otrosbancos-contenedor-drag { border:1px solid #CCC; height:360px; overflow-x:none; overflow-y:auto;}/*col-listazul-transfer*/ 
+.transferir-otrosbancos-titulo-drop {font-weight:normal; margin:20px 0; color:#006DC0; font-size:20px; padding-left:25px;}/*titulo-administrar*/ 
+.transferir-otrosbancos-contenedor-drop {border:1px solid #CCC; padding:15px; font-size:12px; color:#3675A9; height:330px; overflow-x:none; overflow-y:auto;}/*col-listgris*/ 
+
+.transferir-otrosbancos-div-drag { background:url(../img/1024x600/An_Btn_Drag.png) no-repeat; }
+.transferir-otrosbancos-div-drop { background:url(../img/1024x600/An_Btn_Drag_Gris) no-repeat; }
+.transferir-otrosbancos-contenedor-drag li { list-style-type: none !important; }
+.transferir-otrosbancos-contenedor-drop li { list-style-type: none !important; }
+
+.transferir-otrosbancos-div-drag table {font-size: 12px; width: 96%; height: 90%; color:#FFF;}/*draggable*/
+.transferir-otrosbancos-div-drag td {padding-right: 8%; padding-left: 8%;}/*draggable*/
+.transferir-otrosbancos-div-drag .transferir-otrosbancos-tab-filauno td{ padding-top: 4%; }/*draggable*/ /*first-row*/
+.transferir-otrosbancos-div-drag .transferir-otrosbancos-tab-filados td{ padding-bottom: 4%;}/*draggable*/ /*second-row*/
+
+#transferir-otrosbancos-drag-uno, #transferir-otrosbancos-drag-dos, #transferir-otrosbancos-drag-tres, #transferir-otrosbancos-drag-cuatro { position: absolute; width:300px; height:72px;  left:180px; background:url(../img/1024x600/An_Btn_Drag.png) no-repeat; z-index: 10; background-size: contain;  background-repeat:no-repeat}/*dragbbva*/ /*drag2bbva*/ /*drag3bbva*/ /*drag4bbva*/
+#transferir-otrosbancos-drag-uno {top:210px;}/*dragbbva*/
+#transferir-otrosbancos-drag-dos { top:290px; }/*drag2bbva*/
+#transferir-otrosbancos-drag-tres { top:370px; }/*drag3bbva*/
+#transferir-otrosbancos-drag-cuatro { top:450px; }/*drag4bbva*/
+
+.transferir-otrosbancos-tab-columna-izq {text-align: left;}/*left-col*/
+.transferir-otrosbancos-tab-columna-der {text-align: right;}/*right-col*/
+
+#transferir-otrosbancos-drop-uno, #transferir-otrosbancos-drop-dos, #transferir-otrosbancos-drop-tres, #transferir-otrosbancos-drop-cuatro{width:300px; height:72px; position: absolute; left:790px; background:url(../img/1024x600/An_Btn_Drag_Gris.png) no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat}/*drop*/ /*drop2*/ /*drop3*/ /*drop4*/
+#transferir-otrosbancos-drop-uno { top: 210px; }/*drop*/
+#transferir-otrosbancos-drop-dos { top: 290px; }/*drop2*/
+#transferir-otrosbancos-drop-tres { top: 370px; }/*drop3*/
+#transferir-otrosbancos-drop-cuatro { top: 450px; }/*drop4*/
+#transferir-otrosbancos-drop-uno table, #transferir-otrosbancos-drop-dos table, #transferir-otrosbancos-drop-tres table, #transferir-otrosbancos-drop-cuatro table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop*//*drop2*//*drop3*//*drop4*/
+#transferir-otrosbancos-drop-uno .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-dos .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-tres .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-cuatro .transferir-otrosbancos-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop*/ /*second-row*/ /*drop2*/ /*second-row*//*drop3*/ /*second-row*//*drop4*/ /*second-row*/
+#transferir-otrosbancos-drop-uno .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-dos .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-tres .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-cuatro .transferir-otrosbancos-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop*/ /*first-row*//*drop2*/ /*first-row*//*drop3*/ /*first-row*//*drop4*/ /*first-row*/
+
+/*estilos para transferirCtasBBVACCheqFrecuenteInicio.html*/ /*estilos para .html*/
+.transferir-otrosbancos-tab-subtitulos { font-size:16px; color:#888; margin-top:20px}/*nav-tab*/
+.transferir-otrosbancos-tab-subtitulos td{  padding-bottom:15px }/*nav-tab*/
+.transferir-otrosbancos-tab-subtitulos .transferir-otrosbancos-subtitulo-selected { font-weight:bold; background:url(../img/1024x600/sombra.png) no-repeat bottom left; background-size:75%;}/*nav-tab*/ /*resaltado-azulmarino*/
+
+.transferir-otrosbancos-subtitulo-selected { color:#283B6C !important; }/*resaltado-azulmarino*/
+
+.transferir-otrosbancos-columnas-contenido-izq { width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado izquierdo*/
+.transferir-otrosbancos-columnas-contenido-der { width:48%; margin:0 2% 0 0; float:left; }/*doscolumnas *lado derecho*/
+.transferir-otrosbancos-tab-contenido { font-size:16px; border-collapse: collapse; border-spacing:0; }/*transferir-tab*/
+.transferir-otrosbancos-tab-contenido td { padding-right:25px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:44px; line-height:44px; color:#888 }/*transferir-tab*/
+.transferir-otrosbancos-tab-contenido td + td { text-align:left; padding-left:25px; color:#444; padding-right:0 }/*transferir-tab*/
+.transferir-otrosbancos-tab-contenido h3 { font-weight:bold; color:#1F53A4; text-align:left; padding-left:27px}
+.transferir-otrosbancos-tab-contenido * { vertical-align: middle }/*transferir-tab*/
+
+.transferir-otrosbancos-div-emergente { width:238px; height:38px; line-height:38px; background: url(../img/1024x600/An_Input_Select2.png) no-repeat right; display:inline-block; text-align:center; }/*opcion-emergente2*/
+.transferir-otrosbancos-div-emergente select { width:238px; height:38px; line-height:38px; padding: 0 25px 0 10px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:16px }/*opcion-emergente2*/
+
+.transferir-otrosbancos-input-importe { width:228px; border:0; height:38px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 10px; text-align: center; }/*text-imput2*/
+.transferir-otrosbancos-input-numtarjeta { width:228px; border:0; height:38px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 10px; text-align: center; }/*text-imput2*/
+.transferir-otrosbancos-input-concepto { width:228px; border:0; height:38px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 10px; text-align: center; }/*text-imput2*/
+.transferir-otrosbancos-input-referencia { width:228px; border:0; height:38px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 10px; text-align: center; }/*text-imput2*/
+.transferir-otrosbancos-div-botones { position:absolute; text-align:center; top:570px; width:1245px; }/*area-botones*/
+.transferir-otrosbancos-boton-continuar { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 }/*formulario-btn*/
+.transferir-otrosbancos-aviso-inicio {font-size:14px; padding:20px 20px 20px 55px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:15px 2% 15px 0; color:#70767B} /*aviso*/
+.transferir-otrosbancos-aviso-confirmar {font-size:14px; padding:20px 20px 20px 55px ;background: #ECF7FE url(../img/1024x600/An_Bg_Aviso.png) left no-repeat; margin:15px 2% 15px 0; color:#70767B} /*aviso*/
+.transferir-otrosbancos-boton-cancelar { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 } /*formulario-btn*/
+.transferir-otrosbancos-boton-corregir { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 } /*formulario-btn*/
+
+
+/*estilos para transferirCtasBBVACCheqFrecuenteAprobacion.html*/ /*estilos para .html*/
+.transferir-otrosbancos-div-token-aprobacion { background:#F0F9FE; padding:20px; font-size:16px; margin-top:100px } /*cuadro-azul*/
+.transferir-otrosbancos-div-token-aprobacion a, .transferir-otrosbancos-div-token-aprobacion label { color:#398DCB; text-decoration:none;} /*cuadro-azul*/
+.transferir-otrosbancos-boton-confirmar { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 }/*formulario-btn*/
+.transferir-otrosbancos-input-token { width:350px; border:1px solid #E9EDEE; height:38px; background:#FFF; text-align: center;} /*text-Imput*/
+.transferir-otrosbancos-columnas-contenido-der .transferir-otrosbancos-div-token-aprobacion { margin-top:0} /*doscolumnas*//*cuadro-azul*/
+
+/*estilos para transferirCtasBBVACCheqFrecuenteTermino.html*/ /*estilos para .html*/
+.transferir-otrosbancos-encabezado-operacion { font-size:24px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:15px; }/*aviso-verde*/
+.transferir-otrosbancos-div-botones-finales { position:absolute; text-align:center; top:450px; width:1245px; }/*area-botones-final*/
+.transferir-otrosbancos-boton-nueva { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 }/*formulario-btn*/
+.transferir-otrosbancos-boton-comprobante { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 }/*formulario-btn*/
+.transferir-otrosbancos-boton-inicio { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:16px; width:188px; line-height:42px; margin:0 15px; color:#FFF; border:0 }/*formulario-btn*/
+
+
+.transferir-otrosbancos-slide input[type=checkbox]{
+    visibility : hidden;
+}
+.transferir-otrosbancos-slide {
+  width: 50px;
+  height: 26px;
+  margin: 20px 0;
+
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+
+  -webkit-box-shadow: inset 0px 1px 1px , 0px 1px 0px rgba(255,255,255,0.2);
+  -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+  box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+  background-color: #ccc;
+}
+
+.transferir-otrosbancos-slide:after {
+  position: absolute;
+    background: #00bf00;
+    background-color: #00bf00;
+    right: 10px;
+}
+
+.transferir-otrosbancos-slide:before {
+  background: white;
+  background-color: white;
+  position: absolute;
+    left: 10px;
+}
+
+.transferir-otrosbancos-slide label {
+  display: block;
+  width: 27px;
+  height: 20px;
+
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+  background: #fcfff4;
+
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.transferir-otrosbancos-slide input[type=checkbox]:checked + label {
+  left: 20px;
+}
+.encabezado-registro {font-weight:bold; color:#1F53A4; text-align:left; font-size:16px; padding-left:10px;}
+#transferir-otrosbancos-div-principal { height: 683px; width:1024px; position:relative}/*todo*/
+.transferir-otrosbancos-encabezado {background:url(../img/1024x600/An_Ic_Transferir.png) no-repeat left; /* height: 25px; */ margin:10px 0; /* width: 1110px; */padding-left:30px; display:block; font-size:23px; color:#0098E1; text-decoration:none; margin-left:35px;/* width: 80%; */}/*cuerpo-transferir*/
+#transferir-otrosbancos-div-contenedor {padding-left:25px; width:999px;}/*contenedor, contenedor-miquince1, contenedor-miquince2, contenedor-miquince3, contenedor-cheq1, contenedor-cheq2, contenedor-cheq3, contenedor-tdc1, contenedor-tdc2, contenedor-tdc3*/ 
+.transferir-otrosbancos-div-clearfix:before, .transferir-otrosbancos-div-clearfix:after { content: " "; display: table; }/*clearfix*/ 
+.transferir-otrosbancos-div-clearfix:after { clear: both; } /*clearfix*/ 
+.transferir-otrosbancos-div-clearfix { *zoom: 1;} /*clearfix*/ 
+
+.envioMail td {padding-right:30px; padding-bottom: 20px}
+.transferir-otrosbancos-tab {font-size:16px; border-collapse: separate; border-spacing: 20px; /* width: 100%; */}/*eliminar-tab*/
+.transferir-otrosbancos-contenedor-dragdrop { width:328px; float:left; margin: -40px 50px;}/*columna*/ 
+.transferir-otrosbancos-titulo-drag { font-weight:normal; margin:30px 0; color:rgb(0,110,193); font-size:18px}/*titulo-administrar*/
+.transferir-otrosbancos-contenedor-drag { border:1px solid rgba(221,221,221,0.5); height: 318px; overflow-x:none; overflow-y:auto; margin-top:12px;}/*col-listazul-transfer*/
+.transferir-otrosbancos-titulo-drop { font-weight:normal; margin:30px 0; color:rgb(0,110,193); font-size:18px}/*titulo-administrar*/
+.transferir-otrosbancos-contenedor-drop { border:1px solid rgba(221,221,221,0.5); padding:15px; font-size:12px; color:#3675A9; height: 289px; overflow-x:none; overflow-y:auto; }/*col-listgris*/ 
+
+.transferir-otrosbancos-div-drag table {font-size: 12px; width: 96%; height: 90%; color:#FFF;}/*draggable*/
+.transferir-otrosbancos-div-drag td {padding-right: 8%; padding-left: 8%; }/*draggable*/
+.transferir-otrosbancos-div-drag .transferir-otrosbancos-tab-filauno td{ padding-top: 4%; }/*draggable*/ /*first-row*/
+.transferir-otrosbancos-div-drag .transferir-otrosbancos-tab-filados td{ padding-bottom: 4%; }/*draggable*/ /*second-row*/
+
+#transferir-otrosbancos-drag-uno, #transferir-otrosbancos-drag-dos, #transferir-otrosbancos-drag-tres, #transferir-otrosbancos-drag-cuatro, 
+#transferir-otrosbancos-drag-1, #transferir-otrosbancos-drag-2, #transferir-otrosbancos-drag-3, #transferir-otrosbancos-drag-4,
+#transferir-otrosbancos-drag-5, #transferir-otrosbancos-drag-6, #transferir-otrosbancos-drag-7, #transferir-otrosbancos-drag-8, 
+#transferir-otrosbancos-drag-9, #transferir-otrosbancos-drag-10, #transferir-otrosbancos-drag-11, #transferir-otrosbancos-drag-12 
+#transferir-otrosbancos-drag-13, #transferir-otrosbancos-drag-14, #transferir-otrosbancos-drag-15, #transferir-otrosbancos-drag-16, 
+#transferir-otrosbancos-drag-17, #transferir-otrosbancos-drag-18, #transferir-otrosbancos-drag-19, #transferir-otrosbancos-drag-20,
+#transferir-otrosbancos-drag-21, #transferir-otrosbancos-drag-22, #transferir-otrosbancos-drag-23, #transferir-otrosbancos-drag-24  
+{position: absolute; width:256px; height:61px;  left:240px; background:url(../img/1024x600/An_Btn_Drag.png) no-repeat; z-index: 10; background-size: contain;  background-repeat:no-repeat}/*dragbbva*/ /*drag2bbva*/ /*drag3bbva*/ /*drag4bbva*/
+#transferir-otrosbancos-drag-uno, #transferir-otrosbancos-drag-1 {top: 180px;left: 180px;}/*drag*/
+#transferir-otrosbancos-drag-dos, #transferir-otrosbancos-drag-2 {top: 254px;left: 180px;}/*drag2*/
+#transferir-otrosbancos-drag-tres, #transferir-otrosbancos-drag-3 {top: 330px;left: 180px;}/*drag3*/
+#transferir-otrosbancos-drag-cuatro, #transferir-otrosbancos-drag-4 {top: 400px;left: 180px;}/*drag4*/
+#transferir-otrosbancos-drag-5 { top: 484px; } /* top: 484px*/
+#transferir-otrosbancos-drag-6 { top: 560px; } /* top: 560px */
+#transferir-otrosbancos-drag-7 { top: 636px; } /* top: 636px */
+#transferir-otrosbancos-drag-8 { top: 712px; } /* top: 712px */
+#transferir-otrosbancos-drag-9 { top: 788px; } /* top: 788px */
+#transferir-otrosbancos-drag-10 { top: 864px; } /* top: 864px */
+
+.transferir-otrosbancos-tab-columna-izq {text-align: left;}/*left-col*/
+.transferir-otrosbancos-tab-columna-der {text-align: right;}/*right-col*/
+
+#transferir-otrosbancos-drop-uno, #transferir-otrosbancos-drop-dos, #transferir-otrosbancos-drop-tres, #transferir-otrosbancos-drop-cuatro
+{width:256px; height:61px; position: absolute; left:730px; background:url(../img/1024x600/An_Btn_Drag_Gris.png) no-repeat; z-index: 9;  background-size: contain;  background-repeat:no-repeat}/*drop*/ /*drop2*/ /*drop3*/ /*drop4*/
+
+#transferir-otrosbancos-drop-uno { top: 180px; }/*drop*/
+#transferir-otrosbancos-drop-dos { top: 256px; }/*drop2*/
+#transferir-otrosbancos-drop-tres { top: 332px; }/*drop3*/
+#transferir-otrosbancos-drop-cuatro { top: 408px; }/*drop4*/
+#transferir-otrosbancos-drop-5 { visibility: hidden;top: 484px; } /* top: 484px*/
+#transferir-otrosbancos-drop-6 { visibility: hidden;top: 560px; } /* top: 560px */
+#transferir-otrosbancos-drop-7 { visibility: hidden;top: 636px; } /* top: 636px */
+#transferir-otrosbancos-drop-8 { visibility: hidden;top: 712px; } /* top: 712px */
+#transferir-otrosbancos-drop-9 { visibility: hidden;top: 788px; } /* top: 788px */
+#transferir-otrosbancos-drop-10 { visibility: hidden;top: 864px; } /* top: 864px */
+
+#transferir-otrosbancos-div-contenedor .transferir-otrosbancos-div-clearfix { margin: 10px 0px 0px 60px; width: 900px; }
+
+#transferir-otrosbancos-drop-uno table, #transferir-otrosbancos-drop-dos table, #transferir-otrosbancos-drop-tres table, #transferir-otrosbancos-drop-cuatro table,
+{ width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop*//*drop2*//*drop3*//*drop4*/
+
+
+#transferir-otrosbancos-drop-1, #transferir-otrosbancos-drop-2, #transferir-otrosbancos-drop-3, #transferir-otrosbancos-drop-4{width:256px; height:61px; position: absolute; top:196px; left: 725px; background:url(../img/1024x600/An_Btn_Drag_Gris.png) no-repeat; background-size: cover; z-index: 9;}/*drop_*/ /*drop2_*/ /*drop3_*/ /*drop4_*/
+
+#transferir-otrosbancos-drop-1 {top: 180px;left: 600px;}/*drag*/
+#transferir-otrosbancos-drop-2 {top: 255px;left: 600px;}/*drag2*/
+#transferir-otrosbancos-drop-3 {top: 330px;left: 600px;}/*drag3*/
+#transferir-otrosbancos-drop-4 {top: 400px;left: 600px;}/*drag4*/
+
+#transferir-otrosbancos-drop-1 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop_*/
+#transferir-otrosbancos-drop-1 .transferir-otrosbancos-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop_*/ /*second-row*/
+#transferir-otrosbancos-drop-1 .transferir-otrosbancos-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop_*/ /*first-row*/
+#transferir-otrosbancos-drop-2 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop2_*/
+#transferir-otrosbancos-drop-2 .transferir-otrosbancos-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop2_*/ /*second-row*/
+#transferir-otrosbancos-drop-2 .transferir-otrosbancos-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop2_*/ /*first-row*/
+#transferir-otrosbancos-drop-3 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop3_*/
+#transferir-otrosbancos-drop-3 .transferir-otrosbancos-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop3_*/ /*second-row*/
+#transferir-otrosbancos-drop-3 .transferir-otrosbancos-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop3_*/ /*first-row*/
+#transferir-otrosbancos-drop-4 table { width: 96%; height: 90%; font-size:12px; color:#3675A9; } /*drop4_*/
+#transferir-otrosbancos-drop-4 .transferir-otrosbancos-tab-filados td { padding-bottom: 4%; padding-right: 8%; padding-left: 8%; } /*drop4_*/ /*second-row*/
+#transferir-otrosbancos-drop-4 .transferir-otrosbancos-tab-filauno td { padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop4_*/ /*first-row*/
+
+
+#transferir-otrosbancos-drop-uno .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-dos .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-tres .transferir-otrosbancos-tab-filados td, #transferir-otrosbancos-drop-cuatro .transferir-otrosbancos-tab-filados td
+
+#transferir-otrosbancos-drop-uno .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-dos .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-tres .transferir-otrosbancos-tab-filauno td, #transferir-otrosbancos-drop-cuatro .transferir-otrosbancos-tab-filauno td
+{ padding-top: 4%; padding-right: 8%; padding-left: 8%;} /*drop*/ /*first-row*//*drop2*/ /*first-row*//*drop3*/ /*first-row*//*drop4*/ /*first-row*/
+
+/*estilos para transferirCtasBBVACCheqFrecuenteInicio.html*/ /*estilos para .html*/
+.transferir-otrosbancos-tab-subtitulos {font-size:14px; color:#888; margin-top:-5px;margin-left: 25px;}/*nav-tab*/
+.transferir-otrosbancos-tab-subtitulos td{padding-bottom:12px}/*nav-tab*/
+.transferir-otrosbancos-tab-subtitulos .transferir-otrosbancos-subtitulo-selected { font-weight:bold; background:url(../img/1024x600/sombra.png) no-repeat bottom left; background-size:80%; color:#283B6C !important; }/*nav-tab*/ /*resaltado-azulmarino*/
+
+.transferir-otrosbancos-subtitulo-selected { color:#283B6C !important; }/*resaltado-azulmarino*/
+
+.transferir-otrosbancos-columnas-contenido-izq {width:48%; margin:10 2% 0 0; float:left; }/*doscolumnas *lado izquierdo*/
+.transferir-otrosbancos-columnas-contenido-der {width:48%; margin:10 2% 0 0; float:left;  }/*doscolumnas *lado derecho*/
+.transferir-otrosbancos-columnas-contenido-der.pantalla2 {width:48%; margin:10 2% 0 0; float:left; margin-top: -22px; }/*doscolumnas *lado derecho*/
+
+.transferir-otrosbancos-tab-contenido {font-size:12px; border-collapse: collapse; border-spacing:0;}/*transferir-tab*/
+.transferir-otrosbancos-tab-contenido td {padding-right:10px; border-bottom:1px solid #E6E6E6; width:50%; text-align:right; height:35px; line-height:35px; color:#888 }/*transferir-tab*/
+.transferir-otrosbancos-tab-contenido.pantalla2 td {padding-right:10px; border-bottom:1px solid #E6E6E6; width:50%; text-align:left; height:25px; line-height:25px; color:#888 }/*transferir-tab*/
+
+.transferir-otrosbancos-tab-contenido td + td {text-align:left; padding-left:10px; color:#444;}/*transferir-tab*/
+.transferir-otrosbancos-tab-contenido h3 { font-weight:bold; color:#1F53A4; text-align:left; padding-left:10px;}
+.transferir-otrosbancos-tab-contenido * {vertical-align: middle}/*transferir-tab*/
+
+.transferir-otrosbancos-div-emergente {width:179px; height:29px; line-height:29px; background: url(../img/1024x600/An_Input_Select2.png) no-repeat right; display:inline-block; text-align:center; }/*opcion-emergente2*/
+.transferir-otrosbancos-div-emergente select {width:184px; height:29px; line-height:29px; padding: 0 20px 0 5px; text-align:center; border:0; background: transparent; appearance: none; -webkit-appearance: none; -moz-appearance: none; text-indent: 0.01px; text-overflow: ''; font-size:14px}/*opcion-emergente2*/
+
+.transferir-otrosbancos-input-importe { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-otrosbancos-input-numtarjeta { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-otrosbancos-input-concepto { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+.transferir-otrosbancos-input-referencia { width:169px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; text-align: center;}/*text-imput2*/
+
+.transferir-otrosbancos-div-botones { padding-right:25px; text-align:center; margin-top: 20px; margin-left: 125px;}
+.transferir-otrosbancos-div-botones .transferir-miscuentas-boton-confirmar {margin: 0  35px; } /* margin: 0  35px */
+.transferir-otrosbancos-div-botones {width: 770px; top: 420px; /* bottom: 35%; */ position:absolute; /* height: 100px; */}/*area-botones*/
+.transferir-otrosbancos-boton-continuar {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-aviso-inicio { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/1280x800/An_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+.transferir-otrosbancos-aviso-confirmar { font-size:12px; padding:17px 15px 17px 50px ;background: #ECF7FE url(../img/1280x800/An_Bg_Aviso.png) left no-repeat; margin:10px 2% 10px 0; color:#70767B} /*aviso*/
+.transferir-otrosbancos-boton-cancelar {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-boton-corregir {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+
+/*estilos para transferirCtasBBVACCheqFrecuenteAprobacion.html*/ /*estilos para .html*/
+.transferir-otrosbancos-div-token-aprobacion { background:#F0F9FE; padding:4px; font-size:12px; margin-top:120px; line-height: 12px;} /* cuadro-azul */
+.transferir-otrosbancos-div-token-aprobacion a, .transferir-otrosbancos-div-token-aprobacion label { color:#398DCB; text-decoration:none;}  /* cuadro-azul */
+.transferir-otrosbancos-div-token-aprobacion p{margin-top: 5px;margin-bottom: 2px;}
+.transferir-otrosbancos-boton-confirmar {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-input-token { width:230px; border:1px solid #E9EDEE; height:23px; background:#FFF;padding-top:4px; text-align:center;}  /* text-imput */
+.transferir-otrosbancos-columnas-contenido-der .transferir-otrosbancos-div-token-aprobacion { margin-top:0px}  /* cuadro-azul */
+
+/*estilos para transferirCtasBBVACCheqFrecuenteTermino.html*/ /*estilos para .html*/
+.transferir-otrosbancos-encabezado-operacion { font-size:22px; color:#9ED45E; text-align:center; font-weight:normal; margin-bottom:10px;}/*aviso-verde*/
+.transferir-otrosbancos-div-botones-finales {width: 750px; top: 410px; bottom:5%; position:absolute; padding-right:25px; text-align:center; margin-top:30px; margin-left: 135px;}/*area-botones-final*/
+.transferir-otrosbancos-div-botones-finales p{font-size: 14px}/*area-botones-final*/
+.transferir-otrosbancos-boton-nueva {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-boton-comprobante {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-boton-inicio {background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}/*formulario-btn*/
+.transferir-otrosbancos-div-botones-termino {position:absolute; text-align:center; top:390px; width:1000px; margin-left: -7px}
+.transferir-otrosbancos-div-botones-termino p{font-size: 14px}/*area-botones-final*/ 
+.transferir-otrosbancos-aviso-termino {font-size:12px; padding:14px 15px 14px 50px ;background: #ECF7FE url(../img/1280x800/An_Bg_Aviso.png) left no-repeat; margin:6px 2% 6px 0; color:#70767B;}
+.transferir-otrosbancos-aviso-aprobacion {font-size:12px; padding:14px 15px 14px 50px ;background: #ECF7FE url(../img/1280x800/An_Bg_Aviso.png) left no-repeat; margin:6px 2% 6px 0; color:#70767B;}
+
+.pantalla3Inter4pasos{
+  display: inline-table !important;
+  margin-left: -2px;
+  margin-top: 0.5px;
+  width: 217px !important;
+  /*padding-left: 0px !important;*/
+}
+
+/* .sub-min-otrosbancos {position:absolute; width:233px; height:108px; z-index:2; background:url(../img/1280x800/An_Bg_Share1.png) no-repeat; text-align:center; padding:0; margin:0; right:40px; top: -100px} */
+/* .sub-min-otrosbancos>li { display:inline-block; list-style:none; position:relative; width:70px; height:68px; margin: 20px 10px} */
+/* .sub-min-otrosbancos>li a { width:70px; height:68px; display:block} */

@@ -1,0 +1,33 @@
+<%  var instrument = model.models[0];
+
+  if (!instrument || !instrument.id) {
+%>
+    <p><%=BANCOMER.CULTURETEXT.t('dataTable_ErrorMessage_EmptyTable')%></p>
+<%  } else {
+  var mv = instrument.getDescriptorValue("MV");
+  var tradableCls = BANCOMER.Utils.Trader.isTradable(mv) ? '' : 'hidden';
+  var menu = model.options.viewOptions.menu;
+%>
+<!-- indice superior + btn cerrar -->
+<section class="contTop">
+  <h3><%=instrument.getEmisora()%> <%=instrument.getSerie()%></h3>  
+  <a class="icoCloseWindow ifbEventTrigger" data-event="closeClick" ></a>
+</section>
+
+<section class="contMenu">
+    <ul>
+        <% _.each(menu, function(itemMenu) { %>
+          <li class="ifbEventTrigger" data-event="clickInstrumentDetailTab" data-tab="<%=itemMenu.id%>" data-mv="<%=instrument.getDescriptorValue("MV")%>"><%=BANCOMER.CULTURETEXT.t(itemMenu.textKey)%></li>
+        <% });
+
+          if(BANCOMER.Utils.Trader.isTradable(instrument.getDescriptorValue("MV"))) {
+        %>            
+            <li class="sell <%=tradableCls%>"><a href="#!/lightbox/boleta/<%=instrument.id%>/<%=(instrument.getEmisora() + ' ' + instrument.getSerie())%>/Venta"><%=BANCOMER.CULTURETEXT.t('iconSell')%></a></li>
+            <li class="buy <%=tradableCls%>"><a href="#!/lightbox/boleta/<%=instrument.id%>/<%=(instrument.getEmisora() + ' ' + instrument.getSerie())%>/Compra"><%=BANCOMER.CULTURETEXT.t('iconBuy')%></a></li>
+        <%            
+          }
+        %>
+
+    </ul>
+</section>
+<% } %>

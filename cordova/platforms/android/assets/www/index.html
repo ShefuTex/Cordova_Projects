@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title></title>
+        
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/1024x600.css" id="mainCss" />
+        <script type="text/javascript" src="js/jquery/jquery-2.1.0.js"></script>
+		
+		<script  src="cordova.js"></script>
+        <script  src="js/BComTools.js"></script>
+        <script  src="js/LoginDelegate.js"></script>
+        <script  src="js/BComViewsController.js"></script>
+        <script  src="js/Constants.js" charset="utf-8"></script>
+
+        
+    </head>
+    
+    <body id="body" >
+        
+        <header id="login-encabezado">
+            <a href="#" id="login-logo">BBVA Bancomer</a>
+        </header>
+        
+        <div id="cuerpo-login">
+            
+            <div id="loginPrincipal">
+                
+                <div id="bcom-principal">
+                    <h1 class="tab-icon">Bancomer Trader</h1>
+                    <div id="icono-invitado" class="login-icono-invitado">
+                        <a href="#" >
+                            <img id="logonuevacuenta" src="img/1024x600/An_Ic_Inv.png"  alt="" onclick="loginDelegate.limpiar();"/>
+                        </a>
+                    </div>
+					<input type="tel"  class="login-input-datos" placeholder="Número de tarjeta" id="inputTarjetaAux" onkeyup="return ocultar(this);" />
+                    <input type="password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="login-input-datos" id="passwordAux" placeholder="Contraseña" onkeyup="return ocultarPassword(this);"/>
+                    <input type="submit" id="entrar" class="login-boton-entrar" value="Entrar"
+                           onclick="loginDelegate.botonEntrarLogin()" data-role="none"/>
+
+                    <input type="hidden" id="inputTarjeta" />
+                    <input type="hidden" id="password"/>
+                    <a href="#" class="link" data-role="none" onclick="loginDelegate.seleccionDesbloquear()">Desbloquear</a>
+
+			</div>
+                <div id="bcom-secundario">
+                    
+                    <h1 class="tab-icon">Bienvenido</h1>
+                    
+                    <h2 class="usuario-login" id="lblNomCliente"></h2>
+                    
+                    <div class="usuario-log-datos">
+                       <!-- <img src="img/1024x600/usuario.png"/>-->
+                        <span id="lblAyuda"></span>
+                    </div>
+                    
+                    <input type="tel" class="login-input-datos" placeholder="Clave de acceso seguro" id="inputTokenAux" onkeyup="ocultarToken(this);"/>
+                    <input type="hidden" id="inputToken"/> 
+                    <input type="submit" class="login-boton-entrar" value="Entrar" onclick="tokenViewController.botonSignOn();" data-role="none"/>
+                    
+                    <a href="#" onclick="tokenViewController.mostrarAyuda();" class="link">Ayuda</a>
+
+                </div>
+                
+            </div>
+            
+<!--             <div id="login-nav"> -->
+<!--                 <a href="#" onclick="" class="btn-autoseguro"></a> -->
+<!--                 <a href="#" onclick="" class="btn-geolocalizacion"></a> -->
+<!--                 <a href="#" onclick="" class="btn-bestratega"></a> -->
+<!--             </div> -->
+            
+        </div>
+        
+        <footer id="pie">
+            <span class="contactanos">Contáctanos en Línea Bancomer desde el D.F. al 56 24 11 99 y resto de la república al 01 800 1122 999</span>
+            <div class="ver">V 1.0.0</div>
+        </footer>
+
+        <script>
+            console.log("Debug 1 loginDelegate"+loginDelegate);
+
+            document.addEventListener("deviceready", initIndex, false);
+
+            var accountNumberValidator;
+            var passwordInputValidator;
+            var tokenInputValidator;
+            var loginDelegate;
+
+
+            console.log("Debug 2 loginDelegate"+loginDelegate);
+
+            function hola(){
+            console.log("hola");
+            }
+
+            function initIndex() {
+                sessionStorage.esInvitado = false;
+                sessionStorage.isLogin = 0;
+
+                loadDeviceCSS();
+
+                document.getElementById("body").style.width = window.innerWidth;
+                document.getElementById("body").style.height = window.innerHeight;
+                accountNumberValidator = new AccountNumberValidator();
+				passwordInputValidator = new NumericInputValidator();
+				tokenInputValidator = new NumericInputValidator();
+
+                console.log("Debug accountNumberValidator"+accountNumberValidator);
+
+                loginDelegate = new LoginDelegate();
+
+				console.log("Debug 3 loginDelegate"+loginDelegate);
+
+				passwordInputValidator.isAlphanumeric = true;
+				console.log("Debug 3 loginDelegate"+loginDelegate);
+
+
+				document.addEventListener("backbutton", onBackClicked, false);
+
+				loginDelegate.consultaDatosGuardados();
+				console.log("screen.width:  "+screen.width);
+				console.log("creem.height:  "+screen.height);
+				if(screen.width == 600){
+					document.getElementById("logonuevacuenta").src="img/962x601/An_Ic_Inv.png";
+					//document.getElementById("logonuevacuenta").style.marginTop = "-30px";
+					console.log("962x601");
+				}else if (screen.width =="1024"){
+					document.getElementById("logonuevacuenta").src="img/1024x600/An_Ic_Inv.png";
+					//document.getElementById("logonuevacuenta").style.marginTop = "-30px";
+
+				} else if(screen.width =="962"){
+					document.getElementById("logonuevacuenta").src="img/962x601/An_Ic_Inv.png";
+					document.getElementById("logonuevacuenta").style.marginTop = "-30px";
+				}else if (screen.width == "1280"){
+					document.getElementById("logonuevacuenta").src="img/1280x800/An_Ic_Inv.png";
+				}else {
+					document.getElementById("logonuevacuenta").src="img/1920x1200/An_Ic_Inv.png";
+				}
+
+            }
+
+            function onBackClicked() {
+                loginDelegate.backClicked();
+
+            /*
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';
+
+            //alert('Connection type: ' + states[networkState]);
+
+            if(states[networkState] == 'No network connection'){
+            console.log("entre a if");
+             navigator.app.exitApp();
+            }else {
+            console.log("Entre a else");
+
+            }*/
+
+
+        }
+
+
+        </script>
+    </body>
+    
+</html>

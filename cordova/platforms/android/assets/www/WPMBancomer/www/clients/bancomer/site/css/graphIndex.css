@@ -1,0 +1,1153 @@
+/* line 5, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph {
+  overflow: hidden;
+}
+/* line 11, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up {
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+}
+/* line 17, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 22, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 5.0%;
+  left: 1.9rem;
+  top: 4.1rem;
+}
+/* line 31, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 .data01 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 35, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 .data01 .dataDifP {
+  position: absolute;
+  top: -1.2rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 45, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 5.0%;
+  left: 9.5rem;
+  top: 4.1rem;
+}
+/* line 53, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 .data02 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 57, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 .data02 .dataDifP {
+  position: absolute;
+  top: -1.2rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 67, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 6.3%;
+  left: 17.1rem;
+  top: 3.4rem;
+}
+/* line 75, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 .data03 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 79, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 .data03 .dataDifP {
+  position: absolute;
+  top: -1.2rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 89, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 6.3%;
+  left: 24.7rem;
+  top: 3.4rem;
+}
+/* line 97, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 .data04 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 101, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 .data04 .dataDifP {
+  position: absolute;
+  top: -1.2rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 111, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 6.3%;
+  left: 32.3rem;
+  top: 3.4rem;
+}
+/* line 119, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 .data05 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 123, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 .data05 .dataDifP {
+  position: absolute;
+  top: -1.2rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 134, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 5.0%;
+  left: 1.9rem;
+  top: 4.1rem;
+}
+/* line 143, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 .data01 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 147, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 .data01 .dataDifP {
+  position: absolute;
+  top: -1.2rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 157, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 5.0%;
+  left: 9.5rem;
+  top: 4.1rem;
+}
+/* line 165, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 .data02 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 169, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 .data02 .dataDifP {
+  position: absolute;
+  top: -1.2rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 179, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 6.3%;
+  left: 17.1rem;
+  top: 3.4rem;
+}
+/* line 187, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 .data03 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 191, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 .data03 .dataDifP {
+  position: absolute;
+  top: -1.2rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 201, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 6.3%;
+  left: 24.7rem;
+  top: 3.4rem;
+}
+/* line 209, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 .data04 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 213, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 .data04 .dataDifP {
+  position: absolute;
+  top: -1.2rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 223, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 6.3%;
+  left: 32.3rem;
+  top: 3.4rem;
+}
+/* line 231, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 .data05 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 235, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 .data05 .dataDifP {
+  position: absolute;
+  top: -1.2rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 250, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down {
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+}
+/* line 256, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 260, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 5.0%;
+  left: 1.9rem;
+  top: 6.7rem;
+}
+/* line 267, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 .data01 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 271, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 .data01 .dataDifP {
+  position: absolute;
+  bottom: -1.9rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 278, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 .data01 .dataDifP .bold {
+  font-weight: bold;
+}
+/* line 284, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 5.0%;
+  left: 9.5rem;
+  top: 6.7rem;
+}
+/* line 292, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 .data02 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 296, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 .data02 .dataDifP {
+  position: absolute;
+  bottom: -1.9rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 303, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 .data02 .dataDifP .bold {
+  font-weight: bold;
+}
+/* line 309, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 5.0%;
+  left: 17.1rem;
+  top: 6.7rem;
+}
+/* line 317, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 .data03 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 321, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 .data03 .dataDifP {
+  position: absolute;
+  bottom: -1.9rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 328, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 .data03 .dataDifP .bold {
+  font-weight: bold;
+}
+/* line 334, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 5.0%;
+  left: 24.7rem;
+  top: 6.7rem;
+}
+/* line 342, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 .data04 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 346, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 .data04 .dataDifP {
+  position: absolute;
+  bottom: -1.9rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 353, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 .data04 .dataDifP .bold {
+  font-weight: bold;
+}
+/* line 359, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 {
+  float: left;
+  position: absolute;
+  width: 8.0%;
+  height: 5.0%;
+  left: 32.3rem;
+  top: 6.7rem;
+}
+/* line 367, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 .data05 {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 371, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 .data05 .dataDifP {
+  position: absolute;
+  bottom: -1.9rem;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+}
+/* line 378, ../../sass/graphIndex.scss */
+body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 .data05 .dataDifP .bold {
+  font-weight: bold;
+}
+@media only screen and (min-device-width : 0px) and (max-device-width : 1024px) {
+  /* line 394, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 2.0rem !important;
+    top: 4.2rem !important;
+  }
+  /* line 400, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 .data01 .dataDifP {
+    font-size: 1.0rem !important;
+  }
+  /* line 405, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 11.7rem !important;
+    top: 4.2rem !important;
+  }
+  /* line 411, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 .data02 .dataDifP {
+    font-size: 1.0rem !important;
+  }
+  /* line 416, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 21.4rem !important;
+    top: 4.2rem !important;
+  }
+  /* line 422, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 .data03 .dataDifP {
+    font-size: 1.0rem !important;
+  }
+  /* line 427, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 31.1rem !important;
+    top: 4.2rem !important;
+  }
+  /* line 433, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 .data04 .dataDifP {
+    font-size: 1.0rem !important;
+  }
+  /* line 438, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 40.8rem !important;
+    top: 4.2rem !important;
+  }
+  /* line 444, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 .data05 .dataDifP {
+    font-size: 1.0rem !important;
+  }
+  /* line 450, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 2.0rem !important;
+    top: 4.2rem !important;
+  }
+  /* line 456, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 .data01 .dataDifP {
+    font-size: 1.0rem !important;
+  }
+  /* line 461, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 11.7rem !important;
+    top: 4.2rem !important;
+  }
+  /* line 467, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 .data02 .dataDifP {
+    font-size: 1.0rem !important;
+  }
+  /* line 472, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 21.4rem !important;
+    top: 4.2rem !important;
+  }
+  /* line 478, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 .data03 .dataDifP {
+    font-size: 1.0rem !important;
+  }
+  /* line 483, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 31.1rem !important;
+    top: 4.2rem !important;
+  }
+  /* line 489, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 .data04 .dataDifP {
+    font-size: 1.0rem !important;
+  }
+  /* line 494, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 40.8rem !important;
+    top: 4.2rem !important;
+  }
+  /* line 500, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 .data05 .dataDifP {
+    font-size: 1.0rem !important;
+  }
+  /* line 511, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 2.0rem !important;
+  }
+  /* line 517, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 .data01 .dataDifP {
+    font-size: 1.0rem !important;
+    bottom: -2.2rem !important;
+  }
+  /* line 520, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 .data01 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 526, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 11.7rem !important;
+  }
+  /* line 532, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 .data02 .dataDifP {
+    font-size: 1.0rem !important;
+    bottom: -2.2rem !important;
+  }
+  /* line 535, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 .data02 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 541, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 21.4rem !important;
+  }
+  /* line 547, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 .data03 .dataDifP {
+    font-size: 1.0rem !important;
+    bottom: -2.2rem !important;
+  }
+  /* line 550, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 .data03 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 556, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 31.1rem !important;
+  }
+  /* line 562, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 .data04 .dataDifP {
+    font-size: 1.0rem !important;
+    bottom: -2.2rem !important;
+  }
+  /* line 565, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 .data04 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 571, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 {
+    width: 8.5% !important;
+    height: 5.8% !important;
+    left: 40.8rem !important;
+  }
+  /* line 577, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 .data05 .dataDifP {
+    font-size: 1.0rem !important;
+    bottom: -2.2rem !important;
+  }
+  /* line 580, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 .data05 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1280px) and (min-device-height: 601px) and (max-device-height: 800px) {
+  /* line 596, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 1.9rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 602, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 .data01 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 607, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 10.8rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 613, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 .data02 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 618, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 19.8rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 624, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 .data03 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 629, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 28.7rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 635, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 .data04 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 640, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 37.7rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 646, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 .data05 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 652, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 1.9rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 658, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 .data01 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 663, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 10.8rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 669, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 .data02 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 674, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 19.8rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 680, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 .data03 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 685, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 28.7rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 691, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 .data04 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 696, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 37.7rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 702, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 .data05 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 713, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 1.9rem !important;
+    top: 6.1rem !important;
+  }
+  /* line 720, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 .data01 .dataDifP {
+    font-size: 0.9rem !important;
+    bottom: -1.9rem !important;
+  }
+  /* line 723, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 .data01 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 729, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 10.8rem !important;
+    top: 6.1rem !important;
+  }
+  /* line 736, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 .data02 .dataDifP {
+    font-size: 0.9rem !important;
+    bottom: -1.9rem !important;
+  }
+  /* line 739, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 .data02 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 745, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 19.8rem !important;
+    top: 6.1rem !important;
+  }
+  /* line 752, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 .data03 .dataDifP {
+    font-size: 0.9rem !important;
+    bottom: -1.9rem !important;
+  }
+  /* line 755, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 .data03 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 761, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 28.7rem !important;
+    top: 6.1rem !important;
+  }
+  /* line 768, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 .data04 .dataDifP {
+    font-size: 0.9rem !important;
+    bottom: -1.9rem !important;
+  }
+  /* line 771, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 .data04 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 777, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 37.7rem !important;
+    top: 6.1rem !important;
+  }
+  /* line 784, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 .data05 .dataDifP {
+    font-size: 0.9rem !important;
+    bottom: -1.9rem !important;
+  }
+  /* line 787, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 .data05 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+}
+@media only screen and (min-device-width: 1281px) and (min-device-height: 801px) {
+  /* line 804, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 1.9rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 810, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 .data01 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 815, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 10.8rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 821, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 .data02 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 826, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 19.8rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 832, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 .data03 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 837, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 28.7rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 843, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 .data04 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 848, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 37.7rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 854, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 .data05 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 860, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 1.9rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 866, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 .data01 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 871, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 10.8rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 877, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 .data02 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 882, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 19.8rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 888, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 .data03 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 893, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 28.7rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 899, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 .data04 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 904, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 37.7rem !important;
+    top: 3.9rem !important;
+  }
+  /* line 910, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 .data05 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 921, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 1.9rem !important;
+    top: 6.1rem !important;
+  }
+  /* line 928, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 .data01 .dataDifP {
+    font-size: 0.9rem !important;
+    bottom: -1.9rem !important;
+  }
+  /* line 931, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 .data01 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 937, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 10.8rem !important;
+    top: 6.1rem !important;
+  }
+  /* line 944, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 .data02 .dataDifP {
+    font-size: 0.9rem !important;
+    bottom: -1.9rem !important;
+  }
+  /* line 947, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 .data02 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 953, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 19.8rem !important;
+    top: 6.1rem !important;
+  }
+  /* line 960, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 .data03 .dataDifP {
+    font-size: 0.9rem !important;
+    bottom: -1.9rem !important;
+  }
+  /* line 963, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 .data03 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 969, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 28.7rem !important;
+    top: 6.1rem !important;
+  }
+  /* line 976, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 .data04 .dataDifP {
+    font-size: 0.9rem !important;
+    bottom: -1.9rem !important;
+  }
+  /* line 979, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 .data04 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+  /* line 985, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 {
+    width: 8.0% !important;
+    height: 4.9% !important;
+    left: 37.7rem !important;
+    top: 6.1rem !important;
+  }
+  /* line 992, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 .data05 .dataDifP {
+    font-size: 0.9rem !important;
+    bottom: -1.9rem !important;
+  }
+  /* line 995, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 .data05 .dataDifP .bold {
+    font-weight: bold !important;
+  }
+}
+@media only screen and (min-device-width : 768px)  and (max-device-width : 1024px) and (min-device-height: 768px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* line 1011, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 1.9rem !important;
+    top: 4.0rem !important;
+  }
+  /* line 1017, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop1 .data01 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 1022, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 9.5rem !important;
+    top: 4.0rem !important;
+  }
+  /* line 1028, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop2 .data02 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 1033, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 17.1rem !important;
+    top: 4.0rem !important;
+  }
+  /* line 1039, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop3 .data03 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 1044, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 24.7rem !important;
+    top: 4.0rem !important;
+  }
+  /* line 1050, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop4 .data04 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 1055, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 32.3rem !important;
+    top: 4.0rem !important;
+  }
+  /* line 1061, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxTop5 .data05 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 1067, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 1.9rem !important;
+    top: 4.0rem !important;
+  }
+  /* line 1073, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop1 .data01 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 1078, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 9.5rem !important;
+    top: 4.0rem !important;
+  }
+  /* line 1084, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop2 .data02 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 1089, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 17.1rem !important;
+    top: 4.0rem !important;
+  }
+  /* line 1095, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop3 .data03 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 1100, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 24.7rem !important;
+    top: 4.0rem !important;
+  }
+  /* line 1106, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop4 .data04 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 1111, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 32.3rem !important;
+    top: 4.0rem !important;
+  }
+  /* line 1117, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Up .contTop .boxFlop5 .data05 .dataDifP {
+    font-size: 0.9rem !important;
+  }
+  /* line 1128, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 1.9rem !important;
+    top: 6.5rem !important;
+  }
+  /* line 1134, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown1 .data01 .dataDifP {
+    bottom: -1.9rem !important;
+    font-size: 0.9rem !important;
+  }
+  /* line 1140, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 9.5rem !important;
+    top: 6.5rem !important;
+  }
+  /* line 1146, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown2 .data02 .dataDifP {
+    bottom: -1.9rem !important;
+    font-size: 0.9rem !important;
+  }
+  /* line 1152, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 17.1rem !important;
+    top: 6.5rem !important;
+  }
+  /* line 1158, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown3 .data03 .dataDifP {
+    bottom: -1.9rem !important;
+    font-size: 0.9rem !important;
+  }
+  /* line 1164, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 24.7rem !important;
+    top: 6.5rem !important;
+  }
+  /* line 1170, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown4 .data04 .dataDifP {
+    bottom: -1.9rem !important;
+    font-size: 0.9rem !important;
+  }
+  /* line 1176, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 {
+    width: 8.0% !important;
+    height: 5.0% !important;
+    left: 32.3rem !important;
+    top: 6.5rem !important;
+  }
+  /* line 1182, ../../sass/graphIndex.scss */
+  body.ifb .ifb-cont .contIndexGraph .indexGraph .contGralGraphIndex-Down .contDown .boxDown5 .data05 .dataDifP {
+    bottom: -1.9rem !important;
+    font-size: 0.9rem !important;
+  }
+}

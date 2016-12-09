@@ -1,0 +1,1 @@
+"undefined"!=typeof __cookieUsed&&navigator.cookieEnabled&&__cookieUsed===!1&&($.cookie("screen_width",screen.width,{expires:3}),screen.width<700&&location.reload(!0));

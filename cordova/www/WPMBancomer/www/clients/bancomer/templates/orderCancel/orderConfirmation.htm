@@ -1,0 +1,112 @@
+<%
+var folio = model.options.viewOptions.folio;
+
+if (!model.models){
+	return;
+}
+var order = model.get(folio);
+
+if (order) {
+%>
+ <!-- logotipo + btn cerrar -->
+            <section class="contLogo">
+                <div class="logo"></div>
+                <a class="icoCloseWindow ifbEventTrigger" data-event="closeCancelationClick" ></a>
+            </section>
+
+            <!-- titular -->
+            <section class="contTit01">
+                <h3><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_headerTitle')%></h3>
+                <i class="btnBoleta ifbEventTrigger hide" data-event="sendOrderCancelReceiptTooltipClick" id="orderCancelReceiptTooltipContainer"></i>
+                <div class="tooltipBoleta" id="orderReceiptTooltip" style="display:none;">
+                    <div class="arrowBoleta"></div>
+                    <div class="buttonsBoleta">
+                        <!--<div class="icoBtnSave ifbEventTrigger" data-event="sendOrderCancelSaveClick"><a class="icoBtnSave"></a></div>-->
+                        <div class="icoBtnMail ifbEventTrigger" data-event="sendOrderCancelMailClick" ><a class="icoBtnMail"></a></div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- iconoInfo + txt -->
+            <section class="contInfo" id="orderCancelConfirmationInfo" >
+                <div class="icoInfo"></div>
+                <div class="txtInfo"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_headerText')%></div>
+            </section>
+
+            <!-- txt confirmación -->
+            <section class="contTxt01">
+                <div class="txt01"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_headerSubtitleText')%></div>
+            </section>
+
+            <!-- tabla datos -->
+            <section class="contDataResAuto">
+                <div class="contTblDataResAuto">
+                    <table class="tblDataResAuto" cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_RegisterNumber')%>:</td>
+                            <td class="ifb-alignLeft"><%=order.getFolio()%></td>
+                        </tr>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_Issuer')%>:</td>
+                            <td class="ifb-alignLeft"><%=order.getEmisora()%></td>
+                        </tr>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_Serie')%>:</td>
+                            <td class="ifb-alignLeft"><%=order.getSerie()%></td>
+                        </tr>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_TitlesAssigned')%>:</td>
+                            <td class="ifb-alignLeft"><%=order.getAsignados()%></td>
+                        </tr>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_TitlesPendingOfassigning')%>:</td>
+                            <td class="ifb-alignLeft"><%=order.getPendientes()%></td>
+                        </tr>
+
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_Price')%>:</td>
+                            <td class="ifb-alignLeft"><%=order.getPrecio()%></td>
+                        </tr>	
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_Side')%>:</td>
+                            <td class="ifb-alignLeft"><%=order.getOperacionText()%></td>
+                        </tr>
+
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_Status')%>:</td>
+                            <td class="ifb-alignLeft"><%=order.getEstado()%></td>
+                        </tr>
+
+                        <tr class="noBorderBttm" id='orderCancelRegisterDate'>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_RegisterDate')%>:</td>
+                            <td class="ifb-alignLeft"><%=moment(order.getFechaReg(), 'YYYYMMDD').format('DD/MM/YYYY')%></td>
+
+                        </tr>
+						<tr class="hide noBorderBttm" id="orderCancelReceiptFolioContainer">
+	                        <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_RegisterNumberCancel')%>:</td>
+	                        <td class="ifb-alignLeft" id="orderCancelReceiptFolio"></td>
+	                    </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="contBtnConfirm">
+                <div id="orderCancelConfirmationButton" class="btnConfirm ifbEventTrigger" data-event="sendOrderCancelConfirmationClick" data-folio=<%=order.getFolio()%>><a><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_ButtomConfirmation')%></a></div>  
+
+                 <div class="hide" id="orderCancelReceipt">
+
+                <div class="txtConfirm"><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_footerText1')%>
+                <br/><%=BANCOMER.CULTURETEXT.t('componentLabel_OrderCancelConfirmation_footerText2')%>
+                </div>  
+                  
+                </div> 
+            </section>
+
+           
+
+            
+	
+<%}%>

@@ -1,0 +1,86 @@
+<%  var instrument = model.models[0];
+if (!instrument) { %>
+  <p><%=BANCOMER.CULTURETEXT.t('dataTable_ErrorMessage_EmptyTable')%></p>
+<% } else { %>
+<section class="contFvMultiples">
+    <table class="ifb-popupTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <thead>    
+            <tr>
+                <th><%=BANCOMER.CULTURETEXT.t('header_Multiples_Multiples')%></th>
+                <th><%=BANCOMER.CULTURETEXT.t('header_Multiples_Main')%></th>
+                <th><%=BANCOMER.CULTURETEXT.t('header_Multiples_Factor1')%></th>
+                <th><%=BANCOMER.CULTURETEXT.t('header_Multiples_Factor2')%></th>
+            </tr>        
+        </thead>
+        <tbody>            
+            <tr>
+                <td class="ifb-alignLeft"><%=BANCOMER.CULTURETEXT.t('componentLabel_Multiples_P/FLEPA')%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_FLEPA_Main.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getP_FLEPA_Main({decimals: 6, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_FLEPA_Factor1.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getP_FLEPA_Factor1({decimals: 6, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_FLEPA_Factor2.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getP_FLEPA_Factor2({decimals: 6, zeroValue: ' '})%></td>               
+            </tr>
+            <tr>
+                <td class="ifb-alignLeft"><%=BANCOMER.CULTURETEXT.t('componentLabel_Multiples_P/FEPA')%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_FEPA_Main.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getP_FEPA_Main({decimals: 6, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_FEPA_Factor1.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getP_FEPA_Factor1({decimals: 6, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_FEPA_Factor2.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getP_FEPA_Factor2({decimals: 6, zeroValue: ' '})%></td>                
+            </tr>
+            <tr>
+                <td class="ifb-alignLeft"><%=BANCOMER.CULTURETEXT.t('componentLabel_Multiples_VE_UAIIDA')%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.VE_UAIIDA_Main.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getVE_UAIIDA_Main({decimals: 6, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.VE_UAIIDA_Factor1.descriptor %>" data-type="number" data-decimals="6"data-zeroValue=""><%=instrument.getVE_UAIIDA_Factor1({decimals: 6, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.VE_UAIIDA_Factor2.descriptor %>" data-type="number" data-decimals="6"data-zeroValue=""><%=instrument.getVE_UAIIDA_Factor2({decimals: 6, zeroValue: ' '})%></td>                
+            </tr>
+            <tr>
+                <td class="ifb-alignLeft"><%=BANCOMER.CULTURETEXT.t('componentLabel_Multiples_P_U')%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_U_Main.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getP_U_Main({decimals: 6, zeroValue: ' '})%></td> 
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_U_Factor1.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getP_U_Factor1({decimals: 6, zeroValue: ' '})%></td> 
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_U_Factor2.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getP_U_Factor2({decimals: 6, zeroValue: ' '})%></td>                
+            </tr>
+            <tr>
+                <td class="ifb-alignLeft"><%=BANCOMER.CULTURETEXT.t('componentLabel_Multiples_P_VL')%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_VL_Main.descriptor %>" data-type="number" data-decimals="6"data-zeroValue=""><%=instrument.getP_VL_Main({decimals: 6, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_VL_Factor1.descriptor %>" data-type="number" data-decimals="6"data-zeroValue=""><%=instrument.getP_VL_Factor1({decimals: 6, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.P_VL_Factor2.descriptor %>" data-type="number" data-decimals="6"data-zeroValue=""><%=instrument.getP_VL_Factor2({decimals: 6, zeroValue: ' '})%></td>                
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="ifb-popupTable" cellpadding="0" cellspacing="0" border="0" width="100%">        
+        <thead>
+            <tr>
+                <th><%=BANCOMER.CULTURETEXT.t('header_Multiples_Rubro')%></th>
+                <th><%=BANCOMER.CULTURETEXT.t('header_Multiples_Previous')%></th>
+                <th><%=instrument.get3T13()%></th>
+                <th><%=BANCOMER.CULTURETEXT.t('header_Multiples_Increase%')%></th>
+            </tr>        
+        </thead>
+        <tbody>            
+            <tr>
+                <td class="ifb-alignLeft"><%=BANCOMER.CULTURETEXT.t('componentLabel_Multiples_Sales')%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Sales_Previous.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=""><%=instrument.getSales_Previous({decimals: 0, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Sales_3T13.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=""><%=instrument.getSales_3T13({decimals: 0, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Sales_Percentage.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getSales_Percentage({decimals: 6, zeroValue: ' '})%></td>                
+            </tr>
+            <tr>
+                <td class="ifb-alignLeft"><%=BANCOMER.CULTURETEXT.t('componentLabel_Multiples_ON')%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.ON_Previous.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=""><%=instrument.getON_Previous({decimals: 0, zeroValue: ' '})%></td> 
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.ON_3T13.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=""><%=instrument.getON_3T13({decimals: 0, zeroValue: ' '})%></td>    
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Sales_Percentage.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getSales_Percentage({decimals: 6, zeroValue: ' '})%></td>                                           
+            </tr>
+            <tr>
+                <td class="ifb-alignLeft"><%=BANCOMER.CULTURETEXT.t('componentLabel_Multiples_UN')%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.ON_Previous.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=""><%=instrument.getON_Previous({decimals: 0, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.UN_3T13.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=""><%=instrument.getUN_3T13({decimals: 0, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.UN_Percent.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getUN_Percent({decimals: 6, zeroValue: ' '})%></td>                               
+            </tr>
+            <tr>
+                <td class="ifb-alignLeft"><%=BANCOMER.CULTURETEXT.t('componentLabel_Multiples_EBITDA')%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.EBITDA_Previous.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=""><%=instrument.getEBITDA_Previous({decimals: 0, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.EBITDA_3T13.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=""><%=instrument.getEBITDA_3T13({decimals: 0, zeroValue: ' '})%></td>
+                <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.EBITDA_Percent.descriptor %>" data-type="number" data-decimals="6" data-zeroValue=""><%=instrument.getEBITDA_Percent({decimals: 6, zeroValue: ' '})%></td>              
+            </tr>
+        </tbody>
+    </table>
+</section>
+<% } %>
