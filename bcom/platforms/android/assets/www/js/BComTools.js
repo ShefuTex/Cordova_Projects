@@ -326,20 +326,6 @@ AmmountValidator.prototype = {
         }
     }
 }
-function loginDelegate()
-{
-    console.log("Debug loginDelegate function");
-
-}
-
- function botonEntrarLogin() {
-    	console.log("botonEntrarLogin");
-        this.leerDatos();
-
-        if (this.validaDatos()) {
-            this.doNetworkOperation();
-        }
-    }
 
 /* Validador para numero de cuenta */
 function AccountNumberValidator() {

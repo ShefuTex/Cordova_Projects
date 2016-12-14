@@ -2,7 +2,8 @@ package com.bancomer.btrader.common;
 
 import android.util.Log;
 
-import com.bancomer.btrader.BCom;
+import com.bancomer.bcom.BCom;
+import com.bancomer.bcom.R;
 import com.bancomer.btrader.session.Server;
 import com.bancomer.btrader.session.Server.LogoutTime;
 
@@ -10,8 +11,6 @@ import org.apache.cordova.CallbackContext;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
-import com.bancomer.btrader.R;
 
 //Todo se edito la ruta del R
 

@@ -1,14 +1,14 @@
 package com.bancomer.btrader.common;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import android.util.Log;
+
+import com.bancomer.bcom.BCom;
+import com.bancomer.btrader.session.Server;
 
 import org.apache.cordova.CallbackContext;
 
-import com.bancomer.btrader.BCom;
-import com.bancomer.btrader.session.Server;
-
-import android.util.Log;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class InactividadTimer extends Timer {
 	//#region Singleton.

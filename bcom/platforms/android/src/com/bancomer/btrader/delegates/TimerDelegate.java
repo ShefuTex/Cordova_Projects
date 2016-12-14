@@ -1,16 +1,16 @@
 package com.bancomer.btrader.delegates;
 
-import org.apache.cordova.CallbackContext;
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import android.util.Log;
 
-import com.bancomer.btrader.BCom;
+import com.bancomer.bcom.BCom;
 import com.bancomer.btrader.common.DoKeepAlive;
 import com.bancomer.btrader.common.InactividadTimer;
 import com.bancomer.btrader.common.OperacionTimer;
 import com.bancomer.btrader.session.Server;
+
+import org.apache.cordova.CallbackContext;
+import org.json.JSONArray;
+import org.json.JSONException;
 
 public class TimerDelegate extends NativeDelegate {
 	/**

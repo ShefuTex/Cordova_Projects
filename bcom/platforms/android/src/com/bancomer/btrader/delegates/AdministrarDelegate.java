@@ -1,18 +1,17 @@
 package com.bancomer.btrader.delegates;
 
-import java.io.File;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+
+import com.bancomer.bcom.BCom;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-
-import com.bancomer.btrader.BCom;
-import com.bancomer.btrader.utils.Utilerias;
+import java.io.File;
 public class AdministrarDelegate extends CordovaPlugin {
 	
 	private File systemDir = new File("/data/data/com.bancomer.bcom");  //Utilerias.applicationContext.getFilesDir();

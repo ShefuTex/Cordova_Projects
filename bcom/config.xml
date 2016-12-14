@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.bancomer.btrader" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Movilidad</name>
+<widget id="com.bancomer.bcom" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>BCom</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -8,19 +8,62 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <platform name="android">
-        <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
+    <!--  >access origin="*" /-->
+    <access origin="http://teststreaming.bbvanet.com.mx/" />
+    <access origin="http://testbwt.bbvanet.com.mx/" />
+    <access origin="https://equitystreaming.bbvanet.com.mx/" />
+    <access origin="https://equitybwt.bbvanet.com.mx/" />
+    <access origin="http://ifbdpsb.infobolsa.es/" />
+    <access origin="https://a1.bbvanet.com.mx" /> 
+    <!--  >access origin="*" /-->
+    <!-- <access origin="https://a1.bbvanet.com.mx" /> -->
+    <feature name="EdoCuentaDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.EdoCuentaDelegate" />
+    </feature>
+    <feature name="GeneraComprobantesDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.GeneraComprobantesDelegate" />
+    </feature>
+    <feature name="GuardadoComprobantesDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.GuardadoComprobantesDelegate" />
+    </feature>
+    <feature name="AdministrarDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.AdministrarDelegate" />
+    </feature>
+    <feature name="CompraInvertirDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.CompraInvertirDelegate" />
+    </feature>
+    <feature name="ConsultaInvertirDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.ConsultaInvertirDelegate" />
+    </feature>
+    <feature name="VentaInvertirDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.VentaInvertirDelegate" />
+    </feature>
+    <feature name="LoginDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.LoginDelegate" />
+    </feature>
+    <feature name="LoginViewController">
+        <param name="android-package" value="com.bancomer.btrader.controllers.LoginViewController" />
+    </feature>
+    <feature name="PosicionGlobalDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.PosicionGlobalDelegate" />
+    </feature>
+    <feature name="TokenViewController">
+        <param name="android-package" value="com.bancomer.btrader.controllers.TokenViewController" />
+    </feature>
+    <feature name="TimerDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.TimerDelegate" />
+    </feature>
+    <feature name="TransferirDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.TransferirDelegate" />
+    </feature>
+    <feature name="WebTraderDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.WebTraderDelegate" />
+    </feature>
+    <feature name="MisCuentasDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.MisCuentasDelegate" />
+    </feature>
+        <feature name="File">
+        <param name="android-package" value="CDVFile" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>

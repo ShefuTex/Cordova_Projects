@@ -1,6 +1,12 @@
 package com.bancomer.btrader.delegates;
 
-import java.util.Hashtable;
+import android.util.Log;
+
+import com.bancomer.bcom.BCom;
+import com.bancomer.btrader.persistence.HttpInvoker;
+import com.bancomer.btrader.persistence.ServerResponse;
+import com.bancomer.btrader.session.Server;
+import com.bancomer.btrader.session.Server.EstadoRespuesta;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -9,12 +15,7 @@ import org.apache.cordova.PluginResult.Status;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import android.util.Log;
-
-import com.bancomer.btrader.BCom;
-import com.bancomer.btrader.persistence.ServerResponse;
-import com.bancomer.btrader.session.Server;
-import com.bancomer.btrader.session.Server.EstadoRespuesta;
+import java.util.Hashtable;
 
 public class NativeDelegate extends CordovaPlugin{
 	private int procesosActivos;

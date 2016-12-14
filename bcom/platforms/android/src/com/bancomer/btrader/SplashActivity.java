@@ -10,6 +10,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebView;
 
+import com.bancomer.bcom.BCom;
+import com.bancomer.bcom.R;
+
 public class SplashActivity extends Activity {
 
 	@Override

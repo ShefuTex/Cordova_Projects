@@ -1,25 +1,20 @@
 package com.bancomer.btrader.delegates;
 
-import java.util.Hashtable;
-import java.util.Iterator;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.bancomer.bcom.BCom;
+import com.bancomer.btrader.persistence.SharedBcomPreferences;
+import com.bancomer.btrader.session.Server;
 
 import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import android.util.Log;
-import android.widget.Toast;
-
-import com.bancomer.btrader.BCom;
-import com.bancomer.btrader.persistence.SharedBcomPreferences;
-import com.bancomer.btrader.session.Server;
-
-import android.util.Log;
+import java.util.Hashtable;
 
 public class TransferirDelegate extends NativeDelegate {
 	

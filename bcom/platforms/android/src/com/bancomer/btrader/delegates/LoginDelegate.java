@@ -9,7 +9,8 @@ import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
 
-import com.bancomer.btrader.BCom;
+import com.bancomer.bcom.BCom;
+import com.bancomer.bcom.R;
 import com.bancomer.btrader.persistence.ServerResponse;
 import com.bancomer.btrader.persistence.SharedBcomPreferences;
 import com.bancomer.btrader.session.Server;
@@ -42,7 +43,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Hashtable;
 
-import com.bancomer.btrader.R;
 
 //Todo se edito la ruta del R
 

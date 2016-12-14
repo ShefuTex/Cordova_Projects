@@ -2,7 +2,8 @@ package com.bancomer.btrader.common;
 
 import android.util.Log;
 
-import com.bancomer.btrader.BCom;
+import com.bancomer.bcom.BCom;
+import com.bancomer.bcom.R;
 import com.bancomer.btrader.session.Server;
 import com.bancomer.btrader.session.Server.LogoutTime;
 
@@ -13,9 +14,6 @@ import org.json.JSONException;
 import java.util.Timer;
 import java.util.TimerTask;
 
-//import io.cordova.hellocordova.R;
-
-import com.bancomer.btrader.R;
 
 public class DoKeepAlive extends Timer{
 	private static DoKeepAlive instance;

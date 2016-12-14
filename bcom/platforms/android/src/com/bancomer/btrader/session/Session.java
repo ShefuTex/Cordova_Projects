@@ -1,5 +1,11 @@
 package com.bancomer.btrader.session;
 
+import android.util.Log;
+
+import com.bancomer.bcom.BCom;
+import com.bancomer.btrader.session.Server.PersistentJsonFile;
+import com.bancomer.btrader.utils.Utilerias;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -11,12 +17,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-
-import android.util.Log;
-
-import com.bancomer.btrader.BCom;
-import com.bancomer.btrader.session.Server.PersistentJsonFile;
-import com.bancomer.btrader.utils.Utilerias;
 
 
 public class Session {

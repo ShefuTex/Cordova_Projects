@@ -1,17 +1,17 @@
 package com.bancomer.btrader.delegates;
 
-import java.util.Hashtable;
+import android.util.Log;
+
+import com.bancomer.bcom.BCom;
+import com.bancomer.btrader.persistence.SharedBcomPreferences;
+import com.bancomer.btrader.session.Server;
 
 import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.util.Log;
-
-import com.bancomer.btrader.BCom;
-import com.bancomer.btrader.persistence.SharedBcomPreferences;
-import com.bancomer.btrader.session.Server;
+import java.util.Hashtable;
 
 public class CompraInvertirDelegate extends NativeDelegate {
 	public CompraInvertirDelegate() {
