@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html style="overflow-x: hidden; overflow-y: hidden;">
+
+    <head>
+ 
+ 		<title></title>
+        
+        <meta charset="utf-8"/>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="format-detection" content="telephone=no">
+
+        <link rel="stylesheet" href="css/normalize.css"/>
+        <link rel="stylesheet" href="css/1024x600.css" id="mainCss"/>
+        
+        <script type="text/javascript" src="js/jquery/jquery-2.1.0.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+        <!--script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+        <script type="text/javascript" src="js/highcharts/modules/exporting.js"></script>
+        <script type="text/javascript" src="js/html2canvas.js"></script>
+        <script type="text/javascript" src="js/canvas2image.js"></script>
+        <script type="text/javascript" src="js/jspdf/rasterize.js"></script>
+        <script type="text/javascript" src="js/jspdf/jspdf.min.js"></script-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/Constants.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/BComTools.js"></script>
+        <script type="text/javascript" src="js/BaseViewController.js"></script>
+        <script type="text/javascript" src="js/BComViewsController.js"></script>
+
+        <script type="text/javascript" src="js/Accounting.js"></script>
+
+        <script type="text/javascript">
+            function startApp() {
+//                document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+                document.addEventListener("deviceready", baseViewController.initPhonegap(), false);
+            }
+        
+        
+        $(document).ready(function () {
+                          
+         $("#body").css("margin-top","20px");
+                          
+          
+            var rutaImgLogo = 'img/normal/Ios_Logotipo.png';
+                          
+            var valueDevice = window.devicePixelRatio;
+                 
+                          
+            if (valueDevice == 2) {
+                          
+
+                rutaImgLogo = 'img/retina/Ios_Logotipo@2x.png';
+ 
+                $("#logo").css("float","left");
+                $("#logo").css("background-image", "url('"+rutaImgLogo+"')").css("background-size","cover");
+
+                
+                $("#cuerpo-login").css("height","540px");
+                $("#todo").css("height","750px");
+
+            } else {
+                 
+                          
+             $("#logo").css("background-image", "url('"+rutaImgLogo+"')");
+                          
+
+                          $("#todo").css("height","750px");
+
+           $("#btns-lateral a").css("margin-left","8px");
+            }
+  
+
+        });
+                      var viewsController = new BComViewsController();
+
+                            function mostrarMBComInicio(opcion, paso) {
+
+                    viewsController.mostrarPantallaWebtrader(opcion, paso);
+
+                    }
+        
+        </script>
+        
+    </head>
+
+    <body id="body" onLoad="startApp();" style="overflow-x:hidden; overflow-y:hidden;">
+        <div id="todo">
+            
+            <div id="nav-bajo">
+                <div id="nav-webtrader"></div>
+            </div>
+             
+             <div id="mainContent">
+            
+                <iframe id="contentFrame" src="" seamless="seamless"></iframe>
+                <div id="contentFrame2"></div>
+            
+            </div>
+            
+        </div>
+
+    </body>
+    
+</html>

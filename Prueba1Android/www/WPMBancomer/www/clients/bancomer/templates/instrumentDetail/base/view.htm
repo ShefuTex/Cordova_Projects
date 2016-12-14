@@ -1,0 +1,63 @@
+<section class="contResearchNews">
+
+<%
+var itemList = model.models;
+if (!itemList || itemList.length === 0){%>
+    <div class="researchNews">
+        <div class="row1">
+            <div class="txtNoInfo"><%=BANCOMER.CULTURETEXT.t('dataTable_ErrorMessage_EmptyTable')%></div>
+        </div>
+    </div>
+<%} else {%>
+    <div class="researchNews">
+        <div class="row1">
+            <div class="block1">
+                <div class="subBlock"><a id="item1"></a></div>
+            </div>
+            <div class="block1">
+                <div class="subBlock"><a id="item2"></a></div>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="block2">
+                <div class="subBlock"><a id="item3"></a></div>
+            </div>
+            <div class="block2">
+                <div class="subBlock"><a id="item4"></a></div>
+            </div>
+            <div class="block2">
+                <div class="subBlock"><a id="item5"></a></div>
+            </div>
+            <div class="block2">
+                <div class="subBlock"><a id="item6"></a></div>
+            </div>
+        </div>
+        <div class="row3">
+            <div class="block3">
+                <div class="subBlock"><a id="item7"></a></div>
+            </div>
+            <div class="block3">
+                <div class="subBlock"><a id="item8"></a></div>
+            </div>
+            <div class="block3">
+                <div class="subBlock"><a id="item9"></a></div>
+            </div>
+            <div class="block3">
+                <div class="subBlock"><a id="item10"></a></div>
+            </div>
+            <div class="block3">
+                <div class="subBlock"><a id="item11"></a></div>
+            </div>
+            <div class="block3">
+                <div class="subBlock"><a id="item12"></a></div>
+            </div>
+            <div class="block3">
+                <div class="subBlock"><a id="item13"></a></div>
+            </div>
+            <div class="block3">
+                <div class="subBlock"><a id="item14"></a></div>
+            </div>
+        </div>
+    </div>
+<%}%>
+</section>

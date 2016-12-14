@@ -1,0 +1,68 @@
+<%
+    var style;
+    var title = model.title || '';
+    var models = model.models || [];
+    var numMinimum = model.numMinimum || 0;
+    var placeHolderText = BANCOMER.CULTURETEXT.t(model.placeHolderText) || BANCOMER.CULTURETEXT.t("componentLabel_Placeholder_InstrumentSelector");
+    var styleMinimumLegend = (numMinimum > 0) ? 'display: block;' : 'display: none;';
+%>  
+
+<div class="ifb-PopUp selectColumnsIndex">
+    <div class="ifb-innerPopUp">
+
+        <div class="ifb-contHeader">
+          <!-- índice superior + btn cerrar -->
+          <h3><%=BANCOMER.CULTURETEXT.t(title)%></h3>
+          <a class="icoCloseWindow ifbEventTrigger" data-event="closeClick" ></a>
+        </div>        
+
+        <div class="contSelectColumnsIndex">
+            <div class="contDd" >
+                <div class="tit"><%=BANCOMER.CULTURETEXT.t(model.searchTextKey)%></div>
+                 <div class="searchInd">
+                    <input class="ifb-searchInd" type="search" name="search" placeholder="<%=placeHolderText%>" id="instrument_selector_search">
+                </div>
+                <div class="dd" id="category" >
+                    <ol class="dd-list">
+                        <div class="content" id="instrument_selector_search_result"></div>
+                    </ol>
+                </div>
+            </div>
+
+           <div class="separation"></div>
+           <div class="contDd">
+           <div class="tit"><%=BANCOMER.CULTURETEXT.t(model.itemsSelectedTextKey)%></div>
+           <div class="leyendaGraph" style="<%=styleMinimumLegend%>"><%=BANCOMER.CULTURETEXT.t("componentSubtitle_InstrumentSelector_Index_1")%><%=numMinimum%><%=BANCOMER.CULTURETEXT.t("componentSubtitle_InstrumentSelector_Index_2")%></div>
+           <div class="dd" id="userInstruments">
+                <ol class="dd-list">
+                    <%
+                        _.each(models, function (model, index) {   
+                    %>
+                        <li class="dd-item dd3-item" data-id="<%=model.id%>">
+                            <div class="delete"></div>
+                            <%
+                            if ((numMinimum!==0) && (index < numMinimum)){%>
+                              <div class="icoColGraph"></div>
+                            <%}%>
+                            
+                            <div class="dd-handle dd3-handle">
+                                <div class="contLines">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="dd3-content"><%=model.getIFBShortName()%></div>
+                         </li>
+                    <%
+                        });
+                    %>
+                </ol>
+            </div>
+           </div>
+        </div>
+        <div class="contButton">          
+          <div class="selecctButton ifbEventTrigger" data-event="saveUserInstruments"><%=BANCOMER.CULTURETEXT.t('componentTitle_InstrumentSelector_ButtonSave')%></div>
+        </div>     
+    </div>
+</div>  

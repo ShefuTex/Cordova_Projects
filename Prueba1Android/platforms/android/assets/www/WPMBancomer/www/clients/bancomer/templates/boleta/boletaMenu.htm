@@ -1,0 +1,10 @@
+ <% 
+var buyCls = (model.attributes.viewOptions.side === BANCOMER.Utils.Trader.sideOptions.BUY.value) ? 'buy' : '';
+var sellCls = (model.attributes.viewOptions.side === BANCOMER.Utils.Trader.sideOptions.SELL.value) ? 'sell' : '';
+var lineCls = (model.attributes.viewOptions.side === BANCOMER.Utils.Trader.sideOptions.BUY.value) ? 'lineBuy' : 'lineSell';
+%>
+
+<ul class="<%=lineCls%>">
+	<li class="<%=buyCls%> ifbEventTrigger" data-event="sendChangeSideClick" data-side="Compra"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaMenu_BoletaBuy')%></li>
+    <li class="<%=sellCls%> ifbEventTrigger" data-event="sendChangeSideClick" data-side="Venta"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaMenu_BoletaSell')%></li>
+</ul>

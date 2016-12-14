@@ -1,0 +1,36 @@
+
+<div class="tooltipSearch">
+  <div class="arrowSearch"></div>
+  <div class="dataBoxSearch">
+  <div class="titSearchResults">Resultados</div>
+<%
+    var instrumentList = model.models;
+    if (!instrumentList || !instrumentList.length){
+%>    
+      <div class="noDataSearchResults"><%=BANCOMER.CULTURETEXT.t('errorNoResults')%></div>
+<%
+    } else {
+%>
+    <div class="boxSearchResults" id="niceScrollSearch">
+<%
+        _.each(instrumentList, function (instrument, index) {        
+%>
+          <div>
+  		      <a class="linkSearchResults ifbEventTrigger" data-event="openInstrumentDetail" data-mv="<%=instrument.getDescriptorValue("MV")%>" data-isin="<%=instrument.getIsin()%>">
+          		<div class="linkSearchResults">
+              		<span class="name"><%=instrument.getIFBShortName()%></span>
+                  	<span class="isin"><%=instrument.getIsin()%></span>
+                  	<span class="market"><%=instrument.getIFBMarketName()%></span>
+            	</div>
+     		   </a>
+<%
+	});
+%>
+          </div> 
+    </div>
+    </div>
+ 
+<%
+}
+%>  
+

@@ -1,0 +1,42 @@
+<%
+	if (!model.sortview) {
+		model.transformModelToView();
+	}
+
+	var instruments = model.filterByInstrumentType();
+		
+	if (!instruments){
+		return;
+	}
+%>
+
+<table id="investmentDetailGridTable" width="100%" cellspacing="0" cellpadding="0" border="0" class="ifb-tableWS">
+	<thead>
+	<tr class="index">
+	  <th></th>
+	  <th data-event="sortView" data-descriptor="<%=IFB.Descriptors.IFBShortName.descriptor%>" class="header name ifbEventTrigger"><%=BANCOMER.CULTURETEXT.t('componentLabel_InvestmentDetailTable_Issuer')%></th>
+	  <th><%=BANCOMER.CULTURETEXT.t('componentLabel_InvestmentDetailTable_Series')%></th>
+	  <th data-event="sortView" data-descriptor="<%=IFB.Descriptors.Bancomer_Titulos.descriptor%>" class="header ifbEventTrigger"><%=BANCOMER.CULTURETEXT.t('componentLabel_InvestmentDetailTable_Volume')%></th>
+	  <th><%=BANCOMER.CULTURETEXT.t('componentLabel_InvestmentDetailTable_Last')%></th>
+	  <th><%=BANCOMER.CULTURETEXT.t('componentLabel_InvestmentDetailTable_ChangePercent')%></th>
+	</tr>
+	</thead>
+	<tbody>
+<%
+	var topFlopCls;
+	_.each(instruments, function (instrument) {
+		topFlopCls = instrument.getTopFlopCls(IFB.Descriptors.Trend.descriptor);
+%>
+		<tr>
+		  <td class="<%=topFlopCls%> arrow" data-type="silent" data-descriptor="<%=IFB.Descriptors.Trend.descriptor%>" data-mv="<%=instrument.getDescriptorValue('MV')%>"><div></div></td>
+		  <td class="name"><a class="ifbEventTrigger" data-mv="<%=instrument.getDescriptorValue('MV')%>" data-event="AbrirFicha"><%=instrument.getEmisora()%></a></td>
+		  <td class="series"><%=instrument.getSerie()%></td>
+		  <td class="titles"><%=instrument.getTitulos()%></td>
+		  <td class="last <%=topFlopCls%>" data-mv="<%=instrument.getDescriptorValue('MV')%>" data-descriptor="<%=IFB.Descriptors.Bancomer_Ultimo.descriptor%>" data-type="number" data-zeroValue=""><%=instrument.getBancomer_Ultimo({zeroValue: ' '})%></td>
+		  <td class="difP <%=topFlopCls%>" data-type="number" data-mv="<%=instrument.getDescriptorValue('MV')%>" data-descriptor="<%=IFB.Descriptors.ChangePercent.descriptor%>" data-decimals="2" data-zeroValue=""><%=instrument.getChangePercent({decimals: 2, zeroValue: ' '})%></td>
+		</tr>
+<%
+	});
+%>	
+	</tbody>
+</table>

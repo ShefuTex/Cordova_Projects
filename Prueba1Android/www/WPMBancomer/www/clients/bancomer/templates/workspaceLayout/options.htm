@@ -1,0 +1,33 @@
+<%
+var checked = '';
+var idLabel = '';
+
+var name = '';
+
+if (model) {	
+%>
+	
+	<div class="title" id="layout1Title">
+		<h2><%=BANCOMER.CULTURETEXT.t("componentTitle_WorkspaceOptions")%></h2>
+	</div>
+
+	<div class="data">
+  		<div class="data-menu-Layout1">
+
+<%
+        	_.each(model.options, function (option, index){
+        		checked = (option.key === model.checkedOption)?  'checked' : '';
+        		idLabel = model.workspace + '_Option_layout' + model.layout + '_module' +  model.module + '_'+ option.key;
+        		name = model.workspace +'_Option_layout' + model.layout + '_module' +  model.module;
+%>
+	    		<div class="ifb-radioButton">
+	        		<input id="<%=idLabel%>" class="radioButton ifbEventTrigger" data-event="clickOptionFilter" data-workspace="<%=model.workspace%>" data-type="<%=option.key%>" data-module="<%=model.module%>" data-layout="<%=model.layout%>" data-textkey="<%=option.textKey%>" type="radio" name="<%=name%>" value="<%=option.type%>" data-listen="change" <%=checked%>>
+	        		<label class="radioButtonLabel" for="<%=idLabel%>"><%=BANCOMER.CULTURETEXT.t(option.textKey)%></label>
+	    		</div>
+<%      	});
+%>
+		</div>
+	</div>
+<%
+}
+%>

@@ -1,0 +1,41 @@
+<div class="ifb-clickOn">
+    <!-- logotipo -->
+    <section class="contLogo">
+        <div class="logo"></div>
+    </section>
+    <!-- titular  -->
+    <div class="clickOnTitle">BBVA Bancomer Web Trader</div>
+
+    <!-- salida aviso  + nicescroll -->
+    <div class="contTxtScroll">
+        <!-- textoNiceScroll -->
+        <div class="clickOnScroll">
+            <div id="clickOnDocument"></div>
+        </div>
+    </div>
+
+    <!-- botones -->
+    <div class="contButton">
+        <div class="ifb-checkboxButton">
+            <input class="ifbEventTrigger checkboxButton" id="checkBoxConditions" type="checkbox" data-event="checkConditions">
+            <label class="checkboxButtonLabel" for="checkBoxConditions"><%=BANCOMER.CULTURETEXT.t('clickOn_Conditions')%></label>
+        </div>
+
+        <div class="buttons">
+            <div class="btnAcept">
+                <input type="button" id="btnAccept" class="ifb-button ifbEventTrigger disable" data-event="acceptClickOn" value="Acepto" disabled>
+            </div>
+            <div class="btnNoAcept">
+                <input type="button" id="btnRefuse" class="ifb-button ifbEventTrigger" data-event="refuseClickOn" value="No acepto">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--
+<div id="clickOnDocument"></div>
+<input type="checkbox" id="checkBoxConditions" class="ifbEventTrigger" data-event="checkConditions" data-lesten="change"><%=BANCOMER.CULTURETEXT.t('clickOn_Conditions')%></input>
+<input type="button" id="btnAccept" class="ifbEventTrigger" data-event="acceptClickOn" value="Acepto" disabled></input>
+<input type="button" id="btnRefuse" class="ifbEventTrigger" data-event="refuseClickOn" value="No acepto"></input>
+-->

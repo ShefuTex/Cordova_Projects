@@ -1,0 +1,12 @@
+<div class="title">
+<h2><%=model.title%></h2>
+<a href="#!/workspaceMaximized/<%=model.workspace%>/<%=model.module%>" class="icoOpenBox"></a>
+<a class="icoLapiz ifbEventTrigger" data-event="clickEditModule" data-layout="<%=model.layout%>" data-module="<%=model.module%>" data-workspace="<%=model.workspace%>"></a>
+<a class="icoToolBox ifbEventTrigger" data-event="clickToolBoxIndexes"></a>
+<a class="icoFilter ifbEventTrigger" data-event="clickToolBoxInstrumentSelector"></a>
+<a class="icoRefresh ifbEventTrigger iconRefresh" data-event="clickRefreshModule" data-module="indexes"></a>
+
+</div>
+<div class="data">
+	<section class="data-menu-layout1" id="<%=model.idTable%>"></section>
+</div>

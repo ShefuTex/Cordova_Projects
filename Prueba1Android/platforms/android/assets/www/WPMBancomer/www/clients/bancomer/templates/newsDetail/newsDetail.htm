@@ -1,0 +1,22 @@
+<%
+var news = model.models;
+var titleTextKey = model.options.viewOptions.titleTextKey;
+
+if (!news || !news[0]){
+    return;
+}
+var item = news[0];
+%>
+            <section class="contTop">
+                <h3><%=BANCOMER.CULTURETEXT.t(titleTextKey)%></h3>
+                <a class="icoCloseWindow ifbEventTrigger" data-event="closeClick"></a>
+            </section>
+            <div class="contNewResTxtScroll">
+                 
+                <div class="newResTxtScroll" id="niceScrollNewsDetail">
+                  <div class="newResTxtScrollData">
+                    <%=item.getDetails()%>    
+                  </div>    
+                </div>                
+              
+            </div>

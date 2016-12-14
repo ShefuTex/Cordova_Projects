@@ -1,0 +1,39 @@
+<%
+	var news = model.models;
+    var clsIsRead = '';
+    var clsIsEven = '';
+    var clsItemNoRead = model.options.viewOptions.clsItemNoRead;
+    var clsItemEven = model.options.viewOptions.clsItemEven;    	
+    var labelCount = '';
+
+    if (!news){
+        return;
+    }
+
+    labelCount = (news.length===1)?BANCOMER.CULTURETEXT.t('componentLabel_newsList_countMessage'):BANCOMER.CULTURETEXT.t('componentLabel_newsList_countMessages'); 
+%>
+
+<div class="mesAviTbl_header">
+    <div class="mesAviTbl_date"><%=BANCOMER.CULTURETEXT.t('header_Date')%></div>
+    <div class="mesAviTbl_hour"><%=BANCOMER.CULTURETEXT.t('header_Time')%></div>
+    <div class="mesAviTbl_tit"><%=BANCOMER.CULTURETEXT.t('header_Title')%></div>
+</div>
+
+<!-- salida noticia sin estilo + nicescroll -->
+<div class="mesAviTblScroll" id="newsListTable" >
+
+<%  
+_.each(news, function (item, index) {  
+    clsIsRead = item.isRead() ? "" : clsItemNoRead;
+    clsIsEven = (index % 2 === 0) ? clsItemEven : '';
+%>                      
+<div class="mesAviTbl_data ifbEventTrigger <%=clsIsRead%> <%=clsIsEven%>"  id="<%=item.getKey()%>" data-event="itemNewsClick" data-source="<%=item.getSource()%>" data-key="<%=item.getKey()%>">
+        <div class="mesAviTbl_date"><%=item.getDate()%></div>
+        <div class="mesAviTbl_hour"><%=item.getTime()%></div>
+        <div class="mesAviTbl_tit"><%=item.getTitle()%></div>
+</div>
+    <%
+});
+    %>         
+</div>
+<div class="mesAviTbl_bottomNumber" id="newsListCounter"><%=news.length%>&nbsp;<%=labelCount%></div>

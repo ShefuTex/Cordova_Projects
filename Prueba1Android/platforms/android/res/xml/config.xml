@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.bancomer.trader" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <name>BCom</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <feature name="EdoCuentaDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.EdoCuentaDelegate" />
+    </feature>
+    <feature name="GeneraComprobantesDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.GeneraComprobantesDelegate" />
+    </feature>
+    <feature name="GuardadoComprobantesDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.GuardadoComprobantesDelegate" />
+    </feature>
+    <feature name="AdministrarDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.AdministrarDelegate" />
+    </feature>
+    <feature name="CompraInvertirDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.CompraInvertirDelegate" />
+    </feature>
+    <feature name="ConsultaInvertirDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.ConsultaInvertirDelegate" />
+    </feature>
+    <feature name="VentaInvertirDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.VentaInvertirDelegate" />
+    </feature>
+    <feature name="LoginDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.LoginDelegate" />
+    </feature>
+    <feature name="LoginViewController">
+        <param name="android-package" value="com.bancomer.btrader.controllers.LoginViewController" />
+    </feature>
+    <feature name="PosicionGlobalDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.PosicionGlobalDelegate" />
+    </feature>
+    <feature name="TokenViewController">
+        <param name="android-package" value="com.bancomer.btrader.controllers.TokenViewController" />
+    </feature>
+    <feature name="TimerDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.TimerDelegate" />
+    </feature>
+    <feature name="TransferirDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.TransferirDelegate" />
+    </feature>
+    <feature name="WebTraderDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.WebTraderDelegate" />
+    </feature>
+    <feature name="MisCuentasDelegate">
+        <param name="android-package" value="com.bancomer.btrader.delegates.MisCuentasDelegate" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.GeoBroker" />
+    </feature>
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.AccelListener" />
+    </feature>
+    <feature name="Compass">
+        <param name="android-package" value="org.apache.cordova.CompassListener" />
+    </feature>
+    <feature name="Media">
+        <param name="android-package" value="org.apache.cordova.AudioHandler" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.CameraLauncher" />
+    </feature>
+    <feature name="Contacts">
+        <param name="android-package" value="org.apache.cordova.ContactManager" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.FileUtils" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.NetworkManager" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.Notification" />
+    </feature>
+    <feature name="Storage">
+        <param name="android-package" value="org.apache.cordova.Storage" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.FileTransfer" />
+    </feature>
+    <feature name="Capture">
+        <param name="android-package" value="org.apache.cordova.Capture" />
+    </feature>
+    <feature name="Battery">
+        <param name="android-package" value="org.apache.cordova.BatteryListener" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.SplashScreen" />
+    </feature>
+    <feature name="Echo">
+        <param name="android-package" value="org.apache.cordova.Echo" />
+    </feature>
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.Globalization" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+    </feature>
+</widget>

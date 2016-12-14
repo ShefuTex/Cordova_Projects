@@ -1,0 +1,38 @@
+<%  var positions = model.models; 
+    var title = '';
+    if (positions && positions.length > 0){
+        title = (positions.length===1) ? BANCOMER.CULTURETEXT.t('componentLabel_BoletaPosition') : BANCOMER.CULTURETEXT.t('componentLabel_BoletaPositions');
+%>
+            <table id="" class="ifb-popupTable" cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                    <tr>
+                        <th colspan="6"><%=title%></th>
+                    </tr>
+                    </thead>
+                     <tbody>
+                    <tr>
+                        <td class="titTbl"><%=BANCOMER.CULTURETEXT.t('header_BoletaPosition_OrdersBuy')%></td>
+                        <td class="titTbl"><%=BANCOMER.CULTURETEXT.t('header_BoletaPosition_VolumeBuy')%></td>
+                        <td class="titTbl"><%=BANCOMER.CULTURETEXT.t('header_BoletaPosition_PriceBuy')%></td>
+                        <td class="titTbl"><%=BANCOMER.CULTURETEXT.t('header_BoletaPosition_PriceSell')%></td>
+                        <td class="titTbl"><%=BANCOMER.CULTURETEXT.t('header_BoletaPosition_VolumeSell')%></td>
+                        <td class="titTbl"><%=BANCOMER.CULTURETEXT.t('header_BoletaPosition_OrdersSell')%></td>
+                        
+                    </tr>
+<%
+            _.each(positions, function (position, index) {
+                var nposition = position.getId();
+                var decimals = '3';
+%>
+                    <tr>
+                        <td class="datoPos" data-key="<%=nposition%>" data-descriptor="<%= IFB.Descriptors.BidOrders.descriptor %>" data-type="number" data-decimals="0"  data-zeroValue=""><%=position.getBidOrders({zeroValue: ' '})%></td>
+                        <td class="datoPos" data-key="<%=nposition%>" data-descriptor="<%= IFB.Descriptors.BidVolume.descriptor %>" data-type="number" data-decimals="0"  data-zeroValue=""><%=position.getBidVolume({zeroValue: ' '})%></td>
+                        <td class="datoPos" data-key="<%=nposition%>" data-descriptor="<%= IFB.Descriptors.BidPrice.descriptor %>" data-type="number" data-decimals="<%=decimals%>" data-zeroValue=""><%=position.getBidPrice({decimals: 3,zeroValue: ' '})%></td>
+                        <td class="datoPos" data-key="<%=nposition%>" data-descriptor="<%= IFB.Descriptors.AskPrice.descriptor %>" data-type="number" data-decimals="<%=decimals%>" data-zeroValue=""><%=position.getAskPrice({decimals: 3,zeroValue: ' '})%></td>
+                        <td class="datoPos" data-key="<%=nposition%>" data-descriptor="<%= IFB.Descriptors.AskVolume.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=""><%=position.getAskVolume({zeroValue: ' '})%></td>
+                        <td class="datoPos" data-key="<%=nposition%>" data-descriptor="<%= IFB.Descriptors.AskOrders.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=""><%=position.getAskOrders({zeroValue: ' '})%></td>
+                    </tr>
+<% });%>
+            </tbody>
+            </table>
+<% } %>

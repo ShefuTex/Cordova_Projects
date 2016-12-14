@@ -1,0 +1,22 @@
+<%
+var checked = '';
+var idLabel = '';
+if (model && model.options) {
+%>
+
+<div class="tooltipShares">
+<div class="arrowShares"></div>
+<div class="dataBoxShares">
+	
+	<%_.each(model.options, function (option, index){
+	checked = (option.key === model.checkedOption)?  'checked' : '';
+	idLabel = model.componentId + option.key;
+%>
+	<div class="ifb-radioButton">
+		<input id="<%=idLabel%>" class="radioButton ifbEventTrigger" data-event="clickOptionModuleFilter" data-constituentscode="<%=option.constituentscode%>" data-textkey="<%=option.textKey%>" data-module="moduleFilterTopFlop" type="radio" name="<%=model.componentId%>" value="<%=index%>" data-listen="change" <%=checked%>>
+		<label class="radioButtonLabel" for="<%=idLabel%>"><%=BANCOMER.CULTURETEXT.t(option.textKey)%></label>
+	</div>
+	<%});%>
+<%}%>
+</div>
+</div>

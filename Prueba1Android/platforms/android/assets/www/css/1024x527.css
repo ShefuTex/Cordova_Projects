@@ -1,0 +1,597 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html, button, input, select, textarea { color: #333; font-family: "Myriad Pro",Helvetica, Arial, sans-serif; }
+html { font-size: 1em; line-height: 1.4; }
+
+::-moz-selection { background: #b3d4fc; text-shadow: none;}
+::selection { background: #b3d4fc; text-shadow: none;}
+audio, canvas, img, video { vertical-align: middle; }
+fieldset { border: 0; margin: 0; padding: 0; }
+textarea { resize: vertical; }
+
+hr { border:0; margin: 20px 0; height:0; border-bottom:1px solid #DEDEDE;}
+/*
+body { overflow: hidden; }
+*/
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden { display: none !important; visibility: hidden; }
+#body{
+  height: 527.5px !important;
+}
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* ==========================================================================
+   Header classes
+   ========================================================================== */
+#cabeza { background:#FFF;  width:1024px; height:42px; }
+#todo.sideMenuShowing #cabeza { width:940px; }
+#logo {display:block;  background:url(../img/1024x600/An_Logotipo.png) no-repeat center; width:240px; height:42px; text-indent:-99999px; }
+#logo { float:left;}
+
+/*************************** Inicio Login *************************/
+#login-encabezado { background:#FFF;  width:auto; height:42px;}/*cabeza*/
+#login-logo {display:block; background:url(../img/1024x600/An_Logotipo.png) no-repeat center; width:240px; height:42px; text-indent:-99999px; float:left;} /*logo*/
+#menu_superior{  height:24.4px; width: 1024px; background-color: rgb(0,0,255); opacity: 0.5;}
+
+#cuerpo-login { background:url(../img/1024x600/An_Login.png); height:403px; width:1024px; padding-top:42px; background-size: 100% 100%;}/*cuerpo-login*/
+#loginPrincipal #bcom-principal {
+background:rgba(255,255,255, .70);
+ width:424px;
+  height:363px;
+   margin-left:512px; 
+   padding: 20px 18px 0 18px; 
+    display:block;
+    padding-top:130px;
+    margin-top:-84px;
+    padding-left:70px;
+    }/*loginPrincipal*//*bcom*/
+#loginPrincipal #bcom-secundario { background:url(../img/1024x600/An_Box_Token.png) no-repeat center; width:384px; height:304px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:30px; display:none} /*loginPrincipal*//*bcom2*/
+#loginSecundario #bcom-principal { background:url(../img/1024x600/An_Box.png) no-repeat center; width:384px; height:250px; margin-left:535px; padding: 20px 18px 0 18px; margin-bottom:85px; display:none;}/*loginSecundario bcom*/
+#loginSecundario #bcom-secundario { 
+	background:rgba(255,255,255, .70);
+	 width:424px; 
+	 height:427px; 
+	 margin-left:512px; 
+	 padding: 20px 18px 0 18px; 
+	 display:block;
+	 margin-top:-84px;
+	 padding-top:100px;
+	 padding-left:70px;
+	 }/*loginSecundario bcom2*/
+#bcom-principal .link { margin-top: 7px; }
+#bcom-secundario .link { margin-top: 1px; }
+
+.tab-icon {font-weight:normal; color:#1A68AF; background:url(../img/1024x600/An_Ic_Tab.png) no-repeat; font-size:29px; padding: 4.5% 0 0 50px; margin-bottom:4.7%; margin-left:50px;} /*tab-icon*/
+.tab-icon-2 {font-weight:normal; color:#1A68AF; background:url(../img/1024x600/An_Ic_Tab.png) no-repeat; font-size:29px; padding: 4.5% 0 0 60px; margin-bottom:4.7%; margin-left: 70px;} /*tab-icon*/
+.tab-icon h1{background:url(../img/1024x600/An_Ic_Tab.png) no-repeat; font-size:29px; padding: 6px 0 0 40px; margin-bottom:28px;} /*tab-icon*/
+.login-input-datos {border:0; margin:0; color:#BDBDBD; width:350px; height:36px; padding:0 17px; background:url(../img/1024x600/An_Input.png) no-repeat; margin-bottom:10px; font-size:18px;} /*full-input*/
+.login-boton-entrar { padding:0; border:0; margin:0; color:#FFF; width:384px; height:36px; padding:0; background:url(../img/1024x600/An_Btn.png) no-repeat; margin-bottom:20px; font-size:18px;}/*btn-submit*/
+
+.link { color:#B95974; text-align:center; text-decoration:none; display:block; font-size:18px;}/*link*/
+.usuario-login { font-weight:normal; font-size:20px; color:#4C524C;}/*usuario-login*/
+.usuario-log-datos img { float:left; margin-right:20px; -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.3); box-shadow: 0 0 3px 3px rgba(0,0,0,.3); }/*usuario-log-datos*/
+.usuario-log-datos{height:62px;margin-top:10px; margin-bottom:10px; font-size:16px; color:#4C524C;} /*usuario-log-datos*/
+#login-nav { height:53px; background:url(../img/1024x600/An_Bg_Suite.png) no-repeat;}/*login-nav*/
+
+.btn-autoseguro {display:block; float:left; width:333px; height:53px; background:url(../img/1024x600/An_Btn_Aut.png) center no-repeat;} /*btn-autoseguro*/
+.btn-geolocalizacion {display:block; float:left; width:360px; height:53px; background:url(../img/1024x600/An_Btn_Est.png) center no-repeat;} /*btn-geolocalizacion*/
+.btn-bestratega {display:block; float:left; width:331px; height:53px; background:url(../img/1024x600/An_Btn_Geo.png) center no-repeat;}/*btn-bestratega*/
+#pie {width:1024px; height:40px; background:rgba(184,184,184,.70); text-align:center; position:relative; text-shadow: 1px 1px 2px #030303; }/*pie*/
+.contactanos { font-size:16px; background: url(../img/1024x600/An_Ic_Tel.png) left no-repeat; padding-left:30px; line-height:40px;  color:#FFF; display:inline-block;}/*contactanos*/
+.ver { font-size:12px; top:33%; right:15px; color:#FFF; position:absolute;}/*ver*/
+
+#ayudaToken { position: absolute; left: 0px; top: 0px; outline: none; z-index: 999998; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); }
+#ayudaDP720 { width:100%; height:100%; background: url(../img/1024x600/An_token_dp270.png) center center no-repeat; }
+#ayudaSOFT  { width:100%; height:100%; background: url(../img/1024x600/An_token_softoken.png) center center no-repeat; }
+#ayudaOCRA  { width:100%; height:100%; background: url(../img/1024x600/An_token_ocra.png) center center no-repeat; }
+
+.login-icono-invitado { width: 30px; height: 30px; margin-left: 350px; min-width: 0px; position: absolute; margin-top: 5px; }
+
+/*************************** Fin Login *************************/
+
+#nav-lateral { width:14px; height:564px; background: url(../img/1024x600/An_Bg_Menu_Off.png) center right no-repeat; position:absolute; left:0; z-index: 11;}
+#menu_principal{ position:absolute; top:0px; left:0px; width:40px; height:564px; z-index:99; }
+
+.datos-usuario { float:right; font-size:11px; vertical-align:middle; color:#0098E2; margin-top:4px; margin-right:20px}
+.datos-usuario img { vertical-align:middle; margin-right:20px;-webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3);
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.3);-webkit-border-radius: 6px; border-radius: 6px;}
+.miniAvatar { background:url(../img/1024x600/foto-top.png) no-repeat; width:27px; height:27px; vertical-align:middle; margin-right:20px; -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3); box-shadow: 0 0 2px 2px rgba(0,0,0,.3); -webkit-border-radius:6px; border-radius: 6px;  display:inline-block; }
+.pregunta { background:url(../img/1024x600/An_Ic_Ayuda.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.contacto { background:url(../img/1024x600/An_Ic_Tels.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.salir { background:url(../img/1024x600/An_Btn_Salir.png) no-repeat center; display:inline-block; width:80px; height:20px; vertical-align:middle; text-align:center; line-height:20px; color:#fff; text-decoration:none;  vertical-align:middle; margin-left:10px;}
+.ultima-sesion { font-size:9px; color:#333; text-align:right; margin-top:2px }
+
+/*Encabezado para webtrader*/
+#cabeza-webtrader { background:#FFF; width:1024px; }
+#todo.sideMenuShowing #cabeza-webtrader { width:960px; }
+#logo2 { background:url(../img/1024x600/An_Logotipo.png) no-repeat center; width:240px; height:42px; text-indent:-99999px; display:block; float:left; }
+.datos-usuario2 { float:right; font-size:11px; vertical-align:middle; color:#0098E2; margin-top:4px; margin-right:20px}
+.ifb-icoContract{ background:url(../img/1024x600/icoContract.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.correo { background:url(../img/1024x600/An_Ic_Correo.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.ayuda { background:url(../img/1024x600/An_Ic_Ayuda2.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+.engrane { background:url(../img/1024x600/An_Ic_Engrane.png) no-repeat right; display:inline-block; width:25px; height:25px; text-indent:-99999px; border-left:1px solid #CCC; padding-left: 10px; vertical-align:middle; margin-left:10px;}
+/*
+#todo {  height:50%; width:1024px; position:relative}
+*/
+/*
+#contentFrame { width:1024px !important; height:552px !important; border:none; }
+*/
+#img-slider { width:517px; height:431px; float:left; margin-left:35px; padding:1px 3px 3px 1px; background-size:100% auto} 
+/*
+#todo #btns-lateral{ background:#164A8C; width:80px; height:562px; padding:1px 0; display:none; }
+*/
+
+/* ==========================================================================
+   AGREGADO
+   ========================================================================== */
+#nav-administrar a { padding-left:30px; padding-right:30px}
+   /* ==========================================================================
+   END
+   ========================================================================== */
+.nb-cuentas { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Miscuentas_Off.png) no-repeat center top;}
+.nb-estado { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Estado_Off.png) no-repeat center top;}
+.nb-comprobantes { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Comprobantes_Off.png) no-repeat center top;}
+.nb-compguardados { width:128px; height:80px; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Guardados_Off.png) no-repeat center top;}
+/*
+body { overflow: hidden; }
+*/
+#contentFrame { width:1024px !important; height:527.5px !important; border:none; overflow-y:hidden; }
+
+.miniAvatar { background:url(../img/1024x600/foto-top.png) no-repeat; width:27px; height:27px; vertical-align:middle; margin-right:20px; -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3); box-shadow: 0 0 2px 2px rgba(0,0,0,.3); -webkit-border-radius:6px; border-radius: 6px;  display:inline-block; }
+.cuerpo-admin { background:url(../img/1024x600/An_Ic_Administrar.png) no-repeat left; height:24px; margin:8px 0; padding-left:35px; margin-left:19px; display:block; font-size:23px; color:#0098E1; text-decoration:none; line-height:24px}
+
+.titulo-administrar { font-weight:normal; margin:15px 0; color:#006DC0; font-size:18px; padding-left: 19px}
+.eliminar-tab { font-size:16px; border-collapse: separate; border-spacing: 15px; }
+.formulario-btn { background:url(../img/1024x600/An_Btn_Azul.png) no-repeat; font-size:14px; width:140px; line-height:30px; margin:0 10px; color:#FFF; border:0}
+
+.nb-eliminar { width:128px; height:80px; float:left;display:block; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Eliminar_Off.png) no-repeat center top;}
+
+/**Agregado**/
+.nb-eliminar:ACTIVE{ width:128px; height:80px; float:left;display:block; float:left;display:block; background:url(../img/1024x600/An_Ic_Bottom_Eliminar_On.png) no-repeat center top;}
+#depurar_0{-webkit-transform: scale(1.5,1.5);}
+#depurar_1{-webkit-transform: scale(1.5,1.5);}
+.div-btns-eliminar{padding-top:230px;}
+#contenedor-admin { padding-left:0px; width:1000px;}
+.inicio-selected .lateral-inicio { background:url(../img/1024x600/An_Ic_Left_Inicio_On.png) no-repeat; }
+.cuentas-selected .lateral-cuentas {background:url(../img/1024x600/An_Ic_Left_Cuentas_On.png) no-repeat; }
+.transferir-selected .lateral-transferir {background:url(../img/1024x600/An_Ic_Left_Transferir_On.png) no-repeat; }
+.invertir-selected .lateral-invertir {background:url(../img/1024x600/An_Ic_Left_Invertir_On.png) no-repeat; }
+
+.administrar-selected .lateral-administrar {background:url(../img/1024x600/An_Ic_Left_Admin_On.png) no-repeat; }
+
+
+/*Menu inferior*/
+#nav-bajo{ position:absolute; height:27px; bottom:0px; left:0px; /*background:url(../img/1024x600/An_Ic_Lineas.png) no-repeat top;*/ width:1024px }
+#nav-bajo-display{ position:absolute; height:104px; bottom:0px; left:0px; /*background:url(../img/1024x600/An_Bg_BottomBar.png) no-repeat top;*/ width:1024px }
+
+#nav-bajo #nav-cont { height:83px; background:rgba(244,244,244,.9); margin-top:27px; padding-left:20px; display:none; }
+#nav-bajo-display #nav-cont { height:83px; background:rgba(244,244,244,.9); margin-top:21px; padding-left:20px; }
+
+/* ####################################################################################################################################### */
+/* Se debe de ajustar el valor de la propiegag height, los demas valores estan basados en la clase: sec2 */
+
+.android-options-menu-pane { display:table; table-layout: fixed; position: absolute; width: 100%; height: 15%;
+    left: 0px; bottom: 0px; background-color: #1a1a1a; box-shadow: rgba(26,26,26,1) 0px 0px 9px 5px; }
+.android-options-menu-pane-hidden { display:none; }
+.android-options-menu-pane div { display:table-cell; border: 1px solid white; border-width: 0px 1px 0px 0px; padding-top: 0.5%;
+        padding-left:13%; }
+.android-options-menu-pane div:last-child { border-width: 0px; }
+.android-options-menu-pane div a { width: 81px; height: 90px; display: inline-block; }
+.emailMenu a { background: url(../img/1024x600/An_Btn_Correo.png) no-repeat; }
+.emailMenuHidden .emailMenu { display:none; }
+.frecuenteMenu a { background: url(../img/1024x600/An_Btn_Frecuente.png) no-repeat; }
+.frecuenteMenuHidden .frecuenteMenu { display:none; }
+.rapidaMenu a { background: url(../img/1024x600/An_Btn_Rapida.png) no-repeat; }
+.rapidaMenuHidden .rapidaMenu { display:none; }
+.rango { margin-left:13%; width:83%; }
+/*.mis-cuentas-table { width: 620px; height: 130px; margin-left: -0px; }*/
+.mis-cuentas-table { width: 620px; height: 130px; margin-left: 16px; }
+
+
+/*Estilos para comprobantes*/
+.comprobante { -webkit-transition: all 0.5s ease; width: 92px; height: 119px; position: absolute; top: 200px; left: 141px; background-size: 100%; }
+
+#imagenComprobante{ width:100%; height:100%; background: url(../img/comprobante.png) center center no-repeat; }
+
+/* Solo para Android, no incluir en iOS */
+.android-hidden {
+    display:none;
+}
+
+
+
+
+
+.floatButton:active{
+	background: white url(../img/1024x600/an_Ic_Share_Guardar_On2.png) no-repeat center top;
+}
+
+.andOn{
+	background: white url(../img/1024x600/an_Ic_Share_Guardar_On2.png) no-repeat center top;
+}
+
+.andOff{
+	background: white url(../img/1024x600/an_Ic_Share_Guardar_Off2.png) no-repeat center top;
+}
+
+
+
+
+/******************** Inicia BaseViewController ********************/
+.baseviewcontroller-loading-layer {
+    position: absolute;
+    width: 100%;
+   height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+
+.baseviewcontroller-loading-spinner {
+    width:100%;
+    height:100%;
+    background: url(../img/1024x600/loading.gif) center center no-repeat;
+}
+/******************** Fin BaseViewController ********************/
+
+/* ==========================================================================
+  Modulo posisición global
+   ========================================================================== */
+
+.transferir-resaltado-azul {color:#398DCB !important}
+.transferir-resaltado-verde { color:#9ED45E !important; }
+.nueva-cuenta {position:absolute; top:35px; width: 280px; height:65px; left:629px; background:url(../img/1024x600/An_Btn_Nuevoon.png) no-repeat; background-size: contain;  background-repeat:no-repeat; color:#FFF; text-decoration:none; text-align:center; line-height:61px; font-size:14px; display:block; margin:0 auto}
+.text-cantidad { width:140px; border:0; height:29px; background:url(../img/1024x600/An_Input_Transferir.png) no-repeat; padding:0 5px; background-size: contain;  background-repeat:no-repeat; text-align: center;}
+
+/*estilos para transferir.html*/
+/**************** Loading animation ****************/
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../img/1024x600/loading.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+/**************** Loading animation ****************//* } */
+
+
+/********************************** Fin Transferir **********************************/
+
+
+/********************************** Inicio Invertir *********************************/
+.invertir-resaltado-azul {color:#398DCB !important}
+.compras-overflow {  
+    overflow:auto;
+    height:205px;
+}
+
+/* Inicio Invertir Compra */
+/* Fin Invertir consulta */
+
+/********************************** Fin Invertir *********************************/
+
+/* ==========================================================================
+  Modulo administrar
+   ========================================================================== */
+   
+   /* ==========================================================================
+  Modulo posisición global
+   ========================================================================== */
+   
+.highcharts-legend {display: none;}
+
+
+
+
+
+#ui-datepicker-div {
+  border: none;
+}
+/*
+.ui-datepicker-calendar tbody td * {
+  text-align: center !important;
+}
+*/
+.ui-datepicker-unselectable.ui-state-disabled span.ui-state-default {
+  background: none;
+  background-color: #b5e5f9;
+  border: none;
+  color: #89d1f3;
+}
+
+.ui-datepicker-other-month a {
+  background: none !important;
+  background-color: #b5e5f9 !important;
+}
+
+span.ui-icon.ui-icon-circle-triangle-w {
+  background-position: -96px -16px;
+}
+
+span.ui-icon.ui-icon-circle-triangle-e {
+  background-position: -33px -16px;
+}
+
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus {
+    color: #363636 !important;
+    border: 1px solid #094fa4 !important;
+    background: #fff0a5 url("images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x !important;
+    font-weight: normal !important;
+}
+
+
+.floatButton{
+	left: 76%;
+	top: 1px;
+	position:absolute;
+	z-index: 20;
+	width: 120px;
+	height: 40px;
+	/* border: 2px solid #ccc; */
+	background: rgba(255, 255, 255, 0) url(../img/1024x600/an_Ic_Share_Guardar_Off2.png) no-repeat center top;	
+	background-size: 92%;
+}
+
+.floatButton:active{
+	background: rgba(255, 255, 255, 0) url(../img/1024x600/an_Ic_Share_Guardar_On2.png) no-repeat center top;
+}
+
+.andOn{
+	background: white url(../img/1024x600/an_Ic_Share_Guardar_On2.png) no-repeat center top;
+}
+
+.andOff{
+	background: white url(../img/1024x600/an_Ic_Share_Guardar_Off2.png) no-repeat center top;
+}
+
+/*comprobantes fiscal*/
+
+.ui-dialog{ 
+  color:#70767B !important; 
+  padding-top: 10px;
+  background: #F2F2F2;
+  border: 2px solid #ccc;
+}
+
+div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix.ui-draggable-handle {display: none}
+.ui-dialog { top: 0px !important; }
+#botonCierre, .botonCierre { float: right; margin-top: -5px; margin-right: -15px; }
+
+.mensaje-comprobante { padding: 0px 5px 0px 20px; }
+
+
+/*
+#bodyD #compname{
+  margin-left: 20px;
+  font-weight: bold;
+}
+*/
+.hbox{
+  height: 50px;
+}
+
+.hbox .ident{
+  font-size: 24px;
+  color: #0098E1 !important;
+  margin-left: 20px;
+}
+
+.hbox .logo, .hbox .ident{
+  float: left;
+}
+
+.hbox .name, .hbox .date{
+  float: right;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+.tr-contendor-boton { border: none !important; }
+
+
+
+#dialogCFiscal #dialContainer,
+#dialogFrecuente #dialContainer { margin-top: 25px; padding: 40px 5px 30px 5px; }
+
+
+.leyenda{
+  text-align: center;
+  margin:30px;
+}
+
+
+#cuentaOrigenOculta + .transferir-cuentasbbva-div-clearfix 
+{
+width: 850px;
+
+	
+}
+
+.campos-comprobante { padding: 0px 5px 0px 20px; margin-left:180px; margin-top: 40px; padding-top: 10px;}
+
+
+
+.tablacomprobante { padding: 0px 5px 0px 20px; margin-left:220px; margin-top: 40px; padding-top: 10px;}
+
+
+#confirmaComprobante{
+	
+	margin-top: 40px;
+	/*margin-left:90px;*/
+}
+
+.transferir-cuentasbbva-div-clearfix.desplazaderecha
+{
+
+width: 860px !important;
+	
+}
+
+#contenedorBotonConfirmarComprobante{
+	
+	text-align: center;
+}
+
+
+
+
+#transferir-cuentasbbva-div-principal + div > #dialog #dialContainer,
+#dialogCFiscal #dialContainer,
+#dialogFrecuente #dialContainer { margin-top: 0px; padding: 40px 5px 30px 5px; }
+
+
+.intContainer table tr td{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 10%;
+}
+
+
+.intContainer table tr td:nth-child(odd){
+  padding-right: 10px;
+  text-align: right;
+  vertical-align: top;
+
+}
+
+.mensaje-comprobante { padding: 0px 5px 0px 20px; }
+
+.intContainer{
+   /* z-index: 2; */ 
+  background-color: white;
+   border: 2px solid #ccc;
+   margin-left: 2%; 
+   margin-right: 2%;
+   margin-top: 4%; 
+}
+
+.intContainer table{
+  margin: 0 auto;
+  width: 80%;
+}
+
+.intContainer table tr{
+  border-bottom: 1px solid #ccc;
+}
+.overflowS{
+	overflow: scroll;
+}
+
+/******************** Inicia BaseViewController ********************/
+.baseviewcontroller-loading-layer {
+    position: absolute;
+   width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+
+.baseviewcontroller-loading-spinner {
+    width:100%;
+    height:100%;
+    background: url(../img/1024x600/loading.gif) center center no-repeat;
+}
+
+
+#sombraFooter{
+ height: 100%;
+
+ margin-top: 543px;
+
+ z-index: 100;
+ visibility: hidden;
+ width: 100%;
+ background-color: rgba(0, 0, 0, 0.6);
+}
+
+#sombraCabecera
+{
+height: 10%;
+margin-top: -2px;
+z-index: 100;
+visibility: hidden;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all{
+
+
+height: 470px !important;
+	width:700px !important;
+	left:150px !important;
+
+}
+
+
+
+#dialContainer{ height: 360px;}
+
+
+	#dialog{
+	 height: auto !important;
+	}
+	
+	#dialogCFiscal{
+	 height: auto !important;
+	}
+	
+	#dialogFrecuente{
+height: auto !important
+}
+	
+	#leyendaToken{
+	height:10%;
+	}
+
+#labelComp{font-size: 13px;}
+
+#labelFrecuente{font-size: 13px;}
+
+
+.transferir-cuentasbbva-div-botones-finales.pantalla4{
+
+margin-top: -50px;
+}
+
+
+#botonCierreComprobante{
+margin-top:-35px !important;
+}
+
+
+
+
+/*estilos para transferir-otrosbancos.html*/
+.imagenDesbloqueo{background:url(../img/1024x600/An_Ic_Desbloqueo.png) no-repeat; padding:25px; margin-bottom:1px; margin-left: 90px; position:absolute; left:614px; top:360px;}
+.imagenAyuda{background:url(../img/1024x600/An_Ic_AyudaL.png) no-repeat; padding:25px; margin-bottom:1px; margin-left: 90px; position:absolute; left:640px; top:390px;}
+

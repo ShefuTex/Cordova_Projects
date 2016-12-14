@@ -1,0 +1,45 @@
+<%  
+  var instrument = model.models[0];
+  if (!instrument) {
+    return;
+  }
+%>
+<section class="investDet2-Graph">
+	<section class="contMiddle">
+		<div class="middle">
+			<div class="middleBox">
+		  		<div class="title" >
+					<h2><%=instrument.getIFBShortName()%></h2>
+					<a href="#!/workspace/<%=model.workspace%>" class="icoCloseBox"></a>
+					<a class="icoToolBox ifbEventTrigger" data-event="clickFilter" data-filter="chartType"></a>
+					<a class="icoFilter ifbEventTrigger" data-event="clickToolBoxInstrumentSelector"></a>
+					<a class="ifbEventTrigger icoRefresh iconRefresh" data-event="clickRefreshModule"></a>
+				</div>
+				<div class="graph" >
+					<!-- gráfico a tamaño completo -->
+		        	<section class="contInvDet2-Graph">        	
+		  				<div class="contGraphMenu">
+		 					<!-- menu graf -->
+		                	<ul>
+		                		<li class="active ifbEventTrigger" data-event="clickTabChart" data-type="intraday"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_ChartIntraday')%></li>
+								<li>|</li>			
+		      					<li class="ifbEventTrigger" data-event="clickTabChart" data-type="daily"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_ChartDaily')%></li>
+		    				</ul>
+						</div>
+				  		<!-- graf -->
+				  		<div class="contGraphBig">
+							<section class="graph" id="chart_<%=model.componentId%>"></section>
+						</div>
+						<!-- menu periodo/frecuencia  -->
+			        	<div class="contPerFre">
+			          		    <div><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Period')%></div>
+							    <div id="period<%=model.componentId%>" class="ifbEventTrigger" data-event="clickFilter" data-filter="period"></div>
+							    <div ><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Frequency')%></div>
+							    <div id="frequency<%=model.componentId%>" class="ifbEventTrigger selected"  data-event="clickFilter" data-filter="frequency"></div>
+			        	</div>
+			    	</section>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>

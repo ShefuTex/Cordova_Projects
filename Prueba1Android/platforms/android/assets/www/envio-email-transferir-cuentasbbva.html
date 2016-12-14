@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title></title>
+            <meta name="description" content="">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                    
+                    <link rel="stylesheet" href="css/normalize.css">
+                        <link rel="stylesheet" href="css/1024x600.css" id="mainCss">
+                            <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+                            <script type="text/javascript" src="js/jquery/jquery-2.1.0.js"></script>
+                            <!--<script type="text/javascript" src="phonegap.js"></script>-->
+                            <script type="text/javascript" src="js/BComTools.js"></script>
+                            <script type="text/javascript" src="js/BaseViewController.js"></script>
+                            <script type="text/javascript" src="js/BComViewsController.js"></script>
+                            <script type="text/javascript" src="js/Constants.js" charset="utf-8"></script>
+                            <script type="text/javascript" src="js/Accounting.js"></script>
+                            <script type="text/javascript" src="js/TransferirCuentasBBVAViewController.js"></script>
+                            <script type="text/javascript">
+                            
+                            
+                         /*   window.parent.document.addEventListener("deviceready", onDeviceReady, false);
+
+                            // PhoneGap esta listo y ahora ya se pueden hacer llamadas a PhoneGap
+                            //
+                            function onDeviceReady() {
+                         
+                            	window.parent.document.addEventListener("backbutton", onBackKeyDown, false);
+                            }
+                            
+                            // Maneja el evento del boton regresar
+                            //
+                            function onBackKeyDown() {
+                           	 if (window.parent.screen.width == "1024") {
+                         		parent.document.getElementById("todo").style.height= "564px";
+                          		parent.document.getElementById("sombraFooter").style.height = "8.2%";
+                           	 }
+                          	
+                              if (window.parent.sessionStorage.flujo=="3pasos"){
+                          
+                              var parametros ="?bandRegresar=false&cuentaOrigen="+window.parent.sessionStorage.cuentaOrigenParaMail+"&cuentaDestino="+ window.parent.sessionStorage.cuentaDestinoParaMail+"&impOper="+window.parent.sessionStorage.impOperParaMail+"&fecOper="+window.parent.sessionStorage.fecOperParaMail+"&nombreCorto="+window.parent.sessionStorage.nombreCortoParaMail+"&beneficiario="+window.parent.sessionStorage.beneficiarioParaMail+"&concepto="+window.parent.sessionStorage.conceptoParaMail+"&folioOperacion="+ window.parent.sessionStorage.folioOperacionParaMail;
+                          
+                              window.parent.console.log("confirmarFrecuenteAprobacion parametros "+parametros);
+                          
+                              window.parent.document.getElementById('contentFrame').src = "transferirCtasBBVACCheqFrecuenteTermino.html"+parametros;
+                          	  
+                              }else{
+                                  var parametros ="?bandRegresar=false&cuentaOrigen="+window.parent.sessionStorage.cuentaOrigenParaMail+"&cuentaDestino="+ window.parent.sessionStorage.cuentaDestinoParaMail+"&impOper="+window.parent.sessionStorage.impOperParaMail+"&fecOper="+window.parent.sessionStorage.fecOperParaMail+"&nombreCorto="+window.parent.sessionStorage.nombreCortoParaMail+"&beneficiario="+window.parent.sessionStorage.beneficiarioParaMail+"&concepto="+window.parent.sessionStorage.conceptoParaMail+"&folioInternetRegistro="+window.parent.sessionStorage.folioOperacionParaMail;
+                                  
+                                  window.parent.console.log("confirmarFrecuenteAprobacion parametros "+parametros);
+                              
+                                  window.parent.document.getElementById('contentFrame').src = "transferirCtasBBVACCheqNuevaCtaTermino.html"+parametros;
+                              	  
+                                  
+                                  
+                                  
+                                  
+                                  var parametros="?bandRegresar=false&idOrigen="+idOrigenParaMail+"&cuentaOrigen="+sessionStorage.cuentaOrigenParaMail+"&impOper="+sessionStorage.impOperParaMail+
+                                  "&fecOper="+sessionStorage.fecOperParaMail+"&cuentaDestino="+sessionStorage.cuentaDestinoParaMail+"&beneficiario="+sessionStorage.beneficiarioParaMail+
+                                  "&concepto="+sessionStorage.conceptoParaMail+"&folioInternetRegistro="+ sessionStorage.folioOperacionParaMail;
+                                  console.log("cconfirmar4pasosAprobacion parametros "+parametros);
+                                  
+
+                                  window.parent.document.getElementById('contentFrame').src = 'transferirCtasBBVACCheqNuevaCtaTermino.html'+parametros; //Correcto
+                                  
+                              }
+                          	  
+                          		
+                            }*/
+                            
+                            
+                            $(document).ready(function () {
+                            
+                                  $(document).on("click", ".transferir-cuentasbbva-slide", function () {
+                                         if ($("#chkCORREO").is(":checked")) {
+                                                 $(".transferir-cuentasbbva-slide").css("background-color", "#00bf00");
+                                         } else {
+                                                 $(".transferir-cuentasbbva-slide").css("background-color", "#ccc");
+                                         }
+                                  });
+                                  
+                             	 if (screen.width == "1024") {
+                               		parent.document.getElementById("todo").style.height= "564px";
+                              		parent.document.getElementById("sombraFooter").style.height = "2.2%";
+
+                          		 }
+          
+                            });
+   
+                          
+                            </script>
+                            </head>
+    <body onload="inicio()" class="ios-body-adaptader">
+        <div id="sombra" class="baseviewcontroller-loading-layer"></div>
+        <div id="transferir-cuentasbbva-div-principal">
+            <a href="" class="transferir-cuentasbbva-encabezado">- Cuentas BBVA Bancomer</a>
+       		<div class="transferir-cuentasbbva-div-clearfix">
+                <table style="padding: 0; border: 0; width: 100%;" class="transferir-cuentasbbva-tab">
+                    <tbody>
+                        <tr align="left">
+                            <td style="color: #0098e1;" width="50%">Enviar correo electrónico</td>
+                        </tr>
+                    </tbody></table>
+                <div class="transferir-cuentasbbva-div-clearfix">
+                    
+				    <table style="margin: 0px auto" class="envioMail">
+                        <tr align="right">
+                            <td >Correo electrónico del beneficiario:</td>
+                            	<td ><input id="txtCORREO" size="38px" onkeypress="return validaCaracteresCorreo(event);">
+                            </td>
+                        </tr>
+                        <tr align="right">
+                            <td>Mensaje:</td>
+                            <td><textarea id="txtMENSAJE" rows="4" cols="39"></textarea></td>
+                        </tr>
+                        <tr align="right">
+                            <td>Enviarme una copia del aviso a mi correo electrónico:</td>
+                            <td align="left">
+								<div class="transferir-cuentasbbva-slide">	
+									<input type="checkbox" value="None" id="chkCORREO" name="check" />
+									<label for="chkCORREO"></label>
+								</div>
+							</td>
+                        </tr>
+				    </table>
+                    
+                </div>
+            </div>
+        </div>
+	    <div class="transferir-cuentasbbva-div-botones">
+	    	<input type="button" class="transferir-cuentasbbva-boton-continuar" value="Continuar" onclick="enviarCorreo();"/>
+	    </div>        
+        <script type="text/javascript">
+            
+            function inicio(){
+                
+                loadDeviceCSS();
+                document.body.addEventListener('touchstart', function () { 
+                	parent.timerDelegate.resetTimerInactividad(); 
+                });
+                
+            }
+        
+        
+            </script>
+        
+    </body>
+</html>

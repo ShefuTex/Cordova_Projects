@@ -1,0 +1,180 @@
+div#envioCorreo {
+    background-color: #fff;
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal !important;
+}
+
+div#wCorreo {
+    height: 500px;
+}
+
+.cCorreo {
+    height: 300px;
+}
+
+.tCorreo {
+    height: 100%;
+    width: 100%;
+}
+
+.derecha{
+    text-align: right;
+    padding: 5px;
+}
+
+.izquierda{
+    text-align: left;
+    padding: 5px;
+}
+
+.wt_txCorreo{
+    background-color: white;
+    border: 2px solid #EFEFEF;
+    color: #000000;
+}
+
+input#txtCORREO {
+    background-color: #fff !important;
+    border: solid 1px #c5c5c5 !important;
+    color: black;
+}
+
+textarea#txtMENSAJE {
+    background-color: #fff !important;
+    border: solid 1px #c5c5c5 !important;
+    color: black;
+}
+
+img.botonCierre { float: right; margin-top: -5px; margin-right: 0px; }
+
+div.baseviewcontroller-loading-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+a.transferir-cuentasbbva-encabezado {
+    background:url(../../../../../img/1024x600/An_Ic_Transferir.png) no-repeat left; 
+    height:25px; 
+    margin:10px 0; 
+    padding-left:35px; 
+    display:block; 
+    font-size:23px; 
+    color:#0098E1; 
+    text-decoration:none; 
+    margin-left:19px}
+div.transferir-cuentasbbva-div-clearfix { 
+    *zoom: 1; 
+} /*clearfix*/
+
+div.transferir-cuentasbbva-div-clearfix:before, div.transferir-miscuentas-div-clearfix:after { 
+    content: " "; 
+    display: table; 
+}/*clearfix*/ 
+
+div.transferir-cuentasbbva-div-clearfix:after { 
+    clear: both; 
+} /*clearfix*/ 
+
+table.transferir-cuentasbbva-tab { 
+    font-size:16px; 
+    border-collapse: 
+    separate; 
+    border-spacing: 15px;
+}
+
+table.envioMail td {
+    padding-right:30px; 
+    padding-bottom: 20px;
+}
+
+div.transferir-cuentasbbva-slide  input[type=checkbox]{ 
+    visibility : hidden;
+}
+
+div.transferir-cuentasbbva-slide {
+    width: 50px;
+    height: 26px;
+    margin: 20px 0;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    position: relative;
+
+    -webkit-box-shadow: inset 0px 1px 1px , 0px 1px 0px rgba(255,255,255,0.2);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+    background-color: #ccc;
+}
+
+.transferir-cuentasbbva-slide:after {
+    position: absolute;
+    background: #00bf00;
+    background-color: #00bf00;
+    right: 10px;
+}
+
+.transferir-cuentasbbva-slide:before {
+    background: white;
+    background-color: white;
+    position: absolute;
+    left: 10px;
+}
+
+.transferir-cuentasbbva-slide label {
+    display: block;
+    width: 27px;
+    height: 20px;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    transition: all .4s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 1;
+
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    background: #fcfff4;
+
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.transferir-cuentasbbva-slide input[type=checkbox]:checked + label {
+    left: 20px;
+}
+
+div.transferir-cuentasbbva-div-botones {
+    text-align:center; 
+    margin-left: -7px
+}/*area-botones*/
+
+input.transferir-cuentasbbva-boton-continuar { 
+    background:url(../../../../../img/1024x600/An_Btn_Azul.png) no-repeat; 
+    font-size:14px; 
+    width:140px; 
+    line-height:30px; 
+    margin:0 10px; 
+    color:#FFF; 
+    border:0
+}/*formulario-btn*/

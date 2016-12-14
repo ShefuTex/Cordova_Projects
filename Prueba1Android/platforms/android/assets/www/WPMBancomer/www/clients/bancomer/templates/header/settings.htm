@@ -1,0 +1,31 @@
+<%
+var checked = (model.streamingStatus === '1')? 'checked' : '';
+%>
+ 	<div class="tooltipHelpHeader">
+    <div class="arrowHelp"></div>
+    <div class="dataBoxHelp">
+
+      <div class="txtHelpLine">
+        <div class="icoStreaming"></div>
+        <div class="txtHelp"><%=BANCOMER.CULTURETEXT.t('menuSettings_Streaming')%></div>
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox ifbEventTrigger" data-event="sendChangeStreaming"  data-listen="change" id="myonoffswitch" <%=checked%>>
+          <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="txtHelpLine2">
+        <div class="icoTutorial"></div>
+        <div class="txtHelp2"><a href="#!/tutorial"><%=BANCOMER.CULTURETEXT.t('menuSettings_Tutorial')%></a></div>
+      </div>
+
+      <div class="txtHelpLine3">
+        <div class="icoHelp"></div>
+        <div class="txtHelp3"><a href="#!/lightbox/help"><%=BANCOMER.CULTURETEXT.t('menuSettings_Help')%></a></div>
+      </div>
+
+    </div>
+  </div>

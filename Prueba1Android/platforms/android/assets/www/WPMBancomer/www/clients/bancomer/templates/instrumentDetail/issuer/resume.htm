@@ -1,0 +1,75 @@
+<%  var instrument = model.models[0];
+if (!instrument) { %>
+  <p><%=BANCOMER.CULTURETEXT.t('dataTable_ErrorMessage_EmptyTable')%></p>
+<% } else { 
+    var topFlopArrowCls = instrument.getTopFlopCls(IFB.Descriptors.Trend.descriptor, ['ifb-topArrowWhite', 'ifb-flopArrowWhite', 'ifb-equalArrowWhite']);
+    var topFlopBg = instrument.getTopFlopCls(IFB.Descriptors.Trend.descriptor, ['ifb-bgTop', 'ifb-bgFlop', 'ifb-bgEqual']);
+    mv = instrument.getDescriptorValue("MV");
+  %>
+      
+        <!-- inf miniResumen -->
+        <section class="contMiniDetail">
+          <div class="miniDetail <%=topFlopBg%>" data-type="silent" data-descriptor="<%=IFB.Descriptors.Trend.descriptor%>" data-mv="<%=instrument.getDescriptorValue('MV')%>">
+            <ul>
+              <li class="<%=topFlopArrowCls%>" data-type="silent" data-descriptor="<%=IFB.Descriptors.Trend.descriptor%>" data-mv="<%=instrument.getDescriptorValue('MV')%>"></li>
+              <li><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Current')%>:</li>
+              <li class="separate" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Last.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%= instrument.getLast({decimals: 3, zeroValue: ' '})%></li>
+              <li><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Previous')%>:</li>
+              <li class="separate" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Close.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%= instrument.getClose({decimals: 3, zeroValue: ' '})%></li>
+              <li><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Dif')%></li>
+              <li class="separate" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Change.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%=instrument.getChange({decimals: 3}) %></li>
+              <li><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_DifPerc')%></li>
+              <li class="separate" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.ChangePercent.descriptor %>" data-type="number" data-decimals="2" data-zeroValue=""><%=instrument.getChangePercent({positiveSign: '', decimals: 2}) %></li>
+              <li>(<span data-mv="<%=mv%>" data-descriptor="<%=IFB.Descriptors.Time.descriptor%>" data-type="time"><%=instrument.getTime()%></span> - <span data-mv="<%=instrument.getDescriptorValue('MV')%>" data-descriptor="<%=IFB.Descriptors.Date.descriptor%>" data-type="date"><%=instrument.getDate()%></span>)</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- bloque dos cajas -->
+        <section class="contFvDetail">
+          <!-- tabla de datos -->
+          <div class="contTbFvDetail">
+            <table class="ifb-popupTable" cellpadding="0" cellspacing="0" border="0">
+              <tbody>
+                <tr>
+                  <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Previous')%></td>
+                  <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Close.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=" "><%= instrument.getClose({decimals: 3, zeroValue: ' '})%></td>
+                </tr>
+                <tr>
+                  <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Open')%></td>
+                  <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Open.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=" "><%= instrument.getOpen({decimals: 3, zeroValue: ' '})%></td>
+                </tr>
+                <tr>
+                  <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Maximum')%></td>
+                  <td  data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.SessionHigh.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=" "><%= instrument.getSessionHigh({decimals: 3, zeroValue: ' '})%></td>
+                </tr>
+                <tr>
+                  <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Minimum')%></td>
+                  <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.SessionLow.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=" "><%= instrument.getSessionLow({decimals: 3, zeroValue: ' '})%></td>
+                </tr>
+                <tr>
+                  <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Operations')%></td>
+                  <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Operations.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=" "><%= instrument.getOperations({decimals: 0, zeroValue: ' '})%></td>
+                </tr>
+                <tr>
+                  <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Cash')%></td>
+                  <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Cash.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=" "><%= instrument.getCash({decimals: 0, zeroValue: ' '})%></td>
+                </tr>
+                <tr>
+                  <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Volume')%></td>
+                  <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Volume.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=" "><%= instrument.getVolume({decimals: 0, zeroValue: ' '})%></td>
+                </tr>
+                <tr>
+                  <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Capitalization')%></td>
+                  <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Bancomer_Capitalization.descriptor %>" data-type="number" data-decimals="0" data-zeroValue=" "><%= instrument.getBancomerCapitalization({decimals: 0, zeroValue: ' '})%></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- caja derecha: graf + datos -->
+          <div class="contGraph" id="instrumentDetailResumeCharts"></div>
+          </section>
+
+          <section class="contTbBestPosition" id="instrumentDetail_positions"></section>
+<% } %>

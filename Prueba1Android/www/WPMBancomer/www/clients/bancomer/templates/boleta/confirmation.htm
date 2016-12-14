@@ -1,0 +1,82 @@
+<%
+var side = '';
+if (model) { 
+	side = _.find(BANCOMER.Utils.Trader.sideOptions, function(sideOption){return sideOption.value === model.getSide()});
+%>
+            <!-- logotipo + btn cerrar -->
+            <section class="contLogo">
+                <div class="logo"></div>
+                <a class="icoCloseWindow ifbEventTrigger" data-event="cancelOrderClick" ></a>
+            </section>
+
+            <!-- titular -->
+            <section class="contTit01">
+                <h3><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_headerTitle')%></h3>
+            </section>
+
+            <!-- iconoInfo + txt -->
+            <section class="contInfo">
+                <div class="icoInfo"></div>
+                <div class="txtInfo"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_headerText')%></div>
+            </section>
+
+            <!-- txt confirmación -->
+            <section class="contTxt01">
+                <div class="txt01"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_headerSubtitleText')%></div>
+            </section>
+
+            <!-- tabla datos -->
+            <section class="contDataResAuto">
+                <div class="contTblDataResAuto">
+                    <table class="tblDataResAuto" cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_Issuer')%>:</td>
+                            <td class="ifb-alignLeft"><%=model.getIssuer()%>&nbsp;<%=model.getSerie()%></td>
+                        </tr>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_Operation')%>:</td>
+                            <td class="ifb-alignLeft"><%=side.value%></td>
+                        </tr>   
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_Amount')%>:</td>
+                            <td class="ifb-alignLeft txtBlue">$&nbsp;<%=model.getNumberDecriptorValue('amount',2)%></td>
+                        </tr>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_Price')%>:</td>
+                            <td class="ifb-alignLeft"><%=model.getNumberDecriptorValue('price',3)%></td>
+                        </tr>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_Volume')%>:</td>
+                            <td class="ifb-alignLeft"><%=model.get('volume')%></td>
+                        </tr>
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_ExpireDate')%>:</td>
+                            <td class="ifb-alignLeft"><%=model.getExpireDate()%></td>
+                        </tr>
+
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_Commissions')%>:</td>
+                            <td class="ifb-alignLeft"><%=model.getNumberDecriptorValue('commission',3)%></td>
+                        </tr>
+
+                        <tr>
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_Vat')%>:</td>
+                            <td class="ifb-alignLeft"><%=model.getNumberDecriptorValue('vat',3)%></td>
+                        </tr>
+
+                        <tr class="noBorderBttm">
+                            <td class="ifb-alignRight"><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_CommissionsPercentage')%>:</td>
+                            <td class="ifb-alignLeft"><%=model.getNumberDecriptorValue('percentage',2)%></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- lin finl btn Confirmar -->
+            <section class="contBtnConfirm">
+                <div class="btnConfirm ifbEventTrigger" data-event="sendOrderConfirmationClick"><a><%=BANCOMER.CULTURETEXT.t('componentLabel_BoletaConfirmation_ButtomConfirmation')%></a></div>              
+            </section>
+
+<%}%>

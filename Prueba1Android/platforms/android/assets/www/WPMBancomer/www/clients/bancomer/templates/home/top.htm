@@ -1,0 +1,61 @@
+<%
+    var instruments = model.models;
+    if (!instruments){
+        return;
+    }
+    var max;
+    var min;
+    var decimals;
+    var mv;
+    var hasInstruments;
+    var getOrdinal = function(index) {
+        switch(index + 1) {
+            case 1: return "first";
+            case 2: return "second";
+            case 3: return "third";
+            default: return "";
+        }
+    }
+    if (instruments.length > 0) {
+        hasInstruments = false;
+        _.each(model.models, function(instrument, index) {
+            if(instrument.isRising()) {
+                hasInstruments = true;
+            }
+        });
+    }
+%>
+    <h4><%=BANCOMER.CULTURETEXT.t('componentTitle_TopFlopActive_Top')%></h4>
+    <% if (!hasInstruments) { %>
+        <p class="noData"><%=BANCOMER.CULTURETEXT.t('componentNoData_TopFlopActive_Top')%></p>
+    <% } else { %>
+    <ul>
+        <%
+        _.each(model.models, function(instrument, index) {
+             mv = instrument.getDescriptorValue("MV");
+             decimals = instrument.getDecimals();
+            if(instrument.isRising())
+            {
+                min = instrument.getDescriptorValue(IFB.Descriptors.SessionLow.descriptor);
+                max = instrument.getDescriptorValue(IFB.Descriptors.SessionHigh.descriptor);
+        %>
+
+        <li class="<%=getOrdinal(index)%> ifb-alignLeft">
+            <div class="name ifbEventTrigger" data-mv="<%=instrument.getDescriptorValue('MV')%>" data-event="AbrirFicha">
+                </span> <%=instrument.getIFBShortName()%>
+            </div>
+            <div class="slide">
+                <div class="colors">
+                    <div style="width:<%=instrument.getValueRangePercent(instrument.getDescriptorValue(IFB.Descriptors.Close.descriptor), min, max)%>%" class="red"></div>
+                    <div class="green"></div>
+                </div>
+            </div>            
+            
+            <span class="price ifb-left ifb-top" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Last.descriptor %>" data-type="number" data-decimals="<%=decimals%>" data-zeroValue="-"><%= instrument.formatAsNumber(IFB.Descriptors.Last.descriptor, 3) %></span>
+            <span class="difP ifb-right ifb-top" data-mv="<%=mv%>" data-descriptor="<%=IFB.Descriptors.ChangePercent.descriptor %>" data-type="number" data-decimals="2" data-suffix="%" data-zeroValue="" data-positiveSign="+"><%= instrument.formatAsNumber(IFB.Descriptors.ChangePercent.descriptor, 2, null, '+') %>%</span>
+        </li>
+        <% }
+        });
+        %>
+    </ul>
+<% } %>

@@ -1,0 +1,92 @@
+<%
+var periodFilter = model.options.serviceBCOMParams.params.data1;
+var instrumentList = model.models;
+var headerList = model.userHeader.models;
+var dataType = ''  ;
+var topFlopCls = '';
+var isTradable = '';
+
+if (!instrumentList || !headerList){
+    return;
+}
+
+var tableId = (model.options.viewOptions.dataTable) ? model.options.viewOptions.dataTable.id : '';
+%>
+
+<div class="middle">
+  <div class="middleBox">
+    <div class="title">
+    	<h2><%=BANCOMER.CULTURETEXT.t("pageTitle_InvestmentDetail_Positions")%></h2>      				
+		<a href="#!/investmentDetail" class="icoCloseBox"></a>
+		<a class="icoToolBox ifbEventTrigger" data-event="clickToolBoxInstrumentList"></a>
+	  	<a class="icoRefresh  ifbEventTrigger" data-event="refreshData"></a>      
+      	<div class="period">
+        	<span><%=BANCOMER.CULTURETEXT.t("pageSubTitle_InvestmentDetail_Positions_Period")%>:</span>
+        	<select class="ifb-select ifbEventTrigger" data-listen="change" data-event="positionBookPeriodFilterChange">
+          		<option value="D" <%=(periodFilter === 'D') ? 'selected' : ''%>><%=BANCOMER.CULTURETEXT.t('filter_PositionBook_Today')%></option>
+		  		<option value="M" <%=(periodFilter === 'M') ? 'selected' : ''%>><%=BANCOMER.CULTURETEXT.t('filter_PositionBook_Month')%></option>
+        	</select>
+      	</div>
+    </div>
+    <div class="data">
+      <!--investment detail and position table-->
+		<section class="contInvDet2-Big-Table">
+			<table class="ifb-tableWS" id="<%=tableId%>" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<thead>
+					<tr class="index">
+						<%
+					      _.each(headerList, function (headerColumnado, j) {
+					      	if (headerColumnado.isVisible() && Number(headerColumnado.getWidth())>0) {%>
+					      		<th class="header ifbEventTrigger <%=headerList[j].getCss()%>" data-event="sortView" data-descriptor="<%= headerColumnado.getDescriptorId() %>"><%=headerColumnado.getName()%></th>
+					      <%}});%>		
+					</tr>
+				</thead>
+				<tbody>
+					<%_.each(instrumentList, function (instrument, i) {
+						isTradable = BANCOMER.Utils.Trader.isTradable(instrument.id);
+					%>
+					    <tr><%_.each(headerList, function (headerColumnado, j) {		    	
+					    	if ((headerColumnado.getId() === IFB.Descriptors.Buy.descriptor.replace('D','') || headerColumnado.getId() === IFB.Descriptors.Sell.descriptor.replace('D','')) && !isTradable) {
+					    	%>
+					    		<td class="<%=headerList[j].getCss()%>"></td>
+					    	<%
+					    	  	} else {
+									if (headerColumnado.isVisible() && Number(headerColumnado.getWidth())>0) {
+										switch(headerColumnado.getId()) {
+										case IFB.Descriptors.DateOrTimeSituationMessage.descriptor.replace('D',''):
+											dataType = 'dateOrTime';
+											break;
+										case IFB.Descriptors.Trend.descriptor.replace('D',''):
+											dataType = 'silent';
+											break;
+										default:
+											dataType = headerColumnado.getTypeStreaming();
+										}			      	
+													      								
+										topFlopCls = headerList[j].isTopFlopColored() ? instrument.getTopFlopCls(IFB.Descriptors.Trend.descriptor) : '';			     
+										%>
+											<td class="<%=headerList[j].getCss()%> <%=topFlopCls%> <%=headerColumnado.getAlignmentCss()%>" data-mv="<%=instrument.id%>" data-descriptor="<%= headerColumnado.getDescriptorId() %>" data-type="<%=dataType%>" data-decimals="<%=headerColumnado.getDecimals()%>">
+												
+											<% if (headerColumnado.getAction()){%>
+												<a class="ifbEventTrigger" data-event="<%=headerColumnado.getAction()%>" data-mv="<%=instrument.id %>" data-isin="<%=instrument.getIsin()%>">
+													<% if (headerColumnado.getId() === IFB.Descriptors.Buy.descriptor.replace('D','')) { %>C
+													<% } else if (headerColumnado.getId() === IFB.Descriptors.Sell.descriptor.replace('D','')) { %>V
+													<% } else {%><%=instrument.getDataFromColumnadoConfig(headerList[j])%>
+													<% } %>
+												</a>
+											<% } else {
+													if ('D' + headerColumnado.getId() ===  IFB.Descriptors.Trend.descriptor) { %>
+														<div></div>
+												<% } else {%>
+														<%=instrument.getDataFromColumnadoConfig(headerList[j])%>
+												<% } %>
+											<% } %>
+											</td>
+									<%}}});%>					
+					</tr><%});%>
+				</tbody>
+			</table>
+		</section>
+	</div>
+</div>
+</div>

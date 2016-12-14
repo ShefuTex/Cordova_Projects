@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <title>BBVA Bancomer - Web Trader - Producción</title>
+    <script src="../../../vendor/jquery/1.10.1/jquery-1.10.1.js"></script>
+    <script src="../../../vendor/cordova/cordova.js"></script>
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+   <table>
+		<tbody>
+			<tr>
+				<td>
+					Plataforma:
+				</td>
+				<td>
+					<select id="os">
+						<option value="" selected="selected">Autom&aacute;tico</option>
+						<option value="android" >Android</option>
+						<option value="ios" >iOS</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Producto:
+				</td>
+				<td>
+					<select id="profileid">
+						<option value="HTBANCOMER" selected="selected">HTBANCOMER</option>
+						<option value="HTBANCOMERST" >HTBANCOMERST</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Usuario:
+				</td>
+				<td>
+					<select id="clientid">
+							<option value="D0036953">PILAR - 4152312002167143</option>
+							<option value="D0037009" >EMMA - 4152314000437304</option>
+							<option value="D0023132">IRMA - 4152312171293605</option>
+							<option value="D0026218" selected="selected">HIPÓLITA - 4152310035861435</option>
+					</select>	
+				</td>
+			</tr>	
+			<tr>
+				<td>
+					Entorno:
+				</td>
+				<td>
+					<select id="environment">
+						<option value="teststreaming" >Bancomer Pruebas</option>
+						<option value="equitystreaming" selected="selected">Bancomer Produccion</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Protocolo:
+				</td>
+				<td>
+					<select id="protocol">
+						<option value="http" >http</option>
+						<option value="https" selected="selected">https</option>
+					</select>
+				</td>
+			</tr>	
+			<tr>
+	          <td>Idioma:</td>
+	          <td>
+	            <select id="language">
+	              <option value="es" selected="selected">ES</option>
+	              <option value="en" >EN</option>
+	            </select>
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>Separador miles</td>
+	          <td>
+	            <select id="thousand">
+	              <option value="," selected="selected">,</option>
+	              <option value="." >.</option>
+	            </select>
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>Separador decimales</td>
+	          <td>
+	            <select id="decimal">
+	              <option value="." selected="selected">.</option>
+	              <option value="," >,</option>
+	            </select>
+	          </td>
+	        </tr>
+	        <tr>
+				<td>
+					<input type ="button" id="sendButton" value="Enviar"/>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<script type="text/javascript">
+ 
+        $(function () {
+            $.support.cors = true;
+
+            //Clean sessionStorage
+		    window.sessionStorage.clear();
+            
+            $('#sendButton').click(function () {
+                peticionSID();
+            });
+          
+          //Initialize App
+          app.initialize();
+        });
+    </script>
+</body>
+</html>
