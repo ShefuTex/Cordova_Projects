@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/1024x600.css" id="mainCss">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+		<script src="js/jquery/jquery-2.1.0.js"></script>
+        <script type="text/javascript" src="js/TransferirViewController.js"></script>
+        <script type="text/javascript" src="js/BComTools.js"></script>
+        
+        <script type="text/javascript">
+          var paramarr;
+          var ammountValidator;
+          
+          function init(){
+        	loadDeviceCSS();
+        	
+            var recibiendoVariable = location.search.substr( location.search.indexOf("=") + 1 );
+            paramarr = recibiendoVariable.split (",");
+          	ammountValidator = new AmmountValidator();
+            
+            document.body.addEventListener('touchstart', function () { parent.timerDelegate.resetTimerInactividad(); });
+          }
+
+          function activaInput(){
+            document.getElementById('rbcantidad').disabled = false;
+          }
+
+          function inactivaInput(){
+            document.getElementById('rbcantidad').disabled = true;
+          }
+
+        </script>
+    </head>
+<body onload="init();" class="transferir-body-ios-adaptador">
+	<div id="transferir-miscuentas-div-principal"> 
+	
+		<a href="javascript:void(0)" class="transferir-miscuentas-encabezado">- Mis Cuentas</a><br> 
+		<div id="transferir-miscuentas-div-contenedor" class="transferir-miscuentas-div-clearfix transferir-ajustar-contenedor-ios"> 
+		    <table cellpadding="0" cellspacing="20" border="0" width="100%" class="transferir-miscuentas-tab-subtitulos"> 
+		      <tr>
+		        <td class="transferir-miscuentas-subtitulo-selected">1- Ingresa los datos de la operación</td> 
+		        <td>2- Revisa y autoriza los datos de la operación</td>
+		        <td>3- Resultado de la operación</td>
+		      </tr>
+		    </table>
+		    <div class="transferir-miscuentas-div-clearfix"> 
+		        <div class="transferir-miscuentas-columnas-contenido-izq"> 
+		    		<table cellpadding="0" cellspacing="0" border="0" width="100%" class="transferir-miscuentas-tab-contenido">
+				      <tr>
+				        <td>Cuenta de retiro:</td>
+				        <td><div class="transferir-miscuentas-div-emergente"><select><option>Seleccionar</option><option selected>2900073059 - $ 100,000,000.00 - Con/ chequera</option><option>2309284324 - $ 200,000,000.00</option><option>2309243254 - $ 800,000,000.00</option><option>2309285946 - $ 500,000,000.00</option></select></div></td> 
+				      </tr>
+				      <tr>
+				        <td>Cuenta/ tarjeta de depósito:</td>
+				        <td><div class="transferir-miscuentas-div-emergente"><select><option>*****89971 - $7,267.96 - TDC</option></select></div></td> 
+				      </tr>
+				      <tr>
+				      	<td>Pago mínimo:<br>Pago para no generar intereses:<br>Saldo al corte:<br>Otra cantidad:</td>
+				        <td><div class="transferir-miscuentas-radios"><input type="radio" name="RadioGroup" value="" id="rb1" onclick="inactivaInput();"><label></label></div> $254.00<br>
+				            <div class="transferir-miscuentas-radios"><input type="radio" name="RadioGroup" value="" id="rb2" onclick="inactivaInput();"><label></label></div> $7,500.00<br> 
+				            <div class="transferir-miscuentas-radios"><input type="radio" name="RadioGroup" value="" id="rb3" onclick="inactivaInput();"><label></label></div> $12,527.12<br> 
+				            <div class="transferir-miscuentas-radios"><input type="radio" name="RadioGroup" value="" id="rb4" onclick="activaInput();"><label></label></div> <input type="tel" id="rbcantidad" class="text-cantidad" disabled onkeypress="ammountValidator.validateInput('rbcantidad'); return false"/></td> 
+				      </tr>      
+		    		</table>
+		        </div>
+			    <div class="transferir-miscuentas-columnas-contenido-der"> 
+				    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="transferir-miscuentas-tab-contenido">
+				      <tr>
+				        <td>Fecha de operación:</td>
+				        <td style="color: #5C5C5C;">18/06/2013</td>
+				      </tr>
+				    </table>
+			    </div>
+		    </div>
+		    <div class="transferir-miscuentas-div-botones"> 
+		    	<input type="button" class="transferir-miscuentas-boton-continuar" value="Continuar" onclick="continuar(paramarr);"/>
+		    </div>
+		</div>	
+	</div>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<%
+  var instrument = model.models[0];
+  if (!instrument) { 
+%>
+    <p><%=BANCOMER.CULTURETEXT.t('dataTable_ErrorMessage_EmptyTable')%></p>
+<% } else {
+    var issuedCapital = instrument.getIssuedCapital_I() + instrument.getIssuedCapital_II()
+%>
+   
+  <!-- serie table -->
+  <section class="contFvSerie">
+    <table class="ifb-popupTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <thead>
+            <tr>
+                <th colspan="3"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_CorporateName')%>: <%=instrument.getCorporateName()%></th>
+            </tr>   
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="data"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Center')%>: <%=instrument.getCenter()%></div></td>
+          <td class="noRightBorder"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_ShareType')%>: <%=instrument.getShareType()%></td>
+          <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Emisora')%>: <%=instrument.getEmisora()%></td>
+        </tr>
+        <tr>
+          <td class="select"><div class="data"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Market')%>: <%=instrument.getIFBMarketName()%></div></td>
+          <td class="select noRightBorder"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Serie')%>: <%=instrument.getSerie()%></td>
+          <td class="select"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Coupon')%>: <%=instrument.getCoupon()%></td>
+        </tr>
+        <tr>
+          <td class="select"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_MarketType')%>: <%=instrument.getMarketType()%></td>
+          <td class="noRightBorder"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Isin')%>: <%=instrument.getIsin()%></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><div class="data"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Industry')%>: <%=instrument.getIndustry()%></div></td>
+          <td colspan="2"><div class="data"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Sector')%>: <%=instrument.getSubSector()%></div></td>
+
+        </tr>
+        <tr>
+          <td><div class="data"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_SubIndustry')%>: <%=instrument.getSubIndustry()%></div></td>
+          <td colspan="2"><div class="data"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_SubSector')%>: <%=instrument.getSubSector()%></div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="ifb-popupTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <thead>
+        <tr>
+          <th><div class="data"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_SampleIndicator')%>: <%=instrument.getSampleIndicator()%></div></th>
+          <th><div class="data"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Operativity')%>: <%=instrument.getOperativity()%></div></th>
+          <th><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Source')%>: <%=instrument.getSource()%></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>               
+          <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_SERIE_InstrumentType')%>: <%=instrument.getSERIE_InstrumentType()%></td>
+          <td class="select"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Bursatility')%>: <%=instrument.getBursatility()%></td>
+          <td><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Issuance')%>: <%=instrument.getIssuance()%></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="ifb-popupTable" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tbody>
+        <tr>
+          <td class="even" data-type="number" data-decimals="0"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_IssuedCapital')%>: <%=issuedCapital%></td>
+          <td class="even" data-descriptor="<%= IFB.Descriptors.InstrumentYesterday.descriptor %>" data-type="number" data-decimals="0"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_InstrumentYesterday')%>: <%=instrument.getInstrumentYesterday()%></td>
+          <td class="even" data-descriptor="<%= IFB.Descriptors.SharesToday.descriptor %>" data-type="number" data-decimals="0"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_SharesToday')%>: <%=instrument.getSharesToday()%></td>
+        </tr>
+      </tbody>
+    </table>
+  </section> 
+<% 
+    } 
+%>

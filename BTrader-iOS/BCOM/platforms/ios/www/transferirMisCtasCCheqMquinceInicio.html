@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/1024x600.css" id="mainCss">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery-2.1.0.js"></script>
+
+        <script type="text/javascript" src="js/TransferirViewController.js"></script>
+        <script type="text/javascript" src="js/BComTools.js"></script>
+        
+        <script type="text/javascript">
+            var paramarr;
+            var ammountValidator;
+            function init(){
+                var recibiendoVariable = location.search.substr( location.search.indexOf("=") + 1 );
+                paramarr = recibiendoVariable.split (",");
+                ammountValidator = new AmmountValidator();
+                
+                loadDeviceCSS();
+                
+                document.body.addEventListener('touchstart', function () { parent.timerDelegate.resetTimerInactividad(); });
+            }
+        </script>
+    </head>
+    <body  onload="init();" class="transferir-body-ios-adaptador">
+      <div id="transferir-miscuentas-div-principal"> 
+        <a href="" class="transferir-miscuentas-encabezado">- Mis Cuentas</a>
+        <div id="transferir-miscuentas-div-contenedor" class="transferir-miscuentas-div-clearfix transferir-ajustar-contenedor-ios">
+            <table cellpadding="0" cellspacing="20" border="0" width="100%" class="transferir-miscuentas-tab-subtitulos" id="encabezados">
+              <tr>
+                <td class="transferir-miscuentas-subtitulo-selected">1- Ingresa los datos de la operación</td>
+                <td>2- Revisa y autoriza los datos de la operación</td>
+                <td>3- Resultado de la operación</td>
+              </tr>
+            </table><br>
+            <div class="transferir-miscuentas-div-clearfix">
+                <div class="transferir-miscuentas-columnas-contenido-izq">
+            		<table cellpadding="0" cellspacing="0" border="0" width="100%" class="transferir-miscuentas-tab-contenido">
+		            	<tr>
+		                	<td>Cuenta de retiro:</td>
+		                	<td><div class="transferir-miscuentas-div-emergente"><select><option>2900073059 - $ 100,000,000.00</option></select></div></td>
+		              	</tr>
+		              	<tr>
+		                	<td>Cuenta/ tarjeta de depósito:</td>
+		                	<td><div class="transferir-miscuentas-div-emergente"><select><option>Seleccionar</option><option selected>Mi quince  -  $ 1,110.21</option><option>Gasto - $1,000.00</option><option>Colegio - $10,000.00</option></select></div></td>
+		              	</tr>  
+            		</table>
+                </div>
+              	<div class="transferir-miscuentas-columnas-contenido-der">
+		            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="transferir-miscuentas-tab-contenido">
+		              	<tr>
+		                	<td>Importe:</td>
+		                	<td><input type="tel" id="importe" class="transferir-miscuentas-input-importe" onkeypress="ammountValidator.validateInput('importe'); return false;" style="text-align: center;"></td>
+		              	</tr>
+		              	<tr>
+		                	<td>Fecha de operación:</td>
+		                	<td>18/06/2013</td>
+		              	</tr>
+		            </table>
+                </div>
+            </div>
+            <div style="text-align:center" class="transferir-miscuentas-div-botones">
+            	<input type="submit" class="transferir-miscuentas-boton-continuar" value="Continuar" onclick="continuar(paramarr);"/>
+            </div>
+        </div>
+      </div>
+
+     	<script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+ <%  var instrument = model.models[0];
+  if (instrument) {
+  var topFlopCls = instrument.getTopFlopCls(IFB.Descriptors.Trend.descriptor);
+  var mv = instrument.getDescriptorValue("MV");
+  var decimals = '3';
+%>
+
+<table id="boletaInstrumentDetailTable" class="ifb-popupTable" cellpadding="0" cellspacing="0" border="0">
+<thead>
+<tr>
+    <th ><%=BANCOMER.CULTURETEXT.t('header_BoletaInstrumentDetail_Last')%></th>
+    <th><%=BANCOMER.CULTURETEXT.t('header_BoletaInstrumentDetail_Close')%></th>
+    <th><%=BANCOMER.CULTURETEXT.t('header_BoletaInstrumentDetail_Change')%></th>
+    <th><%=BANCOMER.CULTURETEXT.t('header_BoletaInstrumentDetail_ChangePercent')%></th>
+    <th><%=BANCOMER.CULTURETEXT.t('header_BoletaInstrumentDetail_Bid')%></th>
+    <th><%=BANCOMER.CULTURETEXT.t('header_BoletaInstrumentDetail_Ask')%></th>
+    <th><%=BANCOMER.CULTURETEXT.t('header_BoletaInstrumentDetail_Cash')%></th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+      <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Last.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%= instrument.getLast({decimals: 3, zeroValue: ' '})%></td>
+      <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Close.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%=instrument.getClose({decimals: 3, zeroValue: ' '})%></td>
+      <td class="<%=topFlopCls%>" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Change.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%=instrument.getChange({decimals: 3, zeroValue: ' '}) %></td>
+      <td class="<%=topFlopCls%>" data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.ChangePercent.descriptor %>" data-type="number" data-decimals="2" data-zeroValue=""><%=instrument.getChangePercent({positiveSign: '', decimals: 2, zeroValue: ' '}) %></td>
+      <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.BidPrice.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%=instrument.getBidPrice({decimals: 3, zeroValue: ' '})%></td>
+      <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.AskPrice.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%=instrument.getAskPrice({decimals: 3, zeroValue: ' '})%></td>
+       <td data-mv="<%=mv%>" data-descriptor="<%= IFB.Descriptors.Cash.descriptor %>" data-type="number" data-decimals="3" data-zeroValue=""><%=instrument.getCash({decimals: 3, zeroValue: ' '})%></td>
+    </tr>
+</tbody>
+</table>
+<%}%>

@@ -1,0 +1,21 @@
+<%
+    var instrumentList = model.models;
+    var instrumentsMarked = model.instrumentsMarked;
+    var style = '';
+    if (!instrumentList || !instrumentList.length){
+%>  
+    <li class="dd-item" >
+    	<div class="dd-handle"><%=BANCOMER.CULTURETEXT.t('component_NoResults_InstrumentSelector_Index')%></div>
+    </li>
+<%
+    } else {
+        _.each(instrumentList, function (instrument, index) {          
+          style = _.find(instrumentsMarked, function(instrumentMarked){ return instrumentMarked.id === instrument.id;  })? 'display:none' : '';
+%>
+          <li class="dd-item" data-id="<%=instrument.id%>">            
+            <div class="dd-handle ifbEventTrigger" data-event="updateChartInstrument" data-mv="<%=instrument.getDescriptorValue("MV")%>"><%=instrument.getIFBShortName()%></div>
+          </li>
+<%
+	});
+}
+%>

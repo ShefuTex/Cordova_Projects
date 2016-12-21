@@ -1,0 +1,30 @@
+<%
+    var style;
+    var title = model.title || '';
+    var models = model.models || [];
+    var numMinimum = model.numMinimum || 0;
+    var styleMinimumLegend = (numMinimum > 0) ? 'display: block;' : 'display: none;';
+%>  
+
+<div class="ifb-PopUp selectColumnsWS">
+    <div class="ifb-innerPopUp">
+
+        <div class="ifb-contHeader">
+          <!-- índice superior + btn cerrar -->
+          <h3><%=BANCOMER.CULTURETEXT.t('workSpaceModule_IndexChart')%></h3>
+          <a class="icoCloseWindow ifbEventTrigger" data-event="closeClick" ></a>
+        </div>        
+
+        <div class="contSelectColumnsWS">
+            <div class="contDd" >                
+                 <div class="searchInd">
+                    <input class="ifb-searchInd" type="search" name="search" placeholder="<%=BANCOMER.CULTURETEXT.t("componentLabel_Placeholder_IndexSelector")%>" id="chart_instrument_selector_search">
+                </div>
+                <div class="dd" id="category" >
+                    <ol class="dd-list">
+                        <div class="content" id="chart_instrument_selector_search_result"></div>
+                    </ol>
+                </div>
+            </div>
+    </div>
+</div>  

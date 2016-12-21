@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title></title>
+        
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!--        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, target-densityDpi=device-dpi" />-->
+
+            <link rel="stylesheet" href="css/normalize.css" />
+            <link rel="stylesheet" href="css/normal.css" id="mainCss" />
+            <script type="text/javascript" src="js/jquery/jquery-2.1.0.js"></script>
+            
+            <script type="text/javascript" src="cordova.js"></script>
+            <script type="text/javascript" src="js/BComTools.js"></script>
+        	<script type="text/javascript" src="js/BComViewsController.js"></script>
+        	<script type="text/javascript" src="js/Constants.js"></script>
+<!--            <script type="text/javascript" src="js/Publicidad.js"></script>-->
+            <script type="text/javascript">
+                  document.addEventListener("deviceready", initIndex, false);
+                
+                var accountNumberValidator;
+                var passwordInputValidator;
+                var tokenInputValidator;
+                
+                function initIndex() {
+                   // alert("initIndex");
+                    sessionStorage.esInvitado = false;
+                    sessionStorage.isLogin = 0;
+                    
+                    loadDeviceCSS();
+                    
+                    document.getElementById("body").style.width = window.innerWidth;
+                    document.getElementById("body").style.height = window.innerHeight;
+                    
+                    accountNumberValidator = new AccountNumberValidator();
+                    passwordInputValidator = new NumericInputValidator();
+                    tokenInputValidator = new NumericInputValidator();
+                    
+                    passwordInputValidator.isAlphanumeric = true;
+                    
+                    
+                    document.addEventListener("backbutton", onBackClicked, false);
+                    loginDelegate.consultaDatosGuardados();
+                }
+            
+            function onBackClicked() {
+                loginDelegate.backClicked();
+            }
+            
+    
+            $(document).ready(function () {
+                              
+                              
+                              $("#body").css("margin-top","25px");
+                              //$("#login-encabezado").css("height","65px");
+                              // $("#cuerpo-login").css("height","535px");
+                              // $("#cuerpo-login").css("padding-top","105px");
+                              
+                              var rutaImgLogo = 'img/normal/Ios_Logotipo.png';
+                              
+                              var valueDevice = window.devicePixelRatio;
+                              //alert(valueDevice);
+                              
+                              if (valueDevice == 2) {
+                              
+                              // rutaImgMenu = 'img/retina/Ios_btn_menu@2x.png';
+                              rutaImgLogo = 'img/retina/Ios_Logotipo@2x.png';
+                              
+                              $("#login-logo").css("float","left");
+                              $("#login-logo").css("background-image", "url('"+rutaImgLogo+"')");
+                              //$("#login-logo").css("background-repeat", "no-repeat").css("background-position","center");
+                              $("#login-logo").css("background-size","cover");
+                              //$("#login-logo").css("width", "350px").css("height","50px");//.css("background-position","0px 1px");//.css("height","0px");
+                              
+                              } /*else {
+                                 
+                                 
+                                 }*/
+                              
+                              $("#login-logo").css("background-image", "url('"+rutaImgLogo+"')");
+                              
+                              
+                              
+                              
+                              });
+
+            </script>
+            </head>
+    
+    <body id="body" >
+       <header id="login-encabezado">
+            <a href="#" id="login-logo">BBVA Bancomer</a>
+        </header>
+        
+        <div id="cuerpo-login">
+            
+            <div id="loginPrincipal">
+                
+                <div id="bcom-principal">
+                    <h1 class="tab-icon">Bancomer Trader</h1>
+                    <div id="icono-invitado" class="login-icono-invitado">
+                        <a href="#" onclick="loginDelegate.limpiar();">
+                            <img src="img/normal/Ios_Ic_Inv.png" width="30" height="30"  alt=""/>
+                        </a>
+                    </div>
+					<input type="tel" class="login-input-datos" placeholder="Número de tarjeta" id="inputTarjeta" onkeypress="accountNumberValidator.hideAccountNumber('inputTarjeta', 16, 'onkeypress'); return false;" onkeyup="accountNumberValidator.hideAccountNumber('inputTarjeta', 16, 'onkeyup'); return false;"/>
+                    <!--input type="email" class="login-input-datos" id="password" placeholder="Contraseña" onkeypress="passwordInputValidator.hideInputNumber('password', 10, 'onkeypress'); return false;" onkeyup="passwordInputValidator.hideInputNumber('password', 8, 'onkeyup'); return false;"/-->
+                    <input type="password" class="login-input-datos" id="password" maxlength="10" placeholder="Contraseña"/>
+                    <input type="submit" class="login-boton-entrar" value="Entrar" onclick="loginDelegate.botonEntrarLogin();" data-role="none"/>
+                    <a href="javascript:void(0)" class="link" id="linkDesblo"  data-role="none" onclick="loginDelegate.seleccionDesbloquear();">
+                        <img class = "desbloqueo" src="img/normal/Ios_Ic_Desbloqueo.png" width="30" height="30" />
+                        Desbloquear
+                    </a>
+                </div>
+                
+                <div id="bcom-secundario">
+                    
+                    <h1 class="tab-icon">Bienvenido</h1>
+                    
+                    <h2 class="usuario-login" id="lblNomCliente"></h2>
+                    <div class="icoRegresar" onclick="loginDelegate.wtLogout();"></div>
+                    <div class="usuario-log-datos">
+                        <!--<img src="img/1024x600/usuario.png"/>-->
+                        <span id="lblAyuda"></span>
+                    </div>
+                    
+                    <input type="tel" class="login-input-datos" placeholder="Clave de acceso seguro" id="inputToken" onkeypress="tokenInputValidator.hideInputNumber('inputToken', 8, 'onkeypress'); return false;" onkeyup="tokenInputValidator.hideInputNumber('inputToken', 8, 'onkeyup'); return false;"/>
+                    
+                    <input type="submit" class="login-boton-entrar" value="Entrar" onclick="tokenViewController.botonSignOn();" data-role="none"/>
+                    <div id="botonesLogin2">
+                        <!--<a id="linkRegresar"  href="#" onclick="loginDelegate.logout();" class="link">Regresar</a>-->
+                        <a id="linkDesblo"  href="#" onclick="tokenViewController.mostrarAyuda();" class="link">
+                            <img class = "ayudaL" src="img/normal/Ios_Ic_AyudaL.png" width="30" height="30" />
+                        Ayuda
+                        </a>
+                    </div>
+                    <!--<div class="login2Separador"></div>-->
+                </div>
+                
+            </div>
+            
+            <!--<div id="login-nav">
+                <a href="#" onclick="" class="btn-autoseguro"></a>
+                <a href="#" onclick="" class="btn-geolocalizacion"></a>
+                <a href="#" onclick="" class="btn-bestratega"></a>
+            </div>-->
+            
+        </div>
+        
+        <footer id="pie">
+            <span class="contactanos"></span>
+            <span class="version">V 2.4</span>
+        </footer>
+        
+    </body>
+</html>

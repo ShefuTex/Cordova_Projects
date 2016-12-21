@@ -1,0 +1,74 @@
+<div class="graph">
+  <div id="niceScrollGraph" class="invDetData">
+
+<%
+    if (!model.sortConfig) {
+      model.transformModelToView();
+    }
+
+    var instruments = model.filterByInstrumentType();
+    var hasFunds = false;
+    var hasStocks = false;
+	 
+     if (!instruments || !instruments.length){
+%>
+      <div class="noGraphInfo">
+        <span class="centerTxt"><%=BANCOMER.CULTURETEXT.t('dataTable_ErrorMessage_EmptyTable')%></span>
+      </div>
+<%      
+    } else {
+
+    var maxTitulos = Number(_.max(instruments, function (instrument) {
+      return Number(instrument.getDescriptorValue('titulos'));
+    }).getDescriptorValue('titulos'));
+
+    var width = "";
+    var classStyle = "";
+
+    _.each(instruments, function(instrument) {
+      width = (Number(instrument.getDescriptorValue('titulos')) * 100) / maxTitulos;
+
+      if (instrument.getInstrumentType() === IFB.Models.Instrument.prototype.INSTRUMENTS_TYPES.EQUITY) {
+        classStyle = 'equity';
+        hasStocks = true;
+      }
+      else {
+        classStyle = 'fund'
+        hasFunds = true;
+    }      
+%>
+    <ul>
+          <li class="name"><a class="ifbEventTrigger" data-mv="<%=instrument.getDescriptorValue('MV')%>" data-event="AbrirFicha"><%=instrument.getEmisora()%></a></li>
+          <li class="serie"><%=instrument.getSerie()%></li>
+          <li class="bar">
+            <div style="width:<%=width%>%" class="<%=classStyle%>">&nbsp;</div>
+          </li>
+    </ul>        
+<%      
+    });
+%>
+</div>
+</div>
+
+<div class="legend-scale">
+  <ul>
+    <li class="equities">
+      <%if (hasStocks){%>
+      <div class="yellowCube"></div><%=BANCOMER.CULTURETEXT.t('componentLegend_InvestmentDetailChart_Stocks')%>
+      <%}%>      
+    </li>
+    <li class="funds"><%if (hasFunds){%>
+      <div class="cianCube"></div><%=BANCOMER.CULTURETEXT.t('componentLegend_InvestmentDetailChart_Funds')%>
+      <%}%>
+  
+<%
+	for(i = 0; i <= 5; i++) {		
+%>
+		<li class="scale"><%=IFB.Utils.Format.asNumber(parseInt((maxTitulos/5) * i), 0, '', '')%></li>
+<%		
+	}
+%>
+    
+  </ul>
+</div>
+<%}%>

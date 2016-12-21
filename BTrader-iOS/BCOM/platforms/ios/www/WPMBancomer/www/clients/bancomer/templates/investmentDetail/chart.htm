@@ -1,0 +1,41 @@
+<%  
+  var instrument = model.models[0];
+  if (!instrument) {
+    return;
+  } 
+ %>
+
+<div class="title" >
+  <h2><%=instrument.getIFBShortName()%></h2>      
+  <a href="#!/investmentChartDetail/<%=model.options.viewOptions.templateId%>" class="icoOpenBox"></a>
+  <a class="icoToolBox ifbEventTrigger" data-event="clickFilter" data-filter="chartType"></a>  
+  <a class="ifbEventTrigger icoRefresh iconRefresh" data-event="clickRefreshModule"></a>
+</div>
+<div class="data" >
+  <!-- aquí están los gráficos y las pestañas-->
+  <div class="contGraphMenu">
+    <ul>
+      <li class="ifbEventTrigger" data-event="clickTabChart" data-type="intraday"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_ChartIntraday')%></li>
+      <li>|</li>
+      <li class="ifbEventTrigger" data-event="clickTabChart" data-type="daily"><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_ChartDaily')%></li>
+    </ul>
+  </div>
+
+  <!-- graf -->
+  <div class="contGraph">  	
+    <section class="graph" id="chart<%=instrument.id.replace(/ /g,'_')%>"></section>
+  </div>
+
+  <div class="contPerFre">
+    <div><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Period')%></div>
+    <div id="period<%=instrument.id.replace(/ /g,'_')%>" class="ifbEventTrigger" data-event="clickFilter" data-filter="period"></div>
+    <div ><%=BANCOMER.CULTURETEXT.t('componentLabel_instrumentDetail_Frequency')%></div>
+    <div id="frequency<%=instrument.id.replace(/ /g,'_')%>" class="ifbEventTrigger selected" data-event="clickFilter" data-filter="frequency"></div>
+  </div>
+</div>
+
+
+
+
+
+

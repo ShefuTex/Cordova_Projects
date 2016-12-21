@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/1024x600.css" id="mainCss">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="js/BComTools.js"></script>
+    <script type="text/javascript" src="js/TransferirODT9ViewController.js"></script>
+    <script type="text/javascript" src="js/TransferirViewController.js"></script>
+  </head>
+  <body onload="" class="transferir-body-ios-adaptador">
+      <div id="sombra" class="baseviewcontroller-loading-layer"></div>
+      <div id="transferir-miscuentas-div-principal">
+          <a href="" class="transferir-miscuentas-encabezado">- Mis Cuentas</a>
+          <div id="transferir-miscuentas-div-contenedor" class="transferir-miscuentas-div-clearfix">
+              <table cellpadding="0" cellspacing="20" border="0" width="100%" class="transferir-miscuentas-tab">
+                  <tbody>
+                      <tr align="center">
+                          <td width="50%">Elige y arrastra tu cuenta de retiro a tu cuenta destino.</td>
+                          <td width="50%"><div id="nueva"></td>
+                      </tr>
+                  </tbody></table>
+              <div class="transferir-miscuentas-div-clearfix">
+                  <div class="transferir-miscuentas-contenedor-dragdrop">
+                      <h3 class="transferir-miscuentas-titulo-drag">Cuenta/ tarjeta de retiro</h3>
+                      <div id="listaOrigen">
+                          <div id="loadingRetiro" style="display:none;" >
+                              <div class="cargando1">
+                                  <img alt="loadingRetiro" src="img/1024x600/loading.gif" style="display: block; margin-top: 35%; margin-left: 35%;" >
+                                      </div>
+                          </div>
+                          <ul id="listaAzul" class="transferir-miscuentas-contenedor-drag">
+                          </ul>
+                          <br/>
+                          <ul id="listaAzulOculta" hidden="true">
+                          </ul>
+                          <ul class="paginacionTransferencias" id="paginadorOrigen">
+                              <li class="numeroPagina" data-destino="inicio" data-status="inactivo" onclick="cargaPagina(this)">&lt;&lt;</li>
+                              <li class="numeroPagina" data-destino="anterior" data-status="inactivo" onclick="cargaPagina(this)">&lt;</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="transferir-miscuentas-contenedor-dragdrop">
+                      <h3 class="transferir-miscuentas-titulo-drop">Cuenta/ tarjeta de depósito</h3>
+                      <div  id="listaDestino"  >
+                          <ul id="listaGris" class="transferir-miscuentas-contenedor-drop">
+                          </ul>
+                          <ul id="listaGrisOculta" hidden="true">
+                          </ul>
+                          <ul class="paginacionTransferencias" id="paginadorDestino">
+                              <li class="numeroPagina" data-destino="inicio" data-status="inactivo" onclick="cargaPagina(this)">&lt;&lt;</li>
+                              <li class="numeroPagina" data-destino="anterior" data-status="inactivo" onclick="cargaPagina(this)">&lt;</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+    <!--<div id="div-overlay"></div>
+    <div id="todo" style="position: relative;">
+        <a href="" class="cuerpo-transferir">- Cuentas BBVA Bancomer</a>
+        <div id="contenedor" class="clearfix">
+            <table class="eliminar-tab">
+                <tr align="center">
+                    <td width="50%">Elige y arrastra tu cuenta de retiro a tu cuenta destino.</td>
+                </tr>
+            </table>
+            <div class="clearfix">
+                <div class="transferir-miscuentas-cotenedor-dragdrop">
+                    <h3 class="transferir-miscuentas-titulo-drag">Cuenta/ tarjeta de retiro</h3>
+                    <div id="listaOrigen">
+                        <div id="loadingRetiro" style="display:none;" >
+                            <div class="cargando1">
+                                <img alt="loadingRetiro" src="img/1024x600/loading.gif" style="display: block; margin-top: 35%; margin-left: 35%;" >
+                            </div>
+                        </div>
+                        <ul id="listaAzul" class="transferir-miscuentas-contenedor-drag">
+                        </ul>
+                        <br/>
+                        <ul id="listaAzulOculta">
+                        </ul>
+                    
+                    </div>
+                    <div class="transferir-miscuentas-contenedor-dragdrop">
+                    <h3 class="transferir-miscuentas-titulo-drop">Cuenta/ tarjeta de depósito</h3>
+                        <div  id="listaDestino"  >
+                            <ul id="listaGris" class="transferir-miscuentas-contenedor-drop">
+                            </ul>
+                            <ul id="listaGrisOculta">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <script type="text/javascript">
+        
+        document.addEventListener("deviceready", init(), false);
+        var listaAzul = document.getElementById('listaAzul');
+        var listaAzulOculta = document.getElementById('listaAzulOculta');
+        var listaGris = document.getElementById('listaGris');
+        var listaOrigen = document.getElementById('listaOrigen');
+        var listaDestino = document.getElementById('listaDestino');
+        
+        parent.document.getElementById("imgMenu").style.visibility="visible";
+        
+        
+        var QueryString = function () {
+            // This function is anonymous, is executed immediately and
+            // the return value is assigned to QueryString!
+            var query_string = {};
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i=0;i<vars.length;i++) {
+                var pair = vars[i].split("=");
+                // If first entry with this name
+                if (typeof query_string[pair[0]] === "undefined") {
+                    query_string[pair[0]] = pair[1];
+                    // If second entry with this name
+                } else if (typeof query_string[pair[0]] === "string") {
+                    var arr = [ query_string[pair[0]], pair[1] ];
+                    query_string[pair[0]] = arr;
+                    // If third or later entry with this name
+                } else {
+                    query_string[pair[0]].push(pair[1]);
+                }
+            } 
+            return query_string;
+        } ();
+        
+        if((typeof QueryString.banderaRegresar == "undefined") || (!QueryString.banderaRegresar)){
+            obtenerReglaNegocio();
+           window.setTimeout(function () {cargarCuentasOrigen();}, 2000);
+        }else{
+
+            cargarCuentasOrigen();
+        }
+        
+        
+
+
+        function init(){
+          
+            loadDeviceCSS();
+            /*
+             * Interceptores eliminados por la implementación de las flechas para scroll en los listados de cuentas origen y destino
+             */
+//            bindSwipeEvent('swipeup', 'listaOrigen', function () { moveToUpOrigen(); });
+//            bindSwipeEvent('swipedown', 'listaOrigen', function () { moveToDownOrigen(); });
+//            bindSwipeEvent('swipeup', 'listaDestino', function () { moveToUpDestino(); });
+//            bindSwipeEvent('swipedown', 'listaDestino', function () { moveToDownDestino(); });
+
+        }
+    
+    
+    
+
+    
+        </script>
+
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<%
+    var groupedHeader = model.groupedHeader;
+    var userHeader = model.userHeader.models;
+    var numLeftFixedColumns = model.userHeader.numLeftFixedColumns;
+    var style;
+    var title = model.title || '';
+%>  
+
+<div class="ifb-PopUp selectColumns">
+    <div class="ifb-innerPopUp">
+
+        <div class="ifb-contHeader">
+          <!-- índice superior + btn cerrar -->
+          <h3><%=BANCOMER.CULTURETEXT.t(title)%></h3>
+          <a class="icoCloseWindow ifbEventTrigger" data-event="closeClick" ></a>
+        </div>
+        
+        <div class="contSelectColumns">
+         <div class="contDd">
+            <div class="tit"><%=BANCOMER.CULTURETEXT.t("componentColumnsNoSelected_UserHeader")%></div>
+            <div class="dd" id="groupedHeader">
+                <ol class="dd-list">
+
+                <%                
+                    _.each(groupedHeader, function (cols, groupName) {
+                %>
+                    <div class="categoria display"><span><%=groupName%></span></div>
+                    <div class="content">
+                    <%                        
+                        _.each(cols, function(col) {
+                            style = (model.userHeader.get(col.getId()) || col.isFixed() || col.getName() === '') ? 'display:none;' : '';                            
+                    %>
+                        <li class="dd-item" data-id="<%=col.getId()%>" style="<%=style%>">
+                            <% if (!col.isFixed()) { %>
+                                <div class="add"><%=BANCOMER.CULTURETEXT.t("componentLabel_Add_UserHeader")%></div>
+                            <% } %>
+                            <div class="dd-handle"><%=col.getName()%></div>
+                        </li>
+                    <%
+                        });
+                    %>                          
+                    </div>                    
+                <%
+                    });
+                %>                    
+                </ol>
+            </div>
+           </div>
+
+           <div class="separation"></div>
+
+           <div class="contDd">
+           <div class="tit"><%=BANCOMER.CULTURETEXT.t("componentColumnsSelected_UserHeader")%></div>
+           <div class="dd" id="userHeader">
+                <ol class="dd-list">
+                    <%
+                        _.each(userHeader, function (col) {
+                            style = (col.getName() === '') ? 'display:none' : '';
+                    %>
+                            <% if (!col.isFixed()) { %>
+                            <li class="dd-item dd3-item" data-id="<%=col.getId()%>" style="<%=style%>">
+                                <div class="delete"></div>
+                                <div class="dd-handle dd3-handle">
+                                    <div class="contLines">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="dd3-content"><%=col.getName()%></div>
+                            <% } else {%>
+                            <li class="item dd3-item" data-id="<%=col.getId()%>" style="<%=style%>">
+                                <div class="dd3-content noDelete"><%=col.getName()%></div>
+                            <% } %>
+                        </li>
+                    <%
+                        });
+                    %>
+                </ol>
+            </div>
+           </div>
+        </div>
+        <div class="contButton">          
+          <div class="selecctButton ifbEventTrigger" data-event="saveUserHeader"><%=BANCOMER.CULTURETEXT.t('componentLabel_HeaderSelector_ButtonSave')%></div>
+        </div>     
+    </div>
+</div>    
+
+
+<script type="text/javascript">  
+
+    $('.categoria').on('click', function () {              
+        $(this).next().toggle("slow");
+        $(this).toggleClass("display");
+    });
+
+    $('#userHeader').nestable({maxDepth:1, group:2});
+
+    attachDeleteEvent();
+    attachAddEvent();
+
+    function attachDeleteEvent() {
+        $("#userHeader .dd-item .delete").off('click');
+        $("#userHeader .dd-item .delete").on("click", function () {
+            deleteItem(this);
+        });
+    }
+
+    function attachAddEvent() {
+        $("#groupedHeader .dd-item .add").off('click');
+        $("#groupedHeader .dd-item .add").on("click", function (event) {
+        addItem(this, <%=numLeftFixedColumns%>);
+        event.stopPropagation();
+        });
+    }
+
+    function addItem(item, numLeftFixedColumns) {
+        var id = $(item).parent().attr('data-id');
+        var name = $(item).next().html();
+        var htmlItem = '<li class="dd-item dd3-item" data-id="' + id + '">' +
+            '<div class="delete"></div>' +
+            '<div class="dd-handle dd3-handle">' +
+            '<div class="contLines"><div></div><div></div><div></div></div>' +
+            '</div>' +
+            '<div class="dd3-content">' + name + '</div>' +
+            '</li>';
+        if ($('#userHeader .dd-list div.delete').length > 0 ) {
+            $('#userHeader .dd-list div.delete').last().parent().after(htmlItem);
+        } else if (numLeftFixedColumns > 0){
+            $('#userHeader .dd-list .dd3-item').eq(numLeftFixedColumns - 1).append(htmlItem);
+        } else {
+            $('#userHeader .dd-list').append(htmlItem);
+        }
+        $(item).parent().hide();
+        attachDeleteEvent();
+    }
+
+    function deleteItem(item) {
+        var id = $(item).parent().attr('data-id');
+        $("#groupedHeader .dd-item[data-id='" + id + "']").show();
+        $(item).parent().remove();
+    }    
+  
+</script>

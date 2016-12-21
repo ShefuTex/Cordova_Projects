@@ -1,0 +1,13 @@
+<%
+var clsItem = 'icoInfo';
+if (model.models){
+	if (model.models.length > 0 && model.models.length < 10){
+		clsItem += '0' + model.models.length;
+	}else if (model.models.length !== 0){
+		clsItem += '10';
+	}
+}
+%>
+<li class="<%=clsItem%>"></li> 
+
+	
