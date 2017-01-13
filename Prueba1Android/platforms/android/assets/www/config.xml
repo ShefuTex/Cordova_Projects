@@ -90,7 +90,14 @@
 
         Otherwise, you can specify specific domains:
     -->
-    <access origin="*"/> <!-- allow local pages -->
+    <access origin="*"/>
+    <access origin="http://teststreaming.bbvanet.com.mx/" />
+    <access origin="http://testbwt.bbvanet.com.mx/" />
+    <access origin="https://equitystreaming.bbvanet.com.mx/" />
+    <access origin="https://equitybwt.bbvanet.com.mx/" />
+    <access origin="http://ifbdpsb.infobolsa.es" />
+    <access origin="https://a1.bbvanet.com.mx" />
+    <!-- allow local pages -->
     <!--
         <access origin="http://phonegap.com" />                    - allow any secure requests to http://phonegap.com/
         <access origin="http://phonegap.com" subdomains="true" />  - same as above, but including subdomains, such as http://build.phonegap.com/

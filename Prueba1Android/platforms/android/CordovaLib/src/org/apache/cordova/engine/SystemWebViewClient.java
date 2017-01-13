@@ -322,11 +322,12 @@ public class SystemWebViewClient extends WebViewClient {
         try {
             // Check the against the whitelist and lock out access to the WebView directory
             // Changing this will cause problems for your application
-            if (!parentEngine.pluginManager.shouldAllowRequest(url)) {
-                LOG.w(TAG, "URL blocked by whitelist: " + url);
+            //Codigo comentado: Se comento el bloque el If por cuestiones de que bloquea las urls
+            //if (!parentEngine.pluginManager.shouldAllowRequest(url)) {
+              //  LOG.w(TAG, "URL blocked by whitelist: " + url);
                 // Results in a 404.
-                return new WebResourceResponse("text/plain", "UTF-8", null);
-            }
+                //return new WebResourceResponse("text/plain", "UTF-8", null);
+            //}
 
             CordovaResourceApi resourceApi = parentEngine.resourceApi;
             Uri origUri = Uri.parse(url);

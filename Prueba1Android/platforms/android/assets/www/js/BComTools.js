@@ -157,6 +157,12 @@ function selectAppropiateResolution() {
             needToReload = true;
         
         
+        } else if (currentHeight <= 1700 && minWidth <= 2048) {
+            filePath = 'css/1024x768.css';
+            console.log("1920x1200");
+
+            needToReload = true;
+
         }else {
             filePath = 'css/1024x600.css';
             console.log("no Espesificada");
