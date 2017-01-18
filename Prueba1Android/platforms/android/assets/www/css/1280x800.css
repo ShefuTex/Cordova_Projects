@@ -178,7 +178,7 @@ border-radius: 6px;}
    /* ==========================================================================
    END
    ========================================================================== */
-#contentFrame { width:1280px !important; height:775px !important; border:none; }
+#contentFrame { width:1280px ; /*height:775px !important; */border:none; }
 
 #loginPrincipal #bcom { background:url(../img/1280x800/An_Box.png) no-repeat center; width:512px; height:340px; margin-left:700px; padding: 24px 20px 0 24px; margin-bottom:115px; display:block; }
 #loginSecundario #bcom { background:url(../img/1280x800/An_Box.png) no-repeat center; width:512px; height:340px; margin-left:700px; padding: 24px 20px 0 24px; margin-bottom:115px; display:none; }
