@@ -45,7 +45,7 @@ body { overflow: hidden; }
 #loginPrincipal #bcom-principal {
 background:rgba(255,255,255, .70);
  width:424px;
-  height:620px;
+  height:480px;
    margin-left:512px; 
    padding: 20px 18px 0 18px; 
     display:block;
